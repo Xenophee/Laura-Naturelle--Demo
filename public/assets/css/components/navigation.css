@@ -1,0 +1,123 @@
+/* ================================================================================================================================= */
+/* --------------------------------------------------------------------------------------------------------------------------------- */
+/* NAVIGATION PRINCIPALE */
+
+.mainNav {
+    font-family: var(--special-font);
+    background-color: var(--first-color);
+    border-bottom: var(--border-second-solid);
+    font-weight: normal;
+}
+
+.navbar-brand {
+    color: var(--light-font);
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.navbar-brand img {
+    width: 20%;
+    height: 20%;
+}
+
+/* .navbar-nav {
+    width: 20%;
+} */
+
+.mainNav .nav-link {
+    font-size: var(--font-medium-size);
+}
+
+.nav-link {
+    color: var(--light-font);
+}
+
+.navbar-brand:hover, .nav-link:hover {
+    color: var(--second-color);
+}
+
+.mainNav .navbar-nav:last-child .nav-item:last-child {
+    border-left: var(--border-light-solid);
+}
+
+.userAvatarNav {
+    width: 5%;
+}
+
+.headerTitle {
+    position: relative;
+    height: 55vh;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    border-bottom: var(--border-first-solid);
+}
+
+
+
+/* ================================================================================================================================= */
+/* --------------------------------------------------------------------------------------------------------------------------------- */
+/* NAVIGATION PROFIL & DASHBOARD */
+
+.profilNav, .offcanvasColor {
+    font-weight: normal;
+}
+
+.profilNav, .offcanvasColor {
+    background-color: var(--special-dark-color);
+    border-top: var(--border-second-solid);
+    border-bottom: var(--border-second-solid);
+}
+
+.profilNav .nav-link:hover {
+    color: var(--second-color);
+    border-top: var(--border-second-solid);
+    border-bottom: var(--border-second-solid);
+}
+
+.profilNav .nav-link.active {
+    color: var(--special-color);
+    border-top: var(--border-special-solid);
+    border-bottom: var(--border-special-solid);
+}
+
+.profilNav .nav-link.active:hover {
+    color: var(--second-color);
+    border-top: var(--border-second-solid);
+    border-bottom: var(--border-second-solid);
+}
+
+#offcanvasDarkNavbarLabel {
+    color: var(--light-font);
+}
+
+
+/* ================================================================================================================================= */
+/* --------------------------------------------------------------------------------------------------------------------------------- */
+/* PAGINATION */
+
+.page-link {
+    background-color: var(--special-color);
+    color: var(--light-font);
+}
+
+.page-link:hover {
+    background-color: var(--special-dark-color);
+    color: var(--light-font);
+}
+
+.page-link.active {
+    background-color: var(--special-dark-color);
+    border: var(--border-second-solid);
+    color: var(--light-font);
+}
+
+
+/* ================================================================================================================================= */
+/* --------------------------------------------------------------------------------------------------------------------------------- */
+/* FOOTER */
+
+footer {
+    height: 20vh;
+    background-color: var(--first-color);
+}

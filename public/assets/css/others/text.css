@@ -1,0 +1,73 @@
+
+/* ================================================================================================================================= */
+/* --------------------------------------------------------------------------------------------------------------------------------- */
+/* GÉNÉRAL */
+
+
+body {
+    background-color: var(--main-color);
+    color: var(--dark-font);
+    font-family: var(--main-font);
+    font-weight: bold;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--special-font);
+}
+
+h1 {
+    background-color: var(--second-filter);
+    color: var(--first-color);
+    text-shadow: var(--text-shadow);
+    font-size: 4rem;
+    width: 100%;
+    padding: 20px;
+}
+
+h3 {
+    background-image: url(../../img/fond-bois-naturel.jpg);
+    background-size: 500px;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ================================================================================================================================= */
+/* --------------------------------------------------------------------------------------------------------------------------------- */
+/* SPÉCIFIQUE */
+
+.title {
+    clip-path: polygon(100% 0%, 98% 50%, 100% 100%, 0 100%, 2% 50%, 0 0);
+    width: 80%;
+    background-color: var(--first-filter-color);
+    color: var(--light-font);
+    text-shadow: var(--text-shadow);
+}
+
+.numberList {
+    font-size: var(--font-tall-size);
+    line-height: 2.2;
+    color: var(--first-color);
+}
+
+
+/* ================================================================================================================================= */
+/* --------------------------------------------------------------------------------------------------------------------------------- */
+/* RESPONSIVE */
+
+@media (min-width: 768px) and (max-width: 1200px)  {
+
+    h1 {
+        font-size: 6rem;
+    }
+}
+
+
+@media (min-width: 1200px) {
+
+    h1 {
+        font-size: 7rem;
+    }
+}

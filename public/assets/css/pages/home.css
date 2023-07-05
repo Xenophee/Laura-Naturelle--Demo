@@ -1,0 +1,26 @@
+
+
+.backgroundMainTitle {
+    background-image: url(../../img/seamless-pattern-feuilles-palmier-tropical_1016-77.avif);
+    height: 55vh;
+}
+
+h1 {
+    background-color: rgba(240, 248, 255, 0.468);
+    color: #2d550f;
+}
+
+.colServices {
+    background-image: url(../../img/seamless-pattern-feuilles-palmier-tropical_1016-77.avif);
+    border: var(--border-special-solid);
+}
+
+.services {
+    background-color: var(--main-color);
+    border: var(--border-special-solid);
+}
+
+.services img {
+    width: 50%;
+    object-fit: cover;
+}

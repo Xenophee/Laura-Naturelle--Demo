@@ -1,0 +1,210 @@
+/* @import url('variables.css'); */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+legend {
+    font-family: var(--special-font);
+}
+
+
+.blocForm {
+    background-color: var(--second-color);
+    /* color: var(--light-font); */
+    border: var(--big-border-first-solid);
+    box-shadow: var(--box-light-shadow);
+}
+
+
+/* ================================================================================================================================= */
+/* --------------------------------------------------------------------------------------------------------------------------------- */
+/* INPUT FILE AVATAR */
+
+.avatarFile {
+    position: relative;
+    cursor: pointer;
+    width: 60%;
+    max-width: 150px;
+    border-radius: 50%;
+    border: var(--border-dark-special-dotted);
+    box-shadow: var(--box-light-shadow);
+}
+
+.avatarFile:hover {
+    animation: shadowAvatar 5s infinite;
+}
+
+.avatarImg:hover {
+    cursor: pointer;
+}
+
+.editAvatar {
+    position: absolute;
+    color: var(--special-dark-color);
+    font-size: 4rem;
+    cursor: pointer;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all ease-in-out .3s;
+}
+
+.editAvatar:hover {
+    opacity: 1;
+    transition: all ease-in-out .3s;
+}
+
+
+/* ================================================================================================================================= */
+/* --------------------------------------------------------------------------------------------------------------------------------- */
+/* SPÉCIFIQUE */
+
+.form-select {
+    background-image: url(../img/icones/down.png);
+}
+
+.form-control, .form-select {
+    box-shadow: inset 0 0 10px #cac7c6;
+    border: var(--border-special-solid);
+    height: 55px;
+}
+
+#requestMessage {
+    height: 250px;
+}
+
+.form-control:focus, .form-select:focus {
+    border: var(--border-dark-special-solid);
+    box-shadow: none;
+}
+
+.form-check-input {
+    border: var(--border-special-solid);
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-top: 0;
+}
+
+.form-check-input:checked {
+    background-color: var(--special-color);
+    box-shadow: #647AA3 0 0 4px;
+    border: var(--border-second-dotted);
+}
+
+.form-check-input:focus {
+    box-shadow: #647AA3 0 0 4px;
+    border: var(--border-second-dotted);
+}
+
+.forgotten {
+    color: var(--special-color);
+    text-decoration: underline;
+}
+
+.forgotten:hover {
+    color: var(--special-dark-color);
+}
+
+
+
+/* ------------------------------------------------ */
+
+.addQcm {
+    width: 95%;
+}
+
+.addAnswer {
+width: 100%;
+}
+
+
+
+
+
+
+@media (min-width: 768px) and (max-width: 1200px)  {
+
+    .coverQcm {
+        width: 60%;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .addQcm {
+        width: 90%;
+    }
+
+    .coverQcm {
+        width: 30%;
+    }
+
+    .addAnswer {
+        width: 40%;
+        }
+}
+
+
+/* PARTIE AJOUTER UNE HISTOIRE */
+
+
+.formStories {
+    width: 80%;
+}
+
+#synopsis, #summary {
+    height: 300px;
+}
+
+#description {
+    height: 200px;
+}
+
+#content {
+    height: 700px;
+}
+
+/* #storyName {
+    width: 100%;
+} */
+
+#next, #previous, #finish {
+    width: 100%;
+}
+
+
+
+/* PARTIE LISTE UTILISATEURS */
+
+.profilImg {
+    width: 10px;
+}
+
+
+/* PARTIE THEME CATEGORIE */
+
+.form-control.updateInput {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    height: 40px;
+    /* width: 30%; */
+}
+
+.updateInput:focus {
+    background-color: #f1e5cc;
+    border: none;
+    box-shadow: none;
+}
+
+.updateBtn {
+    width: 50%;
+}
+
+.btnSubmitAdd {
+    height: 55px;
+}
