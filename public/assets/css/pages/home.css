@@ -1,26 +1,183 @@
 
 
 .backgroundMainTitle {
-    background-image: url(../../img/seamless-pattern-feuilles-palmier-tropical_1016-77.avif);
+    background-image: url(../../img/background.avif);
+    background-attachment: fixed;
     height: 55vh;
+    border-bottom: var(--border-first-solid);
+    box-shadow: var(--inset-shadow);
 }
 
 h1 {
-    background-color: rgba(240, 248, 255, 0.468);
-    color: #2d550f;
+    background-color: var(--main-filter-color);
+    color: var(--special-color);
+    border-top: var(--border-special-solid);
+    border-bottom: var(--border-special-solid);
+    text-shadow: var(--text-shadow);
+    box-shadow: var(--box-light-shadow);
+    /* backdrop-filter: blur(5px); */
+}
+
+h2 {
+    width: 90%;
+    background-color: var(--main-color);
+    border: var(--border-first-solid);
+    outline: var(--border-first-solid);
+    outline-offset: -10px;
+    margin: 0;
+    /* box-shadow: var(--inset-shadow); */
+}
+
+.backTitle {
+    position: absolute;
+    width: 90%;
+    /* background-color: var(--third-color); */
+    border: var(--border-first-solid);
+    background-image: url(../../img/background.avif);
+    width: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    box-shadow: var(--box-light-shadow);
+}
+
+.ruban {
+    position: relative;
+    /* background-color: var(--first-color); */
+    border-top: var(--border-first-strong-solid);
+    border-bottom: var(--border-first-strong-solid);
+    height: 40px;
+}
+
+
+/* ================================================================================================================================= */
+/* --------------------------------------------------------------------------------------------------------------------------------- */
+/* PRESENTATION */
+
+#presentation {
+    height: 55vh;
+}
+
+/* ================================================================================================================================= */
+/* --------------------------------------------------------------------------------------------------------------------------------- */
+/* PRESTATIONS */
+
+#services {
+    background-image: url(../../img/fond-bois-naturel.jpg);
+    background-size: cover;
+    /* background-attachment: fixed; */
+    box-shadow: var(--inset-shadow);
 }
 
 .colServices {
-    background-image: url(../../img/seamless-pattern-feuilles-palmier-tropical_1016-77.avif);
+    background-image: url(../../img/background.avif);
     border: var(--border-special-solid);
+    box-shadow: var(--box-shadow);
 }
 
 .services {
     background-color: var(--main-color);
     border: var(--border-special-solid);
+    box-shadow: var(--box-light-shadow);
+}
+
+.services h3 {
+    background-image: url(../../img/fond-bois-naturel.jpg);
+    background-size: 500px;
+    color: var(--light-font);
+    padding: 10px 0px 10px;
+    box-shadow: var(--box-light-shadow);
+    text-shadow: var(--text-shadow);
 }
 
 .services img {
-    width: 50%;
+    width: 100%;
     object-fit: cover;
+}
+
+.services .btn {
+    width: 100%;
+}
+
+.separator {
+    background-image: url(../../img/background.avif);
+    background-attachment: fixed;
+    border-top: var(--border-first-solid);
+    border-bottom: var(--border-first-solid);
+    width: 100%;
+    height: 7vh;
+}
+
+
+/* ================================================================================================================================= */
+/* --------------------------------------------------------------------------------------------------------------------------------- */
+/* ENDROIT / HORAIRES */
+
+
+#map {
+    height: 70vh;
+    width: 100%;
+    border: var(--border-third-solid);
+    box-shadow: var(--box-light-shadow);
+}
+
+.scheduleBoard {
+    background-image: url(../../img/fond-bois-naturel.jpg);
+    background-size: cover;
+    color: var(--light-font);
+    font-size: 1.2rem;
+    border: var(--border-third-solid);
+    box-shadow: var(--box-shadow);
+    text-shadow: var(--text-shadow);
+    width: 100%;
+}
+
+.scheduleBoard h3 {
+    font-size: 2.5rem;
+}
+
+.scheduleBoard ul {
+    padding: 0;
+    list-style: none;
+}
+
+.informations h3 {
+    background-image: url(../../img/fond-bois-naturel.jpg);
+    background-size: cover;
+    font-size: 2rem;
+    color: var(--light-font);
+    text-shadow: var(--text-shadow);
+}
+
+
+
+/* ================================================================================================================================= */
+/* --------------------------------------------------------------------------------------------------------------------------------- */
+/* RESPONSIVE */
+
+@media (min-width: 768px) and (max-width: 1200px)  {
+
+    h2 {
+        width: 95%;
+    }
+}
+
+
+@media (min-width: 1200px) {
+
+    h2 {
+        width: 98%;
+    }
+
+    .services img {
+        width: 50%;
+    }
+
+    #map {
+        height: 40vh;
+    }
+
+    .scheduleBoard {
+        width: 80%;
+    }
 }

@@ -111,18 +111,6 @@ legend {
 
 
 
-/* ------------------------------------------------ */
-
-.addQcm {
-    width: 95%;
-}
-
-.addAnswer {
-width: 100%;
-}
-
-
-
 
 
 
@@ -146,34 +134,6 @@ width: 100%;
     .addAnswer {
         width: 40%;
         }
-}
-
-
-/* PARTIE AJOUTER UNE HISTOIRE */
-
-
-.formStories {
-    width: 80%;
-}
-
-#synopsis, #summary {
-    height: 300px;
-}
-
-#description {
-    height: 200px;
-}
-
-#content {
-    height: 700px;
-}
-
-/* #storyName {
-    width: 100%;
-} */
-
-#next, #previous, #finish {
-    width: 100%;
 }
 
 
