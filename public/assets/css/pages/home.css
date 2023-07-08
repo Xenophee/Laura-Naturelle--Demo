@@ -15,7 +15,7 @@ h1 {
     border-bottom: var(--border-special-solid);
     text-shadow: var(--text-shadow);
     box-shadow: var(--box-light-shadow);
-    /* backdrop-filter: blur(5px); */
+    
 }
 
 h2 {
@@ -48,6 +48,10 @@ h2 {
     border-bottom: var(--border-first-strong-solid);
     height: 40px;
 }
+
+/* .ruban div {
+    width: 500px;
+} */
 
 
 /* ================================================================================================================================= */
@@ -82,11 +86,10 @@ h2 {
 }
 
 .services h3 {
-    background-image: url(../../img/fond-bois-naturel.jpg);
-    background-size: 500px;
+    background-color: var(--third-color);
     color: var(--light-font);
     padding: 10px 0px 10px;
-    box-shadow: var(--box-light-shadow);
+    box-shadow: var(--inset-shadow);
     text-shadow: var(--text-shadow);
 }
 
@@ -142,12 +145,20 @@ h2 {
 }
 
 .informations h3 {
+    width: 95%;
     background-image: url(../../img/fond-bois-naturel.jpg);
     background-size: cover;
+    border: var(--border-third-solid);
     font-size: 2rem;
     color: var(--light-font);
+    box-shadow: var(--box-light-shadow);
     text-shadow: var(--text-shadow);
 }
+
+.informations div {
+    width: 100%;
+}
+
 
 
 
@@ -155,10 +166,30 @@ h2 {
 /* --------------------------------------------------------------------------------------------------------------------------------- */
 /* RESPONSIVE */
 
-@media (min-width: 768px) and (max-width: 1200px)  {
+@media (min-width: 768px)  {
 
     h2 {
         width: 95%;
+    }
+
+    #map {
+        height: 40vh;
+    }
+
+    .informations div {
+        width: 50%;
+    }
+
+    .informations h3 {
+        width: 70%;
+    }
+
+    .informations div:first-child {
+        border-right: var(--border-first-solid);
+    }
+
+    .scheduleBoard {
+        width: 50%;
     }
 }
 
@@ -174,7 +205,7 @@ h2 {
     }
 
     #map {
-        height: 40vh;
+        height: 50vh;
     }
 
     .scheduleBoard {

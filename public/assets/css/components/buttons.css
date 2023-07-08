@@ -5,6 +5,7 @@
 .btn {
     background-color: var(--special-color);
     color: var(--light-font);
+    font-weight: bold;
     border: var(--border-light-solid);
     box-shadow: var(--box-light-shadow);
     transition: 2s;
