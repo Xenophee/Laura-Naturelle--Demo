@@ -3,7 +3,7 @@
 .backgroundMainTitle {
     background-image: url(../../img/background.avif);
     background-attachment: fixed;
-    height: 55vh;
+    height: 84vh;
     border-bottom: var(--border-first-solid);
     box-shadow: var(--inset-shadow);
 }
@@ -15,7 +15,6 @@ h1 {
     border-bottom: var(--border-special-solid);
     text-shadow: var(--text-shadow);
     box-shadow: var(--box-light-shadow);
-    
 }
 
 h2 {
@@ -58,8 +57,29 @@ h2 {
 /* --------------------------------------------------------------------------------------------------------------------------------- */
 /* PRESENTATION */
 
-#presentation {
+/* #presentation {
     height: 55vh;
+} */
+
+.carousel-item img {
+    height: 80vh;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+.carousel-caption {
+    background-color: var(--main-filter-color);
+    box-shadow: var(--box-light-shadow);
+    border: var(--border-third-solid);
+}
+
+.textPresentation {
+    background-color: var(--first-color);
+    color: var(--light-font);
+    border: var(--border-special-solid);
+    box-shadow: var(--inset-shadow);
+    /* outline: var(--border-first-solid);
+    outline-offset: 15px; */
 }
 
 /* ================================================================================================================================= */
