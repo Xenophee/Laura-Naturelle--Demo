@@ -3,7 +3,7 @@
 .backgroundMainTitle {
     background-image: url(../../img/background.avif);
     background-attachment: fixed;
-    height: 84vh;
+    height: 55vh;
     border-bottom: var(--border-first-solid);
     box-shadow: var(--inset-shadow);
 }
@@ -61,25 +61,34 @@ h2 {
     height: 55vh;
 } */
 
+/* .carousel {
+    width: 50%;
+} */
+
 .carousel-item img {
-    height: 80vh;
+    height: 95vh;
     object-fit: cover;
     border-radius: 50px;
 }
 
-.carousel-caption {
-    background-color: var(--main-filter-color);
-    box-shadow: var(--box-light-shadow);
-    border: var(--border-third-solid);
-}
-
 .textPresentation {
-    background-color: var(--first-color);
-    color: var(--light-font);
-    border: var(--border-special-solid);
-    box-shadow: var(--inset-shadow);
+    
+    /* background-color: var(--first-color); */
+    /* color: var(--light-font); */
+    /* border: var(--border-special-solid); */
+    /* box-shadow: var(--inset-shadow); */
     /* outline: var(--border-first-solid);
     outline-offset: 15px; */
+}
+
+.textPresentation p {
+    width: 70%;
+    /* background-color: var(--first-color); */
+    border: var(--border-special-strong-solid);
+    /* box-shadow: var(--inset-shadow); */
+    outline: var(--border-second-solid);
+    outline-offset: 15px;
+    box-shadow: var(--inset-shadow);
 }
 
 /* ================================================================================================================================= */
