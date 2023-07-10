@@ -18,7 +18,7 @@ h1 {
 }
 
 h2 {
-    width: 90%;
+    width: 95%;
     background-color: var(--main-color);
     border: var(--border-first-solid);
     outline: var(--border-first-solid);
@@ -33,7 +33,7 @@ h2 {
     /* background-color: var(--third-color); */
     border: var(--border-first-solid);
     background-image: url(../../img/background.avif);
-    width: 50%;
+    /* width: 50%; */
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
@@ -48,25 +48,14 @@ h2 {
     height: 40px;
 }
 
-/* .ruban div {
-    width: 500px;
-} */
-
 
 /* ================================================================================================================================= */
 /* --------------------------------------------------------------------------------------------------------------------------------- */
 /* PRESENTATION */
 
-/* #presentation {
-    height: 55vh;
-} */
-
-/* .carousel {
-    width: 50%;
-} */
-
 .carousel-item img {
-    height: 95vh;
+    height: 700px;
+    width: 500px;
     object-fit: cover;
     border-radius: 50px;
 }
@@ -82,14 +71,14 @@ h2 {
 }
 
 .textPresentation p {
-    width: 70%;
+    width: 100%;
     /* background-color: var(--first-color); */
     border: var(--border-special-strong-solid);
-    /* box-shadow: var(--inset-shadow); */
     outline: var(--border-second-solid);
     outline-offset: 15px;
     box-shadow: var(--inset-shadow);
 }
+
 
 /* ================================================================================================================================= */
 /* --------------------------------------------------------------------------------------------------------------------------------- */
@@ -98,7 +87,6 @@ h2 {
 #services {
     background-image: url(../../img/fond-bois-naturel.jpg);
     background-size: cover;
-    /* background-attachment: fixed; */
     box-shadow: var(--inset-shadow);
 }
 
@@ -124,6 +112,7 @@ h2 {
 
 .services img {
     width: 100%;
+    height: 200px;
     object-fit: cover;
 }
 
@@ -131,14 +120,6 @@ h2 {
     width: 100%;
 }
 
-.separator {
-    background-image: url(../../img/background.avif);
-    background-attachment: fixed;
-    border-top: var(--border-first-solid);
-    border-bottom: var(--border-first-solid);
-    width: 100%;
-    height: 7vh;
-}
 
 
 /* ================================================================================================================================= */
@@ -190,16 +171,47 @@ h2 {
 
 
 
-
 /* ================================================================================================================================= */
 /* --------------------------------------------------------------------------------------------------------------------------------- */
 /* RESPONSIVE */
 
 @media (min-width: 768px)  {
 
+    .backgroundMainTitle {
+        height: 35vh;
+    }
+
+    .backTitle {
+        width: 70%;
+    }
+
     h2 {
         width: 95%;
     }
+
+    .textPresentation p {
+        width: 70%;
+        border: var(--border-special-strong-solid);
+        outline: var(--border-second-solid);
+        outline-offset: 15px;
+        box-shadow: var(--inset-shadow);
+    }
+
+    /* ------------------------------------------------- */
+
+    .services img {
+        height: 50%;
+    }
+
+    .contentService {
+        height: 400px;
+    }
+
+    .contentService div {
+        height: 50%;
+    }
+
+    /* ------------------------------------------------- */
 
     #map {
         height: 40vh;
@@ -225,13 +237,35 @@ h2 {
 
 @media (min-width: 1200px) {
 
+    .backgroundMainTitle {
+        height: 55vh;
+    }
+
+    .backTitle {
+        width: 50%;
+    }
+
     h2 {
         width: 98%;
     }
 
+    /* ------------------------------------------------- */
+
+    .contentService {
+        height: 230px;
+    }
+
     .services img {
         width: 50%;
+        height: 100%;
     }
+
+    .contentService div {
+        width: 50%;
+        height: 100%;
+    }
+
+    /* ------------------------------------------------- */
 
     #map {
         height: 50vh;
