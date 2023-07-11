@@ -20,7 +20,9 @@ h1 {
 h2 {
     width: 95%;
     background-color: var(--main-color);
+    color: var(--brown-color);
     /* color: var(--special-color); */
+    font-weight: bold;
     border: var(--border-first-solid);
     outline: var(--border-first-solid);
     outline-offset: -10px;
@@ -74,7 +76,7 @@ h2 {
 .textPresentation p {
     width: 100%;
     /* background-color: var(--first-color); */
-    border: var(--border-special-strong-solid);
+    border: var(--border-first-medium-solid);
     outline: var(--border-second-solid);
     outline-offset: 15px;
     box-shadow: var(--inset-shadow);
