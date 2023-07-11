@@ -13,7 +13,7 @@ legend {
 
 .blocForm {
     background-color: var(--second-color);
-    /* color: var(--light-font); */
+    /* color: var(--main-color); */
     border: var(--big-border-first-solid);
     box-shadow: var(--box-light-shadow);
 }

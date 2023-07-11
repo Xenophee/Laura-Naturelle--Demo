@@ -4,7 +4,7 @@
 
 .btn {
     background-color: var(--special-color);
-    color: var(--light-font);
+    color: var(--main-color);
     font-weight: bold;
     border: var(--border-light-solid);
     box-shadow: var(--box-light-shadow);
@@ -13,7 +13,7 @@
 
 .btn:hover {
     background-color: var(--special-dark-color);
-    color: var(--light-font);
+    color: var(--main-color);
     border: var(--border-light-solid);
 }
 

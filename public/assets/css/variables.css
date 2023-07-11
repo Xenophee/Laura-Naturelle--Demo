@@ -1,18 +1,18 @@
 :root {
 
     --main-color: #fdf3fd;
+    --main-dark-color: #212529;
 
     --light-green:#c2ddad;
     --first-color: #3f7715;
     --second-color: #2f5b0e;
     --third-color: #6fa348;
-    --fourth-color: #c08552;
+
+    --brown-color: #c08552;
     
     --special-color: #fb8bdb;
     --special-dark-color: #e76899;
 
-    --dark-font: #212529;
-    --light-font: #fdf3fd;
     --danger-color: #b2161a;
 
     --main-filter-color: #fdf3fdbb;
@@ -26,13 +26,18 @@
     --font-medium-size: 1.5rem;
     --font-tall-size: 2rem;
 
-    --border-special-solid: #fb8bdb 1px solid;
-    --border-special-strong-solid: #fb8bdb 10px solid;
-    --border-first-solid: #3f7715 1px solid;
-    --border-second-solid: #2f5b0e 3px solid;
-    --border-third-solid: #c08552 1px solid;
+    --border-light-green-solid: var(--light-green) 1px solid;
+    --border-light-solid: #fdf3fd 1px solid;
+    
+    --border-second-solid: var(--second-color) 3px solid;
 
-    --border-first-strong-solid: #3f7715 10px solid;
+    --border-brown-solid: var(--brown-color) 1px solid;
+
+    --border-special-solid: var(--special-color) 1px solid;
+    --border-special-strong-solid: var(--special-color) 10px solid;
+
+    --border-first-solid: var(--first-color) 1px solid;
+    --border-first-strong-solid: var(--first-color) 10px solid;
 
     --box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     --box-light-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;

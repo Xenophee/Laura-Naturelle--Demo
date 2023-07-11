@@ -1,5 +1,19 @@
 
 
+const container = document.getElementById('lottieAnnouncement');
+
+        const animation = lottie.loadAnimation({
+            container: container,
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: './public/assets/json/inbox-promos.json'
+        });
+
+
+
+
+
 const latitude = 49.83763;
 const longitude = 3.26675;
 

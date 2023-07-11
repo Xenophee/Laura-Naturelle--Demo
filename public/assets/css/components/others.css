@@ -1,7 +1,10 @@
 
 
+
+
+
 .separator {
-    background-image: url(../../img/background.avif);
+    background-image: url(../../img/background/main.jpg);
     background-attachment: fixed;
     border-top: var(--border-first-solid);
     border-bottom: var(--border-first-solid);

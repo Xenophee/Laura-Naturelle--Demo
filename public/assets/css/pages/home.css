@@ -1,7 +1,7 @@
 
 
 .backgroundMainTitle {
-    background-image: url(../../img/background.avif);
+    background-image: url(../../img/background/main.jpg);
     background-attachment: fixed;
     height: 55vh;
     border-bottom: var(--border-first-solid);
@@ -32,8 +32,7 @@ h2 {
     width: 90%;
     /* background-color: var(--third-color); */
     border: var(--border-first-solid);
-    background-image: url(../../img/background.avif);
-    /* width: 50%; */
+    background-image: url(../../img/background/main.jpg);
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
@@ -47,6 +46,9 @@ h2 {
     border-bottom: var(--border-first-strong-solid);
     height: 40px;
 }
+
+
+
 
 
 /* ================================================================================================================================= */
@@ -63,7 +65,7 @@ h2 {
 .textPresentation {
     
     /* background-color: var(--first-color); */
-    /* color: var(--light-font); */
+    /* color: var(--main-color); */
     /* border: var(--border-special-solid); */
     /* box-shadow: var(--inset-shadow); */
     /* outline: var(--border-first-solid);
@@ -85,13 +87,12 @@ h2 {
 /* PRESTATIONS */
 
 #services {
-    background-image: url(../../img/fond-bois-naturel.jpg);
-    background-size: cover;
+    background-image: url(../../img/background/bois.jpg);
     box-shadow: var(--inset-shadow);
 }
 
 .colServices {
-    background-image: url(../../img/background.avif);
+    background-image: url(../../img/background/main.jpg);
     border: var(--border-special-solid);
     box-shadow: var(--box-shadow);
 }
@@ -104,7 +105,7 @@ h2 {
 
 .services h3 {
     background-color: var(--third-color);
-    color: var(--light-font);
+    color: var(--main-color);
     padding: 10px 0px 10px;
     box-shadow: var(--inset-shadow);
     text-shadow: var(--text-shadow);
@@ -117,9 +118,29 @@ h2 {
 }
 
 .services .btn {
+    position: relative;
     width: 100%;
+    z-index: 0;
 }
 
+.services .btn::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -0.5px;
+    width: 0%;
+    height: 100%;
+    background: var(--special-dark-color);
+    border-radius: 5px;
+    opacity: 0;
+    transition: 1s ease-in-out;
+    z-index: -1;
+}
+
+.services .btn:hover::before{
+    width: 100%;
+    opacity: 1;
+}
 
 
 /* ================================================================================================================================= */
@@ -130,16 +151,16 @@ h2 {
 #map {
     height: 70vh;
     width: 100%;
-    border: var(--border-third-solid);
+    border: var(--border-brown-solid);
     box-shadow: var(--box-light-shadow);
 }
 
 .scheduleBoard {
-    background-image: url(../../img/fond-bois-naturel.jpg);
+    background-image: url(../../img/background/bois.jpg);
     background-size: cover;
-    color: var(--light-font);
+    color: var(--main-color);
     font-size: 1.2rem;
-    border: var(--border-third-solid);
+    border: var(--border-brown-solid);
     box-shadow: var(--box-shadow);
     text-shadow: var(--text-shadow);
     width: 100%;
@@ -156,11 +177,11 @@ h2 {
 
 .informations h3 {
     width: 95%;
-    background-image: url(../../img/fond-bois-naturel.jpg);
+    background-image: url(../../img/background/bois.jpg);
     background-size: cover;
-    border: var(--border-third-solid);
+    border: var(--border-brown-solid);
     font-size: 2rem;
-    color: var(--light-font);
+    color: var(--main-color);
     box-shadow: var(--box-light-shadow);
     text-shadow: var(--text-shadow);
 }
@@ -180,6 +201,23 @@ h2 {
     .backgroundMainTitle {
         height: 35vh;
     }
+
+    /* ------------------------------------------------- */
+
+    #lottieAnnouncement {
+        width: 15%;
+    }
+
+    #announcement p {
+        font-size: 1.1rem;
+    }
+    
+    #announcement span {
+        font-size: 2rem;
+        color: var(--special-color);
+    }
+
+    /* ------------------------------------------------- */
 
     .backTitle {
         width: 70%;
@@ -240,6 +278,23 @@ h2 {
     .backgroundMainTitle {
         height: 55vh;
     }
+
+    /* ------------------------------------------------- */
+
+    #lottieAnnouncement {
+        width: 8%;
+    }
+
+    #announcement p {
+        font-size: 1.5rem;
+    }
+    
+    #announcement span {
+        font-size: 4rem;
+        color: var(--special-color);
+    }
+
+    /* ------------------------------------------------- */
 
     .backTitle {
         width: 50%;
