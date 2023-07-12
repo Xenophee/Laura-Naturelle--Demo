@@ -98,12 +98,28 @@
 
                             <fieldset class="blocForm d-flex flex-column justify-content-around py-3 py-md-5 px-3 px-sm-5">
                                 <legend class="text-center py-2 mb-4 mb-md-5">Informations obligatoires</legend>
+
+                                <label>Civilité * :</label>
+                                <div class="mt-2 mb-4 d-flex justify-content-around justify-content-sm-start">
+                                    <div class="d-inline d-flex align-items-center me-3">
+                                        <input type="radio" name="civility" value="1" id="mr" class="form-check-input me-2" required>
+                                        <label class="form-check-label" for="mr">M</label>
+                                    </div>
+                                    <div class="ps-3 d-inline d-flex align-items-center">
+                                        <input type="radio" name="civility" value="2" id="mrs" class="form-check-input me-2" required>
+                                        <label class="form-check-label" for="mrs">Mme</label>
+                                    </div>
+                                </div>
+
+                                <!-- NOM -->
                                 <div class="mb-4">
                                     <label for="lastname" class="form-label">Nom * :</label>
                                     <input type="text" class="form-control" id="lastname" name="lastname"
                                         autocomplete="family-name" pattern="" value="" required>
                                     <small class="text-danger fst-italic mt-2"></small>
                                 </div>
+
+                                <!-- PRENOM -->
                                 <div class="mb-4">
                                     <label for="firstname" class="form-label">Prénom * :</label>
                                     <input type="text" class="form-control" id="firstname" name="firstname"
