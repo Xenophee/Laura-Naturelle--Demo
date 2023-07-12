@@ -23,6 +23,7 @@
 /* IMPORT POUR LES PAGES */
 
 /* @import url('./pages/account.css'); */
+@import url('./pages/connection.css');
 @import url('./pages/home.css');
 /* @import url('./pages/register_connection.css'); */
 

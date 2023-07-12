@@ -34,7 +34,10 @@
     --border-brown-solid: var(--brown-color) 1px solid;
 
     --border-special-solid: var(--special-color) 1px solid;
+    --border-special-medium-solid: var(--special-color) 3px solid;
     --border-special-strong-solid: var(--special-color) 10px solid;
+
+    --border-dark-special-medium-solid: var(--special-dark-color) 2px solid;
 
     --border-first-solid: var(--first-color) 1px solid;
     --border-first-medium-solid: var(--first-color) 3px solid;

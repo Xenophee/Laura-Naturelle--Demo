@@ -1,0 +1,9 @@
+
+
+.bg-leaf {
+    /* 11, 7, 4 */
+    background-image: url(../../img/backgrounds/leafs4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}

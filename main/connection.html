@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Petrona:wght@500&family=Sen&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./public/assets/bootstrap-icons-1.10.3/bootstrap-icons.css">
-    <link rel="stylesheet" href="./public/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./public/assets/css/main.css">
+    <link rel="stylesheet" href="../public/assets/bootstrap-icons-1.10.3/bootstrap-icons.css">
+    <link rel="stylesheet" href="../public/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/assets/css/main.css">
     <meta name="description" content="">
     <link rel="icon" type="image/png" href="">
-    <title>En construction</title>
+    <title>Connexion</title>
 </head>
 
 <body>
@@ -18,8 +18,8 @@
     <header>
         <nav class="navbar navbar-dark mainNav navbar-expand-xl">
             <div class="container-fluid">
-                <a class="navbar-brand d-flex align-items-center" href="../index.html"><img src="./public/assets/img/logo.png"
-                        alt="Logo" class="d-inline-block me-3">L'Aura Natur'elle</a>
+                <a class="navbar-brand d-flex align-items-center" href="../index.html"><img
+                        src="../public/assets/img/logo.png" alt="Logo" class="d-inline-block me-3">L'Aura Natur'elle</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
                     aria-label="Toggle navigation">
@@ -28,25 +28,31 @@
                 <div class="offcanvas offcanvas-end offcanvasColor" tabindex="-1" id="offcanvasDarkNavbar"
                     aria-labelledby="offcanvasDarkNavbarLabel">
                     <div class="offcanvas-header">
-                        <a class="navbar-brand offcanvas-title d-flex align-items-center" href="../index.html" id="offcanvasDarkNavbarLabel"><img src="./public/assets/img/logo.png"
-                            alt="Logo" class="d-inline-block me-3">L'Aura Natur'elle</a>
+                        <a class="navbar-brand offcanvas-title d-flex align-items-center" href="../index.html"
+                            id="offcanvasDarkNavbarLabel"><img src="../public/assets/img/logo.png" alt="Logo"
+                                class="d-inline-block me-3">L'Aura Natur'elle</a>
                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
                             aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
                         <ul class="navbar-nav">
                             <li class="nav-item dropdown mx-1 mx-xxl-3 my-2 my-xl-0">
-                                <a class="nav-link dropdown-toggle" href="../construction.html" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" href="../construction.html" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
                                     Prestations
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item py-3" href="../construction.html">Epilations</a></li>
-                                    <li><a class="dropdown-item py-3" href="../construction.html">Soins du visage</a></li>
-                                    <li><a class="dropdown-item py-3" href="../construction.html">Soins du corps</a></li>
-                                    <li><a class="dropdown-item py-3" href="../construction.html">Soins des mains</a></li>
-                                    <li><a class="dropdown-item py-3" href="../construction.html">Soins des pieds</a></li>
-                                    <li><a class="dropdown-item py-3" href="../construction.html">Modelage (Massage)</a></li>
+                                    <li><a class="dropdown-item py-3" href="../construction.html">Soins du visage</a>
+                                    </li>
+                                    <li><a class="dropdown-item py-3" href="../construction.html">Soins du corps</a>
+                                    </li>
+                                    <li><a class="dropdown-item py-3" href="../construction.html">Soins des mains</a>
+                                    </li>
+                                    <li><a class="dropdown-item py-3" href="../construction.html">Soins des pieds</a>
+                                    </li>
+                                    <li><a class="dropdown-item py-3" href="../construction.html">Modelage (Massage)</a>
+                                    </li>
                                 </ul>
                             </li>
                             <li class="nav-item mx-1 mx-xxl-3 my-2 my-xl-0">
@@ -79,16 +85,56 @@
     <!-- ========================================================================================================================================================================== -->
     <!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
-    <main>
+    <main class="bg-leaf">
         <div class="container-fluid px-0">
-
-            <section class="d-flex flex-column justify-content-center align-items-center py-5">
+            <section class="py-5">
                 <div class="titleContainer">
-                    <h1 class="text-center py-3">En construction</h1>
+                    <h1 class="text-center py-3">Connexion</h1>
                 </div>
+                
 
-                <div class="d-flex justify-content-center backLottie py-5 mt-5">
-                    <div id="lottieContainer">
+                <!-- FORMULAIRE DE CONNEXION -->
+                <div class="row justify-content-center mx-0 mt-5">
+                    <div class="col-12 col-sm-11 col-md-8 col-lg-6 col-xxl-5">
+                        <div class="blocForm">
+                            <form method="post">
+                                <fieldset class="py-5 px-3 px-sm-5">
+                                    <legend class="text-center py-2 mb-5">Se connecter</legend>
+
+                                    <!-- IDENTIFIANT -->
+                                    <div class="mb-4">
+                                        <label for="email" class="form-label">Adresse mail
+                                            :</label>
+                                        <input type="email" class="form-control" id="email" name="email"
+                                            autocomplete="email" value="" required>
+                                        <small class="text-danger fst-italic mt-2"></small>
+                                    </div>
+
+                                    <!-- MOT DE PASSE -->
+                                    <div class="mb-5">
+                                        <label for="password" class="form-label">Mot de passe :</label>
+                                        <input type="password" class="form-control" id="password" name="password"
+                                            autocomplete="current-password" required>
+                                    </div>
+
+                                    <!-- CONNEXION MAINTENUE -->
+                                    <div class="mb-5 form-check d-flex align-items-center justify-content-center">
+                                        <input type="checkbox" class="form-check-input" id="stayConnect"
+                                            name="stayConnect" value="1">
+                                        <label class="form-check-label ps-3" for="stayConnect">Maintenir la
+                                            connexion</label>
+                                    </div>
+                                    <small class="text-danger fst-italic mb-4"></small>
+
+                                    <div><a href="" class="forgotten">Mot de passe ou identifiants oubliés ?</a></div>
+
+                                    <!-- VALIDATION -->
+                                    <div class="d-flex justify-content-center mt-5">
+                                        <button type="submit" class="btn py-3">Se connecter</button>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -99,11 +145,10 @@
     <!-- ========================================================================================================================================================================== -->
     <!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
-    <footer class="mt-5">
+    <footer>
         <div class="container-fluid">
             <div class="row justify-content-around my-4 mx-0">
-                <div class="col-12 col-md-6 col-xl-2 d-flex justify-content-md-center mb-4"
-                    id="informations">
+                <div class="col-12 col-md-6 col-xl-2 d-flex justify-content-md-center mb-4" id="informations">
                     <ul class="ms-3 ms-md-0">
                         <li class="fs-4 footerTitle mb-4">Informations</li>
                         <li class="my-2"><a href="./construction.html" class="footerAfter">Mentions légales</a></li>
@@ -123,8 +168,7 @@
                         <li class="my-3"><i class="bi bi-telephone me-2"></i>07.67.47.68.37</li>
                     </ul>
                 </div>
-                <div class="col-12 col-md-6 col-xl-2 d-flex justify-content-md-center mb-4"
-                    id="websiteNavigation">
+                <div class="col-12 col-md-6 col-xl-2 d-flex justify-content-md-center mb-4" id="websiteNavigation">
                     <ul class="ms-3 ms-md-0">
                         <li class="fs-4 footerTitle mb-4">L' Aura Natur'elle</li>
                         <li class="my-2"><a href="./index.html" class="footerAfter">Accueil</a></li>
@@ -168,20 +212,7 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.9/lottie.min.js"></script>
-    <script src="./public/assets/js/bootstrap.bundle.min.js"></script>
-
-    <script>
-        let container = document.getElementById('lottieContainer');
-
-        let animation = lottie.loadAnimation({
-            container: container,
-            renderer: 'svg',
-            loop: true,
-            autoplay: true,
-            path: './public/assets/json/flowers 2.json'
-        });
-    </script>
-
+    <script src="../public/assets/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

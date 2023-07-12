@@ -9,7 +9,7 @@
 .backLottie {
     width: 90%;
     height: 30vh;
-    background-image: url(../../img/background/bois.jpg);
+    background-image: url(../../img/backgrounds/bois.jpg);
     border: var(--border-special-strong-solid);
     box-shadow: var(--inset-shadow);
 }

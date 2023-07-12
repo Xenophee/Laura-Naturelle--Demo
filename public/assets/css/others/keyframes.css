@@ -9,3 +9,11 @@
         transform: translate(-100%);
     }
 }
+
+
+@keyframes titleAnimation {
+    to {
+        transform: initial;
+        opacity: 1;
+    }
+}

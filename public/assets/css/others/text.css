@@ -15,12 +15,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    background-color: var(--second-filter);
-    color: var(--first-color);
-    text-shadow: var(--text-shadow);
     font-size: 2.5rem;
     width: 100%;
     padding: 20px;
+    opacity: 0;
+    transform: translateY(100%);
+    animation: 0.9s titleAnimation cubic-bezier(0, 0.55, 0.45, 1) forwards;
+}
+
+.titleContainer {
+    width: 100%;
+    background-color: var(--main-filter-color);
+    color: var(--special-color);
+    border-top: var(--border-special-solid);
+    border-bottom: var(--border-special-solid);
+    box-shadow: var(--box-light-shadow);
+    text-shadow: var(--text-shadow);
 }
 
 a {

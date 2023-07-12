@@ -3,6 +3,10 @@
 /* BOUTONS CLASSIQUES */
 
 .btn {
+    font-size: 1.1rem;
+    position: relative;
+    width: 100%;
+    z-index: 0;
     background-color: var(--special-color);
     color: var(--main-color);
     font-weight: bold;
@@ -22,6 +26,12 @@
     color: var(--special-dark-color);
     border: var(--border-dark-special-solid);
 }
+
+.btn .bi {
+    font-size: 1.5rem;
+}
+
+
 
 
 /* ================================================================================================================================= */
@@ -47,12 +57,49 @@
 
 /* ================================================================================================================================= */
 /* --------------------------------------------------------------------------------------------------------------------------------- */
-/* BOUTONS POUR CHOISIR LA DIFFICULTÉ */
+/* RESPONSIVE */
+@media (min-width: 768px)  {
 
-.difficultyLink {
-    font-size: var(--font-medium-size);
+    .serviceBtn {
+        width: 100% !important;
+    }
+
+    .btn {
+        font-size: 1.2rem;
+        width: 300px;
+    }
+
+    .btn .bi {
+        font-size: 1.5rem;
+    }
 }
 
-.iconDifficultyBtn {
-    width: 20%;
+@media (min-width: 1200px) {
+
+    .btn {
+        width: 300px;
+    }
+
+    .serviceBtn {
+        font-size: 1rem;
+    }
+
+    .btn::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -0.5px;
+        height: 0;
+        width: 100%;
+        background: var(--special-dark-color);
+        border-radius: 5px;
+        opacity: 0;
+        transition: 0.7s ease-in-out;
+        z-index: -1;
+    }
+    
+    .btn:hover::before{
+        height: 100%;
+        opacity: 1;
+    }
 }

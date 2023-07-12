@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Petrona:wght@500&family=Sen&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../public/assets/bootstrap-icons-1.10.3/bootstrap-icons.css">
+    <link rel="stylesheet" href="../public/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/assets/css/main.css">
+    <meta name="description" content="">
+    <link rel="icon" type="image/png" href="">
+    <title>S'inscrire</title>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-dark mainNav navbar-expand-xl">
+            <div class="container-fluid">
+                <a class="navbar-brand d-flex align-items-center" href="../index.html"><img
+                        src="../public/assets/img/logo.png" alt="Logo" class="d-inline-block me-3">L'Aura Natur'elle</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end offcanvasColor" tabindex="-1" id="offcanvasDarkNavbar"
+                    aria-labelledby="offcanvasDarkNavbarLabel">
+                    <div class="offcanvas-header">
+                        <a class="navbar-brand offcanvas-title d-flex align-items-center" href="../index.html"
+                            id="offcanvasDarkNavbarLabel"><img src="../public/assets/img/logo.png" alt="Logo"
+                                class="d-inline-block me-3">L'Aura Natur'elle</a>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown mx-1 mx-xxl-3 my-2 my-xl-0">
+                                <a class="nav-link dropdown-toggle" href="../construction.html" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Prestations
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item py-3" href="../construction.html">Epilations</a></li>
+                                    <li><a class="dropdown-item py-3" href="../construction.html">Soins du visage</a>
+                                    </li>
+                                    <li><a class="dropdown-item py-3" href="../construction.html">Soins du corps</a>
+                                    </li>
+                                    <li><a class="dropdown-item py-3" href="../construction.html">Soins des mains</a>
+                                    </li>
+                                    <li><a class="dropdown-item py-3" href="../construction.html">Soins des pieds</a>
+                                    </li>
+                                    <li><a class="dropdown-item py-3" href="../construction.html">Modelage (Massage)</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item mx-1 mx-xxl-3 my-2 my-xl-0">
+                                <a class="nav-link hoverAfter" href="../construction.html">Prendre RDV</a>
+                            </li>
+                            <li class="nav-item mx-1 mx-xxl-3 my-2 my-xl-0">
+                                <a class="nav-link hoverAfter" href="../construction.html">Carte cadeaux</a>
+                            </li>
+                            <li class="nav-item mx-1 mx-xxl-3 my-2 my-xl-0">
+                                <a class="nav-link hoverAfter" href="../construction.html">Livre d'or</a>
+                            </li>
+                            <li class="nav-item mx-1 mx-xxl-3 my-2 my-xl-0">
+                                <a class="nav-link hoverAfter" href="../construction.html">Contact</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav justify-content-end flex-grow-1">
+                            <li class="nav-item mx-1 mx-xxl-3 my-2 my-xl-0">
+                                <a class="nav-link hoverAfter" href="../main/register.html">S'inscrire</a>
+                            </li>
+                            <li class="nav-item mx-1 mx-xxl-3 my-2 my-xl-0">
+                                <a class="nav-link connectionLink px-4" href="../main/connection.html">Se connecter</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ========================================================================================================================================================================== -->
+    <!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+    <main class="bg-leaf">
+        <div class="container-fluid px-0">
+            <section class="py-5">
+                <div class="titleContainer">
+                    <h1 class="text-center py-3">Créer un compte</h1>
+                </div>
+                
+                <form method="post" id="registerForm">
+                    <div class="row justify-content-evenly mt-5 mx-0">
+                        <div class="col-12 col-sm-11 col-md-9 col-lg-6 col-xxl-5">
+
+                            <fieldset class="blocForm d-flex flex-column justify-content-around py-3 py-md-5 px-3 px-sm-5">
+                                <legend class="text-center py-2 mb-4 mb-md-5">Informations obligatoires</legend>
+                                <div class="mb-4">
+                                    <label for="lastname" class="form-label">Nom * :</label>
+                                    <input type="text" class="form-control" id="lastname" name="lastname"
+                                        autocomplete="family-name" pattern="" value="" required>
+                                    <small class="text-danger fst-italic mt-2"></small>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="firstname" class="form-label">Prénom * :</label>
+                                    <input type="text" class="form-control" id="firstname" name="firstname"
+                                        autocomplete="given-name" pattern="" value="" required>
+                                    <small class="text-danger fst-italic mt-2"></small>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="adress" class="form-label">Adresse * :</label>
+                                    <input type="text" class="form-control" id="adress" name="adress"
+                                        autocomplete="" pattern="" value="" required>
+                                    <small class="text-danger fst-italic mt-2"></small>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="moreAdress" class="form-label">Complément d'adresse :</label>
+                                    <input type="text" class="form-control" id="moreAdress" name="moreAdress"
+                                        autocomplete="" pattern="" value="">
+                                    <small class="text-danger fst-italic mt-2"></small>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="zipCode" class="form-label">Code postal * :</label>
+                                    <input type="text" class="form-control" id="zipCode" name="zipCode"
+                                        autocomplete="" pattern="" value="" required>
+                                    <small class="text-danger fst-italic mt-2"></small>
+                                </div>
+                                <div>
+                                    <label for="city" class="form-label">Ville * :</label>
+                                    <input type="text" class="form-control" id="city" name="city"
+                                        autocomplete="" pattern="" value="" required>
+                                    <small class="text-danger fst-italic mt-2"></small>
+                                </div>
+                                
+                            </fieldset>
+                        </div>
+
+                        <div class="col-12 col-sm-11 col-md-9 col-lg-6 col-xxl-5 d-flex flex-column justify-content-between">
+                            <fieldset class="blocForm py-3 py-md-5 px-3 px-sm-5 mt-5 mt-xl-0">
+                                <legend class="text-center py-2 mb-4 mb-md-5">Informations de connexion</legend>
+                                <div class="mb-4">
+                                    <label for="email" class="form-label">Adresse mail * :</label>
+                                    <input type="email" class="form-control" id="email" name="email"
+                                        autocomplete="email" value="" required>
+                                    <small class="text-danger fst-italic mt-2"></small>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="password" class="form-label">Mot de passe * :</label>
+                                    <input type="password" class="form-control" id="password" name="password" value=""
+                                        required>
+                                    <small class="text-danger fst-italic password mt-2"></small>
+                                </div>
+                                <div>
+                                    <label for="confirmPassword" class="form-label">Confirmer le mot de passe *
+                                        :</label>
+                                    <input type="password" class="form-control" id="confirmPassword"
+                                        name="confirmPassword" value="" required>
+                                    <small class="text-danger fst-italic password mt-2"></small>
+                                </div>
+                            </fieldset>
+
+                            <fieldset class="blocForm py-3 py-md-5 px-3 px-sm-5 mt-5">
+                                <legend class="text-center py-2 mb-4 mb-md-5">Informations facultatives</legend>
+                                <div class="mb-4">
+                                    <label for="birthdate" class="form-label">Date de naissance :</label>
+                                    <input type="date" class="form-control" id="birthdate" name="birthdate"
+                                        autocomplete="bday" value="">
+                                    <small class="text-danger fst-italic mt-2"></small>
+                                </div>
+                                <div>
+                                    <label for="phone" class="form-label">Téléphone :</label>
+                                    <input type="text" class="form-control" id="phone" name="phone"
+                                        autocomplete="family-name" pattern="" value="">
+                                    <small class="text-danger fst-italic mt-2"></small>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+
+                    <!-- ======================================================================================================== -->
+                    <!-- -------------------------------------------------------------------------------------------------------- -->
+                    <!-- PARTIE VALIDATION -->
+                    <div class="row justify-content-evenly mt-5 mx-0">
+                        <div class="col-11 col-md-9 col-lg-6 col-xxl-9 blocForm py-3 py-md-5">
+                            <div class="form-check d-flex flex-wrap justify-content-center align-items-center py-md-4">
+                                <input type="checkbox" class="form-check-input" id="cguAcceptation" name="cgu"
+                                    value="1" required>
+                                <label class="form-check-label ps-md-3 mt-3 mt-md-0" for="cguAcceptation">J'accepte
+                                    les
+                                    conditions générales
+                                    d'utilisation *</label>
+                                <small class="text-danger fst-italic mb-4 mb-lg-0"></small>
+                            </div>
+    
+                            <div class="d-flex justify-content-center mt-md-5">
+                                <button type="submit" class="d-flex justify-content-center align-items-center btn py-3" id="confirmBtn"><i class="bi bi-check2-circle me-3"></i>Valider</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- ========================================================================================================================================================================== -->
+    <!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+    <footer>
+        <div class="container-fluid">
+            <div class="row justify-content-around my-4 mx-0">
+                <div class="col-12 col-md-6 col-xl-2 d-flex justify-content-md-center mb-4" id="informations">
+                    <ul class="ms-3 ms-md-0">
+                        <li class="fs-4 footerTitle mb-4">Informations</li>
+                        <li class="my-2"><a href="./construction.html" class="footerAfter">Mentions légales</a></li>
+                        <li class="my-2"><a href="./construction.html" class="footerAfter">Politiques de
+                                confidentialité</a></li>
+                        <li class="my-2"><a href="./construction.html" class="footerAfter">Cookies</a></li>
+                        <li class="my-2"><a href="./construction.html" class="footerAfter">C.G.U</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-xl-2 d-flex justify-content-md-center mb-4" id="contact">
+                    <ul class="ms-3 ms-md-0">
+                        <li class="fs-4 footerTitle mb-4">Contact</li>
+                        <li class="my-3"><i class="bi bi-geo-alt me-2"></i> 10 chemin de la Tombelle <br> 02100 Saint
+                            Quentin</li>
+                        <li class="my-3"><a href="mailto: esthetique@gmail.com"><i
+                                    class="bi bi-envelope-at me-2"></i>esthetique@gmail.com</a></li>
+                        <li class="my-3"><i class="bi bi-telephone me-2"></i>07.67.47.68.37</li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-xl-2 d-flex justify-content-md-center mb-4" id="websiteNavigation">
+                    <ul class="ms-3 ms-md-0">
+                        <li class="fs-4 footerTitle mb-4">L' Aura Natur'elle</li>
+                        <li class="my-2"><a href="./index.html" class="footerAfter">Accueil</a></li>
+                        <li class="my-2"><a href="./construction.html" class="footerAfter">Prestations</a></li>
+                        <li class="my-2"><a href="./construction.html" class="footerAfter">Prendre RDV</a></li>
+                        <li class="my-2"><a href="./construction.html" class="footerAfter">Carte cadeaux</a></li>
+                        <li class="my-2"><a href="./construction.html" class="footerAfter">Livre d'or</a></li>
+                        <li class="my-2"><a href="./construction.html" class="footerAfter">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-xl-2 d-flex justify-content-md-center mb-4" id="schedule">
+                    <ul class="ms-3 ms-md-0">
+                        <li class="fs-4 footerTitle mb-4">Horaires</li>
+                        <li class="my-2"><span>Lundi :</span> 10h-17h</li>
+                        <li class="my-2"><span>Mardi :</span> 10h-17h</li>
+                        <li class="my-2"><span>Mercredi :</span> Fermé</li>
+                        <li class="my-2"><span>Jeudi :</span> 10h-17h</li>
+                        <li class="my-2"><span>Vendredi :</span> 10h-17h</li>
+                        <li class="my-2"><span>Samedi :</span> 10h-17h</li>
+                        <li class="my-2"><span>Dimanche :</span> Fermé</li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-xl-2 d-flex justify-content-center align-items-center"
+                    id="socialNetwork">
+                    <ul class="d-flex flex-xl-column">
+                        <li class="me-5 me-xl-0 mb-xl-5"><a href="https://www.facebook.com/lauranaturellebioetvegan02"
+                                target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook"></i></a></li>
+                        <li><a href="http://" target="_blank" rel="noopener noreferrer"><i
+                                    class="bi bi-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row mx-0">
+                <div class="col d-flex flex-column justify-content-center align-items-center">
+                    <hr>
+                    <small class="text-center mb-4">© L'Aura Natur'elle 2023 - Tous droits réservés</small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.9/lottie.min.js"></script>
+    <script src="../public/assets/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -6,56 +6,26 @@ input[type="number"]::-webkit-outer-spin-button {
     margin: 0;
 }
 
+
+#registerForm .row {
+    width: 100%;
+}
+
 legend {
     font-family: var(--special-font);
+    color: var(--special-color);
+    border: var(--border-special-solid);
+    box-shadow: var(--box-light-shadow);
 }
 
+fieldset {
+    height: 100%;
+}
 
 .blocForm {
-    background-color: var(--second-color);
-    /* color: var(--main-color); */
-    border: var(--big-border-first-solid);
-    box-shadow: var(--box-light-shadow);
-}
-
-
-/* ================================================================================================================================= */
-/* --------------------------------------------------------------------------------------------------------------------------------- */
-/* INPUT FILE AVATAR */
-
-.avatarFile {
-    position: relative;
-    cursor: pointer;
-    width: 60%;
-    max-width: 150px;
-    border-radius: 50%;
-    border: var(--border-dark-special-dotted);
-    box-shadow: var(--box-light-shadow);
-}
-
-.avatarFile:hover {
-    animation: shadowAvatar 5s infinite;
-}
-
-.avatarImg:hover {
-    cursor: pointer;
-}
-
-.editAvatar {
-    position: absolute;
-    color: var(--special-dark-color);
-    font-size: 4rem;
-    cursor: pointer;
-    top: 50%; 
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    transition: all ease-in-out .3s;
-}
-
-.editAvatar:hover {
-    opacity: 1;
-    transition: all ease-in-out .3s;
+    background-color: var(--main-color);
+    border: var(--border-special-medium-solid);
+    box-shadow: var(--box-shadow);
 }
 
 
@@ -78,7 +48,7 @@ legend {
 }
 
 .form-control:focus, .form-select:focus {
-    border: var(--border-dark-special-solid);
+    border: var(--border-dark-special-medium-solid);
     box-shadow: none;
 }
 
@@ -90,19 +60,20 @@ legend {
 }
 
 .form-check-input:checked {
-    background-color: var(--special-color);
-    box-shadow: #647AA3 0 0 4px;
-    border: var(--border-second-dotted);
+    background-color: var(--special-dark-color);
+    box-shadow: #fb8bdb 0 0 4px;
+    border: var(--border-special-solid);
 }
 
 .form-check-input:focus {
-    box-shadow: #647AA3 0 0 4px;
-    border: var(--border-second-dotted);
+    box-shadow: #fb8bdb 0 0 4px;
+    border: var(--border-special-solid);
 }
 
 .forgotten {
     color: var(--special-color);
     text-decoration: underline;
+    transition: 0.7s;
 }
 
 .forgotten:hover {
@@ -116,32 +87,10 @@ legend {
 
 @media (min-width: 768px) and (max-width: 1200px)  {
 
-    .coverQcm {
-        width: 60%;
-    }
 }
 
 @media (min-width: 1200px) {
 
-    .addQcm {
-        width: 90%;
-    }
-
-    .coverQcm {
-        width: 30%;
-    }
-
-    .addAnswer {
-        width: 40%;
-        }
-}
-
-
-
-/* PARTIE LISTE UTILISATEURS */
-
-.profilImg {
-    width: 10px;
 }
 
 
