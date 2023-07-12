@@ -47,7 +47,7 @@ h2 {
 /* PRESENTATION */
 
 .carousel-item img {
-    height: 700px;
+    height: 400px;
     width: 500px;
     object-fit: cover;
     border-radius: 50px;
@@ -65,9 +65,8 @@ h2 {
 
 .textPresentation p {
     width: 100%;
-    /* background-color: var(--first-color); */
-    border: var(--border-first-medium-solid);
-    outline: var(--border-second-solid);
+    border: var(--border-special-strong-solid);
+    outline: var(--border-first-medium-solid);
     outline-offset: 15px;
     box-shadow: var(--inset-shadow);
 }
@@ -200,10 +199,10 @@ h2 {
 
     .textPresentation p {
         width: 70%;
-        border: var(--border-special-strong-solid);
-        outline: var(--border-second-solid);
-        outline-offset: 15px;
-        box-shadow: var(--inset-shadow);
+    }
+
+    .carousel-item img {
+        height: 700px;
     }
 
     /* ------------------------------------------------- */
@@ -269,6 +268,13 @@ h2 {
 
     h2 {
         width: 98%;
+    }
+
+    /* ------------------------------------------------- */
+
+    .carousel-item img {
+        height: 700px;
+        width: 500px;
     }
 
     /* ------------------------------------------------- */
