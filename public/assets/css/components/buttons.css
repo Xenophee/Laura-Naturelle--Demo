@@ -65,20 +65,15 @@
     }
 
     .btn {
-        font-size: 1.2rem;
-        width: 300px;
+        width: 250px;
     }
 
     .btn .bi {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 }
 
 @media (min-width: 1200px) {
-
-    .btn {
-        width: 300px;
-    }
 
     .serviceBtn {
         font-size: 1rem;
