@@ -7,3 +7,10 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+
+.bg-contact {
+    background-image: url(../../img/backgrounds/leafs11.avif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}

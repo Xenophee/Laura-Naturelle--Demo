@@ -34,7 +34,7 @@ fieldset {
 /* SPÉCIFIQUE */
 
 .form-select {
-    background-image: url(../img/icones/down.png);
+    background-image: url(../../img/down.png);
 }
 
 .form-control, .form-select {
