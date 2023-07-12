@@ -25,7 +25,6 @@ fieldset {
 .blocForm {
     background-color: var(--main-color);
     border: var(--border-special-medium-solid);
-    box-shadow: var(--box-shadow);
 }
 
 
