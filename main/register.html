@@ -91,26 +91,36 @@
                 <div class="titleContainer">
                     <h1 class="text-center py-3">Créer un compte</h1>
                 </div>
-                
+
                 <form method="post" id="registerForm">
                     <div class="row justify-content-evenly mt-5 mx-0">
                         <div class="col-12 col-sm-11 col-md-9 col-lg-6 col-xxl-5">
 
-                            <fieldset class="blocForm d-flex flex-column justify-content-around py-3 py-md-5 px-3 px-sm-5">
+                            <!-- ======================================================================================================== -->
+                            <!-- -------------------------------------------------------------------------------------------------------- -->
+                            <!-- INFORMATIONS OBLIGATOIRES -->
+
+                            <fieldset
+                                class="blocForm d-flex flex-column justify-content-around py-3 py-md-5 px-3 px-sm-5">
                                 <legend class="text-center py-2 mb-4 mb-md-5">Informations obligatoires</legend>
 
+                                <!-- ---------------------------------------------------- -->
+                                <!-- CIVILITE -->
                                 <label>Civilité * :</label>
                                 <div class="mt-2 mb-4 d-flex justify-content-around justify-content-sm-start">
                                     <div class="d-inline d-flex align-items-center me-3">
-                                        <input type="radio" name="civility" value="1" id="mr" class="form-check-input me-2" required>
+                                        <input type="radio" name="civility" value="1" id="mr"
+                                            class="form-check-input me-2" required>
                                         <label class="form-check-label" for="mr">M</label>
                                     </div>
                                     <div class="ps-3 d-inline d-flex align-items-center">
-                                        <input type="radio" name="civility" value="2" id="mrs" class="form-check-input me-2" required>
+                                        <input type="radio" name="civility" value="2" id="mrs"
+                                            class="form-check-input me-2" required>
                                         <label class="form-check-label" for="mrs">Mme</label>
                                     </div>
                                 </div>
 
+                                <!-- ---------------------------------------------------- -->
                                 <!-- NOM -->
                                 <div class="mb-4">
                                     <label for="lastname" class="form-label">Nom * :</label>
@@ -119,6 +129,7 @@
                                     <small class="text-danger fst-italic mt-2"></small>
                                 </div>
 
+                                <!-- ---------------------------------------------------- -->
                                 <!-- PRENOM -->
                                 <div class="mb-4">
                                     <label for="firstname" class="form-label">Prénom * :</label>
@@ -126,49 +137,75 @@
                                         autocomplete="given-name" pattern="" value="" required>
                                     <small class="text-danger fst-italic mt-2"></small>
                                 </div>
+
+                                <!-- ---------------------------------------------------- -->
+                                <!-- ADRESSE -->
                                 <div class="mb-4">
                                     <label for="adress" class="form-label">Adresse * :</label>
-                                    <input type="text" class="form-control" id="adress" name="adress"
-                                        autocomplete="" pattern="" value="" required>
+                                    <input type="text" class="form-control" id="adress" name="adress" autocomplete=""
+                                        pattern="" value="" required>
                                     <small class="text-danger fst-italic mt-2"></small>
                                 </div>
+
+                                <!-- ---------------------------------------------------- -->
+                                <!-- COMPLEMENT D'ADRESSE -->
                                 <div class="mb-4">
                                     <label for="moreAdress" class="form-label">Complément d'adresse :</label>
                                     <input type="text" class="form-control" id="moreAdress" name="moreAdress"
                                         autocomplete="" pattern="" value="">
                                     <small class="text-danger fst-italic mt-2"></small>
                                 </div>
+
+                                <!-- ---------------------------------------------------- -->
+                                <!-- CODE POSTAL -->
                                 <div class="mb-4">
                                     <label for="zipCode" class="form-label">Code postal * :</label>
-                                    <input type="text" class="form-control" id="zipCode" name="zipCode"
-                                        autocomplete="" pattern="" value="" required>
+                                    <input type="text" class="form-control" id="zipCode" name="zipCode" autocomplete=""
+                                        pattern="" value="" required>
                                     <small class="text-danger fst-italic mt-2"></small>
                                 </div>
+
+                                <!-- ---------------------------------------------------- -->
+                                <!-- VILLE -->
                                 <div>
                                     <label for="city" class="form-label">Ville * :</label>
-                                    <input type="text" class="form-control" id="city" name="city"
-                                        autocomplete="" pattern="" value="" required>
+                                    <input type="text" class="form-control" id="city" name="city" autocomplete=""
+                                        pattern="" value="" required>
                                     <small class="text-danger fst-italic mt-2"></small>
                                 </div>
-                                
+
                             </fieldset>
                         </div>
 
                         <div class="col-12 col-sm-11 col-md-9 col-lg-6 col-xxl-5 d-flex flex-column justify-content-between">
+
+                            <!-- ======================================================================================================== -->
+                            <!-- -------------------------------------------------------------------------------------------------------- -->
+                            <!-- INFORMATIONS DE CONNEXION -->
+
                             <fieldset class="blocForm py-3 py-md-5 px-3 px-sm-5 mt-5 mt-xl-0">
                                 <legend class="text-center py-2 mb-4 mb-md-5">Informations de connexion</legend>
+
+                                <!-- ---------------------------------------------------- -->
+                                <!-- ADRESSE MAIL -->
                                 <div class="mb-4">
                                     <label for="email" class="form-label">Adresse mail * :</label>
                                     <input type="email" class="form-control" id="email" name="email"
                                         autocomplete="email" value="" required>
                                     <small class="text-danger fst-italic mt-2"></small>
                                 </div>
+
+                                <!-- ---------------------------------------------------- -->
+                                <!-- MOT DE PASSE -->
                                 <div class="mb-4">
                                     <label for="password" class="form-label">Mot de passe * :</label>
                                     <input type="password" class="form-control" id="password" name="password" value=""
                                         required>
                                     <small class="text-danger fst-italic password mt-2"></small>
                                 </div>
+
+                                <!-- ---------------------------------------------------- -->
+                                <!-- CONFIRMATION MOT DE PASSE -->
                                 <div>
                                     <label for="confirmPassword" class="form-label">Confirmer le mot de passe *
                                         :</label>
@@ -178,14 +215,24 @@
                                 </div>
                             </fieldset>
 
+                            <!-- ======================================================================================================== -->
+                            <!-- -------------------------------------------------------------------------------------------------------- -->
+                            <!-- INFORMATIONS FACULTATIVES -->
+
                             <fieldset class="blocForm py-3 py-md-5 px-3 px-sm-5 mt-5">
                                 <legend class="text-center py-2 mb-4 mb-md-5">Informations facultatives</legend>
+
+                                <!-- ---------------------------------------------------- -->
+                                <!-- DATE DE NAISSANCE -->
                                 <div class="mb-4">
                                     <label for="birthdate" class="form-label">Date de naissance :</label>
                                     <input type="date" class="form-control" id="birthdate" name="birthdate"
                                         autocomplete="bday" value="">
                                     <small class="text-danger fst-italic mt-2"></small>
                                 </div>
+
+                                <!-- ---------------------------------------------------- -->
+                                <!-- TELEPHONE -->
                                 <div>
                                     <label for="phone" class="form-label">Téléphone :</label>
                                     <input type="text" class="form-control" id="phone" name="phone"
@@ -202,17 +249,18 @@
                     <div class="row justify-content-evenly mt-5 mx-0">
                         <div class="col-11 col-md-9 col-lg-6 col-xxl-9 blocForm py-3 py-md-5">
                             <div class="form-check d-flex flex-wrap justify-content-center align-items-center py-md-4">
-                                <input type="checkbox" class="form-check-input" id="cguAcceptation" name="cgu"
-                                    value="1" required>
+                                <input type="checkbox" class="form-check-input" id="cguAcceptation" name="cgu" value="1"
+                                    required>
                                 <label class="form-check-label ps-md-3 mt-3 mt-md-0" for="cguAcceptation">J'accepte
                                     les
                                     conditions générales
                                     d'utilisation *</label>
                                 <small class="text-danger fst-italic mb-4 mb-lg-0"></small>
                             </div>
-    
+
                             <div class="d-flex justify-content-center mt-md-5">
-                                <button type="submit" class="d-flex justify-content-center align-items-center btn py-3" id="confirmBtn"><i class="bi bi-check2-circle me-3"></i>Valider</button>
+                                <button type="submit" class="d-flex justify-content-center align-items-center btn py-3"
+                                    id="confirmBtn"><i class="bi bi-check2-circle me-3"></i>Valider</button>
                             </div>
                         </div>
                     </div>
