@@ -1,5 +1,9 @@
 # Laura-Naturelle--Demo
 
+La démo est en ligne : [ici](https://xenophee.github.io/Laura-Naturelle--Demo/)
+
+
+## Description du projet
 
 Site web en cours de développement pour une micro-entreprise d'esthétique.
 
