@@ -46,7 +46,11 @@ a {
     font-style: italic;
 }
 
-.spanColor {
+.text-green {
+    color: var(--third-color);
+}
+
+.text-brown {
     color: var(--brown-color);
 }
 
@@ -55,7 +59,7 @@ a {
 /* --------------------------------------------------------------------------------------------------------------------------------- */
 /* RESPONSIVE */
 
-@media (min-width: 768px) and (max-width: 1200px)  {
+@media (min-width: 768px) {
 
     h1 {
         font-size: 6rem;
