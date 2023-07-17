@@ -118,7 +118,7 @@
 
 .page-link.active {
     background-color: var(--special-dark-color);
-    border: var(--border-second-solid);
+    border: var(--border-light-solid);
     color: var(--main-color);
 }
 

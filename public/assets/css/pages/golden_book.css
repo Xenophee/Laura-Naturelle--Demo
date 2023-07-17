@@ -1,0 +1,103 @@
+
+
+.bg-book {
+    background-image: url(../../img/backgrounds/main.jpg);
+    background-attachment: fixed;
+}
+
+
+.backgroundBookTitle {
+    background-image: url(../../img/backgrounds/leafs11.avif);
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    background-attachment: fixed;
+    height: 55vh;
+    border-bottom: var(--border-first-solid);
+    box-shadow: var(--inset-shadow);
+}
+
+
+.bg-sectionBook {
+    background-color: var(--main-color);
+    border-left: var(--border-first-solid);
+    border-right: var(--border-first-solid);
+    /* width: 95%; */
+}
+
+#commentary {
+    height: 250px;
+}
+
+.commentarySpace {
+    border-right: var(--border-first-solid);
+}
+
+.comment, .hrBook {
+    width: 90%;
+}
+
+.comment {
+    background-image: url(../../img/backgrounds/leafs11.avif);
+    border: var(--border-light-green-solid);
+}
+
+.bi-person-circle {
+    font-size: 1.3rem;
+}
+
+.commentary {
+    background-color: var(--main-color);
+    border-radius: 10px;
+    box-shadow: var(--inset-shadow);
+}
+
+.commentContent {
+    height: 120px;
+    overflow-y: auto;
+    margin: 0;
+}
+
+.hrBook {
+    border: var(--border-light-green-solid);
+    opacity: 1;
+}
+
+.delete-comment {
+    background-color: transparent;
+    color: var(--special-color);
+    border: var(--border-special-solid);
+}
+
+
+
+
+/* ================================================================================================================================= */
+/* --------------------------------------------------------------------------------------------------------------------------------- */
+/* RESPONSIVE */
+
+@media (min-width: 768px)  {
+
+}
+
+@media (min-width: 1200px) {
+
+    .delete-comment::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: var(--danger-color);
+        border-bottom: var(--border-light-solid);
+        border-radius: 5px;
+        opacity: 0;
+        transform: scaleX(0);
+        transition: 0.7s ease-in-out;
+        z-index: -1;
+    }
+    
+    .delete-comment:hover::before{
+        transform: scaleX(1);
+        opacity: 1;
+    }
+}
