@@ -8,9 +8,20 @@
     background-attachment: fixed;
 }
 
-.bg-contact {
-    background-image: url(../../img/backgrounds/leafs11.avif);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+
+
+
+
+@media (min-width: 768px) {
+
+    .bg-contact {
+        background-image: url(../../img/backgrounds/leafs12.avif);
+        /* background-image: url(../../img/backgrounds/bois.jpg); */
+        background-size: cover;
+        background-repeat: no-repeat;
+        /* background-attachment: fixed; */
+        /* box-shadow: var(--inset-shadow); */
+        border: var(--border-first-solid);
+    }
+
 }
