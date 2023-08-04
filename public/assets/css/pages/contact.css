@@ -8,7 +8,15 @@
     background-attachment: fixed;
 }
 
-
+.backgroundTitle {
+    background-image: url(../../img/backgrounds/leafs4.jpg);
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    background-attachment: fixed;
+    height: 55vh;
+    border-bottom: var(--border-first-solid);
+    box-shadow: var(--inset-shadow);
+}
 
 
 
@@ -19,6 +27,7 @@
         /* background-image: url(../../img/backgrounds/bois.jpg); */
         background-size: cover;
         background-repeat: no-repeat;
+        background-position: center;
         /* background-attachment: fixed; */
         /* box-shadow: var(--inset-shadow); */
         border: var(--border-first-solid);
