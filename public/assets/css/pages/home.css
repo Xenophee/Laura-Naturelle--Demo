@@ -8,7 +8,7 @@
     box-shadow: var(--inset-shadow);
 }
 
-h2 {
+.section-title {
     width: 95%;
     background-color: var(--main-color);
     color: var(--brown-color);
