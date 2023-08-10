@@ -28,6 +28,7 @@
     --font-tall-size: 2rem;
 
     --border-light-green-solid: var(--light-green) 1px solid;
+    --border-light-green-medium-solid: var(--light-green) 2px solid;
     --border-light-solid: var(--main-color) 1px solid;
     
     --border-second-solid: var(--second-color) 3px solid;
