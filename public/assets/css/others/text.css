@@ -14,6 +14,15 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--special-font);
 }
 
+
+a {
+    text-decoration: none;
+}
+
+/* ================================================================================================================================= */
+/* --------------------------------------------------------------------------------------------------------------------------------- */
+/* H1 */
+
 h1 {
     font-size: 2.5rem;
     width: 100%;
@@ -33,10 +42,15 @@ h1 {
     text-shadow: var(--text-shadow);
 }
 
-a {
-    text-decoration: none;
+.backgroundTitle {
+    background-image: url(../../img/backgrounds/leafs4.jpg);
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    background-attachment: fixed;
+    height: 35vh;
+    border-bottom: var(--border-first-solid);
+    box-shadow: var(--inset-shadow);
 }
-
 
 /* ================================================================================================================================= */
 /* --------------------------------------------------------------------------------------------------------------------------------- */
@@ -115,6 +129,10 @@ a {
         font-size: 6rem;
     }
 
+    .backgroundTitle {
+        height: 30vh;
+    }
+
     .category-title {
         position: relative;
         color: var(--brown-color);
@@ -128,5 +146,9 @@ a {
 
     h1 {
         font-size: 7rem;
+    }
+
+    .backgroundTitle {
+        height: 55vh;
     }
 }
