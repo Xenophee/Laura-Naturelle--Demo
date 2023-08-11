@@ -6,6 +6,13 @@
 }
 
 
+.new-service {
+    color: var(--brown-color);
+    font-size: 1rem;
+    font-family: var(--special-font);
+}
+
+
 .service-img {
     height: 400px;
     width: 100%;
@@ -73,7 +80,7 @@
         position: absolute;
         transform: translate(-50%, -50%);
         height: 3px;
-        width: 15%;
+        width: 25%;
         background-color: var(--light-green);
         top: 120%;
         left: 20%;
@@ -84,7 +91,7 @@
         position: absolute;
         transform: translate(-50%, -50%);
         height: 3px;
-        width: 15%;
+        width: 25%;
         background-color: var(--light-green);
         top: 120%;
         left: 80%;
@@ -123,6 +130,16 @@
 
 
 @media (min-width: 1200px) {
+
+    .service-text::before {
+        height: 3px;
+        width: 15%;
+    }
+
+    .service-text::after {
+        height: 3px;
+        width: 15%;
+    }
 
     .service-row {
         margin-left: 40px !important;
