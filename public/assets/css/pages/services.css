@@ -33,11 +33,11 @@
 .service-title::after {
     content: '';
     position: absolute;
-    height: 3px;
+    height: 4px;
     width: 80px;
     left: 0%;
     top: 100%;
-    border: var(--border-first-medium-solid);
+    background-color: var(--second-color);
 }
 
 .new-service {
