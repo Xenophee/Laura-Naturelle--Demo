@@ -1,31 +1,15 @@
 
 
-
-
-.category-title {
+.service-text {
+    font-size: 1.4rem;
     position: relative;
-    color: var(--brown-color);
-    font-weight: bold;
-    font-size: 3rem;
-}
-
-.category-title::after {
-    content: '';
-    position: absolute;
-    height: 3px;
-    width: 50%;
-    left: 50%;
-    top: 100%;
-    border: var(--border-first-medium-solid);
-    transform: translate(-50%, -50%);
 }
 
 
 .service-img {
-    height: 100%;
+    height: 400px;
     width: 100%;
     object-fit: cover;
-    /* border: var(--border-light-green-medium-solid); */
 }
 
 .service {
@@ -59,6 +43,7 @@
     font-size: 1.2rem;
     height: 35px;
     width: 100%;
+    border-radius: 5px;
 }
 
 .time {
@@ -68,9 +53,11 @@
     font-size: 1.1rem;
     height: 35px;
     width: 100%;
+    border-radius: 5px;
 }
 
-.time-badge, .price-badge {
+.time-badge,
+.price-badge {
     width: 100%;
 }
 
@@ -81,17 +68,56 @@
 
 @media (min-width: 758px) {
 
+    .service-text::before {
+        content: '';
+        position: absolute;
+        transform: translate(-50%, -50%);
+        height: 3px;
+        width: 15%;
+        background-color: var(--light-green);
+        top: 120%;
+        left: 20%;
+    }
+
+    .service-text::after {
+        content: '';
+        position: absolute;
+        transform: translate(-50%, -50%);
+        height: 3px;
+        width: 15%;
+        background-color: var(--light-green);
+        top: 120%;
+        left: 80%;
+    }
+
     .service {
         height: 100%;
     }
 
-    .time, .price {
+    .main-service {
+        height: auto;
+    }
+
+    .service-img {
+        height: 100%;
+    }
+
+    .time,
+    .price {
         width: 100%;
     }
 
-    .time-badge, .price-badge {
+    .time-badge,
+    .price-badge {
         width: auto;
     }
+
+    .line {
+        height: 3px;
+        width: 20%;
+        background-color: var(--special-color);
+    }
+
 }
 
 
@@ -99,11 +125,25 @@
 @media (min-width: 1200px) {
 
     .service-row {
-        margin-left: 80px !important;
-        margin-right: 80px !important;
+        margin-left: 40px !important;
+        margin-right: 40px !important;
     }
 
-    .time, .price {
+    .service-img {
+        height: 530px;
+    }
+
+    .time,
+    .price {
         width: auto;
+    }
+}
+
+
+@media (min-width: 1400px) {
+
+    .service-row {
+        margin-left: 80px !important;
+        margin-right: 80px !important;
     }
 }

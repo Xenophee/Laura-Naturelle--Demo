@@ -13,7 +13,7 @@
     /* background-repeat: no-repeat; */
     background-size: cover;
     background-attachment: fixed;
-    height: 55vh;
+    height: 35vh;
     border-bottom: var(--border-first-solid);
     box-shadow: var(--inset-shadow);
 }
@@ -31,6 +31,20 @@
         /* background-attachment: fixed; */
         /* box-shadow: var(--inset-shadow); */
         border: var(--border-first-solid);
+    }
+
+    .backgroundTitle {
+        height: 30vh;
+    }
+
+}
+
+
+
+@media (min-width: 1200px) {
+
+    .backgroundTitle {
+        height: 55vh;
     }
 
 }
