@@ -12,6 +12,11 @@
     height: 7vh;
 }
 
+hr {
+    border: var(--border-light-green-medium-solid);
+    width: 70%;
+}
+
 
 
 /* ================================================================================================================================= */
@@ -23,6 +28,12 @@
     .separator {
         height: 6vh;
     }
+
+    .line {
+        height: 3px;
+        width: 20%;
+        background-color: var(--special-color);
+    }
 }
 
 
@@ -31,4 +42,5 @@
     .separator {
         height: 5vh;
     }
+    
 }

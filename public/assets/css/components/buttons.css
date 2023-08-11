@@ -18,7 +18,7 @@
     border: var(--border-light-solid);
 }
 
-.btn-classic:hover {
+.btn-classic:hover, .btn-outline:hover {
     background-color: var(--special-dark-color);
     color: var(--main-color);
     border: var(--border-light-solid);
@@ -27,7 +27,7 @@
 .btn-outline {
     background-color: transparent;
     color: var(--special-dark-color);
-    border: var(--border-dark-special-solid);
+    border: var(--border-dark-special-medium-solid);
 }
 
 .btn .bi {
@@ -83,7 +83,7 @@
         width: 100% !important;
     }
 
-    .btn.btn-classic {
+    .btn.btn-classic, .btn-outline {
         width: 250px;
     }
 
@@ -102,7 +102,7 @@
         font-size: 1rem;
     }
 
-    .btn-classic::before {
+    .btn-classic::before, .btn-outline:before {
         content: '';
         position: absolute;
         left: 0;
@@ -117,7 +117,7 @@
         z-index: -1;
     }
     
-    .btn-classic:hover::before{
+    .btn-classic:hover::before, .btn-outline:hover::before {
         height: 100%;
         opacity: 1;
     }
