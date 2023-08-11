@@ -79,7 +79,7 @@
 
 @media (min-width: 768px)  {
 
-    .serviceBtn {
+    .btn-services {
         width: 100% !important;
     }
 
@@ -98,7 +98,7 @@
 
 @media (min-width: 1200px) {
 
-    .serviceBtn {
+    .btn-services {
         font-size: 1rem;
     }
 

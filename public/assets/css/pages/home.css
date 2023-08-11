@@ -72,42 +72,6 @@
 }
 
 
-/* ================================================================================================================================= */
-/* --------------------------------------------------------------------------------------------------------------------------------- */
-/* PRESTATIONS */
-
-#services {
-    background-image: url(../../img/backgrounds/bois.jpg);
-    box-shadow: var(--inset-shadow);
-}
-
-.colServices {
-    background-image: url(../../img/backgrounds/main.jpg);
-    border: var(--border-special-solid);
-    box-shadow: var(--box-shadow);
-}
-
-.services {
-    background-color: var(--main-color);
-    border: var(--border-special-solid);
-    box-shadow: var(--box-light-shadow);
-}
-
-.services h3 {
-    background-color: var(--third-color);
-    color: var(--main-color);
-    padding: 10px 0px 10px;
-    box-shadow: var(--inset-shadow);
-    text-shadow: var(--text-shadow);
-}
-
-.services img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-
 
 /* ================================================================================================================================= */
 /* --------------------------------------------------------------------------------------------------------------------------------- */
@@ -205,20 +169,7 @@
         height: 700px;
     }
 
-    /* ------------------------------------------------- */
-
-    .services img {
-        height: 50%;
-    }
-
-    .contentService {
-        height: 400px;
-    }
-
-    .contentService div {
-        height: 50%;
-    }
-
+    
     /* ------------------------------------------------- */
 
     #map {
@@ -275,22 +226,6 @@
     .carousel-item img {
         height: 700px;
         width: 500px;
-    }
-
-    /* ------------------------------------------------- */
-
-    .contentService {
-        height: 230px;
-    }
-
-    .services img {
-        width: 50%;
-        height: 100%;
-    }
-
-    .contentService div {
-        width: 50%;
-        height: 100%;
     }
 
     /* ------------------------------------------------- */

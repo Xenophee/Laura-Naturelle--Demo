@@ -24,12 +24,17 @@ a {
 /* H1 */
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     width: 100%;
     padding: 20px;
+    margin: 0;
     opacity: 0;
     transform: translateY(100%);
     animation: 0.9s titleAnimation cubic-bezier(0, 0.55, 0.45, 1) forwards;
+}
+
+.index-title {
+    font-size: 2.5rem;
 }
 
 .titleContainer {
@@ -39,7 +44,7 @@ h1 {
     border-top: var(--border-special-solid);
     border-bottom: var(--border-special-solid);
     box-shadow: var(--box-light-shadow);
-    text-shadow: var(--text-shadow);
+    text-shadow: var(--text-light-shadow);
 }
 
 .backgroundTitle {
@@ -123,9 +128,13 @@ h1 {
 /* --------------------------------------------------------------------------------------------------------------------------------- */
 /* RESPONSIVE */
 
+
+/* -------------------------------------------- */
+/* TABLETTE */
+
 @media (min-width: 768px) {
 
-    h1 {
+    h1, .index-title {
         font-size: 6rem;
     }
 
@@ -142,9 +151,12 @@ h1 {
 }
 
 
+/* -------------------------------------------- */
+/* GRAND ECRAN */
+
 @media (min-width: 1200px) {
 
-    h1 {
+    h1, .index-title {
         font-size: 7rem;
     }
 
