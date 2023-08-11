@@ -1,40 +1,23 @@
 
 
-.bg-leaf {
-    /* 11, 7, 4 */
-    background-image: url(../../img/backgrounds/leafs4.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-.backgroundTitle {
-    background-image: url(../../img/backgrounds/leafs4.jpg);
-    /* background-repeat: no-repeat; */
-    background-size: cover;
-    background-attachment: fixed;
-    height: 35vh;
-    border-bottom: var(--border-first-solid);
-    box-shadow: var(--inset-shadow);
-}
-
-
-
 @media (min-width: 768px) {
 
-    .bg-contact {
-        background-image: url(../../img/backgrounds/leafs12.avif);
-        /* background-image: url(../../img/backgrounds/bois.jpg); */
+    .bg-contact-left {
+        background-image: url(../../img/illustrations/top-view-assortment-make-up-beauty-products.jpg);
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: center;
-        /* background-attachment: fixed; */
-        /* box-shadow: var(--inset-shadow); */
+        background-position: left;
+        box-shadow: var(--inset-shadow);
         border: var(--border-first-solid);
     }
 
-    .backgroundTitle {
-        height: 30vh;
+    .bg-contact-right {
+        background-image: url(../../img/illustrations/top-view-assortment-make-up-beauty-products.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: right;
+        box-shadow: var(--inset-shadow);
+        border: var(--border-first-solid);
     }
 
 }
@@ -43,8 +26,6 @@
 
 @media (min-width: 1200px) {
 
-    .backgroundTitle {
-        height: 55vh;
-    }
+    
 
 }

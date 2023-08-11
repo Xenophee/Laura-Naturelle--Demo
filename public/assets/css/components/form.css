@@ -12,11 +12,12 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 legend {
-    background-image: url(../../img/backgrounds/bois.jpg);
+    /* background-image: url(../../img/backgrounds/bois.jpg); */
+    background-color: var(--special-dark-color);
     font-family: var(--special-font);
     font-size: 1.7rem;
     color: var(--main-color);
-    border: var(--border-brown-solid);
+    border: var(--border-light-solid);
     box-shadow: var(--box-light-shadow);
 }
 

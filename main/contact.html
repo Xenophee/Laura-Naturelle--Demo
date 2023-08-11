@@ -82,93 +82,101 @@
                     </div>
                 </div>
 
+                                <!-- TITRE CATEGORIE -->
+                <!-- ------------------------------------------------------------------------------------------------------------------------------ -->
+                <div class="row mx-0 px-md-5 pb-3 pb-md-5 my-md-5">
+                    <div class="col">
+                        <h2 class="category-title text-center py-4 mb-5">Des questions ? N’hésitez pas à contacter L’Aura Natur’elle !</h2>
+                        <p class="service-text text-center pt-md-5 mt-md-5">Vous recevrez une réponse dans les 24h qui suivent.</p>
+                    </div>
+                </div>
+                <!-- ------------------------------------------------------------------------------------------------------------------------------ -->
+
+
                 <div class="row justify-content-around mx-0 py-md-5 mt-5">
                     
-                    <div class="col-12 col-md-1 col-xl-2 bg-contact"></div>
+                    <div class="col-12 col-md-1 col-xl-2 bg-contact-left"></div>
 
                     <div class="col-12 col-sm-11 col-md-7 col-lg-7 col-xxl-5">
-                        <div>
-                            <form action="" method="post">
-                                <fieldset class="">
-                                    <legend class="text-center py-2 mb-5">Envoyer un message</legend>
+                        <form method="POST">
+                            <fieldset class="">
+                                <legend class="text-center py-2 mb-5">Envoyer un message</legend>
 
-                                    <!-- ---------------------------------------------------- -->
-                                    <!-- CIVILITE -->
-                                    <label>Civilité * :</label>
-                                    <div class="mt-2 mb-4 d-flex justify-content-around justify-content-sm-start">
-                                        <div class="d-inline d-flex align-items-center me-3">
-                                            <input type="radio" name="civility" value="1" id="mr"
-                                                class="form-check-input me-2" required>
-                                            <label class="form-check-label" for="mr">M</label>
-                                        </div>
-                                        <div class="ps-3 d-inline d-flex align-items-center">
-                                            <input type="radio" name="civility" value="2" id="mrs"
-                                                class="form-check-input me-2" required>
-                                            <label class="form-check-label" for="mrs">Mme</label>
-                                        </div>
+                                <!-- ---------------------------------------------------- -->
+                                <!-- CIVILITE -->
+                                <label>Civilité * :</label>
+                                <div class="mt-2 mb-4 d-flex justify-content-around justify-content-sm-start">
+                                    <div class="d-inline d-flex align-items-center me-3">
+                                        <input type="radio" name="civility" value="1" id="mr"
+                                            class="form-check-input me-2" required>
+                                        <label class="form-check-label" for="mr">M</label>
                                     </div>
-
-                                    <!-- ---------------------------------------------------- -->
-                                    <!-- NOM -->
-                                    <div class="mb-4">
-                                        <label for="lastname" class="form-label">Nom * :</label>
-                                        <input type="text" class="form-control" id="lastname" name="lastname"
-                                            autocomplete="family-name" pattern="" value="" required>
-                                        <small class="text-danger fst-italic mt-2"></small>
+                                    <div class="ps-3 d-inline d-flex align-items-center">
+                                        <input type="radio" name="civility" value="2" id="mrs"
+                                            class="form-check-input me-2" required>
+                                        <label class="form-check-label" for="mrs">Mme</label>
                                     </div>
+                                </div>
 
-                                    <!-- ---------------------------------------------------- -->
-                                    <!-- PRENOM -->
-                                    <div class="mb-4">
-                                        <label for="firstname" class="form-label">Prénom * :</label>
-                                        <input type="text" class="form-control" id="firstname" name="firstname"
-                                            autocomplete="given-name" pattern="" value="" required>
-                                        <small class="text-danger fst-italic mt-2"></small>
-                                    </div>
+                                <!-- ---------------------------------------------------- -->
+                                <!-- NOM -->
+                                <div class="mb-4">
+                                    <label for="lastname" class="form-label">Nom * :</label>
+                                    <input type="text" class="form-control" id="lastname" name="lastname"
+                                        autocomplete="family-name" pattern="" value="" required>
+                                    <small class="text-danger fst-italic mt-2"></small>
+                                </div>
 
-                                    <!-- ---------------------------------------------------- -->
-                                    <!-- ADRESSE MAIL -->
-                                    <div class="mb-4">
-                                        <label for="email" class="form-label">Adresse mail * :</label>
-                                        <input type="email" class="form-control" id="email" name="email"
-                                            aria-describedby="emailHelp" autocomplete="email" required>
-                                    </div>
+                                <!-- ---------------------------------------------------- -->
+                                <!-- PRENOM -->
+                                <div class="mb-4">
+                                    <label for="firstname" class="form-label">Prénom * :</label>
+                                    <input type="text" class="form-control" id="firstname" name="firstname"
+                                        autocomplete="given-name" pattern="" value="" required>
+                                    <small class="text-danger fst-italic mt-2"></small>
+                                </div>
 
-                                    <!-- ---------------------------------------------------- -->
-                                    <!-- OBJET -->
-                                    <div class="mb-4">
-                                        <label for="object" class="form-label mb-2">Objet * :</label>
-                                        <select class="form-select" id="object" name="object" required>
-                                            <option value="" selected>-</option>
-                                            <option value="1">Problème d'inscription ou de connexion au compte</option>
-                                            <option value="2">Problème sur la prise de rendez-vous</option>
-                                            <option value="3">Question / demande sur une prestation</option>
-                                            <option value="4">Question / demande sur les cartes cadeaux</option>
-                                            <option value="5">Autre</option>
-                                        </select>
-                                    </div>
+                                <!-- ---------------------------------------------------- -->
+                                <!-- ADRESSE MAIL -->
+                                <div class="mb-4">
+                                    <label for="email" class="form-label">Adresse mail * :</label>
+                                    <input type="email" class="form-control" id="email" name="email"
+                                        aria-describedby="emailHelp" autocomplete="email" required>
+                                </div>
 
-                                    <!-- ---------------------------------------------------- -->
-                                    <!-- MESSAGE -->
-                                    <div class="mt-4 mb-5">
-                                        <label for="requestMessage" class="form-label">Votre message * :</label>
-                                        <textarea class="form-control" id="requestMessage" name="requestMessage"
-                                            required></textarea>
-                                    </div>
+                                <!-- ---------------------------------------------------- -->
+                                <!-- OBJET -->
+                                <div class="mb-4">
+                                    <label for="object" class="form-label mb-2">Objet * :</label>
+                                    <select class="form-select" id="object" name="object" required>
+                                        <option value="" selected>-</option>
+                                        <option value="1">Question / demande sur une prestation</option>
+                                        <option value="2">Question / demande sur les cartes cadeaux</option>
+                                        <option value="3">Problème technique sur le site</option>
+                                        <option value="4">Autre</option>
+                                    </select>
+                                </div>
 
-                                    <!-- ---------------------------------------------------- -->
-                                    <!-- BOUTON -->
-                                    <div class="d-flex justify-content-center">
-                                        <button type="submit" class="btn btn-classic d-flex justify-content-center align-items-center py-2"><i
-                                                class="bi bi-envelope me-3"></i>Envoyer</button>
-                                    </div>
+                                <!-- ---------------------------------------------------- -->
+                                <!-- MESSAGE -->
+                                <div class="mt-4 mb-5">
+                                    <label for="requestMessage" class="form-label">Votre message * :</label>
+                                    <textarea class="form-control" id="requestMessage" name="requestMessage"
+                                        required></textarea>
+                                </div>
 
-                                </fieldset>
-                            </form>
-                        </div>
+                                <!-- ---------------------------------------------------- -->
+                                <!-- BOUTON -->
+                                <div class="d-flex justify-content-center">
+                                    <button type="submit" class="btn btn-classic d-flex justify-content-center align-items-center py-2"><i
+                                            class="bi bi-envelope me-3"></i>Envoyer</button>
+                                </div>
+
+                            </fieldset>
+                        </form>
                     </div>
 
-                    <div class="col-12 col-md-1 col-xl-2 bg-contact"></div>
+                    <div class="col-12 col-md-1 col-xl-2 bg-contact-right"></div>
                 </div>
             </section>
 
