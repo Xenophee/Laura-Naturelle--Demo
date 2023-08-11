@@ -209,7 +209,7 @@ footer hr {
         color: var(--main-color);
     }
 
-    .hoverAfter::after {
+    .header-link::after {
         content: '';
         position: absolute;
         left: 0;
@@ -221,7 +221,7 @@ footer hr {
         transition: .5s;
     }
 
-    .hoverAfter:hover::after {
+    .header-link:hover::after {
         transform: scaleX(1);
     }
 
@@ -269,11 +269,11 @@ footer hr {
 
     /* --------------------------------------------------------- */
 
-    .footerAfter {
+    .footer-link {
         position: relative;
     }
 
-    .footerAfter::after {
+    .footer-link::after {
         content: '';
         position: absolute;
         left: 0;
@@ -285,7 +285,7 @@ footer hr {
         transition: .5s;
     }
 
-    .footerAfter:hover::after {
+    .footer-link:hover::after {
         transform: scaleX(1);
     }
 }
