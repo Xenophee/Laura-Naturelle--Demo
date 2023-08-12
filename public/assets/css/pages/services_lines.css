@@ -1,0 +1,100 @@
+
+
+
+
+
+
+.services-line-img {
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.service-line {
+    border-bottom: var(--border-third-medium-solid);
+}
+
+.service-line-odd {
+    border-bottom: var(--border-light-green-medium-solid);
+}
+
+.service-line p, .service-line-odd p {
+    margin: 0;
+}
+
+.main-service-div {
+    width: 90%;
+}
+
+.main-service-div .sideline-title {
+    font-size: 1.7rem;
+}
+
+.main-service-div .new-service {
+    font-size: 1.2rem;
+}
+
+.badges-div {
+    width: 90%;
+}
+
+
+
+
+
+/* ================================================================================================================================= */
+/* --------------------------------------------------------------------------------------------------------------------------------- */
+/* RESPONSIVE */
+
+
+/* -------------------------------------------- */
+/* TABLETTE */
+
+@media (min-width: 758px) {
+
+    .main-service-div {
+        width: 60%;
+    }
+
+    .main-service-div .sideline-title {
+        font-size: 1.5rem;
+    }
+
+    .badges-div {
+        width: 20%;
+        height: 100%;
+    }
+
+}
+
+
+/* -------------------------------------------- */
+/* GRAND ECRAN */
+
+@media (min-width: 1200px) {
+
+    .main-service-div {
+        width: 55%;
+    }
+
+    .badges-div {
+        width: 35%;
+    }
+
+}
+
+
+/* -------------------------------------------- */
+/* TRES GRAND ECRAN */
+
+@media (min-width: 1400px) {
+
+    .main-service-div {
+        width: 60%;
+    }
+
+    .badges-div {
+        width: 25%;
+    }
+
+}
