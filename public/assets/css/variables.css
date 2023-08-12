@@ -29,11 +29,15 @@
 
     --border-light-green-solid: var(--light-green) 1px solid;
     --border-light-green-medium-solid: var(--light-green) 2px solid;
+    --border-light-green-strong-solid: var(--light-green) 4px solid;
     --border-light-solid: var(--main-color) 1px solid;
     
     --border-second-solid: var(--second-color) 3px solid;
 
+    --border-third-medium-solid: var(--third-color) 2px solid;
+
     --border-brown-solid: var(--brown-color) 1px solid;
+    --border-brown-medium-solid: var(--brown-color) 3px solid;
 
     --border-special-solid: var(--special-color) 1px solid;
     --border-special-medium-solid: var(--special-color) 3px solid;

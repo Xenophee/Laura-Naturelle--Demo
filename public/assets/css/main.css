@@ -12,6 +12,7 @@
 
 @import url('./components/buttons.css');
 @import url('./components/form.css');
+@import url('./components/logos.css');
 @import url('./components/modal.css');
 @import url('./components/navigation.css');
 @import url('./components/others.css');
@@ -25,8 +26,10 @@
 
 /* @import url('./pages/account.css'); */
 @import url('./pages/appointment.css');
+@import url('./pages/index.css');
 @import url('./pages/home.css');
-@import url('./pages/services.css');
+@import url('./pages/services_grid.css');
+@import url('./pages/services_lines.css');
 @import url('./pages/contact.css');
 @import url('./pages/construction.css');
 @import url('./pages/services_categories.css');

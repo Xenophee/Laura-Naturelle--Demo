@@ -3,10 +3,10 @@
 @media (min-width: 768px) {
 
     .bg-contact-left {
-        background-image: url(../../img/illustrations/top-view-assortment-make-up-beauty-products.jpg);
+        background-image: url(../../img/illustrations/beautiful-spa-composition-massage-table-wellness-center-copyspace.jpg);
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: left;
+        background-position: right;
         box-shadow: var(--inset-shadow);
         border: var(--border-first-solid);
     }

@@ -85,9 +85,9 @@ h1 {
 
 /* ================================================================================================================================= */
 /* --------------------------------------------------------------------------------------------------------------------------------- */
-/* H3 */
+/* H3, H4 */
 
-.underline-title {
+.underline-title, .sideline-title, .subtitle {
     position: relative;
     color: var(--second-color);
 }
@@ -102,6 +102,32 @@ h1 {
     background-color: var(--second-color);
 }
 
+.sideline-title::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 3px;
+    left: -10px;
+    top: 0%;
+    background-color: var(--brown-color);
+}
+
+.subtitle {
+    font-size: 2.2rem;
+}
+
+.subtitle::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 75%;
+    left: 50%;
+    top: 105%;
+    height: 5px;
+    background-color: var(--brown-color);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
 
 /* ================================================================================================================================= */
 /* --------------------------------------------------------------------------------------------------------------------------------- */
@@ -148,6 +174,10 @@ h1 {
         font-weight: bold;
         font-size: 3rem;
     }
+
+    .subtitle::after {
+        width: 40%;
+    }
 }
 
 
@@ -162,5 +192,9 @@ h1 {
 
     .backgroundTitle {
         height: 55vh;
+    }
+
+    .subtitle::after {
+        width: 30%;
     }
 }
