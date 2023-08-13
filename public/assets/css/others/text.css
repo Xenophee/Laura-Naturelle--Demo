@@ -206,10 +206,22 @@ h1 {
     }
 
     .background-title, .background-main-title {
-        height: 55vh;
+        height: 60vh;
     }
 
     .subtitle::after {
         width: 30%;
+    }
+}
+
+
+
+/* -------------------------------------------- */
+/* TRES GRAND ECRAN */
+
+@media (min-width: 1200px) {
+
+    .background-title, .background-main-title {
+        height: 55vh;
     }
 }
