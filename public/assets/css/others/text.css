@@ -219,7 +219,7 @@ h1 {
 /* -------------------------------------------- */
 /* TRES GRAND ECRAN */
 
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
 
     .background-title, .background-main-title {
         height: 55vh;
