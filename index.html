@@ -62,7 +62,7 @@
                         </ul>
                         <ul class="navbar-nav justify-content-end flex-grow-1">
                             <li class="nav-item mx-1 mx-xxl-3 my-2 my-xl-0">
-                                <a class="nav-link dashboardLink px-4" href="./construction.html">Dashboard</a>
+                                <a class="nav-link dashboardLink px-4" href="./dashboard/dashboard.html">Dashboard</a>
                             </li>
                         </ul>
                     </div>
@@ -76,8 +76,8 @@
 
     <main>
         <div class="container-fluid px-0">
-            <div class="backgroundMainTitle d-flex align-items-center">
-                <div class="titleContainer shadow-lg">
+            <div class="background-main-title d-flex align-items-center">
+                <div class="title-container">
                     <h1 class="index-title text-center py-3">L'AURA NATUR'ELLE</h1>
                 </div>
             </div>
@@ -87,11 +87,9 @@
 
             <section class="" id="announcement">
                 <div class="row mx-0 annoucementContent">
-                    <div class="col d-flex flex-wrap justify-content-center align-items-center ">
-                        <div class="me-xl-5" id="lottieAnnouncement">
-
-                        </div>
-                        <p class="d-flex flex-wrap justify-content-center align-items-center"><span
+                    <div class="col d-flex flex-wrap justify-content-center align-items-center">
+                        <i class="bi bi-megaphone-fill announcement-icon"></i>
+                        <p class="d-flex flex-wrap justify-content-center align-items-center my-0"><span
                                 class="mx-3 mx-md-4 mx-xl-5">-15%</span> sur une prestation du <span
                                 class="mx-3 mx-md-4 mx-xl-5">18/07</span> au <span
                                 class="mx-3 mx-md-4 mx-xl-5">28/08</span></p>
@@ -103,21 +101,19 @@
             <!-- PARTIE PRESENTATION -->
 
             <section class="py-3 py-md-5" id="presentation">
-                <div class="ruban my-5">
-                    <div class="d-flex flex-column justify-content-center align-items-center backTitle">
-                        <h2 class="section-title text-center py-4 my-2">Salon de beauté bio & vegan</h2>
-                    </div>
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <h2 class="category-title text-center py-4 my-2">Votre salon de beauté bio & vegan !</h2>
                 </div>
                 <div class="row justify-content-evenly pt-md-5 mx-0">
                     <div class="col-12 col-xl-7 col-xxl-6 d-flex flex-column justify-content-around align-items-center">
-                        <div class="textPresentation px-3 px-md-5 pt-5 mb-3">
+                        <div class="presentation-text px-3 px-md-5 pt-5 mb-3">
                             <p class="px-3 px-md-5 py-3 py-md-5">Lorem ipsum dolor sit amet consectetur adipisicing
                                 elit. Consequatur
                                 praesentium nemo
                                 suscipit quae quidem enim, explicabo quisquam, earum inventore magnam cum non
                                 architecto saepe ea autem voluptatem animi et eligendi.</p>
                         </div>
-                        <div class="textPresentation d-flex justify-content-end px-3 px-md-5 pt-4 pb-5">
+                        <div class="presentation-text d-flex justify-content-end px-3 px-md-5 pt-4 pb-5">
                             <p class="px-3 px-md-5 py-3 py-md-5">Lorem ipsum dolor sit amet consectetur adipisicing
                                 elit. Quisquam,
                                 nisi! Quidem quas
@@ -125,6 +121,7 @@
                                 molestiae earum ipsa est? Ipsa, mollitia?</p>
                         </div>
                     </div>
+
                     <div class="col-12 col-xl-4 py-md-5 px-md-5 pe-xl-5">
                         <div id="carouselExampleAutoplaying" class="carousel carousel-dark slide"
                             data-bs-ride="carousel">
@@ -174,118 +171,73 @@
 
             <!-- ========================================================================================================================================================================== -->
 
-            <div class="separator mt-4 mt-md-0">
-            </div>
+            <div class="split-index"></div>
 
             <!-- ========================================================================================================================================================================== -->
             <!-- PARTIE PRESTATIONS -->
 
-            <section class="py-3 py-md-5" id="services">
-                <div class="ruban my-5">
-                    <div class="d-flex flex-column justify-content-center align-items-center backTitle">
-                        <h2 class="section-title text-center py-4 my-2">Prestations</h2>
-                    </div>
+            <section class="py-3 py-md-5">
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <h2 class="category-title text-center py-4 my-2">Les prestations chez L'Aura Natur'elle</h2>
                 </div>
 
-                <div class="row justify-content-around mx-0">
-                    <div class="col-12 col-md-5 col-xxl-3 background-services my-3 my-md-5 mx-md-4">
-                        <article class="services py-4 px-4 my-3 mx-1">
-                            <h3 class="text-center mb-4">Epilations</h3>
-                            <div class="d-flex flex-column flex-xl-row content-services">
-                                <img src="./public/assets/img/illustrations/prestations_categories/epilations.jpg"
-                                    alt="" class="img-fluid">
-                                <div class="d-flex flex-column justify-content-between mt-3 mt-xl-0 ms-xl-3">
-                                    <p>Optez pour une prestation d'épilation, pour une peau douce et lisse, sans
-                                        compromis.</p>
-                                    <a href="./main/services_lines.html" class="btn btn-classic btn-services py-2">Découvrir</a>
-                                </div>
+                <div class="row justify-content-around mx-0 mt-5">
+                    <div class="col prestations-index px-0 py-5">
+                        <img src="./public/assets/img/illustrations/modelage.jpg" alt="" class="img-fluid services-index-img">
+                        <div class="prestations-div-text">
+                            <div class="prestations-text-index py-2 py-md-5 px-2 px-md-5">
+                                <p>Offrez à votre peau l'attention qu'elle mérite avec des soins du visage. Arborez des ongles impeccables grâce aux manucures professionnelles. 
+                                    Dites adieu aux soucis des poils indésirables par le biais d'épilations expertes. 
+                                    Et pour une évasion totale, détendez-vous et échappez au stress quotidien grâce à nos modelages apaisants…</p>
+                                    <div class="d-flex flex-column flex-xl-row justify-content-center align-items-center mt-4">
+                                        <h3 class="text-center fs-6">Chez L'Aura Natur'elle, les produits sont :</h3>
+                                        <ul class="d-flex justify-content-evenly align-items-center logos-product">
+                                            <li><img src="../public/assets/img/logos/france.png" alt="Made in France" class="img-fluid min-logos"></li>
+                                            <li><img src="../public/assets/img/logos/bio.png" alt="Bio" class="img-fluid min-logos"></li>
+                                            <li><img src="../public/assets/img/logos/vegan.png" alt="Vegan" class="img-fluid min-logos"></li>
+                                        </ul>
+                                    </div>
                             </div>
-                        </article>
-                    </div>
-                    <div class="col-12 col-md-5 col-xxl-3 background-services my-3 my-md-5 mx-md-4">
-                        <article class="services py-4 px-4 my-3 mx-1">
-                            <h3 class="text-center mb-4">Soins du visage</h3>
-                            <div class="d-flex flex-column flex-xl-row content-services">
-                                <img src="./public/assets/img/illustrations/prestations_categories/visage.jpg" alt=""
-                                    class="img-fluid">
-                                <div class="d-flex flex-column justify-content-between mt-3 mt-xl-0 ms-xl-3">
-                                    <p>Découvrez les soins du visage sur mesure, conçus pour révéler l'éclat naturel de
-                                        votre peau et lui offrir une véritable source de jeunesse et de vitalité.</p>
-                                    <a href="./main/services_lines.html" class="btn btn-classic btn-services py-2">Découvrir</a>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-12 col-md-5 col-xxl-3 background-services my-3 my-md-5 mx-md-4">
-                        <article class="services py-4 px-4 my-3 mx-1">
-                            <h3 class="text-center mb-4">Soins du corps</h3>
-                            <div class="d-flex flex-column flex-xl-row content-services">
-                                <img src="./public/assets/img/illustrations/prestations_categories/corps.jpg" alt=""
-                                    class="img-fluid">
-                                <div class="d-flex flex-column justify-content-between mt-3 mt-xl-0 ms-xl-3">
-                                    <p>Découvrez la gamme complète de soins corporels pour choyer votre peau et vous
-                                        offrir un moment de détente absolue.</p>
-                                    <a href="./main/services_lines.html" class="btn btn-classic btn-services py-2">Découvrir</a>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-12 col-md-5 col-xxl-3 background-services my-3 my-md-5 mx-md-4">
-                        <article class="services py-4 px-4 my-3 mx-1">
-                            <h3 class="text-center mb-4">Soins des mains</h3>
-                            <div class="d-flex flex-column flex-xl-row content-services">
-                                <img src="./public/assets/img/illustrations/prestations_categories/mains.jpg" alt=""
-                                    class="img-fluid">
-                                <div class="d-flex flex-column justify-content-between mt-3 mt-xl-0 ms-xl-3">
-                                    <p>Offrez à vos mains l'attention qu'elles méritent avec des soins spécialisés, pour
-                                        des mains douces, nourries et sublimées.</p>
-                                    <a href="./main/services.html" class="btn btn-classic btn-services py-2">Découvrir</a>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-12 col-md-5 col-xxl-3 background-services my-3 my-md-5 mx-md-4">
-                        <article class="services py-4 px-4 my-3 mx-1">
-                            <h3 class="text-center mb-4">Soins des pieds</h3>
-                            <div class="d-flex flex-column flex-xl-row content-services">
-                                <img src="./public/assets/img/illustrations/prestations_categories/pieds.jpg" alt=""
-                                    class="img-fluid">
-                                <div class="d-flex flex-column justify-content-between mt-3 mt-xl-0 ms-xl-3">
-                                    <p>Chouchoutez vos pieds avec des soins dédiés, pour une sensation de légèreté et de
-                                        bien-être à chaque pas.</p>
-                                    <a href="./main/services.html" class="btn btn-classic btn-services py-2">Découvrir</a>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-12 col-md-5 col-xxl-3 background-services my-3 my-md-5 mx-md-4">
-                        <article class="services py-4 px-4 my-3 mx-1">
-                            <h3 class="text-center mb-4">Modelages</h3>
-                            <div class="d-flex flex-column flex-xl-row content-services">
-                                <img src="./public/assets/img/illustrations/prestations_categories/modelage.jpg" alt=""
-                                    class="img-fluid">
-                                <div class="d-flex flex-column justify-content-between mt-3 mt-xl-0 ms-xl-3">
-                                    <p>Offrez à votre corps un moment de pure détente et de relaxation profonde avec des
-                                        prestations de modelage.</p>
-                                    <a href="./main/services.html" class="btn btn-classic btn-services py-2">Découvrir</a>
-                                </div>
-                            </div>
-                        </article>
+                            <a href="./main/services_categories.html" class="btn btn-outline btn-services-index py-3">Voir les prestations</a>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <div class="separator">
-            </div>
+            <div class="split-index mt-4"></div>
+
+
+            <!-- ========================================================================================================================================================================== -->
+            <!-- PARTIE FIDELITE -->
+
+            <section class="section-index py-3 py-md-5">
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <h2 class="category-title text-center py-4 my-2">Votre fidélité récompensée !</h2>
+                </div>
+
+                <div class="row justify-content-center justify-content-xl-evenly mx-0 mt-5 py-xl-5">
+                    <div class="col-12 col-md-9 col-xl-4 py-md-5 d-flex justify-content-center">
+                        <img src="./public/assets/img/illustrations/carte.jpg" alt="" class="img-fluid fidelity-img">
+                    </div>
+
+                    <div class="col-12 col-md-9 col-xl-4 d-flex flex-column justify-content-evenly fidelity-text mt-5">
+                        <p><strong>L'Aura Natur'elle</strong> est ravis de vous présenter son <strong>Programme Fidélité</strong> qui vous permet de profiter davantage de ses prestations tout en économisant.</p>
+                        <p>À votre premier rendez-vous, et si vous êtes intéressé, Sandrine vous remettra une carte de fidélité.</p>
+                        <p>Celle-ci vous offre un avantage spécial : après seulement cinq prestations, une réduction exceptionnelle de <span>15%</span> sur la prochaine !</p>
+                        <p>C'est une manière de vous remercier pour votre fidélité et de vous inviter à poursuivre votre voyage beauté avec <strong>L’Aura Natur’elle</strong>.</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="split-index"></div>
+
 
             <!-- ========================================================================================================================================================================== -->
             <!-- PARTIE EMPLACEMENT -->
 
             <section class="pt-3 pt-md-5 pb-xl-5" id="place">
-                <div class="ruban my-5">
-                    <div class="d-flex flex-column justify-content-center align-items-center backTitle">
-                        <h2 class="section-title text-center py-4 my-2">Emplacement & Horaires</h2>
-                    </div>
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <h2 class="category-title text-center py-4 my-2">Emplacement & Horaires</h2>
                 </div>
 
 
@@ -327,7 +279,7 @@
                         <h3 class="text-center py-2 px-5 mb-3">Téléphone</h3>
                         <p class="text-center"><i class="bi bi-telephone me-2"></i> 07.67.47.68.37</p>
                     </div>
-                    <div class="col-12 col-md-6 col-xl-4 d-flex flex-column align-items-center mt-md-4 mt-xl-0">
+                    <div class="col-12 col-md-6 col-xl-4 d-flex flex-column align-items-center mt-md-4 mt-xl-0 mb-5 mb-xl-0">
                         <h3 class="text-center py-2 px-5 mb-3">Mail</h3>
                         <a href="mailto: esthetique@gmail.com"><i
                                 class="bi bi-envelope-at me-2"></i>esthetique@gmail.com</a>
@@ -410,7 +362,7 @@
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script src="./public/assets/js/bootstrap.bundle.min.js"></script>
     <script src="./public/assets/js/home.js"></script>
-    <script src="../public/assets/js/script.js"></script>
+    <script src="./public/assets/js/script.js"></script>
 </body>
 
 </html>
