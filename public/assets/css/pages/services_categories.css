@@ -9,13 +9,36 @@
 }
 
 .background-services {
-    background-image: url(../../img/backgrounds/main.jpg);
+    position: relative;
+    background-image: url(../../img/backgrounds/leafs4.jpg);
     border: var(--border-brown-solid);
     box-shadow: rgba(27, 70, 33, 0.39) 0px 7px 29px 0px;
 }
 
+.badge-new::after {
+    position: absolute;
+    content: 'Nouveauté';
+    font-size: 1.1rem;
+    font-family: var(--special-font);
+    color: var(--main-color);
+    text-align: center;
+    top: 7%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    height: 25px;
+    width: 35%;
+    transform: rotate(48deg);
+    background-color: #e3b04c;
+    box-shadow: var(--box-light-shadow);
+}
+
 .services {
     background-color: var(--main-color);
+    background-image: url(../../img/backgrounds/bois.jpg);
+    color: var(--main-color);
+    font-size: 1.1rem;
+    /* font-weight: bold; */
+    /* letter-spacing: 1px; */
     border: var(--border-brown-solid);
     box-shadow: var(--box-light-shadow);
 }
@@ -28,10 +51,15 @@
     text-shadow: var(--text-shadow);
 }
 
+.services p {
+    text-shadow: var(--text-shadow);
+}
+
 .services img {
     width: 100%;
     height: 200px;
     object-fit: cover;
+    border: var(--border-brown-solid);
 }
 
 
@@ -51,7 +79,7 @@
     }
 
     .content-services {
-        height: 400px;
+        height: 410px;
     }
 
     .content-services div {
@@ -67,7 +95,7 @@
 @media (min-width: 1200px)  {
 
     .content-services {
-        height: 230px;
+        height: 240px;
     }
 
     .services img {
@@ -78,6 +106,13 @@
     .content-services div {
         width: 50%;
         height: 100%;
+    }
+
+    .badge-new::after {
+        top: 10%;
+        left: 75%;
+        height: 25px;
+        width: 30%;
     }
 }
 
