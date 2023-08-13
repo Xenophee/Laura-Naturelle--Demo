@@ -26,6 +26,7 @@
 
 /* @import url('./pages/account.css'); */
 @import url('./pages/appointment.css');
+@import url('./pages/dashboard.css');
 @import url('./pages/index.css');
 @import url('./pages/home.css');
 @import url('./pages/services_grid.css');

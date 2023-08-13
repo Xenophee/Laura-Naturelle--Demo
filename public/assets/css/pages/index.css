@@ -25,6 +25,7 @@
     position: absolute;
     width: 90%;
     border: var(--border-first-solid);
+    
     background-image: url(../../img/backgrounds/main.jpg);
     transform: translate(-50%, -50%);
     top: 50%;
@@ -138,21 +139,6 @@
 
     /* ------------------------------------------------- */
 
-    #lottieAnnouncement {
-        width: 15%;
-    }
-
-    #announcement p {
-        font-size: 1.1rem;
-    }
-    
-    #announcement span {
-        font-size: 2rem;
-        color: var(--special-color);
-    }
-
-    /* ------------------------------------------------- */
-
     .backTitle {
         width: 70%;
     }
@@ -194,21 +180,6 @@
 
     .backgroundMainTitle {
         height: 55vh;
-    }
-
-    /* ------------------------------------------------- */
-
-    #lottieAnnouncement {
-        width: 8%;
-    }
-
-    #announcement p {
-        font-size: 1.5rem;
-    }
-    
-    #announcement span {
-        font-size: 4rem;
-        color: var(--special-color);
     }
 
     /* ------------------------------------------------- */

@@ -19,7 +19,6 @@
 }
 
 .btn-classic:hover, .btn-outline:hover {
-    background-color: var(--special-dark-color);
     color: var(--main-color);
     border: var(--border-light-solid);
 }
@@ -106,11 +105,10 @@
         content: '';
         position: absolute;
         left: 0;
-        bottom: -0.5px;
+        bottom: 0;
         height: 0;
         width: 100%;
         background-color: var(--special-dark-color);
-        /* border-bottom: var(--border-light-solid); */
         border-radius: 5px;
         opacity: 0;
         transition: 0.7s ease-in-out;

@@ -30,7 +30,11 @@
     --border-light-green-solid: var(--light-green) 1px solid;
     --border-light-green-medium-solid: var(--light-green) 2px solid;
     --border-light-green-strong-solid: var(--light-green) 4px solid;
+    --border-light-green-very-strong-solid: var(--light-green) 10px solid;
+
     --border-light-solid: var(--main-color) 1px solid;
+    --border-light-medium-solid: var(--main-color) 2px solid;
+    --border-light-strong-solid: var(--main-color) 10px solid;
     
     --border-second-solid: var(--second-color) 3px solid;
 

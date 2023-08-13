@@ -6,6 +6,7 @@
 .separator {
     background-image: url(../../img/backgrounds/main.jpg);
     background-attachment: fixed;
+    background-color: var(--special-color);
     border-top: var(--border-first-solid);
     border-bottom: var(--border-first-solid);
     width: 100%;

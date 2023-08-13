@@ -5,12 +5,21 @@
 /* BANDEROLE DE PROMOTIONS */
 
 #announcement {
-    background-color: #f5cae9;
+    /* background-color: #f5cae9; */
     background-size: 20px 20px;
     /* background-image: repeating-linear-gradient(45deg, #fdf3fd 0, #fdf3fd 1px, #f5cae9 0, #f5cae9 50%); */
-    background-image: repeating-linear-gradient(45deg, #f5cae9 0, #f5cae9 1px, #fdf3fd 0, #fdf3fd 50%);
-    border-bottom: var(--border-special-solid);
+    /* background-image: repeating-linear-gradient(45deg, #f5cae9 0, #f5cae9 1px, #fdf3fd 0, #fdf3fd 50%); */
+    background-image: url(../../img/backgrounds/bois.jpg);
+    background-size: cover;
+    border-bottom: var(--border-brown-solid);
     /* box-shadow: var(--inset-shadow); */
+}
+
+
+.announcement-icon {
+    font-size: 5rem;
+    color: var(--main-color);
+    text-shadow: var(--text-shadow);
 }
 
 #lottieAnnouncement {
@@ -19,12 +28,14 @@
 
 #announcement p {
     font-size: 1.2rem;
+    color: var(--main-color);
+    text-shadow: var(--text-shadow);
 }
 
 #announcement span {
     font-size: 2rem;
     color: var(--special-color);
-    text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff, 1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+    text-shadow: 1px 0 #fdf3fd, -1px 0 #fdf3fd, 0 1px #fdf3fd, 0 -1px #fdf3fd, 1px 1px #fdf3fd, -1px -1px #fdf3fd, 1px -1px #fdf3fd, -1px 1px #fdf3fd;
 }
 
 
