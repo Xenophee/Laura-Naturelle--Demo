@@ -12,8 +12,6 @@ const container = document.getElementById('lottieAnnouncement');
 
 
 
-
-
 const latitude = 49.83763;
 const longitude = 3.26675;
 
@@ -26,3 +24,27 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 L.marker([latitude, longitude]).addTo(map)
     .bindPopup('L\'aura Natur\'elle.')
     .openPopup();
+
+
+
+
+const images = ["./public/assets/img/illustrations/modelage.jpg", "./public/assets/img/illustrations/pieds.jpg", "./public/assets/img/illustrations/visage.jpg", "./public/assets/img/illustrations/epilations.jpg", "./public/assets/img/illustrations/mains.jpg", "./public/assets/img/illustrations/maquillage.jpg"];
+let currentIndex = 0; // Index de l'image actuellement affichée
+const image = document.querySelector('.services-index-img');
+
+
+// Fonction pour changer l'image toutes les X millisecondes
+function changeImage() {
+
+    image.style.opacity = 0;
+
+    setTimeout(function () {
+        currentIndex = (currentIndex + 1) % images.length;
+        image.src = images[currentIndex];
+        image.style.opacity = 1;
+    }, 1000);
+}
+
+// 1000 = 1s
+setInterval(changeImage, 8500);
+
