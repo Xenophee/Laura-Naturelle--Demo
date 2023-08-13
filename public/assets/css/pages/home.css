@@ -164,6 +164,15 @@
     }
 
     .fidelity-img {
+        height: 270px;
+    }
+
+}
+
+
+@media (min-width: 1400px)  {
+
+    .fidelity-img {
         height: 350px;
     }
 
