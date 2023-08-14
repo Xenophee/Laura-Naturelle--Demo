@@ -1,16 +1,7 @@
 
-
-const container = document.getElementById('lottieAnnouncement');
-
-        const animation = lottie.loadAnimation({
-            container: container,
-            renderer: 'svg',
-            loop: true,
-            autoplay: true,
-            path: './public/assets/json/inbox-promos.json'
-        });
-
-
+// ==================================================================================================================================
+// ----------------------------------------------------------------------------------------------------------------------------------
+// AFFICHAGE DE LA CARTE
 
 const latitude = 49.83763;
 const longitude = 3.26675;
@@ -25,8 +16,11 @@ L.marker([latitude, longitude]).addTo(map)
     .bindPopup('L\'aura Natur\'elle.')
     .openPopup();
 
+    
 
-
+// ==================================================================================================================================
+// ----------------------------------------------------------------------------------------------------------------------------------
+// MODIFICATION DYNAMIQUE DES IMAGES DE PRESTATIONS
 
 const images = ["./public/assets/img/illustrations/modelage.jpg", "./public/assets/img/illustrations/pieds.jpg", "./public/assets/img/illustrations/visage.jpg", "./public/assets/img/illustrations/epilations.jpg", "./public/assets/img/illustrations/mains.jpg", "./public/assets/img/illustrations/maquillage.jpg"];
 let currentIndex = 0; // Index de l'image actuellement affichée
@@ -46,5 +40,5 @@ function changeImage() {
 }
 
 // 1000 = 1s
-setInterval(changeImage, 8500);
+setInterval(changeImage, 8000);
 
