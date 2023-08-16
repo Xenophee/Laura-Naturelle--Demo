@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../public/assets/css/main.css">
     <meta name="description" content="">
     <link rel="icon" type="image/png" href="">
-    <title>L'Aura Natur'elle - Ajouter une prestation</title>
+    <title>L'Aura Natur'elle - Ajouter une catégorie</title>
 </head>
 
 <body>
@@ -106,10 +106,10 @@
                                                     <a class="nav-link" href="../dashboard/list_services.html"><i class="bi bi-list-ul mx-3"></i>Liste des prestations</a>
                                                 </li>
                                                 <li class="nav-item py-2 px-md-4 px-xl-0">
-                                                    <a class="nav-link" href="../dashboard/add_category.html"><i class="bi bi-plus-circle mx-3"></i>Ajouter une catégorie</a>
+                                                    <a class="nav-link active" href="../dashboard/add_category.html"><i class="bi bi-plus-circle mx-3"></i>Ajouter une catégorie</a>
                                                 </li>
                                                 <li class="nav-item py-2 px-md-4 px-xl-0">
-                                                    <a class="nav-link active" href="../dashboard/add_services.html"><i class="bi bi-plus-circle mx-3"></i>Ajouter une prestation</a>
+                                                    <a class="nav-link" href="../dashboard/add_services.html"><i class="bi bi-plus-circle mx-3"></i>Ajouter une prestation</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -121,7 +121,7 @@
 
                     <div class="col-12 col-xl-10">
                         <section class="d-flex flex-column justify-content-center align-items-center">
-                            <h1 class="category-title text-center py-4 my-5">Ajouter une prestation</h1>
+                            <h1 class="category-title text-center py-4 my-5">Ajouter une catégorie</h1>
 
                             <form method="post" enctype="multipart/form-data" class="dashboard-form mt-5">
     
@@ -145,35 +145,13 @@
                                         <div class="text-danger fst-italic mt-2"></div>
                                     </div>
 
-                                    <div class="mb-4 pt-md-5">
+                                    <div class="mb-md-4 pt-md-5">
                                         <div class="d-flex flex-column flex-md-row justify-content-between">
-                                            <label for="description" class="form-label me-3">Description :</label>
+                                            <label for="description" class="form-label me-3">Description * :</label>
                                             <small>Nb de caractères restants : 200</small>
                                         </div>
-                                        <textarea class="form-control textarea" name="description" id="description"></textarea>
+                                        <textarea class="form-control textarea" name="description" id="description" required></textarea>
                                         <div class="text-danger fst-italic mt-2"></div>
-                                    </div>
-
-                                    <div class="d-flex flex-column flex-md-row justify-content-between pt-md-5">
-                                        <div class="mb-4">
-                                            <label for="duration" class="form-label me-3">Durée (en minutes) * :</label>
-                                            <input type="number" class="form-control" id="duration" name="duration" value="" required>
-                                            <div class="text-danger fst-italic mt-2"></div>
-                                        </div>
-    
-                                        <div class="mb-md-4">
-                                            <label for="price" class="form-label me-3">Prix * :</label>
-                                            <input type="number" class="form-control" id="price" name="price" value="" required>
-                                            <div class="text-danger fst-italic mt-2"></div>
-                                        </div>
-                                    </div>
-
-                                    <div class="btn-group d-flex mt-4 mt-md-0 py-md-5" role="group" aria-label="Choisir le type de prestation">
-                                        <input type="radio" class="btn-check" name="type" value="0" id="unique" autocomplete="off" checked>
-                                        <label class="btn btn-radio" for="unique">Prestation unique</label>
-                                    
-                                        <input type="radio" class="btn-check" name="type" value="1" id="package" autocomplete="off">
-                                        <label class="btn btn-radio" for="package">Forfait</label>
                                     </div>
                                 </fieldset>
         

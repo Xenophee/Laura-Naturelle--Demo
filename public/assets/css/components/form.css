@@ -7,10 +7,6 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 
-#registerForm .row {
-    width: 100%;
-}
-
 legend {
     /* background-image: url(../../img/backgrounds/bois.jpg); */
     background-color: var(--special-dark-color);
@@ -25,9 +21,11 @@ fieldset {
     height: 100%;
 }
 
-.blocForm {
-    background-color: var(--main-color);
-    border: var(--border-special-medium-solid);
+.cover {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+    border: var(--border-special-solid);
 }
 
 
@@ -45,7 +43,7 @@ fieldset {
     height: 55px;
 }
 
-#requestMessage {
+.textarea {
     height: 250px;
 }
 
@@ -83,9 +81,37 @@ fieldset {
 }
 
 
+/* ================================================================================================================================= */
+/* --------------------------------------------------------------------------------------------------------------------------------- */
+/* GROUP-RADIO */
+
+.btn-radio {
+    color: var(--special-dark-color);
+    border: var(--border-dark-special-medium-solid);
+}
+
+.btn-radio:hover {
+    color: var(--special-dark-color);
+    border: var(--border-dark-special-medium-solid);
+}
+
+.btn-check + .btn:hover {
+    color: var(--special-dark-color);
+    background-color: var(--bs-btn-bg);
+    border: var(--border-dark-special-medium-solid);
+}
+
+.btn-check:checked + .btn {
+    color: var(--main-color);
+    background-color: var(--special-dark-color);
+    border: var(--border-dark-special-medium-solid);
+}
 
 
 
+/* ================================================================================================================================= */
+/* --------------------------------------------------------------------------------------------------------------------------------- */
+/* RESPONSIVE */
 
 @media (min-width: 768px) and (max-width: 1200px)  {
 

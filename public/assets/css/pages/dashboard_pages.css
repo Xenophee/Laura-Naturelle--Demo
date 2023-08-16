@@ -1,0 +1,69 @@
+
+
+
+.dashboard-form {
+    width: 95%;
+}
+
+
+.schedules-form {
+    width: 100%;
+}
+
+.schedules {
+    width: 100%;
+    padding: 0;
+}
+
+.schedules li {
+    border-bottom: var(--border-special-solid);
+    list-style: none;
+}
+
+.schedules .form-label {
+    width: 90%;
+    font-family: var(--special-font);
+    font-size: 1.7rem;
+    margin-bottom: 0;
+}
+
+.schedules .form-check-label {
+    font-size: 1.2rem;
+}
+
+
+
+
+
+/* ================================================================================================================================= */
+/* --------------------------------------------------------------------------------------------------------------------------------- */
+/* RESPONSIVE */
+
+@media (min-width: 768px) {
+    .dashboard-form {
+        width: 65%;
+    }
+
+    .schedules {
+        width: 90%;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .dashboard-form {
+        width: 50%;
+    }
+
+    .schedules {
+        width: 70%;
+    }
+
+    .schedules .form-label {
+        width: 20%;
+    }
+
+    .schedules-input {
+        width: 20%;
+    }
+}

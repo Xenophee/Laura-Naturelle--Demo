@@ -1,0 +1,81 @@
+/* ================================================================================================================================= */
+/* --------------------------------------------------------------------------------------------------------------------------------- */
+/* NAVIGATION DASHBOARD */
+
+
+.dashboard-nav {
+    background-color: var(--second-color);
+    font-family: var(--special-font);
+}
+
+.links-container, .dashboard-nav ul {
+    width: 100%;
+}
+
+
+/* -------------------------------------------- */
+/* TITRES */
+
+.navbar-title {
+    position: relative;
+    font-size: 1.5rem;
+    color: var(--main-color);
+}
+
+.navbar-title::after {
+    position: absolute;
+    content: '';
+    width: 25%;
+    height: 3px;
+    background-color: var(--main-color);
+    top: 100%;
+    left: 0%;
+}
+
+
+/* -------------------------------------------- */
+/* LIENS */
+
+.dashboard-nav .nav-link {
+    position: relative;
+    color: var(--main-color);
+    z-index: 0;
+}
+
+.dashboard-nav .nav-link.active {
+    color: var(--main-color);
+    background-color: var(--third-color);
+}
+
+
+/* ================================================================================================================================= */
+/* --------------------------------------------------------------------------------------------------------------------------------- */
+/* RESPONSIVE */
+
+
+/* -------------------------------------------- */
+/* GRAND ECRAN */
+
+@media (min-width: 1200px) {
+
+    .dashboard-nav .nav-link::after {
+        position: absolute;
+        content: '';
+        width: 0%;
+        height: 100%;
+        top: 0%;
+        left: 0%;
+        color: var(--main-color);
+        background-color: var(--third-color);
+        transition: 0.7s ease-in-out;
+        z-index: -1;
+    }
+    
+    .dashboard-nav .nav-link:hover::after {
+        width: 100%;
+        top: 0%;
+        left: 0%;
+        color: var(--main-color);
+    }
+
+}

@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../public/assets/css/main.css">
     <meta name="description" content="">
     <link rel="icon" type="image/png" href="">
-    <title>L'Aura Natur'elle - Ajouter une prestation</title>
+    <title>L'Aura Natur'elle - Mes annonces</title>
 </head>
 
 <body>
@@ -76,116 +76,68 @@
     <main>
         <div class="container-fluid px-0">
 
-                <div class="row justify-content-around mx-0">
+            <div class="row justify-content-around mx-0">
 
-                    <div class="col-12 col-xl-2 dashboard-nav">
-                        <aside>
-                            <nav class="navbar navbar-expand-xl navbar-dark">
-                                <div class="container-fluid">
-                                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                                        <span class="navbar-toggler-icon"></span>
-                                    </button>
-                                    <div class="collapse navbar-collapse" id="navbarText">
-                                        <div class="links-container d-flex flex-column flex-md-row flex-xl-column mt-4">
-                                            <ul class="d-flex flex-column navbar-nav me-auto mb-2 mb-lg-0">
-                                                <div class="navbar-title mb-3">Général</div>
-                                                <li class="nav-item py-2 px-md-4 px-xl-0">
-                                                    <a class="nav-link" aria-current="page" href="../dashboard/account.html"><i class="bi bi-person-bounding-box mx-3"></i>Mon compte</a>
-                                                </li>
-                                                <li class="nav-item py-2 px-md-4 px-xl-0">
-                                                    <a class="nav-link" href="../dashboard/schedules.html"><i class="bi bi-clock mx-3"></i>Mes horaires</a>
-                                                </li>
-                                                <li class="nav-item py-2 px-md-4 px-xl-0">
-                                                    <a class="nav-link" href="../dashboard/add_ announcement.html"><i class="bi bi-megaphone mx-3"></i>Mes annonces</a>
-                                                </li>
-                                            </ul>
-    
-                                            <ul class="d-flex flex-column navbar-nav me-auto mt-3 mt-xl-5 mb-2 mb-lg-0">
-                                                <div class="navbar-title mb-3">Prestations</div>
-                                                <li class="nav-item py-2 px-md-4 px-xl-0">
-                                                    <a class="nav-link" href="../dashboard/list_services.html"><i class="bi bi-list-ul mx-3"></i>Liste des prestations</a>
-                                                </li>
-                                                <li class="nav-item py-2 px-md-4 px-xl-0">
-                                                    <a class="nav-link" href="../dashboard/add_category.html"><i class="bi bi-plus-circle mx-3"></i>Ajouter une catégorie</a>
-                                                </li>
-                                                <li class="nav-item py-2 px-md-4 px-xl-0">
-                                                    <a class="nav-link active" href="../dashboard/add_services.html"><i class="bi bi-plus-circle mx-3"></i>Ajouter une prestation</a>
-                                                </li>
-                                            </ul>
-                                        </div>
+                <div class="col-12 col-xl-2 dashboard-nav">
+                    <aside>
+                        <nav class="navbar navbar-expand-xl navbar-dark">
+                            <div class="container-fluid">
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false"
+                                    aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarText">
+                                    <div class="links-container d-flex flex-column flex-md-row flex-xl-column mt-4">
+                                        <ul class="d-flex flex-column navbar-nav me-auto mb-2 mb-lg-0">
+                                            <div class="navbar-title mb-3">Général</div>
+                                            <li class="nav-item py-2 px-md-4 px-xl-0">
+                                                <a class="nav-link" aria-current="page"
+                                                    href="../dashboard/account.html"><i
+                                                        class="bi bi-person-bounding-box mx-3"></i>Mon compte</a>
+                                            </li>
+                                            <li class="nav-item py-2 px-md-4 px-xl-0">
+                                                <a class="nav-link" href="../dashboard/schedules.html"><i
+                                                        class="bi bi-clock mx-3"></i>Mes horaires</a>
+                                            </li>
+                                            <li class="nav-item py-2 px-md-4 px-xl-0">
+                                                <a class="nav-link active" href="../dashboard/add_ announcement.html"><i
+                                                        class="bi bi-megaphone mx-3"></i>Mes annonces</a>
+                                            </li>
+                                        </ul>
+
+                                        <ul class="d-flex flex-column navbar-nav me-auto mt-3 mt-xl-5 mb-2 mb-lg-0">
+                                            <div class="navbar-title mb-3">Prestations</div>
+                                            <li class="nav-item py-2 px-md-4 px-xl-0">
+                                                <a class="nav-link" href="../dashboard/list_services.html"><i
+                                                        class="bi bi-list-ul mx-3"></i>Liste des prestations</a>
+                                            </li>
+                                            <li class="nav-item py-2 px-md-4 px-xl-0">
+                                                <a class="nav-link" href="../dashboard/add_category.html"><i
+                                                        class="bi bi-plus-circle mx-3"></i>Ajouter une catégorie</a>
+                                            </li>
+                                            <li class="nav-item py-2 px-md-4 px-xl-0">
+                                                <a class="nav-link" href="../dashboard/add_services.html"><i
+                                                        class="bi bi-plus-circle mx-3"></i>Ajouter une prestation</a>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
-                            </nav>
-                        </aside>
-                    </div>
-
-                    <div class="col-12 col-xl-10">
-                        <section class="d-flex flex-column justify-content-center align-items-center">
-                            <h1 class="category-title text-center py-4 my-5">Ajouter une prestation</h1>
-
-                            <form method="post" enctype="multipart/form-data" class="dashboard-form mt-5">
-    
-                                <fieldset class="mb-5">
-
-                                    <div class="mb-5">
-                                        <div class="d-flex justify-content-center mb-4">
-                                            <img src="../public/assets/img/backgrounds/main.jpg" class="cover img-fluid" alt="Image d'illustration">
-                                        </div>
-                                        <div class="d-flex justify-content-center">
-                                            <div class="btn btn-classic">
-                                                <label class="form-label m-1" for="cover">Image de couverture</label>
-                                                <input type="file" class="form-control d-none" id="cover" name="cover" accept="image/jpeg" required>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="mb-4">
-                                        <label for="title" class="form-label me-3">Titre * :</label>
-                                        <input type="text" class="form-control" id="title" name="title" value="" required>
-                                        <div class="text-danger fst-italic mt-2"></div>
-                                    </div>
-
-                                    <div class="mb-4 pt-md-5">
-                                        <div class="d-flex flex-column flex-md-row justify-content-between">
-                                            <label for="description" class="form-label me-3">Description :</label>
-                                            <small>Nb de caractères restants : 200</small>
-                                        </div>
-                                        <textarea class="form-control textarea" name="description" id="description"></textarea>
-                                        <div class="text-danger fst-italic mt-2"></div>
-                                    </div>
-
-                                    <div class="d-flex flex-column flex-md-row justify-content-between pt-md-5">
-                                        <div class="mb-4">
-                                            <label for="duration" class="form-label me-3">Durée (en minutes) * :</label>
-                                            <input type="number" class="form-control" id="duration" name="duration" value="" required>
-                                            <div class="text-danger fst-italic mt-2"></div>
-                                        </div>
-    
-                                        <div class="mb-md-4">
-                                            <label for="price" class="form-label me-3">Prix * :</label>
-                                            <input type="number" class="form-control" id="price" name="price" value="" required>
-                                            <div class="text-danger fst-italic mt-2"></div>
-                                        </div>
-                                    </div>
-
-                                    <div class="btn-group d-flex mt-4 mt-md-0 py-md-5" role="group" aria-label="Choisir le type de prestation">
-                                        <input type="radio" class="btn-check" name="type" value="0" id="unique" autocomplete="off" checked>
-                                        <label class="btn btn-radio" for="unique">Prestation unique</label>
-                                    
-                                        <input type="radio" class="btn-check" name="type" value="1" id="package" autocomplete="off">
-                                        <label class="btn btn-radio" for="package">Forfait</label>
-                                    </div>
-                                </fieldset>
-        
-                                <div class="d-flex justify-content-center pb-md-5 mb-5">
-                                    <button type="submit" class="btn btn-classic py-2"><i class="bi bi-pencil-fill me-3"></i>Ajouter</button>
-                                </div>
-    
-                            </form>
-                        </section>
-                    </div>
-
+                            </div>
+                        </nav>
+                    </aside>
                 </div>
+
+                <div class="col-12 col-xl-10">
+                    <section class="d-flex flex-column justify-content-center align-items-center">
+                        <h1 class="category-title text-center py-4 my-5">Mes annonces</h1>
+
+                        
+
+                    </section>
+                </div>
+
+            </div>
 
         </div>
     </main>
@@ -220,7 +172,8 @@
                     <ul class="ms-3 ms-md-0">
                         <li class="fs-4 footerTitle mb-4">L' Aura Natur'elle</li>
                         <li class="my-2"><a href="../index.html" class="footer-link">Accueil</a></li>
-                        <li class="my-2"><a href="../main/services_categories.html" class="footer-link">Prestations</a></li>
+                        <li class="my-2"><a href="../main/services_categories.html" class="footer-link">Prestations</a>
+                        </li>
                         <li class="my-2"><a href="../main/appointment.html" class="footer-link">Prendre RDV</a></li>
                         <li class="my-2"><a href="../construction.html" class="footer-link">Carte cadeaux</a></li>
                         <li class="my-2"><a href="../main/contact.html" class="footer-link">Contact</a></li>
@@ -243,8 +196,8 @@
                     <ul class="d-flex flex-xl-column">
                         <li class="me-5 me-xl-0 mb-xl-5"><a href="https://www.facebook.com/lauranaturellebioetvegan02"
                                 target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook"></i></a></li>
-                        <li><a href="" target="_blank" rel="noopener noreferrer"><i
-                                    class="bi bi-instagram"></i></a></li>
+                        <li><a href="" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
+                        </li>
                     </ul>
                 </div>
             </div>
