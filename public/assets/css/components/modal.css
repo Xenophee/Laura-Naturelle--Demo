@@ -15,6 +15,7 @@
 
 .modal-title {
     padding: 0;
+    letter-spacing: normal;
 }
 
 .modal-body p {
@@ -31,7 +32,7 @@
 
 @media (min-width: 768px) {
 
-    .modal-footer .btn-classic {
+    .modal-footer .btn-classic,  .modal-footer .btn-outline {
         width: 150px;
     }
 

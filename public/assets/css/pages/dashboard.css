@@ -32,6 +32,13 @@
 }
 
 
+.table-responsive {
+    width: 100%;
+}
+
+.table-responsive::-webkit-scrollbar {
+    height: 4px;
+}
 
 
 
@@ -45,6 +52,10 @@
     }
 
     .schedules {
+        width: 90%;
+    }
+
+    .table-responsive {
         width: 90%;
     }
 }
@@ -65,5 +76,9 @@
 
     .schedules-input {
         width: 20%;
+    }
+
+    .table-responsive {
+        width: 70%;
     }
 }

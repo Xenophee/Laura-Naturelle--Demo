@@ -1,0 +1,56 @@
+
+
+tr {
+    height: 60px;
+}
+
+th {
+    color: var(--first-color);
+}
+
+tr:not(thead tr) {
+    border: var(--first-color);
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: var(--second-filter-color);
+}
+
+.badge-type {
+    color: var(--main-color);
+    background-color: #e3b04c;
+}
+
+.table-time {
+    width: 70px;
+    color: var(--main-color);
+    background-color: var(--first-color);
+}
+
+.table-price {
+    width: 70px;
+    color: var(--main-color);
+    background-color: var(--brown-color);
+}
+
+/* .group-links {
+    width: 80%;
+} */
+
+
+.table-news tbody tr:nth-of-type(odd) {
+    background-color: var(--brown-filter-color);
+}
+
+.table-news th {
+    color: var(--brown-color);
+}
+
+
+@media (min-width: 1200px) {
+
+    /* td {
+        height: 60px;
+    } */
+
+}

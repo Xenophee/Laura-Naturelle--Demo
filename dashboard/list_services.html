@@ -120,44 +120,326 @@
                     </div>
 
                     <div class="col-12 col-xl-10">
-                        <section class="d-flex flex-column justify-content-center align-items-center px-5">
+                        <section class="d-flex flex-column justify-content-center align-items-center">
                             <h1 class="category-title text-center py-4 my-5">Liste des prestations</h1>
 
-                            <table class="table align-middle table-striped table-hover my-5">
-                                <thead>
-                                    <form method="POST">
+                            <div class="table-responsive pt-md-5 my-4 my-md-5">
+                                <table class="table align-middle table-striped table-news">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col"></th>
+                                            <th scope="col">
+                                                <h2>En attente de publication</h2>
+                                            </th>
+                                            <th scope="col"></th>
+                                            <th scope="col"></th>
+                                            <th scope="col">
+                                            </th>
+                                        </tr>
+                                    </thead>
+        
+                                    <tbody class="table-group-divider">
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    Pierres Chaudes <!-- <div class="d-inline badge-type px-3 ms-3">Forfait</div> -->
+                                                    <div class="d-inline px-3 ms-3">[Modelages]</div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="table-time d-flex justify-content-center align-items-center">60 min</div>
+                                            </td>
+                                            <td>
+                                                <div class="table-price d-flex justify-content-center align-items-center">75 €</div>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex justify-content-end">
+                                                    <!-- Bouton de visualisation -->
+                                                    <a href="" class="btn view py-2 me-3" title="Voir sur le site"><i class="bi bi-eye"></i></a>
+                                                    <!-- Bouton de validation -->
+                                                    <a href="" class="btn validate py-2 me-3" title="Publier la prestation" data-id="" data-bs-toggle="modal" data-bs-target="#displayModal"><i class="bi bi-check2" data-id=""></i></a>
+                                                    <!-- Bouton éditer -->
+                                                    <a href="" class="btn edit py-2 me-3" title="Editer la prestation"><i class="bi bi-pen"></i></a>
+                                                    <!-- Bouton supprimer -->
+                                                    <button type="button" class="btn delete py-2" title="Supprimer la prestation" data-id="" data-deleteparam="" data-bs-toggle="modal" data-bs-target="#displayModal">
+                                                        <i class="bi bi-trash3" data-id="" data-deleteparam=""></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    Liberté sans Soucis <div class="d-inline badge-type px-3 ms-3">Forfait</div>
+                                                    <div class="d-inline px-3 ms-3">[Épilations]</div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="table-time d-flex justify-content-center align-items-center">75 min</div>
+                                            </td>
+                                            <td>
+                                                <div class="table-price d-flex justify-content-center align-items-center">45 €</div>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex justify-content-end">
+                                                    <!-- Bouton de visualisation -->
+                                                    <a href="" class="btn view py-2 me-3" title="Voir sur le site"><i class="bi bi-eye"></i></a>
+                                                    <!-- Bouton de validation -->
+                                                    <a href="" class="btn validate py-2 me-3" title="Publier la prestation" data-id="" data-bs-toggle="modal" data-bs-target="#displayModal"><i class="bi bi-check2" data-id=""></i></a>
+                                                    <!-- Bouton éditer -->
+                                                    <a href="" class="btn edit py-2 me-3" title="Editer la prestation"><i class="bi bi-pen"></i></a>
+                                                    <!-- Bouton supprimer -->
+                                                    <button type="button" class="btn delete py-2" title="Supprimer la prestation" data-id="" data-deleteparam="" data-bs-toggle="modal" data-bs-target="#displayModal">
+                                                        <i class="bi bi-trash3" data-id="" data-deleteparam=""></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <hr>
+
+                            <div class="table-responsive pt-md-5 my-4 my-md-5">
+                                <table class="table align-middle table-striped">
+                                    <thead>
                                         <tr>
                                             <th scope="col"></th>
                                             <th scope="col">
                                                 <h2>Modelages</h2>
                                             </th>
-                                            <th scope="col" class="d-flex justify-content-end">
-                                                <button type="submit" class="btn edit py-2 px-4 me-3" title="Editer la catégorie"><i class="bi bi-pen"></i></button>
-                                                <!-- Bouton supprimer -->
-                                                <a href="" class="btn delete py-2 px-4" title="Supprimer la catégorie" data-id="" data-deleteparam="" data-bs-toggle="modal" data-bs-target="#deleteThemeCategory">
-                                                    <i class="bi bi-trash3" data-id="" data-deleteparam=""></i>
-                                                </a>
+                                            <th scope="col"></th>
+                                            <th scope="col"></th>
+                                            <th scope="col">
+                                                <div class="d-flex justify-content-end">
+                                                    <a href="" class="btn view py-2 me-3" title="Voir sur le site"><i class="bi bi-eye"></i></a>
+                                                    <!-- Bouton éditer -->
+                                                    <a href="" class="btn edit py-2 me-3" title="Editer la catégorie"><i class="bi bi-pen"></i></a>
+                                                    <!-- Bouton supprimer -->
+                                                    <a href="" class="btn delete py-2" title="Supprimer la catégorie" data-id="" data-deleteparam="1" data-bs-toggle="modal" data-bs-target="#displayModal">
+                                                        <i class="bi bi-trash3" data-id="" data-deleteparam="1"></i>
+                                                    </a>
+                                                </div>
                                             </th>
                                         </tr>
-                                    </form>
-                                </thead>
-    
-                                <tbody class="table-group-divider">
-                                    <tr>
-                                        <form method="POST">
+                                    </thead>
+        
+                                    <tbody class="table-group-divider">
+                                        <tr>
                                             <th scope="row">1</th>
-                                            <td>Californien</td>
-                                            <td class="d-flex justify-content-end">
-                                                <button type="submit" class="btn edit py-2 px-4 me-3" title="Editer la prestation"><i class="bi bi-pen"></i></button>
-                                                <!-- Bouton supprimer -->
-                                                <button type="button" class="btn delete py-2 px-4" title="Supprimer la prestation" data-id="" data-deleteparam="" data-bs-toggle="modal" data-bs-target="#deleteThemeCategory">
-                                                    <i class="bi bi-trash3" data-id="" data-deleteparam=""></i>
-                                                </button>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    Californien <!-- <div class="d-inline badge-type px-3 ms-3">Forfait</div> -->
+                                                </div>
                                             </td>
-                                        </form>
-                                    </tr>
-                                </tbody>
-                            </table>
+                                            <td>
+                                                <div class="table-time d-flex justify-content-center align-items-center">60 min</div>
+                                            </td>
+                                            <td>
+                                                <div class="table-price d-flex justify-content-center align-items-center">65 €</div>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex justify-content-end">
+                                                    <!-- Bouton éditer -->
+                                                    <a href="" class="btn edit py-2 me-3" title="Editer la prestation"><i class="bi bi-pen"></i></a>
+                                                    <!-- Bouton supprimer -->
+                                                    <button type="button" class="btn delete py-2" title="Supprimer la prestation" data-id="" data-deleteparam="2" data-bs-toggle="modal" data-bs-target="#displayModal">
+                                                        <i class="bi bi-trash3" data-id="" data-deleteparam="2"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    Thaï Traditionnel <!-- <div class="d-inline badge-type px-3 ms-3">Forfait</div> -->
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="table-time d-flex justify-content-center align-items-center">90 min</div>
+                                            </td>
+                                            <td>
+                                                <div class="table-price d-flex justify-content-center align-items-center">80 €</div>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex justify-content-end">
+                                                    <!-- Bouton éditer -->
+                                                    <a href="" class="btn edit py-2 me-3" title="Editer la prestation"><i class="bi bi-pen"></i></a>
+                                                    <!-- Bouton supprimer -->
+                                                    <button type="button" class="btn delete py-2" title="Supprimer la prestation" data-id="" data-deleteparam="2" data-bs-toggle="modal" data-bs-target="#displayModal">
+                                                        <i class="bi bi-trash3" data-id="" data-deleteparam="2"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    Évasion Zen <div class="d-inline badge-type px-3 ms-3">Forfait</div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="table-time d-flex justify-content-center align-items-center">90 min</div>
+                                            </td>
+                                            <td>
+                                                <div class="table-price d-flex justify-content-center align-items-center">80 €</div>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex justify-content-end">
+                                                    <!-- Bouton éditer -->
+                                                    <a href="" class="btn edit py-2 me-3" title="Editer la prestation"><i class="bi bi-pen"></i></a>
+                                                    <!-- Bouton supprimer -->
+                                                    <button type="button" class="btn delete py-2" title="Supprimer la prestation" data-id="" data-deleteparam="" data-bs-toggle="modal" data-bs-target="#displayModal">
+                                                        <i class="bi bi-trash3" data-id="" data-deleteparam=""></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="table-responsive pt-md-5 my-4 my-md-5">
+                                <table class="table align-middle table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col"></th>
+                                            <th scope="col">
+                                                <h2>Épilations</h2>
+                                            </th>
+                                            <th scope="col"></th>
+                                            <th scope="col"></th>
+                                            <th scope="col">
+                                                <div class="d-flex justify-content-end">
+                                                    <a href="" class="btn view py-2 me-3" title="Voir sur le site"><i class="bi bi-eye"></i></a>
+                                                    <!-- Bouton éditer -->
+                                                    <a href="" class="btn edit py-2 me-3" title="Editer la catégorie"><i class="bi bi-pen"></i></a>
+                                                    <!-- Bouton supprimer -->
+                                                    <a href="" class="btn delete py-2" title="Supprimer la catégorie" data-id="" data-deleteparam="" data-bs-toggle="modal" data-bs-target="#displayModal">
+                                                        <i class="bi bi-trash3" data-id="" data-deleteparam=""></i>
+                                                    </a>
+                                                </div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+        
+                                    <tbody class="table-group-divider">
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    Sourcils <!-- <div class="d-inline badge-type px-3 ms-3">Forfait</div> -->
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="table-time d-flex justify-content-center align-items-center">15 min</div>
+                                            </td>
+                                            <td>
+                                                <div class="table-price d-flex justify-content-center align-items-center">15 €</div>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex justify-content-end">
+                                                    <!-- Bouton éditer -->
+                                                    <a href="" class="btn edit py-2 me-3" title="Editer la prestation"><i class="bi bi-pen"></i></a>
+                                                    <!-- Bouton supprimer -->
+                                                    <button type="button" class="btn delete py-2" title="Supprimer la prestation" data-id="" data-deleteparam="" data-bs-toggle="modal" data-bs-target="#displayModal">
+                                                        <i class="bi bi-trash3" data-id="" data-deleteparam=""></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    Bras <!-- <div class="d-inline badge-type px-3 ms-3">Forfait</div> -->
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="table-time d-flex justify-content-center align-items-center">25 min</div>
+                                            </td>
+                                            <td>
+                                                <div class="table-price d-flex justify-content-center align-items-center">25 €</div>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex justify-content-end">
+                                                    <!-- Bouton éditer -->
+                                                    <a href="" class="btn edit py-2 me-3" title="Editer la prestation"><i class="bi bi-pen"></i></a>
+                                                    <!-- Bouton supprimer -->
+                                                    <button type="button" class="btn delete py-2" title="Supprimer la prestation" data-id="" data-deleteparam="" data-bs-toggle="modal" data-bs-target="#displayModal">
+                                                        <i class="bi bi-trash3" data-id="" data-deleteparam=""></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    Douceur Printanière <div class="d-inline badge-type px-3 ms-3">Forfait</div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="table-time d-flex justify-content-center align-items-center">90 min</div>
+                                            </td>
+                                            <td>
+                                                <div class="table-price d-flex justify-content-center align-items-center">80 €</div>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex justify-content-end">
+                                                    <!-- Bouton éditer -->
+                                                    <a href="" class="btn edit py-2 me-3" title="Editer la prestation"><i class="bi bi-pen"></i></a>
+                                                    <!-- Bouton supprimer -->
+                                                    <button type="button" class="btn delete py-2" title="Supprimer la prestation" data-id="" data-deleteparam="" data-bs-toggle="modal" data-bs-target="#displayModal">
+                                                        <i class="bi bi-trash3" data-id="" data-deleteparam=""></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="table-responsive pt-md-5 my-4 my-md-5">
+                                <table class="table align-middle table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col"></th>
+                                            <th scope="col">
+                                                <h2>Soins des mains</h2>
+                                            </th>
+                                            <th scope="col"></th>
+                                            <th scope="col"></th>
+                                            <th scope="col">
+                                                <div class="d-flex justify-content-end">
+                                                    <a href="" class="btn view py-2 me-3" title="Voir sur le site"><i class="bi bi-eye"></i></a>
+                                                    <!-- Bouton éditer -->
+                                                    <a href="" class="btn edit py-2 me-3" title="Editer la catégorie"><i class="bi bi-pen"></i></a>
+                                                    <!-- Bouton supprimer -->
+                                                    <a href="" class="btn delete py-2" title="Supprimer la catégorie" data-id="" data-deleteparam="" data-bs-toggle="modal" data-bs-target="#displayModal">
+                                                        <i class="bi bi-trash3" data-id="" data-deleteparam=""></i>
+                                                    </a>
+                                                </div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+        
+                                    <tbody class="table-group-divider">
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+
                         </section>
                     </div>
 
@@ -165,6 +447,26 @@
 
         </div>
     </main>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="displayModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5">Suppression / Validation</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body py-4">
+                    <p class="text-center">Êtes vous certain de vouloir <strong>supprimer / valider</strong> cet élément ?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline py-2 me-md-4 mb-3 mb-md-0" data-bs-dismiss="modal">Annuler</button>
+                    <a class="btn btn-classic py-2" id="delete-link">Valider</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- ========================================================================================================================================================================== -->
     <!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->

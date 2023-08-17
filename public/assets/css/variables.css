@@ -18,7 +18,9 @@
 
     --main-filter-color: #fdf3fdbb;
     /* --main-filter-color: #fdf3fd91; */
-    --second-filter-color: #2f5b0e8c;
+    /* --second-filter-color: #2f5b0e8c; */
+    --second-filter-color: #2f5b0e28;
+    --brown-filter-color: #c0855248;
 
     --special-font: 'Petrona', serif;
     --main-font: 'Lato', sans-serif;

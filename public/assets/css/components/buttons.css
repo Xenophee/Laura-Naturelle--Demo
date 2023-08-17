@@ -18,9 +18,13 @@
     border: var(--border-light-solid);
 }
 
-.btn-classic:hover, .btn-outline:hover {
+.btn-classic:hover {
     color: var(--main-color);
     border: var(--border-light-solid);
+}
+
+.btn-outline:hover {
+    color: var(--main-color);
 }
 
 .btn-outline {
@@ -38,6 +42,12 @@
 /* --------------------------------------------------------------------------------------------------------------------------------- */
 /* BOUTONS DASHBOARD */
 
+.view {
+    color: var(--main-color);
+    border: var(--border-light-medium-solid);
+    background-color: var(--third-color);
+}
+
 .edit {
     color: var(--main-color);
     border: var(--border-light-medium-solid);
@@ -50,12 +60,33 @@
     background-color: var(--danger-color);
 }
 
+.validate {
+    color: var(--main-color);
+    border: var(--border-light-medium-solid);
+    background-color: #e3b04c;
+}
+
 .view:hover,
 .edit:hover,
-.delete:hover {
+.delete:hover,
+.validate:hover {
     background-color: transparent;
-    color: var(--first-color);
-    border: var(--border-first-solid);
+    color: var(--special-dark-color);
+    border: var(--border-dark-special-medium-solid);
+}
+
+.view,
+.edit,
+.delete,
+.validate {
+    width: 55px;
+}
+
+.view .bi,
+.edit .bi,
+.delete .bi,
+.validate .bi {
+    font-size: 1rem;
 }
 
 
@@ -81,12 +112,8 @@
         font-size: 1.2rem;
     }
 
-    .edit {
-        width: 25%;
-    }
-    
-    .delete {
-        width: 25%;
+    .view, .edit, .delete, .validate {
+        width: 65px;
     }
 }
 
@@ -115,12 +142,8 @@
         opacity: 1;
     }
 
-    .edit {
-        width: 10%;
-    }
-    
-    .delete {
-        width: 10%;
+    .view, .edit, .delete {
+        width: 70px;
     }
 
 }
