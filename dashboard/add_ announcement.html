@@ -132,7 +132,20 @@
                     <section class="d-flex flex-column justify-content-center align-items-center">
                         <h1 class="category-title text-center py-4 my-5">Mes annonces</h1>
 
-                        
+                        <form method="POST" class="dashboard-form d-flex flex-column align-items-center">
+                            <label class="mt-4 mt-md-5 mb-4 mb-md-0">Quel type d'annonce souhaitez vous afficher ?</label>
+
+                            <div class="btn-group d-flex flex-column flex-md-row w-100 mb-4 mb-md-5 py-md-5" role="group" aria-label="Choisir le type d'annonce">
+                                <input type="radio" class="btn-check" name="type" value="1" id="absence" autocomplete="off">
+                                <label class="btn btn-radio" for="absence">Absence</label>
+                            
+                                <input type="radio" class="btn-check" name="type" value="2" id="promotion" autocomplete="off">
+                                <label class="btn btn-radio" for="promotion">Promotion</label>
+
+                                <input type="radio" class="btn-check" name="type" value="3" id="other" autocomplete="off">
+                                <label class="btn btn-radio" for="other">Autre</label>
+                            </div>
+                        </form>
 
                     </section>
                 </div>

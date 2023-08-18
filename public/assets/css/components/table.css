@@ -1,5 +1,13 @@
 
 
+.table-responsive {
+    width: 100%;
+}
+
+.table-responsive::-webkit-scrollbar {
+    height: 4px;
+}
+
 tr {
     height: 60px;
 }
@@ -15,6 +23,18 @@ tr:not(thead tr) {
 .table-striped tbody tr:nth-of-type(odd) {
     background-color: var(--second-filter-color);
 }
+
+.table-news tbody tr:nth-of-type(odd) {
+    background-color: var(--brown-filter-color);
+}
+
+.table-news th {
+    color: var(--brown-color);
+}
+
+
+/* ---------------------------------------- */
+/* Badges du tableau */
 
 .badge-type {
     color: var(--main-color);
@@ -33,24 +53,30 @@ tr:not(thead tr) {
     background-color: var(--brown-color);
 }
 
-/* .group-links {
-    width: 80%;
-} */
 
 
-.table-news tbody tr:nth-of-type(odd) {
-    background-color: var(--brown-filter-color);
+/* ================================================================================================================================= */
+/* --------------------------------------------------------------------------------------------------------------------------------- */
+/* RESPONSIVE */
+
+
+/* -------------------------------------------- */
+/* TABLETTE */
+
+@media (min-width: 768px) {
+
+    .table-responsive {
+        width: 90%;
+    }
 }
 
-.table-news th {
-    color: var(--brown-color);
-}
 
+/* -------------------------------------------- */
+/* GRAND ECRAN */
 
 @media (min-width: 1200px) {
 
-    /* td {
-        height: 60px;
-    } */
-
+    .table-responsive {
+        width: 70%;
+    }
 }

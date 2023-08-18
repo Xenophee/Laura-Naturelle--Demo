@@ -6,6 +6,7 @@
 }
 
 
+
 .schedules-form {
     width: 100%;
 }
@@ -27,17 +28,17 @@
     margin-bottom: 0;
 }
 
+.schedules .form-control {
+    height: 40px;
+}
+
 .schedules .form-check-label {
     font-size: 1.2rem;
 }
 
 
-.table-responsive {
-    width: 100%;
-}
-
-.table-responsive::-webkit-scrollbar {
-    height: 4px;
+.announcement-btns {
+    width: 90%;
 }
 
 
@@ -46,7 +47,11 @@
 /* --------------------------------------------------------------------------------------------------------------------------------- */
 /* RESPONSIVE */
 
+/* -------------------------------------------- */
+/* TABLETTE */
+
 @media (min-width: 768px) {
+
     .dashboard-form {
         width: 65%;
     }
@@ -55,13 +60,21 @@
         width: 90%;
     }
 
-    .table-responsive {
-        width: 90%;
+    .schedules .form-label {
+        width: 30%;
+    }
+
+    .announcement-btns {
+        width: 80%;
     }
 }
 
 
+/* -------------------------------------------- */
+/* GRAND ECRAN */
+
 @media (min-width: 1200px) {
+
     .dashboard-form {
         width: 50%;
     }
@@ -74,11 +87,11 @@
         width: 20%;
     }
 
-    .schedules-input {
+    .schedules .form-control {
         width: 20%;
     }
 
-    .table-responsive {
+    .announcement-btns {
         width: 70%;
     }
 }
