@@ -29,8 +29,9 @@ const counterLenght = (textarea, value) => {
         
     counterChar.textContent = value - content;
     
+    // Ajout d'un message d'erreur en cas de dépassement
     if (Number(counterChar.textContent) < 0) {
-        textareaMessage.textContent = 'Vous avez dépasser le nombre de caractères autorisés.';
+        textareaMessage.textContent = 'Vous avez dépassé le nombre de caractères autorisés.';
     } else {
         textareaMessage.textContent = '';
     }
@@ -47,32 +48,37 @@ const counterLenght = (textarea, value) => {
 const announcement = document.getElementById('announcement-form');
 
 if (announcement != undefined) {
+
     const typeChoices = document.querySelectorAll('.type-choice');
     const inputBlock = document.querySelectorAll('.input-block');
     const textarea = document.querySelector('textarea');
     const value = Number(counterChar.textContent);
     
-    console.log(inputBlock);
-
+    // Fait le décompte du nombre de caractères sur le textarea et affiche le message d'erreur
     textarea.addEventListener('keydown', () => {
         counterLenght(textarea, value);
     })
     
+    // Affichage du formulaire adapté en fonction du bouton cliqué
     typeChoices.forEach((element, key) => {
         element.addEventListener('click', () => {
 
+            // Réinitialise l'affichage à chaque click
             inputBlock.forEach(element => {
                 element.classList.add('d-none');
             });
 
-            if (element.checked && key == 0) {
+            if (element.checked && element.value == 1) {
+                // Affichage pour les absences
                 inputBlock[1].classList.remove('d-none');
                 inputBlock[2].classList.remove('d-none');
-            } else if (element.checked && key == 1) {
+            } else if (element.checked && element.value == 2) {
+                // Affichage pour les promotions
                 inputBlock[0].classList.remove('d-none');
                 inputBlock[1].classList.remove('d-none');
                 inputBlock[2].classList.remove('d-none');
-            } else {
+            } else if (element.checked && element.value == 3) {
+                // Affichage pour les messages personnalisés
                 inputBlock[1].classList.remove('d-none');
             }
         })
