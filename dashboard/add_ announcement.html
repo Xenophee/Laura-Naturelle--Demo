@@ -132,36 +132,36 @@
                     <section class="d-flex flex-column justify-content-center align-items-center">
                         <h1 class="category-title text-center py-4 my-5">Mes annonces</h1>
 
-                        <form method="POST" class="dashboard-form d-flex flex-column align-items-center">
+                        <form method="POST" class="dashboard-form d-flex flex-column align-items-center" id="announcement-form">
                             <label class="mt-4 mt-md-5 mb-4 mb-md-0">Quel type d'annonce souhaitez vous afficher ?</label>
 
                             <div class="btn-group d-flex flex-column flex-md-row w-100 mb-4 mb-md-5 py-md-5" role="group" aria-label="Choisir le type d'annonce">
-                                <input type="radio" class="btn-check" name="type" value="1" id="absence" autocomplete="off">
+                                <input type="radio" class="btn-check type-choice" name="type" value="1" id="absence" autocomplete="off">
                                 <label class="btn btn-radio" for="absence">Absence</label>
                             
-                                <input type="radio" class="btn-check" name="type" value="2" id="promotion" autocomplete="off">
+                                <input type="radio" class="btn-check type-choice" name="type" value="2" id="promotion" autocomplete="off">
                                 <label class="btn btn-radio" for="promotion">Promotion</label>
 
-                                <input type="radio" class="btn-check" name="type" value="3" id="other" autocomplete="off">
+                                <input type="radio" class="btn-check type-choice" name="type" value="3" id="other" autocomplete="off">
                                 <label class="btn btn-radio" for="other">Autre</label>
                             </div>
 
-                            <div class="form-div mb-4 pt-md-5">
+                            <div class="form-div input-block d-none mb-4 pt-md-5">
                                 <label for="advantage" class="form-label me-3">Avantage * :</label>
                                 <input type="text" class="form-control" id="advantage" name="advantage" value="" required>
                                 <div class="text-danger fst-italic mt-2"></div>
                             </div>
 
-                            <div class="mb-4 mb-md-5 pt-md-5 w-100">
+                            <div class="mb-4 mb-md-5 pt-md-5 w-100 input-block d-none">
                                 <div class="d-flex flex-column flex-md-row justify-content-between">
                                     <label for="content" class="form-label me-3">Contenu * :</label>
-                                    <small>Nb de caractères restants : 500</small>
+                                    <small>Nb de caractères restants : <span id="counterChar">500</span></small>
                                 </div>
-                                <textarea class="form-control textarea" name="content" id="content">sur la prochaine</textarea>
-                                <div class="text-danger fst-italic mt-2"></div>
+                                <textarea class="form-control textarea" name="content" id="content"></textarea>
+                                <div class="text-danger fst-italic mt-2" id="textareaMessage"></div>
                             </div>
 
-                            <div class="d-flex flex-column flex-md-row justify-content-around align-items-center w-100 mb-4 mb-md-5">
+                            <div class="d-flex flex-column flex-md-row justify-content-around align-items-center input-block d-none w-100 mb-4 mb-md-5">
                                 <div class="form-div me-md-5 mb-3 mb-md-0">
                                     <label for="first_date" class="form-label me-3">Date de début * :</label>
                                     <input type="date" class="form-control" id="first_date" name="first_date" value="" required>
