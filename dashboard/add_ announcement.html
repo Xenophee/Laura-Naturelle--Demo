@@ -145,6 +145,41 @@
                                 <input type="radio" class="btn-check" name="type" value="3" id="other" autocomplete="off">
                                 <label class="btn btn-radio" for="other">Autre</label>
                             </div>
+
+                            <div class="form-div mb-4 pt-md-5">
+                                <label for="advantage" class="form-label me-3">Avantage * :</label>
+                                <input type="text" class="form-control" id="advantage" name="advantage" value="" required>
+                                <div class="text-danger fst-italic mt-2"></div>
+                            </div>
+
+                            <div class="mb-4 mb-md-5 pt-md-5 w-100">
+                                <div class="d-flex flex-column flex-md-row justify-content-between">
+                                    <label for="content" class="form-label me-3">Contenu * :</label>
+                                    <small>Nb de caractères restants : 500</small>
+                                </div>
+                                <textarea class="form-control textarea" name="content" id="content">sur la prochaine</textarea>
+                                <div class="text-danger fst-italic mt-2"></div>
+                            </div>
+
+                            <div class="d-flex flex-column flex-md-row justify-content-around align-items-center w-100 mb-4 mb-md-5">
+                                <div class="form-div me-md-5 mb-3 mb-md-0">
+                                    <label for="first_date" class="form-label me-3">Date de début * :</label>
+                                    <input type="date" class="form-control" id="first_date" name="first_date" value="" required>
+                                    <div class="text-danger fst-italic mt-2"></div>
+                                </div>
+
+                                <span class="bold">au</span>
+    
+                                <div class="form-div ms-md-5 mt-3 mt-md-0">
+                                    <label for="last_date" class="form-label me-3">Date de fin * :</label>
+                                    <input type="date" class="form-control" id="last_date" name="last_date" value="" required>
+                                    <div class="text-danger fst-italic mt-2"></div>
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-center pb-md-5 mt-4 mt-md-0 mb-5 w-100">
+                                <button type="submit" class="btn btn-classic py-2"><i class="bi bi-pencil-fill me-3"></i>Ajouter</button>
+                            </div>
                         </form>
 
                     </section>
