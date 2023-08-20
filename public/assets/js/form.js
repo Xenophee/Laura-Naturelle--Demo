@@ -14,10 +14,10 @@ if (coverInput != undefined) {
             coverPreview.setAttribute('src', reader.result);
         });
         reader.readAsDataURL(file);
-        }
+        };
     });
 
-}
+};
 
 
 // ----------------------------------------------------------------------------------------------
@@ -34,9 +34,9 @@ const counterLenght = (textarea, value) => {
         textareaMessage.textContent = 'Vous avez dépassé le nombre de caractères autorisés.';
     } else {
         textareaMessage.textContent = '';
-    }
+    };
 
-}
+};
 
 
 
@@ -71,15 +71,15 @@ if (announcement != undefined) {
         } else if (element.checked && element.value == 3) {
             // Affichage pour les messages personnalisés
             inputBlock[1].classList.remove('d-none');
-        }
-    }
+        };
+    };
     // ----------------------------------------------------------------------
 
     // ----------------------------------------------------------------------
     // En cas d'annulation de la suppression de l'annonce, retour du check sur le bouton modifier
     displayModal.addEventListener('hidden.bs.modal', () => {
         modify.checked = true;
-    })
+    });
     // ----------------------------------------------------------------------
     
     // ----------------------------------------------------------------------
@@ -110,7 +110,7 @@ if (announcement != undefined) {
         });
     });
     // ----------------------------------------------------------------------
-}
+};
 
 
 
@@ -158,4 +158,4 @@ if (service != undefined) {
         });
     });
     // ----------------------------------------------------------------------
-}
+};
