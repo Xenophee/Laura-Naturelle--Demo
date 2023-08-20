@@ -20,8 +20,24 @@ tr:not(thead tr) {
     border: var(--first-color);
 }
 
+.table-group-divider {
+    border-top: var(--border-second-solid);
+}
+
 .table-striped tbody tr:nth-of-type(odd) {
     background-color: var(--second-filter-color);
+}
+
+
+/* ---------------------------------------- */
+/* Tableau en attente de publication */
+
+.table-news .table-group-divider {
+    border-top: var(--border-brown-medium-solid);
+}
+
+.table-news tr:not(thead tr) {
+    border-bottom: var(--border-brown-solid);
 }
 
 .table-news tbody tr:nth-of-type(odd) {
@@ -34,11 +50,24 @@ tr:not(thead tr) {
 
 
 /* ---------------------------------------- */
+/* Ligne de tableau archivé */
+
+.desactivated {
+    background-color: var(--brown-filter-color) !important;
+}
+
+
+/* ---------------------------------------- */
 /* Badges du tableau */
 
-.badge-type {
+.badge-package {
     color: var(--main-color);
     background-color: #e3b04c;
+}
+
+.badge-special {
+    color: var(--main-color);
+    background-color: var(--special-dark-color);
 }
 
 .table-time {

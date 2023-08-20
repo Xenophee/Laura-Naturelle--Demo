@@ -34,7 +34,7 @@
 }
 
 .btn .bi {
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 
@@ -66,10 +66,17 @@
     background-color: #e3b04c;
 }
 
+.desactivate {
+    color: var(--main-color);
+    border: var(--border-light-medium-solid);
+    background-color: var(--brown-color);
+}
+
 .view:hover,
 .edit:hover,
 .delete:hover,
-.validate:hover {
+.validate:hover,
+.desactivate:hover {
     background-color: transparent;
     color: var(--special-dark-color);
     border: var(--border-dark-special-medium-solid);
@@ -78,21 +85,18 @@
 .view,
 .edit,
 .delete,
-.validate {
+.validate,
+.desactivate {
     width: 55px;
-}
-
-.view .bi,
-.edit .bi,
-.delete .bi,
-.validate .bi {
-    font-size: 1rem;
 }
 
 
 /* ================================================================================================================================= */
 /* --------------------------------------------------------------------------------------------------------------------------------- */
 /* RESPONSIVE */
+
+/* -------------------------------------------- */
+/* TABLETTE */
 
 @media (min-width: 768px)  {
 
@@ -112,10 +116,14 @@
         font-size: 1.2rem;
     }
 
-    .view, .edit, .delete, .validate {
+    .view, .edit, .delete, .validate, .desactivate {
         width: 65px;
     }
 }
+
+
+/* -------------------------------------------- */
+/* GRAND ECRAN */
 
 @media (min-width: 1200px) {
 
@@ -142,7 +150,7 @@
         opacity: 1;
     }
 
-    .view, .edit, .delete {
+    .view, .edit, .delete, .desactivate {
         width: 70px;
     }
 
