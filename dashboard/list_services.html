@@ -143,7 +143,7 @@
                                             <th scope="row">1</th>
                                             <td>
                                                 <div class="d-flex align-items-center">
-                                                    Pierres Chaudes <!-- <div class="d-inline badge-type px-3 ms-3">Forfait</div> -->
+                                                    Pierres Chaudes <!-- <div class="d-inline badge-package px-3 ms-3">Forfait</div> -->
                                                     <div class="d-inline px-3 ms-3">[Modelages]</div>
                                                 </div>
                                             </td>
@@ -156,7 +156,7 @@
                                             <td>
                                                 <div class="d-flex justify-content-end">
                                                     <!-- Bouton de visualisation -->
-                                                    <a href="" class="btn view py-2 me-3" title="Voir sur le site"><i class="bi bi-eye"></i></a>
+                                                    <a href="" class="btn view py-2 me-3" title="Voir sur le site"><i class="bi bi-globe2"></i></a>
                                                     <!-- Bouton de validation -->
                                                     <a href="" class="btn validate py-2 me-3" title="Publier la prestation" data-id="" data-bs-toggle="modal" data-bs-target="#displayModal"><i class="bi bi-check2" data-id=""></i></a>
                                                     <!-- Bouton éditer -->
@@ -173,7 +173,7 @@
                                             <th scope="row">2</th>
                                             <td>
                                                 <div class="d-flex align-items-center">
-                                                    Liberté sans Soucis <div class="d-inline badge-type px-3 ms-3">Forfait</div>
+                                                    Liberté sans Soucis <div class="d-inline badge-package px-3 ms-3">Forfait</div>
                                                     <div class="d-inline px-3 ms-3">[Épilations]</div>
                                                 </div>
                                             </td>
@@ -186,9 +186,39 @@
                                             <td>
                                                 <div class="d-flex justify-content-end">
                                                     <!-- Bouton de visualisation -->
-                                                    <a href="" class="btn view py-2 me-3" title="Voir sur le site"><i class="bi bi-eye"></i></a>
+                                                    <a href="" class="btn view py-2 me-3" title="Voir sur le site"><i class="bi bi-globe2"></i></a>
                                                     <!-- Bouton de validation -->
                                                     <a href="" class="btn validate py-2 me-3" title="Publier la prestation" data-id="" data-bs-toggle="modal" data-bs-target="#displayModal"><i class="bi bi-check2" data-id=""></i></a>
+                                                    <!-- Bouton éditer -->
+                                                    <a href="" class="btn edit py-2 me-3" title="Editer la prestation"><i class="bi bi-pen"></i></a>
+                                                    <!-- Bouton supprimer -->
+                                                    <button type="button" class="btn delete py-2" title="Supprimer la prestation" data-id="" data-deleteparam="" data-bs-toggle="modal" data-bs-target="#displayModal">
+                                                        <i class="bi bi-trash3" data-id="" data-deleteparam=""></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    Évasion Sérénité <div class="d-inline badge-package px-3 ms-3">Forfait</div> <div class="d-inline badge-special px-3 ms-3">Spécial</div>
+                                                    <div class="d-inline px-3 ms-3">[Modelage]</div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="table-time d-flex justify-content-center align-items-center">75 min</div>
+                                            </td>
+                                            <td>
+                                                <div class="table-price d-flex justify-content-center align-items-center">90 €</div>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex justify-content-end">
+                                                    <!-- Bouton de visualisation -->
+                                                    <a href="" class="btn view py-2 me-3" title="Voir sur le site"><i class="bi bi-globe2"></i></a>
+                                                    <!-- Bouton de validation -->
+                                                    <!-- <a href="" class="btn validate py-2 me-3" title="Publier la prestation" data-id="" data-bs-toggle="modal" data-bs-target="#displayModal"><i class="bi bi-check2" data-id=""></i></a> -->
                                                     <!-- Bouton éditer -->
                                                     <a href="" class="btn edit py-2 me-3" title="Editer la prestation"><i class="bi bi-pen"></i></a>
                                                     <!-- Bouton supprimer -->
@@ -216,9 +246,11 @@
                                             <th scope="col"></th>
                                             <th scope="col">
                                                 <div class="d-flex justify-content-end">
-                                                    <a href="" class="btn view py-2 me-3" title="Voir sur le site"><i class="bi bi-eye"></i></a>
+                                                    <a href="" class="btn view py-2 me-3" title="Voir sur le site"><i class="bi bi-globe2"></i></a>
                                                     <!-- Bouton éditer -->
                                                     <a href="" class="btn edit py-2 me-3" title="Editer la catégorie"><i class="bi bi-pen"></i></a>
+                                                    <!-- Bouton de désactivation -->
+                                                    <a href="" class="btn desactivate py-2 me-3" title="Désactiver la catégorie"><i class="bi bi-eye-slash"></i></a>
                                                     <!-- Bouton supprimer -->
                                                     <a href="" class="btn delete py-2" title="Supprimer la catégorie" data-id="" data-deleteparam="1" data-bs-toggle="modal" data-bs-target="#displayModal">
                                                         <i class="bi bi-trash3" data-id="" data-deleteparam="1"></i>
@@ -233,7 +265,7 @@
                                             <th scope="row">1</th>
                                             <td>
                                                 <div class="d-flex align-items-center">
-                                                    Californien <!-- <div class="d-inline badge-type px-3 ms-3">Forfait</div> -->
+                                                    Californien <!-- <div class="d-inline badge-package px-3 ms-3">Forfait</div> -->
                                                 </div>
                                             </td>
                                             <td>
@@ -246,6 +278,8 @@
                                                 <div class="d-flex justify-content-end">
                                                     <!-- Bouton éditer -->
                                                     <a href="" class="btn edit py-2 me-3" title="Editer la prestation"><i class="bi bi-pen"></i></a>
+                                                    <!-- Bouton de désactivation -->
+                                                    <a href="" class="btn desactivate py-2 me-3" title="Désactiver la prestation"><i class="bi bi-eye-slash"></i></a>
                                                     <!-- Bouton supprimer -->
                                                     <button type="button" class="btn delete py-2" title="Supprimer la prestation" data-id="" data-deleteparam="2" data-bs-toggle="modal" data-bs-target="#displayModal">
                                                         <i class="bi bi-trash3" data-id="" data-deleteparam="2"></i>
@@ -258,7 +292,7 @@
                                             <th scope="row">2</th>
                                             <td>
                                                 <div class="d-flex align-items-center">
-                                                    Thaï Traditionnel <!-- <div class="d-inline badge-type px-3 ms-3">Forfait</div> -->
+                                                    Thaï Traditionnel <!-- <div class="d-inline badge-package px-3 ms-3">Forfait</div> -->
                                                 </div>
                                             </td>
                                             <td>
@@ -271,6 +305,8 @@
                                                 <div class="d-flex justify-content-end">
                                                     <!-- Bouton éditer -->
                                                     <a href="" class="btn edit py-2 me-3" title="Editer la prestation"><i class="bi bi-pen"></i></a>
+                                                    <!-- Bouton de désactivation -->
+                                                    <a href="" class="btn desactivate py-2 me-3" title="Désactiver la prestation"><i class="bi bi-eye-slash"></i></a>
                                                     <!-- Bouton supprimer -->
                                                     <button type="button" class="btn delete py-2" title="Supprimer la prestation" data-id="" data-deleteparam="2" data-bs-toggle="modal" data-bs-target="#displayModal">
                                                         <i class="bi bi-trash3" data-id="" data-deleteparam="2"></i>
@@ -283,7 +319,34 @@
                                             <th scope="row">3</th>
                                             <td>
                                                 <div class="d-flex align-items-center">
-                                                    Évasion Zen <div class="d-inline badge-type px-3 ms-3">Forfait</div>
+                                                    Coquillages chauds <div class="d-inline badge-special px-3 ms-3">Spécial</div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="table-time d-flex justify-content-center align-items-center">70 min</div>
+                                            </td>
+                                            <td>
+                                                <div class="table-price d-flex justify-content-center align-items-center">70 €</div>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex justify-content-end">
+                                                    <!-- Bouton éditer -->
+                                                    <a href="" class="btn edit py-2 me-3" title="Editer la prestation"><i class="bi bi-pen"></i></a>
+                                                    <!-- Bouton de désactivation -->
+                                                    <a href="" class="btn desactivate py-2 me-3" title="Désactiver la prestation"><i class="bi bi-eye-slash"></i></a>
+                                                    <!-- Bouton supprimer -->
+                                                    <button type="button" class="btn delete py-2" title="Supprimer la prestation" data-id="" data-deleteparam="" data-bs-toggle="modal" data-bs-target="#displayModal">
+                                                        <i class="bi bi-trash3" data-id="" data-deleteparam=""></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <th scope="row">4</th>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    Évasion Zen <div class="d-inline badge-package px-3 ms-3">Forfait</div>
                                                 </div>
                                             </td>
                                             <td>
@@ -296,6 +359,62 @@
                                                 <div class="d-flex justify-content-end">
                                                     <!-- Bouton éditer -->
                                                     <a href="" class="btn edit py-2 me-3" title="Editer la prestation"><i class="bi bi-pen"></i></a>
+                                                    <!-- Bouton de désactivation -->
+                                                    <a href="" class="btn desactivate py-2 me-3" title="Désactiver la prestation"><i class="bi bi-eye-slash"></i></a>
+                                                    <!-- Bouton supprimer -->
+                                                    <button type="button" class="btn delete py-2" title="Supprimer la prestation" data-id="" data-deleteparam="" data-bs-toggle="modal" data-bs-target="#displayModal">
+                                                        <i class="bi bi-trash3" data-id="" data-deleteparam=""></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        
+                                        <tr class="desactivated">
+                                            <th scope="row">5</th>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    Hawaïen Lomi-Lomi <!-- <div class="d-inline badge-package px-3 ms-3">Forfait</div> -->
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="table-time d-flex justify-content-center align-items-center">120 min</div>
+                                            </td>
+                                            <td>
+                                                <div class="table-price d-flex justify-content-center align-items-center">90 €</div>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex justify-content-end">
+                                                    <!-- Bouton éditer -->
+                                                    <a href="" class="btn edit py-2 me-3" title="Editer la prestation"><i class="bi bi-pen"></i></a>
+                                                    <!-- Bouton de désactivation -->
+                                                    <a href="" class="btn desactivate py-2 me-3" title="Activer la prestation"><i class="bi bi-eye"></i></a>
+                                                    <!-- Bouton supprimer -->
+                                                    <button type="button" class="btn delete py-2" title="Supprimer la prestation" data-id="" data-deleteparam="" data-bs-toggle="modal" data-bs-target="#displayModal">
+                                                        <i class="bi bi-trash3" data-id="" data-deleteparam=""></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="desactivated">
+                                            <th scope="row">6</th>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    Harmonie Totale <div class="d-inline badge-package px-3 ms-3">Forfait</div> <div class="d-inline badge-special px-3 ms-3">Spécial</div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="table-time d-flex justify-content-center align-items-center">90 min</div>
+                                            </td>
+                                            <td>
+                                                <div class="table-price d-flex justify-content-center align-items-center">80 €</div>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex justify-content-end">
+                                                    <!-- Bouton éditer -->
+                                                    <a href="" class="btn edit py-2 me-3" title="Editer la prestation"><i class="bi bi-pen"></i></a>
+                                                    <!-- Bouton de désactivation -->
+                                                    <!-- <a href="" class="btn desactivate py-2 me-3" title="Activer la prestation"><i class="bi bi-eye"></i></a> -->
                                                     <!-- Bouton supprimer -->
                                                     <button type="button" class="btn delete py-2" title="Supprimer la prestation" data-id="" data-deleteparam="" data-bs-toggle="modal" data-bs-target="#displayModal">
                                                         <i class="bi bi-trash3" data-id="" data-deleteparam=""></i>
@@ -319,9 +438,11 @@
                                             <th scope="col"></th>
                                             <th scope="col">
                                                 <div class="d-flex justify-content-end">
-                                                    <a href="" class="btn view py-2 me-3" title="Voir sur le site"><i class="bi bi-eye"></i></a>
+                                                    <a href="" class="btn view py-2 me-3" title="Voir sur le site"><i class="bi bi-globe2"></i></a>
                                                     <!-- Bouton éditer -->
                                                     <a href="" class="btn edit py-2 me-3" title="Editer la catégorie"><i class="bi bi-pen"></i></a>
+                                                    <!-- Bouton de désactivation -->
+                                                    <a href="" class="btn desactivate py-2 me-3" title="Désactiver la catégorie"><i class="bi bi-eye-slash"></i></a>
                                                     <!-- Bouton supprimer -->
                                                     <a href="" class="btn delete py-2" title="Supprimer la catégorie" data-id="" data-deleteparam="" data-bs-toggle="modal" data-bs-target="#displayModal">
                                                         <i class="bi bi-trash3" data-id="" data-deleteparam=""></i>
@@ -336,7 +457,7 @@
                                             <th scope="row">1</th>
                                             <td>
                                                 <div class="d-flex align-items-center">
-                                                    Sourcils <!-- <div class="d-inline badge-type px-3 ms-3">Forfait</div> -->
+                                                    Sourcils <!-- <div class="d-inline badge-package px-3 ms-3">Forfait</div> -->
                                                 </div>
                                             </td>
                                             <td>
@@ -349,6 +470,8 @@
                                                 <div class="d-flex justify-content-end">
                                                     <!-- Bouton éditer -->
                                                     <a href="" class="btn edit py-2 me-3" title="Editer la prestation"><i class="bi bi-pen"></i></a>
+                                                    <!-- Bouton de désactivation -->
+                                                    <a href="" class="btn desactivate py-2 me-3" title="Désactiver la prestation"><i class="bi bi-eye-slash"></i></a>
                                                     <!-- Bouton supprimer -->
                                                     <button type="button" class="btn delete py-2" title="Supprimer la prestation" data-id="" data-deleteparam="" data-bs-toggle="modal" data-bs-target="#displayModal">
                                                         <i class="bi bi-trash3" data-id="" data-deleteparam=""></i>
@@ -361,7 +484,7 @@
                                             <th scope="row">2</th>
                                             <td>
                                                 <div class="d-flex align-items-center">
-                                                    Bras <!-- <div class="d-inline badge-type px-3 ms-3">Forfait</div> -->
+                                                    Bras <!-- <div class="d-inline badge-package px-3 ms-3">Forfait</div> -->
                                                 </div>
                                             </td>
                                             <td>
@@ -374,6 +497,8 @@
                                                 <div class="d-flex justify-content-end">
                                                     <!-- Bouton éditer -->
                                                     <a href="" class="btn edit py-2 me-3" title="Editer la prestation"><i class="bi bi-pen"></i></a>
+                                                    <!-- Bouton de désactivation -->
+                                                    <a href="" class="btn desactivate py-2 me-3" title="Désactiver la prestation"><i class="bi bi-eye-slash"></i></a>
                                                     <!-- Bouton supprimer -->
                                                     <button type="button" class="btn delete py-2" title="Supprimer la prestation" data-id="" data-deleteparam="" data-bs-toggle="modal" data-bs-target="#displayModal">
                                                         <i class="bi bi-trash3" data-id="" data-deleteparam=""></i>
@@ -386,7 +511,7 @@
                                             <th scope="row">3</th>
                                             <td>
                                                 <div class="d-flex align-items-center">
-                                                    Douceur Printanière <div class="d-inline badge-type px-3 ms-3">Forfait</div>
+                                                    Douceur Printanière <div class="d-inline badge-package px-3 ms-3">Forfait</div>
                                                 </div>
                                             </td>
                                             <td>
@@ -399,6 +524,8 @@
                                                 <div class="d-flex justify-content-end">
                                                     <!-- Bouton éditer -->
                                                     <a href="" class="btn edit py-2 me-3" title="Editer la prestation"><i class="bi bi-pen"></i></a>
+                                                    <!-- Bouton de désactivation -->
+                                                    <a href="" class="btn desactivate py-2 me-3" title="Désactiver la prestation"><i class="bi bi-eye-slash"></i></a>
                                                     <!-- Bouton supprimer -->
                                                     <button type="button" class="btn delete py-2" title="Supprimer la prestation" data-id="" data-deleteparam="" data-bs-toggle="modal" data-bs-target="#displayModal">
                                                         <i class="bi bi-trash3" data-id="" data-deleteparam=""></i>
@@ -422,7 +549,7 @@
                                             <th scope="col"></th>
                                             <th scope="col">
                                                 <div class="d-flex justify-content-end">
-                                                    <a href="" class="btn view py-2 me-3" title="Voir sur le site"><i class="bi bi-eye"></i></a>
+                                                    <a href="" class="btn view py-2 me-3" title="Voir sur le site"><i class="bi bi-globe2"></i></a>
                                                     <!-- Bouton éditer -->
                                                     <a href="" class="btn edit py-2 me-3" title="Editer la catégorie"><i class="bi bi-pen"></i></a>
                                                     <!-- Bouton supprimer -->

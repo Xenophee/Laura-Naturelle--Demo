@@ -123,7 +123,7 @@
                         <section class="d-flex flex-column justify-content-center align-items-center">
                             <h1 class="category-title text-center py-4 my-5">Ajouter une prestation</h1>
 
-                            <form method="post" enctype="multipart/form-data" class="dashboard-form mt-5">
+                            <form method="post" enctype="multipart/form-data" class="dashboard-form mt-5" id="service-form">
     
                                 <fieldset class="mb-5">
 
@@ -137,17 +137,19 @@
                                                 <input type="file" class="form-control d-none" id="cover" name="cover" accept="image/jpeg" required>
                                             </div>
                                         </div>
+                                        <div class="text-danger text-center fst-italic mt-2"></div>
                                     </div>
 
                                     <div class="mb-4 pt-md-5">
                                         <label for="object" class="form-label mb-2">Catégorie de la prestation * :</label>
                                         <select class="form-select" id="object" name="object" required>
-                                            <option value="" selected>-</option>
+                                            <option value="0">-</option>
                                             <option value="1">Épilations</option>
                                             <option value="2">Soins du visage</option>
                                             <option value="3">Soins des mains</option>
                                             <option value="4">Modelages</option>
                                         </select>
+                                        <div class="text-danger fst-italic mt-2"></div>
                                     </div>
 
                                     <div class="mb-4 pt-md-5">
@@ -159,17 +161,17 @@
                                     <div class="mb-4 pt-md-5">
                                         <div class="d-flex flex-column flex-md-row justify-content-between">
                                             <label for="description" class="form-label me-3">Description :</label>
-                                            <small>Nb de caractères restants : 200</small>
+                                            <small>Nb de caractères restants : <span id="counterChar">200</span></small>
                                         </div>
                                         <textarea class="form-control textarea" name="description" id="description"></textarea>
-                                        <div class="text-danger fst-italic mt-2"></div>
+                                        <div class="text-danger fst-italic mt-2" id="textareaMessage"></div>
                                     </div>
 
                                     <div class="d-flex flex-column flex-md-row justify-content-between pt-md-5">
                                         <div class="mb-4">
                                             <label for="duration" class="form-label me-3">Durée (en minutes) * :</label>
                                             <input type="number" class="form-control" id="duration" name="duration" value="" required>
-                                            <div class="text-danger fst-italic mt-2"></div>
+                                            <div class="text-danger fst-italic mt-2">Veuiollez choisir une durée</div>
                                         </div>
     
                                         <div class="mb-md-4">
@@ -180,11 +182,33 @@
                                     </div>
 
                                     <div class="btn-group d-flex mt-4 mt-md-0 py-md-5" role="group" aria-label="Choisir le type de prestation">
-                                        <input type="radio" class="btn-check" name="type" value="0" id="unique" autocomplete="off" checked>
+                                        <input type="radio" class="btn-check" name="package" value="0" id="unique" autocomplete="off" required checked>
                                         <label class="btn btn-radio" for="unique">Prestation unique</label>
                                     
-                                        <input type="radio" class="btn-check" name="type" value="1" id="package" autocomplete="off">
+                                        <input type="radio" class="btn-check" name="package" value="1" id="package" autocomplete="off" required>
                                         <label class="btn btn-radio" for="package">Forfait</label>
+                                    </div>
+
+                                    <div class="btn-group d-flex mt-4 mt-md-0 pb-md-5" role="group" aria-label="Choisir le type de prestation">
+                                        <input type="radio" class="btn-check type-choice" name="special" value="0" id="classic" autocomplete="off" required checked>
+                                        <label class="btn btn-radio" for="classic">Classique</label>
+                                    
+                                        <input type="radio" class="btn-check type-choice" name="special" value="1" id="special" autocomplete="off" required>
+                                        <label class="btn btn-radio" for="special">Spécial</label>
+                                    </div>
+
+                                    <div class="special-dates d-none">
+                                        <div class="mb-md-4">
+                                            <label for="publication" class="form-label me-3">Date de début * :</label>
+                                            <input type="date" class="form-control" id="publication" name="publication" value="">
+                                            <div class="text-danger fst-italic mt-2"></div>
+                                        </div>
+
+                                        <div class="mb-md-4">
+                                            <label for="deactivation" class="form-label me-3">Date de fin * :</label>
+                                            <input type="date" class="form-control" id="deactivation" name="deactivation" value="">
+                                            <div class="text-danger fst-italic mt-2"></div>
+                                        </div>
                                     </div>
                                 </fieldset>
         
