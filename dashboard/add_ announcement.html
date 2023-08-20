@@ -133,22 +133,35 @@
                         <h1 class="category-title text-center py-4 my-5">Mes annonces</h1>
 
                         <form method="POST" class="dashboard-form d-flex flex-column align-items-center" id="announcement-form">
-                            <label class="mt-4 mt-md-5 mb-4 mb-md-0">Quel type d'annonce souhaitez vous afficher ?</label>
+
+                            <label class="mt-4 mt-md-5 mb-4 mb-md-0">Une annonce est actuellement en cours :</label>
+
+                            <div class="btn-group d-flex flex-column flex-md-row w-100 mb-4 mb-md-5 py-md-5" role="group" aria-label="Activer / Désactiver l'annonce">
+                                <input type="radio" class="btn-check status-choice" name="status" value="1" id="modify" autocomplete="off" required checked>
+                                <label class="btn btn-radio" for="modify">Modifier</label>
+                            
+                                <input type="radio" class="btn-check status-choice" name="status" value="2" id="deactivation" autocomplete="off" data-bs-toggle="modal" data-bs-target="#displayModal" required>
+                                <label class="btn btn-radio" for="deactivation">Désactiver</label>
+                            </div>
+
+
+                            
+                            <label class="mb-4 mb-md-0">Quel type d'annonce souhaitez vous afficher ?</label>
 
                             <div class="btn-group d-flex flex-column flex-md-row w-100 mb-4 mb-md-5 py-md-5" role="group" aria-label="Choisir le type d'annonce">
                                 <input type="radio" class="btn-check type-choice" name="type" value="1" id="absence" autocomplete="off">
                                 <label class="btn btn-radio" for="absence">Absence</label>
                             
-                                <input type="radio" class="btn-check type-choice" name="type" value="2" id="promotion" autocomplete="off">
+                                <input type="radio" class="btn-check type-choice" name="type" value="2" id="promotion" autocomplete="off" checked>
                                 <label class="btn btn-radio" for="promotion">Promotion</label>
 
                                 <input type="radio" class="btn-check type-choice" name="type" value="3" id="other" autocomplete="off">
                                 <label class="btn btn-radio" for="other">Autre</label>
                             </div>
 
-                            <div class="form-div input-block d-none mb-4 pt-md-5">
+                            <div class="form-div input-block d-none mb-4">
                                 <label for="advantage" class="form-label me-3">Avantage * :</label>
-                                <input type="text" class="form-control" id="advantage" name="advantage" value="" required>
+                                <input type="text" class="form-control" id="advantage" name="advantage" value="-15%" required>
                                 <div class="text-danger fst-italic mt-2"></div>
                             </div>
 
@@ -157,14 +170,14 @@
                                     <label for="content" class="form-label me-3">Contenu * :</label>
                                     <small>Nb de caractères restants : <span id="counterChar">500</span></small>
                                 </div>
-                                <textarea class="form-control textarea" name="content" id="content"></textarea>
+                                <textarea class="form-control textarea" name="content" id="content">sur une prestation du</textarea>
                                 <div class="text-danger fst-italic mt-2" id="textareaMessage"></div>
                             </div>
 
                             <div class="d-flex flex-column flex-md-row justify-content-around align-items-center input-block d-none w-100 mb-4 mb-md-5">
                                 <div class="form-div me-md-5 mb-3 mb-md-0">
                                     <label for="first_date" class="form-label me-3">Date de début * :</label>
-                                    <input type="date" class="form-control" id="first_date" name="first_date" value="" required>
+                                    <input type="date" class="form-control" id="first_date" name="first_date" value="2023-07-18" required>
                                     <div class="text-danger fst-italic mt-2"></div>
                                 </div>
 
@@ -172,12 +185,12 @@
     
                                 <div class="form-div ms-md-5 mt-3 mt-md-0">
                                     <label for="last_date" class="form-label me-3">Date de fin * :</label>
-                                    <input type="date" class="form-control" id="last_date" name="last_date" value="" required>
+                                    <input type="date" class="form-control" id="last_date" name="last_date" value="2023-08-28" required>
                                     <div class="text-danger fst-italic mt-2"></div>
                                 </div>
                             </div>
 
-                            <div class="d-flex justify-content-center pb-md-5 mt-4 mt-md-0 mb-5 w-100">
+                            <div class="d-flex justify-content-center pb-md-5 mt-4 mt-md-5 mb-5 w-100">
                                 <button type="submit" class="btn btn-classic py-2"><i class="bi bi-pencil-fill me-3"></i>Ajouter</button>
                             </div>
                         </form>
@@ -189,6 +202,26 @@
 
         </div>
     </main>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="displayModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5">Supprimer l'annonce</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body py-4">
+                    <p class="text-center">Êtes vous certain de vouloir <strong>supprimer</strong> l'annonce en cours ?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline py-2 me-md-4 mb-3 mb-md-0" data-bs-dismiss="modal">Non</button>
+                    <a class="btn btn-classic py-2" id="delete-announcement">Oui</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- ========================================================================================================================================================================== -->
     <!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->

@@ -53,14 +53,51 @@ if (announcement != undefined) {
     const inputBlock = document.querySelectorAll('.input-block');
     const textarea = document.querySelector('textarea');
     const value = Number(counterChar.textContent);
+    const modalBtn = document.querySelector('.modal-footer .btn-outline');
+
+    // ----------------------------------------------------------------------
+    // Fonction d'affichage du formulaire nécessaire
+    const displayForm = (element) => {
+
+        if (element.checked && element.value == 1) {
+            // Affichage pour les absences
+            inputBlock[1].classList.remove('d-none');
+            inputBlock[2].classList.remove('d-none');
+        } else if (element.checked && element.value == 2) {
+            // Affichage pour les promotions
+            inputBlock[0].classList.remove('d-none');
+            inputBlock[1].classList.remove('d-none');
+            inputBlock[2].classList.remove('d-none');
+        } else if (element.checked && element.value == 3) {
+            // Affichage pour les messages personnalisés
+            inputBlock[1].classList.remove('d-none');
+        }
+    }
+    // ----------------------------------------------------------------------
+
+    // ----------------------------------------------------------------------
+    // En cas d'annulation de la suppression de l'annonce, retour du check sur le bouton modifier
+    displayModal.addEventListener('hidden.bs.modal', () => {
+        modify.checked = true;
+    })
+    // ----------------------------------------------------------------------
     
+    // ----------------------------------------------------------------------
     // Fait le décompte du nombre de caractères sur le textarea et affiche le message d'erreur
     textarea.addEventListener('keydown', () => {
         counterLenght(textarea, value);
-    })
+    });
+
+    // Appel de la fonction de comptage au démarrage pour pallier les cas de modification
+    counterLenght(textarea, value);
+    // ----------------------------------------------------------------------
     
+    // ----------------------------------------------------------------------
     // Affichage du formulaire adapté en fonction du bouton cliqué
     typeChoices.forEach((element, key) => {
+
+        displayForm(element);
+
         element.addEventListener('click', () => {
 
             // Réinitialise l'affichage à chaque click
@@ -68,22 +105,11 @@ if (announcement != undefined) {
                 element.classList.add('d-none');
             });
 
-            if (element.checked && element.value == 1) {
-                // Affichage pour les absences
-                inputBlock[1].classList.remove('d-none');
-                inputBlock[2].classList.remove('d-none');
-            } else if (element.checked && element.value == 2) {
-                // Affichage pour les promotions
-                inputBlock[0].classList.remove('d-none');
-                inputBlock[1].classList.remove('d-none');
-                inputBlock[2].classList.remove('d-none');
-            } else if (element.checked && element.value == 3) {
-                // Affichage pour les messages personnalisés
-                inputBlock[1].classList.remove('d-none');
-            }
-        })
-        
+            displayForm(element);
+
+        });
     });
+    // ----------------------------------------------------------------------
 }
 
 
@@ -103,11 +129,17 @@ if (service != undefined) {
     const dates = document.querySelector('.special-dates');
     const inputDates = document.querySelectorAll('.special-dates .form-control');
     
+    // ----------------------------------------------------------------------
     // Fait le décompte du nombre de caractères sur le textarea et affiche le message d'erreur
     textarea.addEventListener('keydown', () => {
         counterLenght(textarea, value);
-    })
+    });
 
+    // Appel de la fonction de comptage au démarrage pour pallier les cas de modification
+    counterLenght(textarea, value);
+    // ----------------------------------------------------------------------
+
+    // ----------------------------------------------------------------------
     // Affiche les dates à enregistrer en cas de prestation spéciale et les rends obligatoire
     typeChoices.forEach(element => {
         element.addEventListener('click', () => {
@@ -122,7 +154,8 @@ if (service != undefined) {
                 inputDates.forEach(element => {
                     element.required = false;
                 });
-            }
-        })
+            };
+        });
     });
+    // ----------------------------------------------------------------------
 }
