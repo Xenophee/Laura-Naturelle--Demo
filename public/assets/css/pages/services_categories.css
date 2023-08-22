@@ -34,8 +34,8 @@
 
 .services {
     background-color: var(--main-color);
-    background-image: url(../../img/backgrounds/bois.jpg);
-    color: var(--main-color);
+    background-image: url(../../img/backgrounds/bois2.jpg);
+    /* color: var(--main-color); */
     font-size: 1.1rem;
     /* font-weight: bold; */
     /* letter-spacing: 1px; */
@@ -52,7 +52,8 @@
 }
 
 .services p {
-    text-shadow: var(--text-shadow);
+    /* text-shadow: var(--text-shadow); */
+    font-weight: bold;
 }
 
 .services img {
