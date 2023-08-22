@@ -33,30 +33,35 @@
 /* --------------------------------------------------------------------------------------------------------------------------------- */
 /* PRESENTATION */
 
+.carousel-control-next {
+    right: -15%;
+}
+
+.carousel-control-prev {
+    left: -15%;
+}
+
 .carousel-item img {
-    height: 400px;
-    width: 500px;
+    height: 350px;
     object-fit: cover;
-    border-radius: 50px;
+    border-radius: 20px;
 }
 
-.textPresentation {
-    
-    /* background-color: var(--first-color); */
-    /* color: var(--main-color); */
-    /* border: var(--border-special-solid); */
-    /* box-shadow: var(--inset-shadow); */
-    /* outline: var(--border-first-solid);
-    outline-offset: 15px; */
+.carousel-indicators {
+    bottom: -10%;
 }
 
+.presentation-text {
+    width: 90%;
+    border: var(--border-special-strong-solid);
+    outline: var(--border-third-medium-solid);
+    outline-offset: 15px;
+    box-shadow: var(--box-light-shadow);
+}
 
 .presentation-text p {
     width: 100%;
-    border: var(--border-special-strong-solid);
-    outline: var(--border-first-medium-solid);
-    outline-offset: 15px;
-    box-shadow: var(--box-light-shadow);
+    margin: 0;
 }
 
 
@@ -96,7 +101,7 @@
     position: absolute;
     font-size: 1rem;
     width: 80%;
-    top: 40%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     backdrop-filter: blur(35px);
@@ -106,7 +111,7 @@
 .btn-services-index {
     position: absolute;
     transform: translate(-50%, -50%);
-    top: 90%;
+    top: 85%;
     left: 50%;
     width: 90%;
     background-color: transparent;
@@ -196,10 +201,14 @@
 /* --------------------------------------------------------------------------------------------------------------------------------- */
 /* RESPONSIVE */
 
+
+/* -------------------------------------------- */
+/* TABLETTE */
+
 @media (min-width: 768px)  {
 
-    .presentation-text p {
-        width: 70%;
+    .presentation-text {
+        width: 60%;
     }
 
     .carousel-item img {
@@ -231,6 +240,7 @@
 
     #map {
         height: 40vh;
+        width: 90%;
     }
 
     .informations h3 {
@@ -248,12 +258,15 @@
 }
 
 
+/* -------------------------------------------- */
+/* GRAND ECRAN */
+
 @media (min-width: 1200px)  {
 
-    .carousel-item img {
+    /* .carousel-item img {
         height: 700px;
         width: 500px;
-    }
+    } */
 
     /* ------------------------------------------------- */
 
@@ -291,6 +304,9 @@
 
 }
 
+
+/* -------------------------------------------- */
+/* TRES GRAND ECRAN */
 
 @media (min-width: 1400px)  {
 

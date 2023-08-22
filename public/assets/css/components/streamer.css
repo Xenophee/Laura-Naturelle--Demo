@@ -5,25 +5,21 @@
 /* BANDEROLE DE PROMOTIONS */
 
 #announcement {
-    /* background-color: #f5cae9; */
     background-size: 20px 20px;
-    /* background-image: repeating-linear-gradient(45deg, #fdf3fd 0, #fdf3fd 1px, #f5cae9 0, #f5cae9 50%); */
-    /* background-image: repeating-linear-gradient(45deg, #f5cae9 0, #f5cae9 1px, #fdf3fd 0, #fdf3fd 50%); */
     background-image: url(../../img/backgrounds/bois.jpg);
     background-size: cover;
     border-bottom: var(--border-brown-solid);
-    /* box-shadow: var(--inset-shadow); */
+    overflow-x: hidden;
 }
 
-
 .announcement-icon {
-    font-size: 5rem;
+    font-size: 3rem;
     color: var(--main-color);
     text-shadow: var(--text-shadow);
 }
 
-#lottieAnnouncement {
-    width: 40%;
+.announcement-double {
+    display: none !important;
 }
 
 #announcement p {
@@ -44,25 +40,38 @@
 /* --------------------------------------------------------------------------------------------------------------------------------- */
 /* RESPONSIVE */
 
+
+/* -------------------------------------------- */
+/* TABLETTE */
+
 @media (min-width: 768px)  {
 
     /* ------------------------------------------------- */
 
-    #lottieAnnouncement {
-        width: 15%;
+    .announcement-icon {
+        font-size: 3.5rem;
     }
 
-    /* .annoucementContent {
+    .announcement-content .col {
+        position: relative;
+    }
+
+    .announcement-double {
+        display: flex !important;
+        position: absolute;
+        left: 100%;
+    }
+
+    .announcement-content {
         animation: parade 20s linear infinite;
-    } */
+    }
 
     #announcement p {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
     
     #announcement span {
-        font-size: 2rem;
-        color: var(--special-color);
+        font-size: 2.3rem;
     }
 
     /* ------------------------------------------------- */
@@ -70,16 +79,19 @@
 }
 
 
+/* -------------------------------------------- */
+/* GRAND ECRAN */
+
 @media (min-width: 1200px) {
 
     /* ------------------------------------------------- */
 
-    #lottieAnnouncement {
-        width: 8%;
+    .announcement-icon {
+        font-size: 5rem;
     }
 
     #announcement p {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
     
     #announcement span {
