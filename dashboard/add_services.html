@@ -127,19 +127,6 @@
     
                                 <fieldset class="mb-5">
 
-                                    <div class="mb-5">
-                                        <div class="d-flex justify-content-center mb-4">
-                                            <img src="../public/assets/img/backgrounds/leafs4.jpg" class="cover img-fluid" alt="Image d'illustration">
-                                        </div>
-                                        <div class="d-flex justify-content-center">
-                                            <div>
-                                                <label class="btn btn-classic form-label d-flex align-items-center justify-content-center py-3 m-1" for="cover">Image de couverture</label>
-                                                <input type="file" class="form-control d-none" id="cover" name="cover" accept="image/jpeg" required>
-                                            </div>
-                                        </div>
-                                        <div class="text-danger text-center fst-italic mt-2"></div>
-                                    </div>
-
                                     <div class="mb-4 pt-md-5">
                                         <label for="object" class="form-label mb-2">Catégorie de la prestation * :</label>
                                         <select class="form-select" id="object" name="object" required>
@@ -186,15 +173,15 @@
                                         <label class="btn btn-radio" for="unique">Prestation unique</label>
                                     
                                         <input type="radio" class="btn-check" name="package" value="1" id="package" autocomplete="off" required>
-                                        <label class="btn btn-radio" for="package">Forfait</label>
+                                        <label class="btn btn-radio" for="package">Prestation en forfait</label>
                                     </div>
 
                                     <div class="btn-group d-flex mt-4 mt-md-0 pb-md-5" role="group" aria-label="Choisir le type de prestation">
                                         <input type="radio" class="btn-check type-choice" name="special" value="0" id="classic" autocomplete="off" required checked>
-                                        <label class="btn btn-radio" for="classic">Classique</label>
+                                        <label class="btn btn-radio" for="classic">Prestation classique</label>
                                     
                                         <input type="radio" class="btn-check type-choice" name="special" value="1" id="special" autocomplete="off" required>
-                                        <label class="btn btn-radio" for="special">Spécial</label>
+                                        <label class="btn btn-radio" for="special">Prestation spéciale</label>
                                     </div>
 
                                     <div class="special-dates d-none">
