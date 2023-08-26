@@ -40,6 +40,7 @@
     --border-light-strong-solid: var(--main-color) 10px solid;
     
     --border-second-solid: var(--second-color) 3px solid;
+    --border-second-solid-medium: var(--second-color) 2px solid;
 
     --border-third-medium-solid: var(--third-color) 2px solid;
 

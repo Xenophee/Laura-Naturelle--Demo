@@ -22,13 +22,17 @@ L.marker([latitude, longitude]).addTo(map)
 // ----------------------------------------------------------------------------------------------------------------------------------
 // MODIFICATION DYNAMIQUE DES IMAGES DE PRESTATIONS
 
-const images = ["./public/assets/img/illustrations/modelage.jpg", "./public/assets/img/illustrations/pieds.jpg", "./public/assets/img/illustrations/visage.jpg", "./public/assets/img/illustrations/epilations.jpg", "./public/assets/img/illustrations/mains.jpg", "./public/assets/img/illustrations/maquillage.jpg"];
+const images = ["./public/assets/img/illustrations/prestations/modelage.jpg", "./public/assets/img/illustrations/prestations/epilations.jpg", "./public/assets/img/illustrations/prestations/corps.jpg", "./public/assets/img/illustrations/prestations/pieds.jpg", "./public/assets/img/illustrations/prestations/visage.jpg", "./public/assets/img/illustrations/prestations/mains.jpg"];
 let currentIndex = 0; // Index de l'image actuellement affichée
 const image = document.querySelector('.services-index-img');
-
+const text = document.querySelector('.prestations-text-index');
+const btn = document.querySelector('.btn-services-index');
 
 // Fonction pour changer l'image toutes les X millisecondes
 function changeImage() {
+
+    text.classList.remove('darkmode');
+    btn.classList.remove('darkmode');
 
     image.style.opacity = 0;
 
@@ -36,6 +40,11 @@ function changeImage() {
         currentIndex = (currentIndex + 1) % images.length;
         image.src = images[currentIndex];
         image.style.opacity = 1;
+
+        if (currentIndex == 1 || currentIndex == 3 || currentIndex == 5) {
+            text.classList.add('darkmode');
+            btn.classList.add('darkmode');
+        }
     }, 1000);
 }
 
