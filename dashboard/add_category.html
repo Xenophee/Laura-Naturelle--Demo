@@ -126,6 +126,8 @@
     
                                 <fieldset class="mb-5">
 
+                                    <!-- -------------------------------------------------------------- -->
+                                    <!-- IMAGE DE LA CATÉGORIE -->
                                     <div class="mb-5">
                                         <div class="d-flex justify-content-center mb-4">
                                             <img src="../public/assets/img/illustrations/others/cover.jpg" class="cover img-fluid" alt="Image d'illustration">
@@ -138,13 +140,31 @@
                                         </div>
                                         <div class="text-danger text-center fst-italic mt-2"></div>
                                     </div>
+                                    <!-- -------------------------------------------------------------- -->
 
+                                    <!-- -------------------------------------------------------------- -->
+                                    <!-- CHOIX DU CONTRASTE PAR RAPPORT À L'IMAGE -->
+                                    <label class="d-block text-center">Rendu textuel sur l'image en page d'accueil :</label>
+                                    <div class="btn-group d-flex mt-3 mb-5" role="group" aria-label="Choisir l'affichage">
+                                        <input type="radio" class="btn-check" name="mode" value="0" id="light" autocomplete="off" required checked>
+                                        <label class="btn btn-radio" for="light">Mode clair</label>
+                                    
+                                        <input type="radio" class="btn-check" name="mode" value="1" id="dark" autocomplete="off" required>
+                                        <label class="btn btn-radio" for="dark">Mode sombre</label>
+                                    </div>
+                                    <!-- -------------------------------------------------------------- -->
+
+                                    <!-- -------------------------------------------------------------- -->
+                                    <!-- TITRE DE LA CATÉGORIE -->
                                     <div class="mb-4">
                                         <label for="title" class="form-label me-3">Titre * :</label>
                                         <input type="text" class="form-control" id="title" name="title" value="" required>
                                         <div class="text-danger fst-italic mt-2"></div>
                                     </div>
+                                    <!-- -------------------------------------------------------------- -->
 
+                                    <!-- -------------------------------------------------------------- -->
+                                    <!-- DESCRIPTION DE LA CATÉGORIE -->
                                     <div class="mb-md-4 pt-md-5">
                                         <div class="d-flex flex-column flex-md-row justify-content-between">
                                             <label for="description" class="form-label me-3">Description * :</label>
@@ -153,7 +173,10 @@
                                         <textarea class="form-control textarea" name="description" id="description" required></textarea>
                                         <div class="text-danger fst-italic mt-2"></div>
                                     </div>
+                                    <!-- -------------------------------------------------------------- -->
 
+                                    <!-- -------------------------------------------------------------- -->
+                                    <!-- MODE D'AFFICHAGE DES PRESTATIONS -->
                                     <div class="btn-group d-flex mt-4 mt-md-0 py-md-5" role="group" aria-label="Choisir l'affichage">
                                         <input type="radio" class="btn-check" name="view" value="0" id="lines" autocomplete="off" required checked>
                                         <label class="btn btn-radio" for="lines">Affichage en ligne</label>
@@ -161,11 +184,15 @@
                                         <input type="radio" class="btn-check" name="view" value="1" id="grid" autocomplete="off" required>
                                         <label class="btn btn-radio" for="grid">Affichage en grille</label>
                                     </div>
+                                    <!-- -------------------------------------------------------------- -->
                                 </fieldset>
         
+                                <!-- -------------------------------------------------------------- -->
+                                <!-- BOUTON D'AJOUT -->
                                 <div class="d-flex justify-content-center pb-md-5 mb-5">
                                     <button type="submit" class="btn btn-classic py-2"><i class="bi bi-pencil-fill me-3"></i>Ajouter</button>
                                 </div>
+                                <!-- -------------------------------------------------------------- -->
     
                             </form>
                         </section>
