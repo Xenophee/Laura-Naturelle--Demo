@@ -2,12 +2,6 @@
 /* --------------------------------------------------------------------------------------------------------------------------------- */
 /* PRESTATIONS */
 
-/* ! A retirer une fois la page d'accueil refaite ! */
-#services {
-    background-image: url(../../img/backgrounds/bois.jpg);
-    box-shadow: var(--inset-shadow);
-}
-
 .background-services {
     position: relative;
     background-image: url(../../img/backgrounds/leafs4.jpg);
@@ -74,10 +68,6 @@
 /* TABLETTE */
 
 @media (min-width: 768px)  {
-
-    .services img {
-        height: 50%;
-    }
 
     .content-services {
         height: 410px;
