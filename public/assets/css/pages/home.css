@@ -41,6 +41,10 @@
     left: -15%;
 }
 
+.carousel {
+    width: 100%;
+}
+
 .carousel-item img {
     height: 350px;
     object-fit: cover;
@@ -221,6 +225,10 @@
         width: 60%;
     }
 
+    .carousel {
+        width: 70%;
+    }
+
     .carousel-item img {
         height: 700px;
     }
@@ -273,10 +281,17 @@
 
 @media (min-width: 1200px)  {
 
-    /* .carousel-item img {
-        height: 700px;
-        width: 500px;
-    } */
+    .presentation-text {
+        width: 70%;
+    }
+
+    .carousel {
+        width: 90%;
+    }
+
+    .carousel-item img {
+        height: 500px;
+    }
 
     /* ------------------------------------------------- */
 
@@ -295,7 +310,7 @@
     /* ------------------------------------------------- */
 
     .fidelity-img {
-        width: 75%;
+        width: 80%;
     }
 
     /* ------------------------------------------------- */
@@ -319,6 +334,14 @@
 /* TRES GRAND ECRAN */
 
 @media (min-width: 1400px)  {
+
+    .presentation-text {
+        width: 60%;
+    }
+
+    .carousel-item img {
+        height: 700px;
+    }
 
     .fidelity-img {
         width: 85%;

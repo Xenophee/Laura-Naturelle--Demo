@@ -106,6 +106,17 @@ tr:not(thead tr) {
 @media (min-width: 1200px) {
 
     .table-responsive {
+        width: 95%;
+    }
+}
+
+
+/* -------------------------------------------- */
+/* TRES GRAND ECRAN */
+
+@media (min-width: 1400px) {
+
+    .table-responsive {
         width: 70%;
     }
 }

@@ -79,6 +79,34 @@
 @media (min-width: 1200px) {
 
     .dashboard-form {
+        width: 70%;
+    }
+
+    .schedules {
+        width: 95%;
+    }
+
+    .schedules .form-label {
+        width: 20%;
+        font-size: 1.5rem;
+    }
+
+    .schedules .form-control {
+        width: 20%;
+    }
+
+    .announcement-btns {
+        width: 70%;
+    }
+}
+
+
+/* -------------------------------------------- */
+/* TRES GRAND ECRAN */
+
+@media (min-width: 1400px) {
+
+    .dashboard-form {
         width: 50%;
     }
 
@@ -88,6 +116,7 @@
 
     .schedules .form-label {
         width: 20%;
+        font-size: 1.7rem;
     }
 
     .schedules .form-control {
