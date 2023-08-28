@@ -77,6 +77,8 @@
     height: 650px;
     width: 100%;
     object-fit: cover;
+    border-top: var(--border-light-solid);
+    border-bottom: var(--border-light-solid);
     transition: opacity 1s ease-in-out;
 }
 
@@ -85,6 +87,7 @@
 }
 
 .prestations-index {
+    height: 750px;
     position: relative;
     background-image: url(../../img/backgrounds/bois.jpg);
     background-size: cover;

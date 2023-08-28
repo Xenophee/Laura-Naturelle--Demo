@@ -22,25 +22,69 @@ L.marker([latitude, longitude]).addTo(map)
 // ----------------------------------------------------------------------------------------------------------------------------------
 // MODIFICATION DYNAMIQUE DES IMAGES DE PRESTATIONS
 
-const images = ["./public/assets/img/illustrations/prestations/modelage.jpg", "./public/assets/img/illustrations/prestations/epilations.jpg", "./public/assets/img/illustrations/prestations/corps.jpg", "./public/assets/img/illustrations/prestations/pieds.jpg", "./public/assets/img/illustrations/prestations/visage.jpg", "./public/assets/img/illustrations/prestations/mains.jpg"];
+const images = ["./public/assets/img/illustrations/prestations/modelage-xl.jpg", 
+    "./public/assets/img/illustrations/prestations/epilations-xl.jpg", 
+    "./public/assets/img/illustrations/prestations/corps-xl.jpg", 
+    "./public/assets/img/illustrations/prestations/pieds-xl.jpg", 
+    "./public/assets/img/illustrations/prestations/visage-xl.jpg", 
+    "./public/assets/img/illustrations/prestations/mains-xl.jpg"];
+
+
+
+let count = 0;
+
+// while (count < 6) {
+
+//     linkImg += `${count +1}`;
+//     console.log(linkImg);
+//     count++;
+// }
+
+
+
 let currentIndex = 0; // Index de l'image actuellement affichée
 const image = document.querySelector('.services-index-img');
 const text = document.querySelector('.prestations-text-index');
 const btn = document.querySelector('.btn-services-index');
+const source = document.querySelectorAll('#diapo source');
+console.log(source);
 
 // Fonction pour changer l'image toutes les X millisecondes
-function changeImage() {
+const changeImage = () => {
 
     text.classList.remove('darkmode');
     btn.classList.remove('darkmode');
 
     image.style.opacity = 0;
 
-    setTimeout(function () {
-        currentIndex = (currentIndex + 1) % images.length;
-        image.src = images[currentIndex];
+    setTimeout(() => {
+        let linkImg = './public/assets/img/illustrations/prestations/';
+
+        // ! Remplacer 6 après le modulo par le nombre de catégories existantes en BDD avec de l'AJAX
+        currentIndex = (currentIndex + 1) % 6;
+
+        source.forEach((element, key) => {
+            switch (key) {
+                case 0:
+                    element.srcset = linkImg + `${currentIndex +1}-xl.webp`;
+                    break;
+                case 1:
+                    element.srcset = linkImg + `${currentIndex +1}.webp`;
+                    break;
+                case 2:
+                    element.srcset = linkImg + `${currentIndex +1}-xl.jpg`;
+                    break;
+                case 3:
+                    element.srcset = linkImg + `${currentIndex +1}.jpg`;
+                    break;
+                default:
+                    break;
+            }
+        });
+        
         image.style.opacity = 1;
 
+        // ! Remplacer la condition par la vérification du darkmode enregistré en BDD
         if (currentIndex == 1 || currentIndex == 3 || currentIndex == 5) {
             text.classList.add('darkmode');
             btn.classList.add('darkmode');

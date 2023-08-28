@@ -179,7 +179,14 @@
 
                 <div class="row justify-content-around mx-0 mt-5">
                     <div class="col prestations-index px-0 py-5">
-                        <img src="./public/assets/img/illustrations/prestations/modelage.jpg" alt="" class="img-fluid services-index-img">
+                        <picture id="diapo">
+                            <source srcset="./public/assets/img/illustrations/prestations/1-xl.webp" type="image/webp" media="(min-width: 768px)">
+                            <source srcset="./public/assets/img/illustrations/prestations/1.webp" type="image/webp" media="(max-width: 768px)">
+                            <source srcset="./public/assets/img/illustrations/prestations/1-xl.jpg" type="image/jpeg" media="(min-width: 768px)">
+                            <source srcset="./public/assets/img/illustrations/prestations/1.jpg" type="image/jpeg" media="(max-width: 768px)">
+                            <img src="./public/assets/img/illustrations/prestations/1-xl.jpg" class="img-fluid services-index-img">
+                        </picture>
+                        <!-- <img src="./public/assets/img/illustrations/prestations/1-xl.jpg" class="img-fluid services-index-img"> -->
                         <div class="prestations-div-text">
                             <div class="prestations-text-index py-3 py-md-5 px-3 px-md-5">
                                 <p>Offrez à votre peau l'attention qu'elle mérite avec des soins du visage. Arborez des ongles impeccables grâce aux manucures professionnelles. 
@@ -213,7 +220,10 @@
 
                 <div class="row justify-content-center justify-content-xl-evenly mx-0 mt-5 py-xl-5">
                     <div class="col-12 col-md-9 col-xl-5 col-xxl-4 py-md-5 d-flex justify-content-center align-items-center">
-                        <img src="./public/assets/img/illustrations/others/carte.jpg" alt="" class="img-fluid fidelity-img">
+                        <picture>
+                            <source srcset="./public/assets/img/illustrations/others/carte.webp" type="image/webp">
+                            <img src="./public/assets/img/illustrations/others/carte.jpg" alt="Visuel de la carte de fidélité" class="img-fluid fidelity-img">
+                        </picture>
                     </div>
 
                     <div class="col-12 col-md-9 col-xl-5 col-xxl-4 d-flex flex-column justify-content-evenly fidelity-text mt-5">

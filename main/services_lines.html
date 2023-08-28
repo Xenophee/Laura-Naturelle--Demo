@@ -112,11 +112,17 @@
 
                 <!-- PARTIE PRESTATIONS -->
                 <!-- ------------------------------------------------------------------------------------------------------------------------------ -->
-                <div class="row justify-content-center mx-0 mt-xl-5">
+                <div class="row justify-content-center mx-0 mt-4 mt-md-5">
 
                     <!-- GRANDE IMAGE -->
                     <div class="col-xl-11 col-xxl-10">
-                        <img src="../public/assets/img/illustrations/prestations/epilations.jpg" alt="" class="img-fluid services-line-img">
+                        <picture>
+                            <source srcset="../public/assets/img/illustrations/prestations/6-xl.webp" type="image/webp" media="(min-width: 1200px)">
+                            <source srcset="../public/assets/img/illustrations/prestations/6.webp" type="image/webp" media="(max-width: 768px)">
+                            <source srcset="../public/assets/img/illustrations/prestations/6-xl.jpg" type="image/jpeg" media="(min-width: 1200px)">
+                            <source srcset="../public/assets/img/illustrations/prestations/6.jpg" type="image/jpeg" media="(max-width: 768px)">
+                            <img src="../public/assets/img/illustrations/prestations/6-xl.jpg" alt="Illustration de la catégorie épilations" class="img-fluid services-line-img">
+                        </picture>
                     </div>
 
                 </div>
@@ -124,7 +130,7 @@
                 <!-- SECTION PRESTATIONS UNIQUES -->
                 <!-- ------------------------------------------------------------------------------------------------------------------------------ -->
                 <section>
-                    <h3 class="subtitle text-center my-5 pt-5">Prestations uniques</h3>
+                    <h3 class="subtitle text-center my-5 pt-md-5">Prestations uniques</h3>
                     <!-- ========================================================================================================================== -->
                     <article>
                         <div class="row justify-content-center mx-0 mt-4">
