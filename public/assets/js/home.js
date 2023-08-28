@@ -77,8 +77,6 @@ const changeImage = () => {
                 case 3:
                     element.srcset = linkImg + `${currentIndex +1}.jpg`;
                     break;
-                default:
-                    break;
             }
         });
         
