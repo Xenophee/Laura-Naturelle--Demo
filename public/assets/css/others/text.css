@@ -34,15 +34,6 @@ h1 {
     animation: 0.9s titleAnimation cubic-bezier(0, 0.55, 0.45, 1) forwards;
 }
 
-.background-main-title {
-    background-image: url(../../img/backgrounds/leafs4.jpg);
-    /* background-image: url(../../img/backgrounds/main.jpg); */
-    background-attachment: fixed;
-    height: 55vh;
-    border-bottom: var(--border-first-solid);
-    box-shadow: var(--inset-shadow);
-}
-
 .index-title {
     font-size: 2.5rem;
     word-wrap: break-word;
@@ -63,7 +54,7 @@ h1 {
 }
 
 .background-title {
-    background-image: url(../../img/backgrounds/leafs4.jpg);
+    background-image: url(../../img/backgrounds/leafs4.webp);
     background-size: cover;
     background-attachment: fixed;
     height: 35vh;
