@@ -55,6 +55,10 @@ body {
     margin: 0;
 }
 
+.bg-main {
+    background-color: var(--main-color);
+}
+
 ::-webkit-scrollbar {
     width: 0.7em;
     background-color: var(--light-green);
