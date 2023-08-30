@@ -39,6 +39,8 @@ const changeImage = () => {
     image.style.opacity = 0;
 
     setTimeout(() => {
+
+        // ! Changer le lien une fois le passage en back
         let linkImg = './public/assets/img/illustrations/prestations/';
 
         // ! Remplacer 6 après le modulo par le nombre de catégories existantes en BDD avec de l'AJAX
