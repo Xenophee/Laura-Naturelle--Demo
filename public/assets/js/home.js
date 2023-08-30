@@ -59,6 +59,11 @@ const changeImage = () => {
     }, 1000);
 }
 
-// 1000 = 1s
-setInterval(changeImage, 8000);
+
+// Lancement de l'animation uniquement pour les formats tablettes et supérieurs
+if (window.innerWidth >= 768) {
+    // 1000 = 1s
+    setInterval(changeImage, 8000);
+}
+
 
