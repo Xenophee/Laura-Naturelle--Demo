@@ -8,7 +8,7 @@
     background-size: 20px 20px;
     background-image: url(../../img/backgrounds/bois.jpg);
     background-size: cover;
-    border-bottom: var(--border-brown-solid);
+    border-bottom: var(--border-brown-thin-solid);
     overflow-x: hidden;
 }
 

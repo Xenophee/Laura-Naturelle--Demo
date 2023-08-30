@@ -169,7 +169,7 @@
 #map {
     height: 70vh;
     width: 100%;
-    border: var(--border-brown-solid);
+    border: var(--border-brown-thin-solid);
     box-shadow: var(--box-light-shadow);
 }
 
@@ -178,7 +178,7 @@
     background-size: cover;
     color: var(--main-color);
     font-size: 1.2rem;
-    border: var(--border-brown-solid);
+    border: var(--border-brown-thin-solid);
     box-shadow: var(--box-light-shadow);
     text-shadow: var(--text-shadow);
     width: 100%;
@@ -197,7 +197,7 @@
     width: 100%;
     background-image: url(../../img/backgrounds/bois.jpg);
     background-size: cover;
-    border: var(--border-brown-solid);
+    border: var(--border-brown-thin-solid);
     font-size: 2rem;
     color: var(--main-color);
     box-shadow: var(--box-light-shadow);

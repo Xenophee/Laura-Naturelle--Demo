@@ -87,8 +87,8 @@
 .dropdown-item:hover {
     background-color: var(--first-color);
     color: var(--main-color);
-    border-top: var(--border-brown-solid);
-    border-bottom: var(--border-brown-solid);
+    border-top: var(--border-brown-thin-solid);
+    border-bottom: var(--border-brown-thin-solid);
     box-shadow: var(--inset-shadow);
 }
 
@@ -251,8 +251,8 @@ footer hr {
     .drop-links li:hover {
         background-color: var(--first-color);
         color: var(--main-color);
-        border-top: var(--border-brown-solid);
-        border-bottom: var(--border-brown-solid);
+        border-top: var(--border-brown-thin-solid);
+        border-bottom: var(--border-brown-thin-solid);
         box-shadow: var(--inset-shadow);
     }
 

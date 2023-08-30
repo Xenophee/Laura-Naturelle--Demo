@@ -5,7 +5,7 @@
 .background-services {
     position: relative;
     background-image: url(../../img/backgrounds/leafs4.jpg);
-    border: var(--border-brown-solid);
+    border: var(--border-brown-thin-solid);
     box-shadow: rgba(27, 70, 33, 0.39) 0px 7px 29px 0px;
 }
 
@@ -22,7 +22,7 @@
     height: 25px;
     width: 35%;
     transform: rotate(48deg);
-    background-color: #e3b04c;
+    background-color: var(--gold-color);
     box-shadow: var(--box-light-shadow);
 }
 
@@ -33,7 +33,7 @@
     font-size: 1.1rem;
     /* font-weight: bold; */
     /* letter-spacing: 1px; */
-    border: var(--border-brown-solid);
+    border: var(--border-brown-thin-solid);
     box-shadow: var(--box-light-shadow);
 }
 
@@ -54,7 +54,7 @@
     width: 100%;
     height: 200px;
     object-fit: cover;
-    border: var(--border-brown-solid);
+    border: var(--border-brown-thin-solid);
 }
 
 

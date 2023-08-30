@@ -10,6 +10,7 @@
     --third-color: #6fa348;
 
     --brown-color: #c08552;
+    --gold-color: #e3b04c;
     
     --special-color: #fb8bdb;
     --special-dark-color: #e76899;
@@ -44,7 +45,8 @@
 
     --border-third-medium-solid: var(--third-color) 2px solid;
 
-    --border-brown-solid: var(--brown-color) 1px solid;
+    --border-brown-thin-solid: var(--brown-color) 1px solid;
+    --border-brown-solid: var(--brown-color) 2px solid;
     --border-brown-medium-solid: var(--brown-color) 3px solid;
 
     --border-special-solid: var(--special-color) 1px solid;

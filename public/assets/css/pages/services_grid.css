@@ -26,13 +26,17 @@
 }
 
 .new-service {
-    color: var(--brown-color);
-    font-size: 1rem;
+    background-color: var(--gold-color);
+    color: var(--main-color);
+    height: 25px;
+    font-size: 1.1rem;
     font-family: var(--special-font);
 }
 
 .special-service {
-    color: var(--special-dark-color);
+    background-color: var(--special-dark-color);
+    color: var(--main-color);
+    height: 25px;
     font-size: 1rem;
     font-family: var(--special-font);
 }

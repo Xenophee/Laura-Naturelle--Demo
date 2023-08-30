@@ -37,7 +37,7 @@ tr:not(thead tr) {
 }
 
 .table-news tr:not(thead tr) {
-    border-bottom: var(--border-brown-solid);
+    border-bottom: var(--border-brown-thin-solid);
 }
 
 .table-news tbody tr:nth-of-type(odd) {
@@ -62,7 +62,7 @@ tr:not(thead tr) {
 
 .badge-package {
     color: var(--main-color);
-    background-color: #e3b04c;
+    background-color: var(--gold-color);
 }
 
 .badge-special {
