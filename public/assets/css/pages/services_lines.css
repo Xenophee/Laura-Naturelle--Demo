@@ -1,5 +1,5 @@
 
-.uniques-section {
+.classic-section {
     background-color: #2f5b0e28;
 }
 
@@ -11,11 +11,11 @@
     background-color: #e768993d;
 }
 
-.special-section .service, .uniques-section .service, .package-section .service {
+.special-section .service, .classic-section .service, .package-section .service {
     background-color: var(--main-color);
 }
 
-.uniques-section .service {
+.classic-section .service {
     border: var(--border-third-medium-solid);
 }
 
@@ -54,7 +54,7 @@
     font-size: 1.7rem;
 }
 
-.lines-service-div .new-service {
+.lines-service-div .new-service, .lines-service-div .special-service {
     font-size: 1.2rem;
 }
 
