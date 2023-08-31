@@ -39,7 +39,7 @@
                                 <a class="nav-link header-link" href="../main/services_categories.html" role="button">
                                     Prestations
                                 </a>
-                                <ul class="drop-links d-none">
+                                <ul class="drop-links visually-hidden">
                                     <li><a href="../main/services_lines.html" class="ps-3">Epilations</a></li>
                                     <li><a href="../main/services_lines.html" class="ps-3">Soins du visage</a></li>
                                     <li><a href="../main/services_lines.html" class="ps-3">Soins du corps</a></li>
@@ -128,29 +128,34 @@
                                     <legend class="text-center py-2 mb-5">Informations générales</legend>
                                     <div class="mb-4">
                                         <label for="email" class="form-label me-3">Adresse mail * :</label>
-                                        <input type="email" class="form-control" id="email" name="email" value="" required>
-                                        <div class="text-danger fst-italic mt-2"></div>
+                                        <input type="email" class="form-control" aria-describedby="email-description" id="email" name="email" value="" required>
+                                        <p class="visually-hidden" id="email-description"></p>
+                                        <small class="text-danger fst-italic mt-2"></small>
                                     </div>
                                     <div class="mb-4">
                                         <label for="phone" class="form-label me-3">Numéro de téléphone * :</label>
-                                        <input type="text" class="form-control" id="phone" name="phone" value="" required>
-                                        <div class="text-danger fst-italic mt-2"></div>
+                                        <input type="text" class="form-control" aria-describedby="phone-description" id="phone" name="phone" value="" required>
+                                        <p class="visually-hidden" id="phone-description"></p>
+                                        <small class="text-danger fst-italic mt-2"></small>
                                     </div>
 
                                     <div class="mb-4">
                                         <label for="street" class="form-label me-3">Rue * :</label>
-                                        <input type="text" class="form-control" id="street" name="street" value="" required>
-                                        <div class="text-danger fst-italic mt-2"></div>
+                                        <input type="text" class="form-control" aria-describedby="street-description" id="street" name="street" value="" required>
+                                        <p class="visually-hidden" id="street-description"></p>
+                                        <small class="text-danger fst-italic mt-2"></small>
                                     </div>
                                     <div class="mb-4">
                                         <label for="zipcode" class="form-label me-3">Code postal * :</label>
-                                        <input type="text" class="form-control" id="zipcode" name="zipcode" value="" required>
-                                        <div class="text-danger fst-italic mt-2"></div>
+                                        <input type="text" class="form-control" aria-describedby="zipcode-description" id="zipcode" name="zipcode" value="" required>
+                                        <p class="visually-hidden" id="zipcode-description"></p>
+                                        <small class="text-danger fst-italic mt-2"></small>
                                     </div>
                                     <div class="mb-4">
                                         <label for="city" class="form-label me-3">Ville * :</label>
-                                        <input type="text" class="form-control" id="city" name="city" value="" required>
-                                        <div class="text-danger fst-italic mt-2"></div>
+                                        <input type="text" class="form-control" aria-describedby="city-description" id="city" name="city" value="" required>
+                                        <p class="visually-hidden" id="city-description"></p>
+                                        <small class="text-danger fst-italic mt-2"></small>
                                     </div>
                                 </fieldset>
         
@@ -158,19 +163,20 @@
                                     <legend class="text-center py-2 mb-5">Changer de mot de passe</legend>
                                     <div class="mb-4">
                                         <label for="password" class="form-label mb-2">Mot de passe actuel :</label>
-                                        <input type="password" class="form-control" id="password" name="password">
-                                        <div class="text-danger fst-italic mt-2"></div>
+                                        <input type="password" class="form-control" aria-describedby="password-description" id="password" name="password">
+                                        <p class="visually-hidden" id="password-description"></p>
+                                        <small class="text-danger fst-italic mt-2"></small>
                                     </div>
                                     <div class="mb-4">
                                         <label for="newPassword" class="form-label mb-2">Nouveau mot de passe :</label>
-                                        <input type="password" class="form-control" id="newPassword" name="newPassword">
-                                        <div class="text-danger fst-italic mt-2"></div>
+                                        <input type="password" class="form-control" aria-describedby="new-password-description" id="newPassword" name="newPassword">
+                                        <p class="visually-hidden" id="new-password-description"></p>
+                                        <small class="text-danger fst-italic mt-2"></small>
                                     </div>
                                     <div class="mb-4">
-                                        <label for="confirmPassword" class="form-label mb-2">Confirmer le mot de passe
-                                            :</label>
-                                        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword">
-                                        <div class="text-danger fst-italic mt-2"></div>
+                                        <label for="confirmPassword" class="form-label mb-2">Confirmer le mot de passe :</label>
+                                        <input type="password" class="form-control" aria-describedby="new-password-description" id="confirmPassword" name="confirmPassword">
+                                        <small class="text-danger fst-italic mt-2"></small>
                                     </div>
                                 </fieldset>
         
