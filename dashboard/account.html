@@ -36,7 +36,7 @@
                     <div class="offcanvas-body">
                         <ul class="navbar-nav my-auto">
                             <li class="nav-item drop-menu mx-1 mx-xl-3 mx-xxl-4 my-2 my-xl-0">
-                                <a class="nav-link header-link" href="../main/services_categories.html" role="button">
+                                <a class="nav-link header-link" href="../main/services_categories.html">
                                     Prestations
                                 </a>
                                 <ul class="drop-links visually-hidden">
@@ -60,7 +60,7 @@
                         </ul>
                         <ul class="navbar-nav justify-content-end flex-grow-1">
                             <li class="nav-item mx-1 mx-xxl-3 my-2 my-xl-0">
-                                <a class="nav-link dashboardLink px-4" href="../dashboard/account.html">Gestion</a>
+                                <a class="nav-link dashboardLink px-4" href="../dashboard/account.html" aria-current="page">Gestion</a>
                             </li>
                         </ul>
                     </div>
@@ -89,7 +89,7 @@
                                             <ul class="d-flex flex-column navbar-nav me-auto mb-2 mb-lg-0">
                                                 <div class="navbar-title mb-3">Général</div>
                                                 <li class="nav-item py-2 px-md-4 px-xl-0">
-                                                    <a class="nav-link active" aria-current="page" href="../dashboard/account.html"><i class="bi bi-person-bounding-box mx-3"></i>Mon compte</a>
+                                                    <a class="nav-link active" aria-current="location" href="../dashboard/account.html"><i class="bi bi-person-bounding-box mx-3"></i>Mon compte</a>
                                                 </li>
                                                 <li class="nav-item py-2 px-md-4 px-xl-0">
                                                     <a class="nav-link" href="../dashboard/schedules.html"><i class="bi bi-clock mx-3"></i>Mes horaires</a>
@@ -128,34 +128,34 @@
                                     <legend class="text-center py-2 mb-5">Informations générales</legend>
                                     <div class="mb-4">
                                         <label for="email" class="form-label me-3">Adresse mail * :</label>
-                                        <input type="email" class="form-control" aria-describedby="email-description" id="email" name="email" value="" required>
+                                        <input type="email" class="form-control" aria-describedby="email-description" id="email" name="email" value="" aria-required="true" required>
                                         <p class="visually-hidden" id="email-description"></p>
-                                        <small class="text-danger fst-italic mt-2"></small>
+                                        <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="email"></small>
                                     </div>
                                     <div class="mb-4">
                                         <label for="phone" class="form-label me-3">Numéro de téléphone * :</label>
-                                        <input type="text" class="form-control" aria-describedby="phone-description" id="phone" name="phone" value="" required>
+                                        <input type="text" class="form-control" aria-describedby="phone-description" id="phone" name="phone" value="" aria-required="true" required>
                                         <p class="visually-hidden" id="phone-description"></p>
-                                        <small class="text-danger fst-italic mt-2"></small>
+                                        <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="phone"></small>
                                     </div>
 
                                     <div class="mb-4">
                                         <label for="street" class="form-label me-3">Rue * :</label>
-                                        <input type="text" class="form-control" aria-describedby="street-description" id="street" name="street" value="" required>
+                                        <input type="text" class="form-control" aria-describedby="street-description" id="street" name="street" value="" aria-required="true" required>
                                         <p class="visually-hidden" id="street-description"></p>
-                                        <small class="text-danger fst-italic mt-2"></small>
+                                        <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="street"></small>
                                     </div>
                                     <div class="mb-4">
                                         <label for="zipcode" class="form-label me-3">Code postal * :</label>
-                                        <input type="text" class="form-control" aria-describedby="zipcode-description" id="zipcode" name="zipcode" value="" required>
+                                        <input type="text" class="form-control" aria-describedby="zipcode-description" id="zipcode" name="zipcode" value="" aria-required="true" required>
                                         <p class="visually-hidden" id="zipcode-description"></p>
-                                        <small class="text-danger fst-italic mt-2"></small>
+                                        <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="zipcode"></small>
                                     </div>
                                     <div class="mb-4">
                                         <label for="city" class="form-label me-3">Ville * :</label>
-                                        <input type="text" class="form-control" aria-describedby="city-description" id="city" name="city" value="" required>
+                                        <input type="text" class="form-control" aria-describedby="city-description" id="city" name="city" value="" aria-required="true" required>
                                         <p class="visually-hidden" id="city-description"></p>
-                                        <small class="text-danger fst-italic mt-2"></small>
+                                        <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="city"></small>
                                     </div>
                                 </fieldset>
         
@@ -165,23 +165,23 @@
                                         <label for="password" class="form-label mb-2">Mot de passe actuel :</label>
                                         <input type="password" class="form-control" aria-describedby="password-description" id="password" name="password">
                                         <p class="visually-hidden" id="password-description"></p>
-                                        <small class="text-danger fst-italic mt-2"></small>
+                                        <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="password"></small>
                                     </div>
                                     <div class="mb-4">
                                         <label for="newPassword" class="form-label mb-2">Nouveau mot de passe :</label>
                                         <input type="password" class="form-control" aria-describedby="new-password-description" id="newPassword" name="newPassword">
                                         <p class="visually-hidden" id="new-password-description"></p>
-                                        <small class="text-danger fst-italic mt-2"></small>
+                                        <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="newPassword"></small>
                                     </div>
                                     <div class="mb-4">
                                         <label for="confirmPassword" class="form-label mb-2">Confirmer le mot de passe :</label>
                                         <input type="password" class="form-control" aria-describedby="new-password-description" id="confirmPassword" name="confirmPassword">
-                                        <small class="text-danger fst-italic mt-2"></small>
+                                        <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="confirmPassword"></small>
                                     </div>
                                 </fieldset>
         
                                 <div class="d-flex justify-content-center pb-md-5 my-5">
-                                    <button type="submit" class="btn btn-classic btn-large py-2"><i class="bi bi-pencil-fill me-3"></i>Soumettre les modifications</button>
+                                    <button type="submit" class="btn btn-classic btn-large py-2"><i class="bi bi-pencil-fill me-3" aria-hidden="true"></i>Soumettre les modifications</button>
                                 </div>
     
                             </form>
@@ -243,9 +243,9 @@
                     id="socialNetwork">
                     <ul class="d-flex flex-xl-column">
                         <li class="me-5 me-xl-0 mb-xl-5"><a href="https://www.facebook.com/lauranaturellebioetvegan02"
-                                target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook"></i></a></li>
-                        <li><a href="" target="_blank" rel="noopener noreferrer"><i
-                                    class="bi bi-instagram"></i></a></li>
+                                target="_blank" rel="noopener noreferrer" title="Facebook" aria-label="Ouvrir la page facebook de L'Aura Natur'elle"><i class="bi bi-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="" target="_blank" rel="noopener noreferrer" title="Instagram" aria-label="Ouvrir la page instagram de L'Aura Natur'elle"><i
+                                    class="bi bi-instagram" aria-hidden="true"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -253,7 +253,7 @@
             <div class="row mx-0">
                 <div class="col d-flex flex-column justify-content-center align-items-center">
                     <hr>
-                    <small class="text-center mb-4">© L'Aura Natur'elle 2023 - Tous droits réservés</small>
+                    <small class="text-center mb-4">© L'Aura Natur'elle 2019 - 2023 - Tous droits réservés</small>
                 </div>
             </div>
         </div>

@@ -55,7 +55,7 @@
                                 <a class="nav-link header-link" href="../construction.html">Carte cadeaux</a>
                             </li>
                             <li class="nav-item mx-1 mx-xl-3 mx-xxl-4 my-2 my-xl-0">
-                                <a class="nav-link header-link" href="../main/contact.html">Contact</a>
+                                <a class="nav-link header-link" href="../main/contact.html" aria-current="page">Contact</a>
                             </li>
                         </ul>
                         <ul class="navbar-nav justify-content-end flex-grow-1">
@@ -113,15 +113,15 @@
                                 <label>Civilité * :</label>
                                 <div class="mt-2 mb-4 d-flex justify-content-around justify-content-sm-start">
                                     <div class="d-inline d-flex align-items-center me-3">
-                                        <input type="radio" name="civility" value="1" id="mr" class="form-check-input me-2" aria-describedby="civility-description" required>
+                                        <input type="radio" name="civility" value="1" id="mr" class="form-check-input me-2" aria-describedby="civility-description" aria-required="true" required>
                                         <label class="form-check-label" for="mr">M</label>
                                     </div>
                                     <div class="ps-3 d-inline d-flex align-items-center">
-                                        <input type="radio" name="civility" value="2" id="mrs" class="form-check-input me-2" aria-describedby="civility-description" required>
+                                        <input type="radio" name="civility" value="2" id="mrs" class="form-check-input me-2" aria-describedby="civility-description" aria-required="true" required>
                                         <label class="form-check-label" for="mrs">Mme</label>
                                     </div>
                                     <p class="visually-hidden" id="civility-description"></p>
-                                    <small class="text-danger fst-italic ms-5"></small>
+                                    <small class="d-none text-danger fst-italic ms-5" role="alert" aria-errormessage="civility"></small>
                                 </div>
                                 
                                 <!-- ---------------------------------------------------- -->
@@ -129,9 +129,9 @@
                                 <div class="mb-4">
                                     <label for="lastname" class="form-label">Nom * :</label>
                                     <input type="text" class="form-control" aria-describedby="lastname-description" id="lastname" name="lastname"
-                                        autocomplete="family-name" pattern="" value="" required>
+                                        autocomplete="family-name" pattern="" value="" aria-required="true" required>
                                     <p class="visually-hidden" id="lastname-description"></p>
-                                    <small class="text-danger fst-italic mt-2"></small>
+                                    <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="lastname"></small>
                                 </div>
 
                                 <!-- ---------------------------------------------------- -->
@@ -139,9 +139,9 @@
                                 <div class="mb-4">
                                     <label for="firstname" class="form-label">Prénom * :</label>
                                     <input type="text" class="form-control" aria-describedby="firstname-description" id="firstname" name="firstname"
-                                        autocomplete="given-name" pattern="" value="" required>
+                                        autocomplete="given-name" pattern="" value="" aria-required="true" required>
                                     <p class="visually-hidden" id="firstname-description"></p>
-                                    <small class="text-danger fst-italic mt-2"></small>
+                                    <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="firstname"></small>
                                 </div>
 
                                 <!-- ---------------------------------------------------- -->
@@ -149,16 +149,16 @@
                                 <div class="mb-4">
                                     <label for="email" class="form-label">Adresse mail * :</label>
                                     <input type="email" class="form-control" id="email" name="email"
-                                        aria-describedby="email-description" autocomplete="email" required>
+                                        aria-describedby="email-description" autocomplete="email" aria-required="true" required>
                                     <p class="visually-hidden" id="email-description"></p>
-                                    <small class="text-danger fst-italic mt-2"></small>
+                                    <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="email"></small>
                                 </div>
 
                                 <!-- ---------------------------------------------------- -->
                                 <!-- OBJET -->
                                 <div class="mb-4">
                                     <label for="object" class="form-label mb-2">Objet * :</label>
-                                    <select class="form-select" aria-describedby="object-description" id="object" name="object" required>
+                                    <select class="form-select" aria-describedby="object-description" id="object" name="object" aria-required="true" required>
                                         <option value="0">-</option>
                                         <option value="1">Question / demande sur une prestation</option>
                                         <option value="2">Question / demande sur les cartes cadeaux</option>
@@ -166,22 +166,23 @@
                                         <option value="4">Autre</option>
                                     </select>
                                     <p class="visually-hidden" id="object-description"></p>
-                                    <small class="text-danger fst-italic mt-2"></small>
+                                    <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="object"></small>
                                 </div>
 
                                 <!-- ---------------------------------------------------- -->
                                 <!-- MESSAGE -->
                                 <div class="mt-4 mb-5">
                                     <label for="request" class="form-label">Votre message * :</label>
-                                    <textarea class="form-control textarea" aria-describedby="message-description" id="request" name="request" required></textarea>
+                                    <textarea class="form-control textarea" aria-describedby="message-description" id="request" name="request" aria-required="true" required></textarea>
                                     <p class="visually-hidden" id="message-description"></p>
+                                    <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="request"></small>
                                 </div>
 
                                 <!-- ---------------------------------------------------- -->
                                 <!-- BOUTON -->
                                 <div class="d-flex justify-content-center">
                                     <button type="submit" class="btn btn-classic d-flex justify-content-center align-items-center py-2"><i
-                                            class="bi bi-envelope me-3"></i>Envoyer</button>
+                                            class="bi bi-envelope me-3" aria-hidden="true"></i>Envoyer</button>
                                 </div>
 
                             </fieldset>
@@ -251,9 +252,9 @@
                     id="socialNetwork">
                     <ul class="d-flex flex-xl-column">
                         <li class="me-5 me-xl-0 mb-xl-5"><a href="https://www.facebook.com/lauranaturellebioetvegan02"
-                                target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook"></i></a></li>
-                        <li><a href="" target="_blank" rel="noopener noreferrer"><i
-                                    class="bi bi-instagram"></i></a></li>
+                                target="_blank" rel="noopener noreferrer" title="Facebook" aria-label="Ouvrir la page facebook de L'Aura Natur'elle"><i class="bi bi-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="" target="_blank" rel="noopener noreferrer" title="Instagram" aria-label="Ouvrir la page instagram de L'Aura Natur'elle"><i
+                                    class="bi bi-instagram" aria-hidden="true"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -261,7 +262,7 @@
             <div class="row mx-0">
                 <div class="col d-flex flex-column justify-content-center align-items-center">
                     <hr>
-                    <small class="text-center mb-4">© L'Aura Natur'elle 2023 - Tous droits réservés</small>
+                    <small class="text-center mb-4">© L'Aura Natur'elle 2019 - 2023 - Tous droits réservés</small>
                 </div>
             </div>
         </div>
