@@ -1,8 +1,6 @@
 :root {
 
-    /* --main-color: #fdf3fd; */
     --main-color: #ffffff;
-    /* --main-color: #fcf6fc; */
     --main-dark-color: #212529;
 
     --light-green:#c2ddad;
@@ -23,6 +21,7 @@
     /* --second-filter-color: #2f5b0e8c; */
     --second-filter-color: #2f5b0e28;
     --brown-filter-color: #c0855248;
+    --special-dark-filter: #e768993d;
 
     --special-font: 'Petrona', serif;
     --main-font: 'Lato', sans-serif;

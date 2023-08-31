@@ -1,4 +1,14 @@
-/* @import url('variables.css'); */
+
+.bg-form {
+    border: var(--border-first-solid);
+}
+
+.bg-form img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {

@@ -4,7 +4,7 @@
 
 .background-services {
     position: relative;
-    background-image: url(../../img/backgrounds/leafs4.jpg);
+    background-image: url(../../img/backgrounds/min_leafs.webp);
     border: var(--border-brown-thin-solid);
     box-shadow: rgba(27, 70, 33, 0.39) 0px 7px 29px 0px;
 }
@@ -27,7 +27,8 @@
 }
 
 .services {
-    background-image: url(../../img/backgrounds/bois.jpg);
+    background-image: url(../../img/backgrounds/min_bois.webp);
+    background-position: center;
     color: var(--main-color);
     font-size: 1.1rem;
     /* font-weight: bold; */
@@ -46,6 +47,8 @@
 
 .services p {
     text-shadow: var(--text-shadow);
+    backdrop-filter: blur(3px);
+    /* color: black; */
     /* font-weight: bold; */
 }
 
@@ -93,7 +96,7 @@
 @media (min-width: 1200px)  {
 
     .content-services {
-        height: 250px;
+        height: 270px;
     }
 
     .services img {

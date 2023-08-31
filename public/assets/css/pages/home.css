@@ -92,7 +92,7 @@
     background-image: url(../../img/backgrounds/bois.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    box-shadow: var(--inset-shadow);
+    /* box-shadow: var(--inset-shadow); */
 }
 
 .prestations-div-text {

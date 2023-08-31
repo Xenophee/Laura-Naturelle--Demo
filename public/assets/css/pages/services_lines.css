@@ -1,14 +1,19 @@
 
+/* ================================================================================================================================= */
+/* --------------------------------------------------------------------------------------------------------------------------------- */
+/* STYLE GLOBALE A SERVICE */
+
+
 .classic-section {
-    background-color: #2f5b0e28;
+    background-color: var(--second-filter-color);
 }
 
 .package-section {
-    background-color: #c0855248;
+    background-color: var(--brown-filter-color);
 }
 
 .special-section {
-    background-color: #e768993d;
+    background-color: var(--special-dark-filter);
 }
 
 .special-section .service, .classic-section .service, .package-section .service {
@@ -26,6 +31,13 @@
 .package-section .service {
     border: var(--border-brown-solid);
 }
+
+
+
+
+/* ================================================================================================================================= */
+/* --------------------------------------------------------------------------------------------------------------------------------- */
+/* STYLE SPECIFIQUE POUR SERVICE EN LIGNE */
 
 
 .services-line-img {
