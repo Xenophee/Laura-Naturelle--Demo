@@ -95,6 +95,10 @@ fieldset {
 /* --------------------------------------------------------------------------------------------------------------------------------- */
 /* GROUP-RADIO */
 
+.btn-group label {
+    border-radius: 0;
+}
+
 .btn-radio {
     color: var(--special-dark-color);
     border: var(--border-dark-special-medium-solid);
@@ -123,35 +127,14 @@ fieldset {
 /* --------------------------------------------------------------------------------------------------------------------------------- */
 /* RESPONSIVE */
 
-@media (min-width: 768px) and (max-width: 1200px)  {
+@media (min-width: 768px)  {
+
+    .btn-group label {
+        border-radius: 10px;
+    }
 
 }
 
 @media (min-width: 1200px) {
 
-}
-
-
-/* PARTIE THEME CATEGORIE */
-
-.form-control.updateInput {
-    background-color: transparent;
-    border: none;
-    box-shadow: none;
-    height: 40px;
-    /* width: 30%; */
-}
-
-.updateInput:focus {
-    background-color: #f1e5cc;
-    border: none;
-    box-shadow: none;
-}
-
-.updateBtn {
-    width: 50%;
-}
-
-.btnSubmitAdd {
-    height: 55px;
 }

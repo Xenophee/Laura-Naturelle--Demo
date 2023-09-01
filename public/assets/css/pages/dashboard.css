@@ -14,14 +14,26 @@
     width: 100%;
 }
 
+.schedule-btn-group {
+    width: 100%;
+}
+
+.schedule-btn-group label {
+    width: 100%;
+}
+
 .schedules {
     width: 100%;
     padding: 0;
 }
 
-.schedules li {
-    border-bottom: var(--border-special-solid);
+.schedules {
+    border-bottom: var(--border-first-solid);
     list-style: none;
+}
+
+.schedules legend {
+    background-color: var(--brown-color);
 }
 
 .schedules .form-label {
@@ -61,6 +73,10 @@
 
     .schedules {
         width: 90%;
+    }
+
+    .schedule-btn-group label {
+        width: 30%;
     }
 
     .schedules .form-label {
