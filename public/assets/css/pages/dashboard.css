@@ -28,12 +28,18 @@
 }
 
 .schedules {
-    border-bottom: var(--border-first-solid);
+    border-bottom: var(--border-light-green-solid);
     list-style: none;
 }
 
 .schedules legend {
-    background-color: var(--brown-color);
+    background-color: var(--light-green);
+    color: var(--second-color);
+    font-size: 2rem;
+}
+
+.schedule-btn-group label {
+    padding: 15px;
 }
 
 .schedules .form-label {
@@ -44,13 +50,13 @@
 }
 
 .schedules .form-control {
-    height: 40px;
+    height: 55px;
+    font-size: 1.5rem;
 }
 
-.schedules .form-check-label {
-    font-size: 1.2rem;
+.schedules-first-bloc span, .schedules-second-bloc span {
+    font-size: 1.3rem;
 }
-
 
 .announcement-btns {
     width: 90%;
@@ -79,8 +85,17 @@
         width: 30%;
     }
 
+    .schedule-btn-group label {
+        padding: 5px;
+    }
+
     .schedules .form-label {
         width: 30%;
+    }
+
+    .schedules .form-control {
+        height: 45px;
+        font-size: 1.3rem;
     }
 
     .announcement-btns {
@@ -109,6 +124,12 @@
 
     .schedules .form-control {
         width: 20%;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    .schedules-first-bloc span, .schedules-second-bloc span {
+        font-size: 1.2rem;
     }
 
     .announcement-btns {

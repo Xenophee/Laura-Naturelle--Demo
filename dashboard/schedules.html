@@ -131,251 +131,375 @@
                     <section class="d-flex flex-column justify-content-center align-items-center">
                         <h1 class="category-title text-center py-4 my-5 px-3 px-md-5">Mes horaires</h1>
 
-                        <form method="POST" class="schedules-form d-flex flex-column align-items-center mt-md-5">
+                        <form method="POST" class="schedules-form d-flex flex-column align-items-center mt-md-5" id="schedules-form">
 
                             <div class="text-danger text-center fst-italic"></div>
-
-                            <ul class="schedules d-flex flex-column justify-content-center mt-5">
                             
                                 <!-- --------------------------------------------------------------- -->
                                 <!-- LUNDI -->
-                                <li class="py-4">
-                                    <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
-                                        <label for="day1" class="form-label text-green me-md-3 mb-4 mb-md-0">Lundi :</label>
-                                        <div class="d-flex flex-column flex-md-row align-items-center w-100">
-                                            De
-                                            <div class="d-flex justify-content-center align-items-center ms-md-3 my-3 my-md-0">
-                                                <input type="number" class="form-control text-end me-md-3" id="day1"
-                                                    name="day1_openHour" value=""><strong class="mt-md-0 mx-3 mx-md-0">H</strong>
+                                <fieldset class="schedules d-flex flex-column justify-content-center align-items-center py-4">
+                                    <legend class="text-center mb-4">Lundi</legend>
 
+                                    <div class="btn-group d-flex flex-wrap pb-4 pb-md-5 schedule-btn-group" role="group" aria-label="Choisir si l'entreprise est ouverte ou non">
+                                        <input type="radio" class="btn-check scheduleBtn" name="open_day1" value="0" id="close_day1" autocomplete="off" aria-required="true" required checked>
+                                        <label class="btn btn-radio" for="close_day1">Fermé</label>
+                                    
+                                        <input type="radio" class="btn-check scheduleBtn" name="open_day1" value="1" id="open-uninterrupted_day1" autocomplete="off" aria-required="true" required>
+                                        <label class="btn btn-radio" for="open-uninterrupted_day1">Ouvert sans interruption</label>
 
-                                                <input type="number" class="form-control mx-md-3" id="day1"
-                                                    name="day1_openMinutes" value="">
-                                            </div>
-                                            à
-                                            <div class="d-flex justify-content-center align-items-center ms-md-3 my-3 my-md-0">
-                                                <input type="number" class="form-control text-end me-md-3" id="day1"
-                                                    name="day1_closeHour" value=""><strong class="mt-md-0 mx-3 mx-md-0">H</strong>
+                                        <input type="radio" class="btn-check scheduleBtn" name="open_day1" value="2" id="open-interrupted_day1" autocomplete="off" aria-required="true" required>
+                                        <label class="btn btn-radio" for="open-interrupted_day1">Ouvert avec interruption</label>
+                                    </div>
 
+                                    <!-- ! Pour le back, les names sont day1_openHour, day1_closeHour, day1_openHour2, day1_closeHour2 -->
+                                    
+                                    <div class="schedules-first-bloc d-flex flex-column flex-md-row justify-content-center align-items-center mb-4">
+                                        <span>De</span>
+                                        <div class="d-flex justify-content-center align-items-center ms-md-3 my-3 my-md-0">
+                                            <input type="number" class="form-control text-end me-md-3" aria-label="Heure d'ouverture sans préciser les minutes" id="day1_openHour"
+                                                name="day1_openHour" value=""><span class="fw-bold mx-3 mx-md-0">H</span>
 
-                                                <input type="number" class="form-control mx-md-3" id="day1"
-                                                    name="day1_closeMinutes" value="">
-                                            </div>
+                                            <input type="number" class="form-control mx-md-3" aria-label="Minutes d'ouverture associées à l'heure du champs précédent" aria-required="false" id="day1_openMinutes" name="day1_openMinutes" value="">
                                         </div>
+                                        <span>à</span>
+                                        <div class="d-flex justify-content-center align-items-center ms-md-3 my-3 my-md-0">
+                                            <input type="number" class="form-control text-end me-md-3" aria-label="Heure de fermeture sans préciser les minutes" id="day1_closeHour"
+                                                name="day1_closeHour" value=""><span class="fw-bold mx-3 mx-md-0">H</span>
 
-                                        <div class="form-check d-flex justify-content-center align-items-center mt-3 mt-md-0 ms-md-3">
-                                            <input class="form-check-input me-3" type="checkbox" value="1" name="closeDays[]" id="closeDay1">
-                                            <label class="form-check-label" for="closeDay1">Fermé</label>
+                                            <input type="number" class="form-control mx-md-3" aria-label="Minutes de fermeture associées à l'heure du champs précédent" aria-required="false" id="day1_closeMinutes" name="day1_closeMinutes" value="">
                                         </div>
                                     </div>
-                                </li>
+
+                                    <div class="schedules-second-bloc d-flex flex-column flex-md-row justify-content-center align-items-center mb-4">
+                                        <span>De</span>
+                                        <div class="d-flex justify-content-center align-items-center ms-md-3 my-3 my-md-0">
+                                            <input type="number" class="form-control text-end me-md-3" aria-label="Heure d'ouverture sans préciser les minutes" id="day1_openHour2"
+                                                name="day1_openHour2" value=""><span class="fw-bold mx-3 mx-md-0">H</span>
+
+                                            <input type="number" class="form-control mx-md-3" aria-label="Minutes d'ouverture associées à l'heure du champs précédent" aria-required="false" id="day1_openMinutes2" name="day1_openMinutes2" value="">
+                                        </div>
+                                        <span>à</span>
+                                        <div class="d-flex justify-content-center align-items-center ms-md-3 my-3 my-md-0">
+                                            <input type="number" class="form-control text-end me-md-3" aria-label="Heure de fermeture sans préciser les minutes" id="day1_closeHour2"
+                                                name="day1_closeHour2" value=""><span class="fw-bold mx-3 mx-md-0">H</span>
+
+                                            <input type="number" class="form-control mx-md-3" aria-label="Minutes de fermeture associées à l'heure du champs précédent" aria-required="false" id="day1_closeMinutes2" name="day1_closeMinutes2" value="">
+                                        </div>
+                                    </div>
+                                </fieldset>
                                 <!-- --------------------------------------------------------------- -->
 
                                 <!-- --------------------------------------------------------------- -->
                                 <!-- MARDI -->
-                                <li class="py-4">
-                                    <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
-                                        <label for="day2" class="form-label text-green me-md-3 mb-4 mb-md-0">Mardi :</label>
-                                        <div class="d-flex flex-column flex-md-row align-items-center w-100">
-                                            De
-                                            <div class="d-flex justify-content-center align-items-center ms-md-3 my-3 my-md-0">
-                                                <input type="number" class="form-control text-end me-md-3" id="day2"
-                                                    name="day2_openHour" value=""><strong class="mt-md-0 mx-3 mx-md-0">H</strong>
-
-
-                                                <input type="number" class="form-control mx-md-3" id="day2"
-                                                    name="day2_openMinutes" value="">
-                                            </div>
-                                            à
-                                            <div class="d-flex justify-content-center align-items-center ms-md-3 my-3 my-md-0">
-                                                <input type="number" class="form-control text-end me-md-3" id="day2"
-                                                    name="day2_closeHour" value=""><strong class="mt-md-0 mx-3 mx-md-0">H</strong>
-
-
-                                                <input type="number" class="form-control mx-md-3" id="day2"
-                                                    name="day2_closeMinutes" value="">
-                                            </div>
+                                <fieldset class="schedules d-flex flex-column justify-content-center align-items-center py-4">
+                                    <legend class="text-center mb-4">Mardi</legend>
+                                
+                                    <div class="btn-group d-flex flex-wrap pb-4 pb-md-5 schedule-btn-group" role="group" aria-label="Choisir si l'entreprise est ouverte ou non">
+                                        <input type="radio" class="btn-check scheduleBtn" name="open_day2" value="0" id="close_day2" autocomplete="off" aria-required="true" required>
+                                        <label class="btn btn-radio" for="close_day2">Fermé</label>
+                                    
+                                        <input type="radio" class="btn-check scheduleBtn" name="open_day2" value="1" id="open-uninterrupted_day2" autocomplete="off" aria-required="true" required checked>
+                                        <label class="btn btn-radio" for="open-uninterrupted_day2">Ouvert sans interruption</label>
+                                
+                                        <input type="radio" class="btn-check scheduleBtn" name="open_day2" value="2" id="open-interrupted_day2" autocomplete="off" aria-required="true" required>
+                                        <label class="btn btn-radio" for="open-interrupted_day2">Ouvert avec interruption</label>
+                                    </div>
+                                    
+                                    <div class="schedules-first-bloc d-flex flex-column flex-md-row justify-content-center align-items-center mb-4">
+                                        <span>De</span>
+                                        <div class="d-flex justify-content-center align-items-center ms-md-3 my-3 my-md-0">
+                                            <input type="number" class="form-control text-end me-md-3" aria-label="Heure d'ouverture sans préciser les minutes" id="day2_openHour"
+                                                name="day2_openHour" value="10"><span class="fw-bold mx-3 mx-md-0">H</span>
+                                
+                                            <input type="number" class="form-control mx-md-3" aria-label="Minutes d'ouverture associées à l'heure du champs précédent" aria-required="false" id="day2_openMinutes" name="day2_openMinutes" value="00">
                                         </div>
-
-                                        <div class="form-check d-flex justify-content-center align-items-center mt-3 mt-md-0 ms-md-3">
-                                            <input class="form-check-input me-3" type="checkbox" value="1" name="closeDays[]" id="closeDay2">
-                                            <label class="form-check-label" for="closeDay2">Fermé</label>
+                                        <span>à</span>
+                                        <div class="d-flex justify-content-center align-items-center ms-md-3 my-3 my-md-0">
+                                            <input type="number" class="form-control text-end me-md-3" aria-label="Heure de fermeture sans préciser les minutes" id="day2_closeHour"
+                                                name="day2_closeHour" value="18"><span class="fw-bold mx-3 mx-md-0">H</span>
+                                
+                                            <input type="number" class="form-control mx-md-3" aria-label="Minutes de fermeture associées à l'heure du champs précédent" aria-required="false" id="day2_closeMinutes" name="day2_closeMinutes" value="00">
                                         </div>
                                     </div>
-                                </li>
+                                
+                                    <div class="schedules-second-bloc d-flex flex-column flex-md-row justify-content-center align-items-center mb-4">
+                                        <span>De</span>
+                                        <div class="d-flex justify-content-center align-items-center ms-md-3 my-3 my-md-0">
+                                            <input type="number" class="form-control text-end me-md-3" aria-label="Heure d'ouverture sans préciser les minutes" id="day2_openHour2"
+                                                name="day2_openHour2" value=""><span class="fw-bold mx-3 mx-md-0">H</span>
+                                
+                                            <input type="number" class="form-control mx-md-3" aria-label="Minutes d'ouverture associées à l'heure du champs précédent" aria-required="false" id="day2_openMinutes2" name="day2_openMinutes2" value="">
+                                        </div>
+                                        <span>à</span>
+                                        <div class="d-flex justify-content-center align-items-center ms-md-3 my-3 my-md-0">
+                                            <input type="number" class="form-control text-end me-md-3" aria-label="Heure de fermeture sans préciser les minutes" id="day2_closeHour2"
+                                                name="day2_closeHour2" value=""><span class="fw-bold mx-3 mx-md-0">H</span>
+                                
+                                            <input type="number" class="form-control mx-md-3" aria-label="Minutes de fermeture associées à l'heure du champs précédent" aria-required="false" id="day2_closeMinutes2" name="day2_closeMinutes2" value="">
+                                        </div>
+                                    </div>
+                                </fieldset>
                                 <!-- --------------------------------------------------------------- -->
 
                                 <!-- --------------------------------------------------------------- -->
                                 <!-- MERCREDI -->
-                                <li class="py-4">
-                                    <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
-                                        <label for="day3" class="form-label text-green me-md-3 mb-4 mb-md-0">Mercredi :</label>
-                                        <div class="d-flex flex-column flex-md-row align-items-center w-100">
-                                            De
-                                            <div class="d-flex justify-content-center align-items-center ms-md-3 my-3 my-md-0">
-                                                <input type="number" class="form-control text-end me-md-3" id="day3"
-                                                    name="day3_openHour" value=""><strong class="mt-md-0 mx-3 mx-md-0">H</strong>
-
-
-                                                <input type="number" class="form-control mx-md-3" id="day3"
-                                                    name="day3_openMinutes" value="">
-                                            </div>
-                                            à
-                                            <div class="d-flex justify-content-center align-items-center ms-md-3 my-3 my-md-0">
-                                                <input type="number" class="form-control text-end me-md-3" id="day3"
-                                                    name="day3_closeHour" value=""><strong class="mt-md-0 mx-3 mx-md-0">H</strong>
-
-
-                                                <input type="number" class="form-control mx-md-3" id="day3"
-                                                    name="day3_closeMinutes" value="">
-                                            </div>
+                                <fieldset class="schedules d-flex flex-column justify-content-center align-items-center py-4">
+                                    <legend class="text-center mb-4">Mercredi</legend>
+                                
+                                    <div class="btn-group d-flex flex-wrap pb-4 pb-md-5 schedule-btn-group" role="group" aria-label="Choisir si l'entreprise est ouverte ou non">
+                                        <input type="radio" class="btn-check scheduleBtn" name="open_day3" value="0" id="close_day3" autocomplete="off" aria-required="true" required checked>
+                                        <label class="btn btn-radio" for="close_day3">Fermé</label>
+                                    
+                                        <input type="radio" class="btn-check scheduleBtn" name="open_day3" value="1" id="open-uninterrupted_day3" autocomplete="off" aria-required="true" required>
+                                        <label class="btn btn-radio" for="open-uninterrupted_day3">Ouvert sans interruption</label>
+                                
+                                        <input type="radio" class="btn-check scheduleBtn" name="open_day3" value="2" id="open-interrupted_day3" autocomplete="off" aria-required="true" required>
+                                        <label class="btn btn-radio" for="open-interrupted_day3">Ouvert avec interruption</label>
+                                    </div>
+                                    
+                                    <div class="schedules-first-bloc d-flex flex-column flex-md-row justify-content-center align-items-center mb-4">
+                                        <span>De</span>
+                                        <div class="d-flex justify-content-center align-items-center ms-md-3 my-3 my-md-0">
+                                            <input type="number" class="form-control text-end me-md-3" aria-label="Heure d'ouverture sans préciser les minutes" id="day3_openHour"
+                                                name="day3_openHour" value=""><span class="fw-bold mx-3 mx-md-0">H</span>
+                                
+                                            <input type="number" class="form-control mx-md-3" aria-label="Minutes d'ouverture associées à l'heure du champs précédent" aria-required="false" id="day3_openMinutes" name="day3_openMinutes" value="">
                                         </div>
-
-                                        <div class="form-check d-flex justify-content-center align-items-center mt-3 mt-md-0 ms-md-3">
-                                            <input class="form-check-input me-3" type="checkbox" value="1" name="closeDays[]" id="closeDay3">
-                                            <label class="form-check-label" for="closeDay3">Fermé</label>
+                                        <span>à</span>
+                                        <div class="d-flex justify-content-center align-items-center ms-md-3 my-3 my-md-0">
+                                            <input type="number" class="form-control text-end me-md-3" aria-label="Heure de fermeture sans préciser les minutes" id="day3_closeHour"
+                                                name="day3_closeHour" value=""><span class="fw-bold mx-3 mx-md-0">H</span>
+                                
+                                            <input type="number" class="form-control mx-md-3" aria-label="Minutes de fermeture associées à l'heure du champs précédent" aria-required="false" id="day3_closeMinutes" name="day3_closeMinutes" value="">
                                         </div>
                                     </div>
-                                </li>
+                                
+                                    <div class="schedules-second-bloc d-flex flex-column flex-md-row justify-content-center align-items-center mb-4">
+                                        <span>De</span>
+                                        <div class="d-flex justify-content-center align-items-center ms-md-3 my-3 my-md-0">
+                                            <input type="number" class="form-control text-end me-md-3" aria-label="Heure d'ouverture sans préciser les minutes" id="day3_openHour2"
+                                                name="day3_openHour2" value=""><span class="fw-bold mx-3 mx-md-0">H</span>
+                                
+                                            <input type="number" class="form-control mx-md-3" aria-label="Minutes d'ouverture associées à l'heure du champs précédent" aria-required="false" id="day3_openMinutes2" name="day3_openMinutes2" value="">
+                                        </div>
+                                        <span>à</span>
+                                        <div class="d-flex justify-content-center align-items-center ms-md-3 my-3 my-md-0">
+                                            <input type="number" class="form-control text-end me-md-3" aria-label="Heure de fermeture sans préciser les minutes" id="day3_closeHour2"
+                                                name="day3_closeHour2" value=""><span class="fw-bold mx-3 mx-md-0">H</span>
+                                
+                                            <input type="number" class="form-control mx-md-3" aria-label="Minutes de fermeture associées à l'heure du champs précédent" aria-required="false" id="day3_closeMinutes2" name="day3_closeMinutes2" value="">
+                                        </div>
+                                    </div>
+                                </fieldset>
                                 <!-- --------------------------------------------------------------- -->
 
                                 <!-- --------------------------------------------------------------- -->
                                 <!-- JEUDI -->
-                                <li class="py-4">
-                                    <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
-                                        <label for="day4" class="form-label text-green me-md-3 mb-4 mb-md-0">Jeudi :</label>
-                                        <div class="d-flex flex-column flex-md-row align-items-center w-100">
-                                            De
-                                            <div class="d-flex justify-content-center align-items-center ms-md-3 my-3 my-md-0">
-                                                <input type="number" class="form-control text-end me-md-3" id="day4"
-                                                    name="day4_openHour" value=""><strong class="mt-md-0 mx-3 mx-md-0">H</strong>
-
-
-                                                <input type="number" class="form-control mx-md-3" id="day4"
-                                                    name="day4_openMinutes" value="">
-                                            </div>
-                                            à
-                                            <div class="d-flex justify-content-center align-items-center ms-md-3 my-3 my-md-0">
-                                                <input type="number" class="form-control text-end me-md-3" id="day4"
-                                                    name="day4_closeHour" value=""><strong class="mt-md-0 mx-3 mx-md-0">H</strong>
-
-
-                                                <input type="number" class="form-control mx-md-3" id="day4"
-                                                    name="day4_closeMinutes" value="">
-                                            </div>
+                                <fieldset class="schedules d-flex flex-column justify-content-center align-items-center py-4">
+                                    <legend class="text-center mb-4">Jeudi</legend>
+                                
+                                    <div class="btn-group d-flex flex-wrap pb-4 pb-md-5 schedule-btn-group" role="group" aria-label="Choisir si l'entreprise est ouverte ou non">
+                                        <input type="radio" class="btn-check scheduleBtn" name="open_day4" value="0" id="close_day4" autocomplete="off" aria-required="true" required>
+                                        <label class="btn btn-radio" for="close_day4">Fermé</label>
+                                    
+                                        <input type="radio" class="btn-check scheduleBtn" name="open_day4" value="1" id="open-uninterrupted_day4" autocomplete="off" aria-required="true" required checked>
+                                        <label class="btn btn-radio" for="open-uninterrupted_day4">Ouvert sans interruption</label>
+                                
+                                        <input type="radio" class="btn-check scheduleBtn" name="open_day4" value="2" id="open-interrupted_day4" autocomplete="off" aria-required="true" required>
+                                        <label class="btn btn-radio" for="open-interrupted_day4">Ouvert avec interruption</label>
+                                    </div>
+                                    
+                                    <div class="schedules-first-bloc d-flex flex-column flex-md-row justify-content-center align-items-center mb-4">
+                                        <span>De</span>
+                                        <div class="d-flex justify-content-center align-items-center ms-md-3 my-3 my-md-0">
+                                            <input type="number" class="form-control text-end me-md-3" aria-label="Heure d'ouverture sans préciser les minutes" id="day4_openHour"
+                                                name="day4_openHour" value="10"><span class="fw-bold mx-3 mx-md-0">H</span>
+                                
+                                            <input type="number" class="form-control mx-md-3" aria-label="Minutes d'ouverture associées à l'heure du champs précédent" aria-required="false" id="day4_openMinutes" name="day4_openMinutes" value="00">
                                         </div>
-
-                                        <div class="form-check d-flex justify-content-center align-items-center mt-3 mt-md-0 ms-md-3">
-                                            <input class="form-check-input me-3" type="checkbox" value="1" name="closeDays[]" id="closeDay4">
-                                            <label class="form-check-label" for="closeDay4">Fermé</label>
+                                        <span>à</span>
+                                        <div class="d-flex justify-content-center align-items-center ms-md-3 my-3 my-md-0">
+                                            <input type="number" class="form-control text-end me-md-3" aria-label="Heure de fermeture sans préciser les minutes" id="day4_closeHour"
+                                                name="day4_closeHour" value="18"><span class="fw-bold mx-3 mx-md-0">H</span>
+                                
+                                            <input type="number" class="form-control mx-md-3" aria-label="Minutes de fermeture associées à l'heure du champs précédent" aria-required="false" id="day4_closeMinutes" name="day4_closeMinutes" value="00">
                                         </div>
                                     </div>
-                                </li>
+                                
+                                    <div class="schedules-second-bloc d-flex flex-column flex-md-row justify-content-center align-items-center mb-4">
+                                        <span>De</span>
+                                        <div class="d-flex justify-content-center align-items-center ms-md-3 my-3 my-md-0">
+                                            <input type="number" class="form-control text-end me-md-3" aria-label="Heure d'ouverture sans préciser les minutes" id="day4_openHour2"
+                                                name="day4_openHour2" value=""><span class="fw-bold mx-3 mx-md-0">H</span>
+                                
+                                            <input type="number" class="form-control mx-md-3" aria-label="Minutes d'ouverture associées à l'heure du champs précédent" aria-required="false" id="day4_openMinutes2" name="day4_openMinutes2" value="">
+                                        </div>
+                                        <span>à</span>
+                                        <div class="d-flex justify-content-center align-items-center ms-md-3 my-3 my-md-0">
+                                            <input type="number" class="form-control text-end me-md-3" aria-label="Heure de fermeture sans préciser les minutes" id="day4_closeHour2"
+                                                name="day4_closeHour2" value=""><span class="fw-bold mx-3 mx-md-0">H</span>
+                                
+                                            <input type="number" class="form-control mx-md-3" aria-label="Minutes de fermeture associées à l'heure du champs précédent" aria-required="false" id="day4_closeMinutes2" name="day4_closeMinutes2" value="">
+                                        </div>
+                                    </div>
+                                </fieldset>
                                 <!-- --------------------------------------------------------------- -->
 
                                 <!-- --------------------------------------------------------------- -->
                                 <!-- VENDREDI -->
-                                <li class="py-4">
-                                    <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
-                                        <label for="day5" class="form-label text-green me-md-3 mb-4 mb-md-0">Vendredi :</label>
-                                        <div class="d-flex flex-column flex-md-row align-items-center w-100">
-                                            De
-                                            <div class="d-flex justify-content-center align-items-center ms-md-3 my-3 my-md-0">
-                                                <input type="number" class="form-control text-end me-md-3" id="day5"
-                                                    name="day5_openHour" value=""><strong class="mt-md-0 mx-3 mx-md-0">H</strong>
-
-
-                                                <input type="number" class="form-control mx-md-3" id="day5"
-                                                    name="day5_openMinutes" value="">
-                                            </div>
-                                            à
-                                            <div class="d-flex justify-content-center align-items-center ms-md-3 my-3 my-md-0">
-                                                <input type="number" class="form-control text-end me-md-3" id="day5"
-                                                    name="day5_closeHour" value=""><strong class="mt-md-0 mx-3 mx-md-0">H</strong>
-
-
-                                                <input type="number" class="form-control mx-md-3" id="day5"
-                                                    name="day5_closeMinutes" value="">
-                                            </div>
+                                <fieldset class="schedules d-flex flex-column justify-content-center align-items-center py-4">
+                                    <legend class="text-center mb-4">Vendredi</legend>
+                                
+                                    <div class="btn-group d-flex flex-wrap pb-4 pb-md-5 schedule-btn-group" role="group" aria-label="Choisir si l'entreprise est ouverte ou non">
+                                        <input type="radio" class="btn-check scheduleBtn" name="open_day5" value="0" id="close_day5" autocomplete="off" aria-required="true" required>
+                                        <label class="btn btn-radio" for="close_day5">Fermé</label>
+                                    
+                                        <input type="radio" class="btn-check scheduleBtn" name="open_day5" value="1" id="open-uninterrupted_day5" autocomplete="off" aria-required="true" required checked>
+                                        <label class="btn btn-radio" for="open-uninterrupted_day5">Ouvert sans interruption</label>
+                                
+                                        <input type="radio" class="btn-check scheduleBtn" name="open_day5" value="2" id="open-interrupted_day5" autocomplete="off" aria-required="true" required>
+                                        <label class="btn btn-radio" for="open-interrupted_day5">Ouvert avec interruption</label>
+                                    </div>
+                                    
+                                    <div class="schedules-first-bloc d-flex flex-column flex-md-row justify-content-center align-items-center mb-4">
+                                        <span>De</span>
+                                        <div class="d-flex justify-content-center align-items-center ms-md-3 my-3 my-md-0">
+                                            <input type="number" class="form-control text-end me-md-3" aria-label="Heure d'ouverture sans préciser les minutes" id="day5_openHour"
+                                                name="day5_openHour" value="10"><span class="fw-bold mx-3 mx-md-0">H</span>
+                                
+                                            <input type="number" class="form-control mx-md-3" aria-label="Minutes d'ouverture associées à l'heure du champs précédent" aria-required="false" id="day5_openMinutes" name="day5_openMinutes" value="00">
                                         </div>
-
-                                        <div class="form-check d-flex justify-content-center align-items-center mt-3 mt-md-0 ms-md-3">
-                                            <input class="form-check-input me-3" type="checkbox" value="1" name="closeDays[]" id="closeDay5">
-                                            <label class="form-check-label" for="closeDay5">Fermé</label>
+                                        <span>à</span>
+                                        <div class="d-flex justify-content-center align-items-center ms-md-3 my-3 my-md-0">
+                                            <input type="number" class="form-control text-end me-md-3" aria-label="Heure de fermeture sans préciser les minutes" id="day5_closeHour"
+                                                name="day5_closeHour" value="18"><span class="fw-bold mx-3 mx-md-0">H</span>
+                                
+                                            <input type="number" class="form-control mx-md-3" aria-label="Minutes de fermeture associées à l'heure du champs précédent" aria-required="false" id="day5_closeMinutes" name="day5_closeMinutes" value="00">
                                         </div>
                                     </div>
-                                </li>
+                                
+                                    <div class="schedules-second-bloc d-flex flex-column flex-md-row justify-content-center align-items-center mb-4">
+                                        <span>De</span>
+                                        <div class="d-flex justify-content-center align-items-center ms-md-3 my-3 my-md-0">
+                                            <input type="number" class="form-control text-end me-md-3" aria-label="Heure d'ouverture sans préciser les minutes" id="day5_openHour2"
+                                                name="day5_openHour2" value=""><span class="fw-bold mx-3 mx-md-0">H</span>
+                                
+                                            <input type="number" class="form-control mx-md-3" aria-label="Minutes d'ouverture associées à l'heure du champs précédent" aria-required="false" id="day5_openMinutes2" name="day5_openMinutes2" value="">
+                                        </div>
+                                        <span>à</span>
+                                        <div class="d-flex justify-content-center align-items-center ms-md-3 my-3 my-md-0">
+                                            <input type="number" class="form-control text-end me-md-3" aria-label="Heure de fermeture sans préciser les minutes" id="day5_closeHour2"
+                                                name="day5_closeHour2" value=""><span class="fw-bold mx-3 mx-md-0">H</span>
+                                
+                                            <input type="number" class="form-control mx-md-3" aria-label="Minutes de fermeture associées à l'heure du champs précédent" aria-required="false" id="day5_closeMinutes2" name="day5_closeMinutes2" value="">
+                                        </div>
+                                    </div>
+                                </fieldset>
                                 <!-- --------------------------------------------------------------- -->
 
                                 <!-- --------------------------------------------------------------- -->
                                 <!-- SAMEDI -->
-                                <li class="py-4">
-                                    <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
-                                        <label for="day6" class="form-label text-green me-md-3 mb-4 mb-md-0">Samedi :</label>
-                                        <div class="d-flex flex-column flex-md-row align-items-center w-100">
-                                            De
-                                            <div class="d-flex justify-content-center align-items-center ms-md-3 my-3 my-md-0">
-                                                <input type="number" class="form-control text-end me-md-3" id="day6"
-                                                    name="day6_openHour" value=""><strong class="mt-md-0 mx-3 mx-md-0">H</strong>
-
-
-                                                <input type="number" class="form-control mx-md-3" id="day6"
-                                                    name="day6_openMinutes" value="">
-                                            </div>
-                                            à
-                                            <div class="d-flex justify-content-center align-items-center ms-md-3 my-3 my-md-0">
-                                                <input type="number" class="form-control text-end me-md-3" id="day6"
-                                                    name="day6_closeHour" value=""><strong class="mt-md-0 mx-3 mx-md-0">H</strong>
-
-
-                                                <input type="number" class="form-control mx-md-3" id="day6"
-                                                    name="day6_closeMinutes" value="">
-                                            </div>
+                                <fieldset class="schedules d-flex flex-column justify-content-center align-items-center py-4">
+                                    <legend class="text-center mb-4">Samedi</legend>
+                                
+                                    <div class="btn-group d-flex flex-wrap pb-4 pb-md-5 schedule-btn-group" role="group" aria-label="Choisir si l'entreprise est ouverte ou non">
+                                        <input type="radio" class="btn-check scheduleBtn" name="open_day6" value="0" id="close_day6" autocomplete="off" aria-required="true" required>
+                                        <label class="btn btn-radio" for="close_day6">Fermé</label>
+                                    
+                                        <input type="radio" class="btn-check scheduleBtn" name="open_day6" value="1" id="open-uninterrupted_day6" autocomplete="off" aria-required="true" required checked>
+                                        <label class="btn btn-radio" for="open-uninterrupted_day6">Ouvert sans interruption</label>
+                                
+                                        <input type="radio" class="btn-check scheduleBtn" name="open_day6" value="2" id="open-interrupted_day6" autocomplete="off" aria-required="true" required>
+                                        <label class="btn btn-radio" for="open-interrupted_day6">Ouvert avec interruption</label>
+                                    </div>
+                                    
+                                    <div class="schedules-first-bloc d-flex flex-column flex-md-row justify-content-center align-items-center mb-4">
+                                        <span>De</span>
+                                        <div class="d-flex justify-content-center align-items-center ms-md-3 my-3 my-md-0">
+                                            <input type="number" class="form-control text-end me-md-3" aria-label="Heure d'ouverture sans préciser les minutes" id="day6_openHour"
+                                                name="day6_openHour" value="10"><span class="fw-bold mx-3 mx-md-0">H</span>
+                                
+                                            <input type="number" class="form-control mx-md-3" aria-label="Minutes d'ouverture associées à l'heure du champs précédent" aria-required="false" id="day6_openMinutes" name="day6_openMinutes" value="00">
                                         </div>
-
-                                        <div class="form-check d-flex justify-content-center align-items-center mt-3 mt-md-0 ms-md-3">
-                                            <input class="form-check-input me-3" type="checkbox" value="1" name="closeDays[]" id="closeDay6">
-                                            <label class="form-check-label" for="closeDay6">Fermé</label>
+                                        <span>à</span>
+                                        <div class="d-flex justify-content-center align-items-center ms-md-3 my-3 my-md-0">
+                                            <input type="number" class="form-control text-end me-md-3" aria-label="Heure de fermeture sans préciser les minutes" id="day6_closeHour"
+                                                name="day6_closeHour" value="18"><span class="fw-bold mx-3 mx-md-0">H</span>
+                                
+                                            <input type="number" class="form-control mx-md-3" aria-label="Minutes de fermeture associées à l'heure du champs précédent" aria-required="false" id="day6_closeMinutes" name="day6_closeMinutes" value="00">
                                         </div>
                                     </div>
-                                </li>
+                                
+                                    <div class="schedules-second-bloc d-flex flex-column flex-md-row justify-content-center align-items-center mb-4">
+                                        <span>De</span>
+                                        <div class="d-flex justify-content-center align-items-center ms-md-3 my-3 my-md-0">
+                                            <input type="number" class="form-control text-end me-md-3" aria-label="Heure d'ouverture sans préciser les minutes" id="day6_openHour2"
+                                                name="day6_openHour2" value=""><span class="fw-bold mx-3 mx-md-0">H</span>
+                                
+                                            <input type="number" class="form-control mx-md-3" aria-label="Minutes d'ouverture associées à l'heure du champs précédent" aria-required="false" id="day6_openMinutes2" name="day6_openMinutes2" value="">
+                                        </div>
+                                        <span>à</span>
+                                        <div class="d-flex justify-content-center align-items-center ms-md-3 my-3 my-md-0">
+                                            <input type="number" class="form-control text-end me-md-3" aria-label="Heure de fermeture sans préciser les minutes" id="day6_closeHour2"
+                                                name="day6_closeHour2" value=""><span class="fw-bold mx-3 mx-md-0">H</span>
+                                
+                                            <input type="number" class="form-control mx-md-3" aria-label="Minutes de fermeture associées à l'heure du champs précédent" aria-required="false" id="day6_closeMinutes2" name="day6_closeMinutes2" value="">
+                                        </div>
+                                    </div>
+                                </fieldset>
                                 <!-- --------------------------------------------------------------- -->
 
                                 <!-- --------------------------------------------------------------- -->
                                 <!-- DIMANCHE -->
-                                <li class="py-4">
-                                    <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
-                                        <label for="day7" class="form-label text-green me-md-3 mb-4 mb-md-0">Dimanche :</label>
-                                        <div class="d-flex flex-column flex-md-row align-items-center w-100">
-                                            De
-                                            <div class="d-flex justify-content-center align-items-center ms-md-3 my-3 my-md-0">
-                                                <input type="number" class="form-control text-end me-md-3" id="day7"
-                                                    name="day7_openHour" value=""><strong class="mt-md-0 mx-3 mx-md-0">H</strong>
-
-
-                                                <input type="number" class="form-control mx-md-3" id="day7"
-                                                    name="day7_openMinutes" value="">
-                                            </div>
-                                            à
-                                            <div class="d-flex justify-content-center align-items-center ms-md-3 my-3 my-md-0">
-                                                <input type="number" class="form-control text-end me-md-3" id="day7"
-                                                    name="day7_closeHour" value=""><strong class="mt-md-0 mx-3 mx-md-0">H</strong>
-
-
-                                                <input type="number" class="form-control mx-md-3" id="day7"
-                                                    name="day7_closeMinutes" value="">
-                                            </div>
+                                <fieldset class="schedules d-flex flex-column justify-content-center align-items-center py-4">
+                                    <legend class="text-center mb-4">Dimanche</legend>
+                                
+                                    <div class="btn-group d-flex flex-wrap pb-4 pb-md-5 schedule-btn-group" role="group" aria-label="Choisir si l'entreprise est ouverte ou non">
+                                        <input type="radio" class="btn-check scheduleBtn" name="open_day7" value="0" id="close_day7" autocomplete="off" aria-required="true" required checked>
+                                        <label class="btn btn-radio" for="close_day7">Fermé</label>
+                                    
+                                        <input type="radio" class="btn-check scheduleBtn" name="open_day7" value="1" id="open-uninterrupted_day7" autocomplete="off" aria-required="true" required>
+                                        <label class="btn btn-radio" for="open-uninterrupted_day7">Ouvert sans interruption</label>
+                                
+                                        <input type="radio" class="btn-check scheduleBtn" name="open_day7" value="2" id="open-interrupted_day7" autocomplete="off" aria-required="true" required>
+                                        <label class="btn btn-radio" for="open-interrupted_day7">Ouvert avec interruption</label>
+                                    </div>
+                                    
+                                    <div class="schedules-first-bloc d-flex flex-column flex-md-row justify-content-center align-items-center mb-4">
+                                        <span>De</span>
+                                        <div class="d-flex justify-content-center align-items-center ms-md-3 my-3 my-md-0">
+                                            <input type="number" class="form-control text-end me-md-3" aria-label="Heure d'ouverture sans préciser les minutes" id="day7_openHour"
+                                                name="day7_openHour" value=""><span class="fw-bold mx-3 mx-md-0">H</span>
+                                
+                                            <input type="number" class="form-control mx-md-3" aria-label="Minutes d'ouverture associées à l'heure du champs précédent" aria-required="false" id="day7_openMinutes" name="day7_openMinutes" value="">
                                         </div>
-
-                                        <div class="form-check d-flex justify-content-center align-items-center mt-3 mt-md-0 ms-md-3">
-                                            <input class="form-check-input me-3" type="checkbox" value="1" name="closeDays[]" id="closeDay7">
-                                            <label class="form-check-label" for="closeDay7">Fermé</label>
+                                        <span>à</span>
+                                        <div class="d-flex justify-content-center align-items-center ms-md-3 my-3 my-md-0">
+                                            <input type="number" class="form-control text-end me-md-3" aria-label="Heure de fermeture sans préciser les minutes" id="day7_closeHour"
+                                                name="day7_closeHour" value=""><span class="fw-bold mx-3 mx-md-0">H</span>
+                                
+                                            <input type="number" class="form-control mx-md-3" aria-label="Minutes de fermeture associées à l'heure du champs précédent" aria-required="false" id="day7_closeMinutes" name="day7_closeMinutes" value="">
                                         </div>
                                     </div>
-                                </li>
+                                
+                                    <div class="schedules-second-bloc d-flex flex-column flex-md-row justify-content-center align-items-center mb-4">
+                                        <span>De</span>
+                                        <div class="d-flex justify-content-center align-items-center ms-md-3 my-3 my-md-0">
+                                            <input type="number" class="form-control text-end me-md-3" aria-label="Heure d'ouverture sans préciser les minutes" id="day7_openHour2"
+                                                name="day7_openHour2" value=""><span class="fw-bold mx-3 mx-md-0">H</span>
+                                
+                                            <input type="number" class="form-control mx-md-3" aria-label="Minutes d'ouverture associées à l'heure du champs précédent" aria-required="false" id="day7_openMinutes2" name="day7_openMinutes2" value="">
+                                        </div>
+                                        <span>à</span>
+                                        <div class="d-flex justify-content-center align-items-center ms-md-3 my-3 my-md-0">
+                                            <input type="number" class="form-control text-end me-md-3" aria-label="Heure de fermeture sans préciser les minutes" id="day7_closeHour2"
+                                                name="day7_closeHour2" value=""><span class="fw-bold mx-3 mx-md-0">H</span>
+                                
+                                            <input type="number" class="form-control mx-md-3" aria-label="Minutes de fermeture associées à l'heure du champs précédent" aria-required="false" id="day7_closeMinutes2" name="day7_closeMinutes2" value="">
+                                        </div>
+                                    </div>
+                                </fieldset>
                                 <!-- --------------------------------------------------------------- -->
-
-                            </ul>
 
                             <div class="d-flex justify-content-center pb-md-5 my-5">
                                 <button type="submit" class="btn btn-classic btn-large py-2"><i class="bi bi-pencil-fill me-3" aria-hidden="true"></i>Soumettre les modifications</button>
@@ -457,7 +581,7 @@
     </footer>
 
     <script src="../public/assets/js/bootstrap.bundle.min.js"></script>
-    <script src="../public/assets/js/form.js"></script>
+    <script src="../public/assets/js/schedules.js"></script>
     <script src="../public/assets/js/script.js"></script>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-K01XHPHL6L"></script>
