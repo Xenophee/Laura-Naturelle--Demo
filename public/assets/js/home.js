@@ -67,3 +67,21 @@ if (window.innerWidth >= 768) {
 }
 
 
+// ==================================================================================================================================
+// ----------------------------------------------------------------------------------------------------------------------------------
+// CHANGEMENT DE L'IMAGE AU SURVOL SUR LA CARTE DE FIDÉLITÉ
+
+
+const fidelitySource = document.querySelector('.fidelity-img source');
+const fidelityImg = document.querySelector('.fidelity-img img');
+
+
+fidelityImg.addEventListener('mouseover', () => {
+    fidelitySource.srcset = './public/assets/img/illustrations/others/carte-xl-verso.webp';
+    fidelityImg.src = './public/assets/img/illustrations/others/carte-verso.webp';
+});
+
+fidelityImg.addEventListener('mouseleave', () => {
+    fidelitySource.srcset = './public/assets/img/illustrations/others/carte-xl.webp';
+    fidelityImg.src = './public/assets/img/illustrations/others/carte.webp';
+});

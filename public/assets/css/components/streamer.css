@@ -34,6 +34,9 @@
     text-shadow: 1px 0 #fdf3fd, -1px 0 #fdf3fd, 0 1px #fdf3fd, 0 -1px #fdf3fd, 1px 1px #fdf3fd, -1px -1px #fdf3fd, 1px -1px #fdf3fd, -1px 1px #fdf3fd;
 }
 
+#announcement .category-annoucement {
+    font-size: 1.2rem;
+}
 
 
 /* ================================================================================================================================= */
@@ -62,11 +65,15 @@
         left: 100%;
     }
 
-    .announcement-content {
+    .announcement-content.announcement-animation {
+        width: 100%;
+    }
+
+    .announcement-animation {
         animation: parade 20s linear infinite;
     }
 
-    #announcement p {
+    #announcement p, #announcement .category-annoucement {
         font-size: 1.2rem;
     }
     
@@ -90,7 +97,7 @@
         font-size: 5rem;
     }
 
-    #announcement p {
+    #announcement p, #announcement .category-annoucement {
         font-size: 1.8rem;
     }
     
