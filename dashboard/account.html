@@ -75,120 +75,120 @@
     <main>
         <div class="container-fluid px-0">
 
-                <div class="row justify-content-around mx-0">
+            <div class="row justify-content-around mx-0">
 
-                    <div class="col-12  col-xxl-2 dashboard-nav">
-                        <aside>
-                            <nav class="navbar navbar-expand-xl navbar-dark">
-                                <div class="container-fluid">
-                                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                                        <span class="navbar-toggler-icon"></span>
-                                    </button>
-                                    <div class="collapse navbar-collapse" id="navbarText">
-                                        <div class="links-container d-flex flex-column flex-md-row flex-xxl-column mt-4">
-                                            <ul class="d-flex flex-column navbar-nav mx-auto mb-2 mb-lg-0">
-                                                <div class="navbar-title mb-3">Général</div>
-                                                <li class="nav-item py-2 px-md-4 px-xl-0">
-                                                    <a class="nav-link active" aria-current="location" href="../dashboard/account.html"><i class="bi bi-person-bounding-box mx-3"></i>Mon compte</a>
-                                                </li>
-                                                <li class="nav-item py-2 px-md-4 px-xl-0">
-                                                    <a class="nav-link" href="../dashboard/schedules.html"><i class="bi bi-clock mx-3"></i>Mes horaires</a>
-                                                </li>
-                                                <li class="nav-item py-2 px-md-4 px-xl-0">
-                                                    <a class="nav-link" href="../dashboard/add_ announcement.html"><i class="bi bi-megaphone mx-3"></i>Mes annonces</a>
-                                                </li>
-                                            </ul>
-    
-                                            <ul class="d-flex flex-column navbar-nav me-auto mt-xxl-5 mb-2 mb-lg-0">
-                                                <div class="navbar-title mb-3">Prestations</div>
-                                                <li class="nav-item py-2 px-md-4 px-xl-0">
-                                                    <a class="nav-link" href="../dashboard/list_services.html"><i class="bi bi-list-ul mx-3"></i>Liste des prestations</a>
-                                                </li>
-                                                <li class="nav-item py-2 px-md-4 px-xl-0">
-                                                    <a class="nav-link" href="../dashboard/add_category.html"><i class="bi bi-plus-circle mx-3"></i>Ajouter une catégorie</a>
-                                                </li>
-                                                <li class="nav-item py-2 px-md-4 px-xl-0">
-                                                    <a class="nav-link" href="../dashboard/add_services.html"><i class="bi bi-plus-circle mx-3"></i>Ajouter une prestation</a>
-                                                </li>
-                                            </ul>
-                                        </div>
+                <div class="col-12 col-xxl-2 dashboard-nav">
+                    <aside>
+                        <nav class="navbar navbar-expand-xl navbar-dark">
+                            <div class="container-fluid">
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarText">
+                                    <div class="links-container d-flex flex-column flex-md-row flex-xxl-column mt-4">
+                                        <ul class="d-flex flex-column navbar-nav mx-auto mb-2 mb-lg-0">
+                                            <div class="navbar-title mb-3">Général</div>
+                                            <li class="nav-item py-2 px-md-4 px-xl-0">
+                                                <a class="nav-link active" aria-current="location" href="../dashboard/account.html"><i class="bi bi-person-bounding-box mx-3"></i>Mon compte</a>
+                                            </li>
+                                            <li class="nav-item py-2 px-md-4 px-xl-0">
+                                                <a class="nav-link" href="../dashboard/schedules.html"><i class="bi bi-clock mx-3"></i>Mes horaires</a>
+                                            </li>
+                                            <li class="nav-item py-2 px-md-4 px-xl-0">
+                                                <a class="nav-link" href="../dashboard/add_ announcement.html"><i class="bi bi-megaphone mx-3"></i>Mes annonces</a>
+                                            </li>
+                                        </ul>
+
+                                        <ul class="d-flex flex-column navbar-nav me-auto mt-xxl-5 mb-2 mb-lg-0">
+                                            <div class="navbar-title mb-3">Prestations</div>
+                                            <li class="nav-item py-2 px-md-4 px-xl-0">
+                                                <a class="nav-link" href="../dashboard/list_services.html"><i class="bi bi-list-ul mx-3"></i>Liste des prestations</a>
+                                            </li>
+                                            <li class="nav-item py-2 px-md-4 px-xl-0">
+                                                <a class="nav-link" href="../dashboard/add_category.html"><i class="bi bi-plus-circle mx-3"></i>Ajouter une catégorie</a>
+                                            </li>
+                                            <li class="nav-item py-2 px-md-4 px-xl-0">
+                                                <a class="nav-link" href="../dashboard/add_services.html"><i class="bi bi-plus-circle mx-3"></i>Ajouter une prestation</a>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
-                            </nav>
-                        </aside>
-                    </div>
-
-                    <div class="col-12 col-xl-9 col-xxl-10">
-                        <section class="d-flex flex-column justify-content-center align-items-center">
-                            <h1 class="category-title text-center py-4 my-5 px-3 px-md-5">Mon Compte</h1>
-
-                            <form method="post" enctype="multipart/form-data" class="dashboard-form mt-5">
-    
-                                <fieldset class="mb-md-5">
-                                    <legend class="text-center py-2 mb-5">Informations générales</legend>
-                                    <div class="mb-4">
-                                        <label for="email" class="form-label me-3">Adresse mail * :</label>
-                                        <input type="email" class="form-control" aria-describedby="email-description" id="email" name="email" value="" aria-required="true" required>
-                                        <p class="visually-hidden" id="email-description"></p>
-                                        <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="email"></small>
-                                    </div>
-                                    <div class="mb-4">
-                                        <label for="phone" class="form-label me-3">Numéro de téléphone * :</label>
-                                        <input type="text" class="form-control" aria-describedby="phone-description" id="phone" name="phone" value="" aria-required="true" required>
-                                        <p class="visually-hidden" id="phone-description"></p>
-                                        <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="phone"></small>
-                                    </div>
-
-                                    <div class="mb-4">
-                                        <label for="street" class="form-label me-3">Rue * :</label>
-                                        <input type="text" class="form-control" aria-describedby="street-description" id="street" name="street" value="" aria-required="true" required>
-                                        <p class="visually-hidden" id="street-description"></p>
-                                        <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="street"></small>
-                                    </div>
-                                    <div class="mb-4">
-                                        <label for="zipcode" class="form-label me-3">Code postal * :</label>
-                                        <input type="text" class="form-control" aria-describedby="zipcode-description" id="zipcode" name="zipcode" value="" aria-required="true" required>
-                                        <p class="visually-hidden" id="zipcode-description"></p>
-                                        <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="zipcode"></small>
-                                    </div>
-                                    <div class="mb-4">
-                                        <label for="city" class="form-label me-3">Ville * :</label>
-                                        <input type="text" class="form-control" aria-describedby="city-description" id="city" name="city" value="" aria-required="true" required>
-                                        <p class="visually-hidden" id="city-description"></p>
-                                        <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="city"></small>
-                                    </div>
-                                </fieldset>
-        
-                                <fieldset class="pt-5">
-                                    <legend class="text-center py-2 mb-5">Changer de mot de passe</legend>
-                                    <div class="mb-4">
-                                        <label for="password" class="form-label mb-2">Mot de passe actuel :</label>
-                                        <input type="password" class="form-control" aria-describedby="password-description" id="password" name="password">
-                                        <p class="visually-hidden" id="password-description"></p>
-                                        <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="password"></small>
-                                    </div>
-                                    <div class="mb-4">
-                                        <label for="newPassword" class="form-label mb-2">Nouveau mot de passe :</label>
-                                        <input type="password" class="form-control" aria-describedby="new-password-description" id="newPassword" name="newPassword">
-                                        <p class="visually-hidden" id="new-password-description"></p>
-                                        <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="newPassword"></small>
-                                    </div>
-                                    <div class="mb-4">
-                                        <label for="confirmPassword" class="form-label mb-2">Confirmer le mot de passe :</label>
-                                        <input type="password" class="form-control" aria-describedby="new-password-description" id="confirmPassword" name="confirmPassword">
-                                        <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="confirmPassword"></small>
-                                    </div>
-                                </fieldset>
-        
-                                <div class="d-flex justify-content-center pb-md-5 my-5">
-                                    <button type="submit" class="btn btn-classic btn-large py-2"><i class="bi bi-pencil-fill me-3" aria-hidden="true"></i>Soumettre les modifications</button>
-                                </div>
-    
-                            </form>
-                        </section>
-                    </div>
-
+                            </div>
+                        </nav>
+                    </aside>
                 </div>
+
+                <div class="col-12 col-xl-9 col-xxl-10">
+                    <section class="d-flex flex-column justify-content-center align-items-center">
+                        <h1 class="category-title text-center py-4 my-5 px-3 px-md-5">Mon Compte</h1>
+
+                        <form method="post" enctype="multipart/form-data" class="dashboard-form mt-5">
+
+                            <fieldset class="mb-md-5">
+                                <legend class="text-center py-2 mb-5">Informations générales</legend>
+                                <div class="mb-4">
+                                    <label for="email" class="form-label me-3">Adresse mail * :</label>
+                                    <input type="email" class="form-control" aria-describedby="email-description" id="email" name="email" value="" aria-required="true" required>
+                                    <p class="visually-hidden" id="email-description"></p>
+                                    <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="email"></small>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="phone" class="form-label me-3">Numéro de téléphone * :</label>
+                                    <input type="text" class="form-control" aria-describedby="phone-description" id="phone" name="phone" value="" aria-required="true" required>
+                                    <p class="visually-hidden" id="phone-description"></p>
+                                    <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="phone"></small>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label for="street" class="form-label me-3">Rue * :</label>
+                                    <input type="text" class="form-control" aria-describedby="street-description" id="street" name="street" value="" aria-required="true" required>
+                                    <p class="visually-hidden" id="street-description"></p>
+                                    <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="street"></small>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="zipcode" class="form-label me-3">Code postal * :</label>
+                                    <input type="text" class="form-control" aria-describedby="zipcode-description" id="zipcode" name="zipcode" value="" aria-required="true" required>
+                                    <p class="visually-hidden" id="zipcode-description"></p>
+                                    <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="zipcode"></small>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="city" class="form-label me-3">Ville * :</label>
+                                    <input type="text" class="form-control" aria-describedby="city-description" id="city" name="city" value="" aria-required="true" required>
+                                    <p class="visually-hidden" id="city-description"></p>
+                                    <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="city"></small>
+                                </div>
+                            </fieldset>
+    
+                            <fieldset class="pt-5">
+                                <legend class="text-center py-2 mb-5">Changer de mot de passe</legend>
+                                <div class="mb-4">
+                                    <label for="password" class="form-label mb-2">Mot de passe actuel :</label>
+                                    <input type="password" class="form-control" aria-describedby="password-description" id="password" name="password">
+                                    <p class="visually-hidden" id="password-description"></p>
+                                    <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="password"></small>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="newPassword" class="form-label mb-2">Nouveau mot de passe :</label>
+                                    <input type="password" class="form-control" aria-describedby="new-password-description" id="newPassword" name="newPassword">
+                                    <p class="visually-hidden" id="new-password-description"></p>
+                                    <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="newPassword"></small>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="confirmPassword" class="form-label mb-2">Confirmer le mot de passe :</label>
+                                    <input type="password" class="form-control" aria-describedby="new-password-description" id="confirmPassword" name="confirmPassword">
+                                    <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="confirmPassword"></small>
+                                </div>
+                            </fieldset>
+    
+                            <div class="d-flex justify-content-center pb-md-5 my-5">
+                                <button type="submit" class="btn btn-classic btn-large py-2"><i class="bi bi-pencil-fill me-3" aria-hidden="true"></i>Soumettre les modifications</button>
+                            </div>
+
+                        </form>
+                    </section>
+                </div>
+
+            </div>
 
         </div>
     </main>
