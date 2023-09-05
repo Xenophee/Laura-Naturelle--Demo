@@ -42,21 +42,13 @@
 }
 
 .mainNav .nav-link.active, .drop-menu.active {
-    color: var(--special-color);
-    border-top: var(--border-special-solid);
-    border-bottom: var(--border-special-solid);
-}
-
-.mainNav .nav-link.active:hover {
-    color: var(--second-color);
-    border-top: var(--border-second-solid);
-    border-bottom: var(--border-second-solid);
+    color: var(--main-color);
+    border-bottom: var(--border-light-green-solid);
 }
 
 
 /* ------------------------------------------------- */
 /* special nav-link */
-
 
 
 .dashboardLink {
@@ -71,6 +63,11 @@
     outline: var(--border-light-green-solid);
 }
 
+.dashboardLink.active {
+    background-color: var(--light-green);
+    color: var(--first-color) !important;
+    outline: var(--border-light-green-solid);
+}
 
 /* ------------------------------------------------- */
 /* dropdown */
@@ -97,6 +94,13 @@
     width: 100%;
     height: 55px;
     line-height: 55px;
+}
+
+.drop-links a.active {
+    background-color: var(--second-color);
+    box-shadow: var(--inset-shadow);
+    border-top: var(--border-light-solid);
+    border-bottom: var(--border-light-solid);
 }
 
 /* ------------------------------------------------- */

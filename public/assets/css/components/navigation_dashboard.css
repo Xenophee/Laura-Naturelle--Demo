@@ -54,9 +54,25 @@
 
 
 /* -------------------------------------------- */
+/* TABLETTE */
+
+@media (min-width: 768px) {
+
+    .dashboard-nav ul {
+        width: 40%;
+    }
+
+}
+
+
+/* -------------------------------------------- */
 /* GRAND ECRAN */
 
 @media (min-width: 1200px) {
+
+    .dashboard-nav ul {
+        width: 20%;
+    }
 
     .dashboard-nav .nav-link::after {
         position: absolute;
@@ -76,6 +92,17 @@
         top: 0%;
         left: 0%;
         color: var(--main-color);
+    }
+}
+
+
+/* -------------------------------------------- */
+/* TRES GRAND ECRAN */
+
+@media (min-width: 1400px) {
+
+    .dashboard-nav ul {
+        width: 100%;
     }
 
 }
