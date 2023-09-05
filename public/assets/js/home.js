@@ -77,11 +77,11 @@ const fidelityImg = document.querySelector('.fidelity-img img');
 
 
 fidelityImg.addEventListener('mouseover', () => {
-    fidelitySource.srcset = './public/assets/img/illustrations/others/carte-xl-verso.webp';
-    fidelityImg.src = './public/assets/img/illustrations/others/carte-verso.webp';
+    fidelitySource.srcset = './public/assets/img/illustrations/others/carte-xl.webp';
+    fidelityImg.src = './public/assets/img/illustrations/others/carte.webp';
 });
 
 fidelityImg.addEventListener('mouseleave', () => {
-    fidelitySource.srcset = './public/assets/img/illustrations/others/carte-xl.webp';
-    fidelityImg.src = './public/assets/img/illustrations/others/carte.webp';
+    fidelitySource.srcset = './public/assets/img/illustrations/others/carte-xl-verso.webp';
+    fidelityImg.src = './public/assets/img/illustrations/others/carte-verso.webp';
 });
