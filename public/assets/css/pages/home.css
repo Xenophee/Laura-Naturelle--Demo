@@ -56,15 +56,18 @@
 }
 
 .presentation-text {
-    width: 90%;
+    width: 100%;
     border: var(--border-special-strong-solid);
     outline: var(--border-third-medium-solid);
-    outline-offset: 15px;
+    /* outline-offset: 15px; */
+    border: var(--border-third-medium-solid);
+    outline: var(--border-special-strong-solid);
+    outline-offset: -25px;
     box-shadow: var(--box-light-shadow);
 }
 
 .presentation-text p {
-    width: 100%;
+    width: 90%;
     margin: 0;
 }
 
@@ -288,7 +291,7 @@
     }
 
     .carousel {
-        width: 90%;
+        width: 75%;
     }
 
     .carousel-item img {
@@ -339,6 +342,10 @@
 
     .presentation-text {
         width: 60%;
+    }
+
+    .carousel {
+        width: 90%;
     }
 
     .carousel-item img {
