@@ -70,13 +70,13 @@ tr:not(thead tr) {
     background-color: var(--special-dark-color);
 }
 
-.table-time {
+.table-time, .table-advantage {
     width: 70px;
     color: var(--main-color);
     background-color: var(--first-color);
 }
 
-.table-price {
+.table-price, .table-date {
     width: 70px;
     color: var(--main-color);
     background-color: var(--brown-color);
