@@ -62,7 +62,17 @@
     width: 90%;
 }
 
+.formatting {
+    background-color: var(--special-color);
+    color: var(--main-color);
+    border: var(--border-light-solid);
+}
 
+.formatting:hover {
+    background-color: var(--special-dark-color);
+    color: var(--main-color);
+    border: var(--border-light-solid);
+}
 
 /* ================================================================================================================================= */
 /* --------------------------------------------------------------------------------------------------------------------------------- */

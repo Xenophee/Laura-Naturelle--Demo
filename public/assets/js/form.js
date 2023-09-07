@@ -27,13 +27,17 @@ const counterLenght = (textarea, value) => {
 
     let content = textarea.value.length;
         
-    counterChar.textContent = value - content;
-    
-    // Ajout d'un message d'erreur en cas de dépassement
-    if (Number(counterChar.textContent) < 0) {
-        textareaMessage.textContent = 'Vous avez dépassé le nombre de caractères autorisés.';
+    if (value != undefined) {
+        counterChar.textContent = value - content;
+        
+        // Ajout d'un message d'erreur en cas de dépassement
+        if (Number(counterChar.textContent) < 0) {
+            textareaMessage.textContent = 'Vous avez dépassé le nombre de caractères autorisés.';
+        } else {
+            textareaMessage.textContent = '';
+        };
     } else {
-        textareaMessage.textContent = '';
+        counterChar.textContent = content;
     };
 
 };
@@ -48,31 +52,14 @@ const announcement = document.getElementById('announcement-form');
 
 if (announcement != undefined) {
 
-    const typeChoices = document.querySelectorAll('.type-choice');
-    const inputBlock = document.querySelectorAll('.input-block');
     const textarea = document.querySelector('textarea');
-    const value = Number(counterChar.textContent);
+    const textareaBtns = document.querySelectorAll('.formatting');
     const modalBtn = document.querySelector('.modal-footer .btn-outline');
 
-    // ----------------------------------------------------------------------
-    // Fonction d'affichage du formulaire nécessaire
-    const displayForm = (element) => {
-
-        if (element.checked && element.value == 1) {
-            // Affichage pour les absences
-            inputBlock[1].classList.remove('d-none');
-            inputBlock[2].classList.remove('d-none');
-        } else if (element.checked && element.value == 2) {
-            // Affichage pour les promotions
-            inputBlock[0].classList.remove('d-none');
-            inputBlock[1].classList.remove('d-none');
-            inputBlock[2].classList.remove('d-none');
-        } else if (element.checked && element.value == 3) {
-            // Affichage pour les messages personnalisés
-            inputBlock[1].classList.remove('d-none');
-        };
-    };
-    // ----------------------------------------------------------------------
+    
+    const previewText = () => {
+        preview.innerHTML = textarea.value;
+    }
 
     // ----------------------------------------------------------------------
     // En cas d'annulation de la suppression de l'annonce, retour du check sur le bouton modifier
@@ -84,29 +71,38 @@ if (announcement != undefined) {
     // ----------------------------------------------------------------------
     // Fait le décompte du nombre de caractères sur le textarea et affiche le message d'erreur
     textarea.addEventListener('keydown', () => {
-        counterLenght(textarea, value);
+        counterLenght(textarea);
     });
 
     // Appel de la fonction de comptage au démarrage pour pallier les cas de modification
-    counterLenght(textarea, value);
+    counterLenght(textarea);
     // ----------------------------------------------------------------------
     
+    textarea.addEventListener('input', () => {
+        previewText();
+    });
+
+    previewText();
+
     // ----------------------------------------------------------------------
-    // Affichage du formulaire adapté en fonction du bouton cliqué
-    typeChoices.forEach((element, key) => {
-
-        displayForm(element);
-
+    textareaBtns.forEach((element, key) => {
         element.addEventListener('click', () => {
+            const selectedText = textarea.value.substring(textarea.selectionStart, textarea.selectionEnd);
+            const textBefore = textarea.value.substring(0, textarea.selectionStart);
+            const textAfter = textarea.value.substring(textarea.selectionEnd);
 
-            // Réinitialise l'affichage à chaque click
-            inputBlock.forEach(element => {
-                element.classList.add('d-none');
-            });
-
-            displayForm(element);
-
-        });
+            let newText;
+            
+            if(key == 0) {
+                newText = `<span>${selectedText}</span>`;
+            } else {
+                newText = `<span class="category-annoucement">${selectedText}</span>`;
+            }
+            
+            
+            textarea.value = textBefore + newText + textAfter;
+            preview.innerHTML = textBefore + newText + textAfter;
+        })
     });
     // ----------------------------------------------------------------------
 };
