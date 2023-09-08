@@ -58,6 +58,16 @@ body {
     background-color: var(--main-color);
 }
 
+.bg-green {
+    background-color: var(--first-color);
+    color: var(--main-color);
+}
+
+.bg-brown {
+    background-color: var(--brown-color);
+    color: var(--main-color);
+}
+
 ::-webkit-scrollbar {
     width: 0.7em;
     background-color: var(--light-green);

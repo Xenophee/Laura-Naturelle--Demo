@@ -181,7 +181,7 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <div class="table-advantage d-flex justify-content-center align-items-center">-20%</div>
+                                            <div class="table-advantage d-flex justify-content-center align-items-center">-10€</div>
                                         </td>
                                         <td>
                                             <div class="table-date d-flex justify-content-center align-items-center w-100">Du 20/12 au 20/01</div>
@@ -208,48 +208,7 @@
                         
                         <form method="post" enctype="multipart/form-data" class="dashboard-form mt-5">
                             <legend class="text-center py-2 mb-5">Ajouter une promotion</legend>
-                                <!-- -------------------------------------------------------------- -->
-                                <!-- TYPE DE REDUCTION -->
-                                <label class="d-block text-center">Type de réduction :</label>
-                                <div class="btn-group d-flex mt-3 mb-5" role="group" aria-label="Choisir l'affichage en page d'accueil">
-                                    <input type="radio" class="btn-check" name="discountType" value="0" id="percentage" autocomplete="off" aria-required="true" required>
-                                    <label class="btn btn-radio" for="percentage">%</label>
-                                
-                                    <input type="radio" class="btn-check" name="discountType" value="1" id="euro" autocomplete="off" aria-required="true" required>
-                                    <label class="btn btn-radio" for="euro">€</label>
-                                </div>
-                                <!-- -------------------------------------------------------------- -->
-                                <!-- MONTANT DE LA REDUCTION -->
-                                <div class="mb-4">
-                                    <label for="advantage" class="form-label me-3">Montant de la réduction * :</label>
-                                    <input type="number" class="form-control" id="advantage" name="advantage" value="" aria-required="true" required>
-                                    <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="advantage"></small>
-                                </div>
-                                <!-- -------------------------------------------------------------- -->
-                                <!-- CHOIX DU CONTRASTE PAR RAPPORT À L'IMAGE -->
-                                <label class="d-block text-center pt-4">Prestations concernées :</label>
-                                <div class="btn-group d-flex mt-3 mb-5" role="group" aria-label="Choisir l'affichage en page d'accueil">
-                                    <input type="radio" class="btn-check" name="whichServices" value="0" id="all" autocomplete="off" aria-required="true" required checked>
-                                    <label class="btn btn-radio" for="all">Toutes les prestations</label>
 
-                                    <input type="radio" class="btn-check" name="whichServices" value="1" id="allInCat" autocomplete="off" aria-required="true" required>
-                                    <label class="btn btn-radio" for="allInCat">Catégories ciblées</label>
-                                
-                                    <input type="radio" class="btn-check" name="whichServices" value="2" id="specific" autocomplete="off" aria-required="true" required>
-                                    <label class="btn btn-radio" for="specific">Prestations ciblées</label>
-                                </div>
-                                <!-- -------------------------------------------------------------- -->
-                                <div class="mb-4">
-                                    <label for="object" class="form-label mb-2">Catégorie de la prestation * :</label>
-                                    <select class="form-select" id="object" name="object" required>
-                                        <option value="0">-</option>
-                                        <option value="1">Épilations</option>
-                                        <option value="2">Soins du visage</option>
-                                        <option value="3">Soins des mains</option>
-                                        <option value="4">Modelages</option>
-                                    </select>
-                                    <div class="text-danger fst-italic mt-2"></div>
-                                </div>
                                 <!-- -------------------------------------------------------------- -->
                                 <!-- DURÉE DE LA PROMOTION -->
                                 <label class="fw-bold mb-4 mt-4">Quand la promotion doit-elle être appliquée ?</label>
@@ -267,6 +226,112 @@
                                         <label for="last_date" class="form-label me-3">Date de fin * :</label>
                                         <input type="date" class="form-control" id="last_date" name="last_date" value="2023-08-28" required>
                                         <div class="text-danger fst-italic mt-2"></div>
+                                    </div>
+                                </div>
+                                <!-- -------------------------------------------------------------- -->
+                                <!-- TYPE DE REDUCTION -->
+                                <label class="d-block text-center fw-bold">Type de réduction :</label>
+                                <div class="btn-group d-flex mt-3 mb-5" role="group" aria-label="Choisir l'affichage en page d'accueil">
+                                    <input type="radio" class="btn-check" name="discountType" value="0" id="percentage" autocomplete="off" aria-required="true" required>
+                                    <label class="btn btn-radio" for="percentage">%</label>
+                                
+                                    <input type="radio" class="btn-check" name="discountType" value="1" id="euro" autocomplete="off" aria-required="true" required>
+                                    <label class="btn btn-radio" for="euro">€</label>
+                                </div>
+                                <!-- -------------------------------------------------------------- -->
+                                <!-- MONTANT DE LA REDUCTION -->
+                                <div class="mb-4">
+                                    <label for="advantage" class="form-label me-3">Montant de la réduction * :</label>
+                                    <input type="number" class="form-control" id="advantage" name="advantage" value="" aria-required="true" required>
+                                    <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="advantage"></small>
+                                </div>
+                                <!-- -------------------------------------------------------------- -->
+                                <!-- CHOIX DU CONTRASTE PAR RAPPORT À L'IMAGE -->
+                                <label class="d-block text-center fw-bold pt-4">Prestations concernées :</label>
+                                <div class="btn-group d-flex mt-3 mb-5" role="group" aria-label="Choisir l'affichage en page d'accueil">
+                                    <input type="radio" class="btn-check" name="whichServices" value="0" id="all" autocomplete="off" aria-required="true" required checked>
+                                    <label class="btn btn-radio" for="all">Toutes les prestations</label>
+                                
+                                    <input type="radio" class="btn-check" name="whichServices" value="1" id="specific" autocomplete="off" aria-required="true" required>
+                                    <label class="btn btn-radio" for="specific">Prestations ciblées</label>
+                                </div>
+                                <!-- -------------------------------------------------------------- -->
+                                
+                                <div class="accordion" id="accordionPanelsStayOpenExample">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                </div>
+                                                <label class="form-check-label ps-2" for="flexCheckDefault">Épilations</label>
+                                            </button>
+                                        </h2>
+                                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                                            <div class="accordion-body d-flex flex-column flex-md-row justify-content-evenly">
+                                                <fieldset class="mb-1">
+                                                    <label class="bg-green px-4 mb-2">Classiques</label>
+                                                    <div class="form-check mt-2">
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                        <label class="form-check-label ps-2" for="flexCheckDefault">
+                                                            Sourcils
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check mt-2">
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                        <label class="form-check-label ps-2" for="flexCheckDefault">
+                                                            Aisselles
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check mt-2">
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                        <label class="form-check-label ps-2" for="flexCheckDefault">
+                                                            Demi-jambe
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check mt-2">
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                        <label class="form-check-label ps-2" for="flexCheckDefault">
+                                                            Dos
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check mt-2">
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                        <label class="form-check-label ps-2" for="flexCheckDefault">
+                                                            Bras
+                                                        </label>
+                                                    </div>
+                                                </fieldset>
+
+                                                <fieldset class="mb-1">
+                                                    <label class="bg-brown px-4 mb-2">Forfaits</label>
+                                                    <div class="form-check mt-2">
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                        <label class="form-check-label ps-2" for="flexCheckDefault">
+                                                            Douceur printanière
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check mt-2">
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                        <label class="form-check-label ps-2" for="flexCheckDefault">
+                                                            Liberté sans Soucis
+                                                        </label>
+                                                    </div>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                                            Modelages
+                                            </button>
+                                        </h2>
+                                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                                            <div class="accordion-body">
+                                            <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <!-- -------------------------------------------------------------- -->
