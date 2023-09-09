@@ -54,7 +54,6 @@
 
     .announcement p, .announcement .category-annoucement {
         font-size: 1.2rem;
-        
     }
     
     .announcement span {
@@ -70,6 +69,30 @@
 /* GRAND ECRAN */
 
 @media (min-width: 1200px) {
+
+    /* ------------------------------------------------- */
+
+    .announcement-icon::before  {
+        font-size: 3.5rem;
+    }
+
+    .announcement p, .announcement .category-annoucement {
+        font-size: 1.5rem;
+    }
+    
+    .announcement span {
+        font-size: 3rem;
+    }
+
+    /* ------------------------------------------------- */
+
+}
+
+
+/* -------------------------------------------- */
+/* TRES GRAND ECRAN */
+
+@media (min-width: 1400px) {
 
     /* ------------------------------------------------- */
 

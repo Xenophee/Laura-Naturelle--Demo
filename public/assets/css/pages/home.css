@@ -321,7 +321,7 @@
     /* ------------------------------------------------- */
 
     #map {
-        height: 50vh;
+        height: 65vh;
     }
 
     .scheduleBoard {
@@ -354,6 +354,10 @@
 
     .fidelity-img {
         width: 85%;
+    }
+
+    #map {
+        height: 50vh;
     }
 
 }
