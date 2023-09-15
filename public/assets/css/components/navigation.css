@@ -2,10 +2,11 @@
 /* --------------------------------------------------------------------------------------------------------------------------------- */
 /* NAVIGATION PRINCIPALE */
 
+
 .mainNav {
     font-family: var(--special-font);
-    background-color: var(--first-color);
-    border-bottom: var(--border-second-solid);
+    background-color: var(--special-dark-color);
+    border-bottom: var(--border-special-medium-solid);
     font-weight: normal;
 }
 
@@ -20,7 +21,7 @@
 }
 
 .navbar-brand:hover {
-    color: var(--light-green) !important;
+    color: var(--main-color) !important;
 }
 
 .navbar-brand img {
@@ -38,12 +39,12 @@
 }
 
 .mainNav .nav-link:hover {
-    color: var(--light-green);
+    color: var(--main-color);
 }
 
 .mainNav .nav-link.active, .drop-menu.active {
     color: var(--main-color);
-    border-bottom: var(--border-light-green-solid);
+    border-bottom: var(--border-light-solid);
 }
 
 
@@ -58,36 +59,13 @@
     transition: 1s;
 }
 
-.dashboardLink:hover {
-    border: var(--border-light-green-solid);
-    outline: var(--border-light-green-solid);
-}
-
 .dashboardLink.active {
-    background-color: var(--light-green);
-    color: var(--first-color) !important;
-    outline: var(--border-light-green-solid);
+    background-color: var(--main-color);
+    color: var(--special-dark-color) !important;
 }
 
 /* ------------------------------------------------- */
 /* dropdown */
-
-.dropdown-menu {
-    background-color: var(--second-color);
-    box-shadow: var(--inset-shadow);
-}
-
-.dropdown-item {
-    color: var(--main-color);
-}
-
-.dropdown-item:hover {
-    background-color: var(--first-color);
-    color: var(--main-color);
-    border-top: var(--border-brown-thin-solid);
-    border-bottom: var(--border-brown-thin-solid);
-    box-shadow: var(--inset-shadow);
-}
 
 .drop-links a {
     display: block;
@@ -97,8 +75,7 @@
 }
 
 .drop-links a.active {
-    background-color: var(--second-color);
-    box-shadow: var(--inset-shadow);
+    background-color: var(--special-color);
     border-top: var(--border-light-solid);
     border-bottom: var(--border-light-solid);
 }
@@ -110,9 +87,6 @@
     background-color: var(--first-color);
     color: var(--main-color);
 }
-
-
-
 
 
 /* ================================================================================================================================= */
@@ -141,11 +115,11 @@
 /* FOOTER */
 
 footer {
-    background-color: var(--first-color);
+    background-color: var(--special-dark-color);
     color: var(--main-color);
     font-family: var(--special-font);
     font-weight: normal;
-    border-top: var(--border-second-solid);
+    border-top: var(--border-special-medium-solid);
 }
 
 footer ul {
@@ -159,7 +133,7 @@ footer a {
 }
 
 footer a:hover {
-    color: var(--light-green);
+    color: var(--main-color);
 }
 
 #socialNetwork .bi {
@@ -176,6 +150,7 @@ footer span {
 
 footer hr {
     width: 70%;
+    border: var(--border-light-medium-solid);
 }
 
 .footerTitle {
@@ -253,16 +228,16 @@ footer hr {
     }
 
     .drop-links li:hover {
-        background-color: var(--first-color);
+        background-color: var(--special-dark-color);
         color: var(--main-color);
-        border-top: var(--border-brown-thin-solid);
-        border-bottom: var(--border-brown-thin-solid);
+        border-top: var(--border-light-solid);
+        border-bottom: var(--border-light-solid);
         box-shadow: var(--inset-shadow);
     }
 
     .drop-links {
-        background-color: var(--first-color);
-        border: var(--border-second-solid);
+        background-color: var(--special-dark-color);
+        border: var(--border-special-medium-solid);
         width: 200px;
         position: absolute;
         top: 150%;

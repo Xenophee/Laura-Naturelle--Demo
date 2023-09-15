@@ -23,6 +23,25 @@
     border: var(--border-light-solid);
 }
 
+.btn-classic::before, .btn-outline:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    background-color: var(--special-dark-color);
+    border-radius: 5px;
+    opacity: 0;
+    transition: 0.7s ease-in-out;
+    z-index: -1;
+}
+
+.btn-classic:hover::before, .btn-outline:hover::before {
+    height: 100%;
+    opacity: 1;
+}
+
 .btn-outline:hover {
     color: var(--main-color);
 }
@@ -131,24 +150,7 @@
         font-size: 1rem;
     }
 
-    .btn-classic::before, .btn-outline:before {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        height: 0;
-        width: 100%;
-        background-color: var(--special-dark-color);
-        border-radius: 5px;
-        opacity: 0;
-        transition: 0.7s ease-in-out;
-        z-index: -1;
-    }
     
-    .btn-classic:hover::before, .btn-outline:hover::before {
-        height: 100%;
-        opacity: 1;
-    }
 
     .view, .edit, .delete, .desactivate {
         width: 70px;

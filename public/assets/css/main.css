@@ -68,12 +68,16 @@ body {
     color: var(--main-color);
 }
 
+.c-pink {
+    color: var(--special-dark-color);
+}
+
 ::-webkit-scrollbar {
     width: 0.7em;
-    background-color: var(--light-green);
+    background-color: var(--main-color);
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--first-color);
+    background-color: var(--special-dark-color);
 }
 

@@ -12,6 +12,7 @@
     --gold-color: #e3b04c;
     
     --special-color: #fb8bdb;
+    --special-color: #f1a2da;
     --special-dark-color: #e76899;
 
     --danger-color: #b2161a;
@@ -54,9 +55,10 @@
     --border-special-strong-solid: var(--special-color) 10px solid;
 
     --border-dark-special-medium-solid: var(--special-dark-color) 2px solid;
+    --border-special-dark-strong-solid: var(--special-dark-color) 10px solid;
 
     --border-first-solid: var(--first-color) 1px solid;
-    --border-first-medium-solid: var(--first-color) 3px solid;
+    --border-first-medium-solid: var(--first-color) 2px solid;
     --border-first-strong-solid: var(--first-color) 10px solid;
 
     --box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;

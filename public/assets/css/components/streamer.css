@@ -5,7 +5,7 @@
 /* BANDEROLE DE PROMOTIONS */
 
 .announcement {
-    background-image: url(../../img/backgrounds/bois.jpg);
+    background-image: url(../../img/backgrounds/bois3.jpg);
     background-size: cover;
     border-bottom: var(--border-brown-thin-solid);
     overflow-x: hidden;
@@ -20,18 +20,18 @@
 
 .announcement p {
     font-size: 1.2rem;
-    color: var(--main-color);
-    text-shadow: var(--text-shadow);
+    color: var(--first-color);
+    /* text-shadow: var(--text-shadow); */
 }
 
 .announcement span {
     font-size: 2rem;
-    color: var(--special-color);
+    color: var(--first-color);
     margin: 0px 25px 0px 25px;
-    text-shadow: 1px 0 #fdf3fd, -1px 0 #fdf3fd, 0 1px #fdf3fd, 0 -1px #fdf3fd, 1px 1px #fdf3fd, -1px -1px #fdf3fd, 1px -1px #fdf3fd, -1px 1px #fdf3fd;
+    /* text-shadow: 1px 0 #fdf3fd, -1px 0 #fdf3fd, 0 1px #fdf3fd, 0 -1px #fdf3fd, 1px 1px #fdf3fd, -1px -1px #fdf3fd, 1px -1px #fdf3fd, -1px 1px #fdf3fd; */
 }
 
-.announcement .category-annoucement {
+.announcement {
     font-size: 1.2rem;
 }
 
@@ -52,7 +52,7 @@
         font-size: 3.5rem;
     }
 
-    .announcement p, .announcement .category-annoucement {
+    .announcement p {
         font-size: 1.2rem;
     }
     
@@ -76,7 +76,7 @@
         font-size: 3.5rem;
     }
 
-    .announcement p, .announcement .category-annoucement {
+    .announcement p {
         font-size: 1.5rem;
     }
     
@@ -100,7 +100,7 @@
         font-size: 5rem;
     }
 
-    .announcement p, .announcement .category-annoucement {
+    .announcement p {
         font-size: 1.8rem;
     }
     

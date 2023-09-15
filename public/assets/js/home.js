@@ -33,8 +33,8 @@ const img = document.querySelector('#diapo img');
 // Fonction pour changer l'image toutes les X millisecondes
 const changeImage = () => {
 
-    text.classList.remove('darkmode');
-    btn.classList.remove('darkmode');
+    text.classList.remove('lightmode');
+    btn.classList.remove('lightmode');
 
     image.style.opacity = 0;
 
@@ -52,9 +52,9 @@ const changeImage = () => {
         image.style.opacity = 1;
 
         // ! Remplacer la condition par la vérification du darkmode enregistré en BDD
-        if (currentIndex == 1 || currentIndex == 3 || currentIndex == 5) {
-            text.classList.add('darkmode');
-            btn.classList.add('darkmode');
+        if (currentIndex == 2 || currentIndex == 4) {
+            text.classList.add('lightmode');
+            btn.classList.add('lightmode');
         }
     }, 1000);
 }

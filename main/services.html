@@ -71,14 +71,14 @@
 
     <!-- ========================================================================================================================================================================== -->
     <!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-
+    
     <main>
         <div class="container-fluid px-0">
             <section class="pb-5">
                 <!-- TITRE DE LA PAGE -->
                 <!-- ------------------------------------------------------------------------------------------------------------------------------ -->
                 <div class="background-title d-flex align-items-center">
-                    <div class="title-container shadow-lg">
+                    <div class="title-container">
                         <h1 class="text-center py-3">Prestations</h1>
                     </div>
                 </div>
@@ -95,25 +95,10 @@
                 </div>
                 <!-- ------------------------------------------------------------------------------------------------------------------------------ -->
 
-                <!-- PRODUITS -->
-                <!-- ------------------------------------------------------------------------------------------------------------------------------ -->
-                <article>
-                    <div class="row pt-xl-5 mx-0">
-                        <div class="col">
-                            <ul class="d-flex justify-content-evenly logos-product mt-4">
-                                <li><img src="../public/assets/img/logos/france.webp" alt="Made in France" class="img-fluid"></li>
-                                <li><img src="../public/assets/img/logos/bio.webp" alt="Bio" class="img-fluid"></li>
-                                <li><img src="../public/assets/img/logos/vegan.webp" alt="Vegan" class="img-fluid"></li>
-                            </ul>
-                        </div>
-                    </div>
-                </article>
-                <!-- ------------------------------------------------------------------------------------------------------------------------------ -->
-
                 <!-- SECTION EXCLUSIVE -->
                 <!-- ------------------------------------------------------------------------------------------------------------------------------ -->
                 <section>
-                    <h3 class="subtitle text-center my-5 pt-xl-4 pt-xxl-5">Les exclusives</h3>
+                    <h3 class="subtitle text-center my-5">Les exclusives</h3>
                     <div class="row justify-content-around mx-0 px-md-4 px-xl-5 pb-5 service-row special-section">
 
                         <!-- ========================================================================================================================== -->
@@ -167,7 +152,7 @@
                             <!-- GRANDE IMAGE -->
                             <div class="col-12 col-md-4 col-xl-6 col-xxl-8">
                                 <picture>
-                                    <source srcset="../public/assets/img/illustrations/prestations/1-xl.webp" type="image/webp" media="(min-width: 1200px)">
+                                    <source srcset="../public/assets/img/illustrations/prestations/1-xl.webp" type="image/webp" media="(min-width: 1400px)">
                                     <img src="../public/assets/img/illustrations/prestations/1.webp" alt="Illustration de la catégorie modelages" class="img-fluid service-img">
                                 </picture>
                             </div>
@@ -187,7 +172,7 @@
                                         <div class="time time-badge d-flex justify-content-center align-items-center px-4">
                                             <i class="bi bi-clock me-2"></i>60 min
                                         </div>
-                                        <div class="price price-badge d-flex flex-wrap justify-content-center align-items-center px-4 mt-3 mt-md-0"><span class="text-dark text-decoration-line-through me-3">65 €</span> 55,25 €</div>
+                                        <div class="price price-badge discount d-flex flex-wrap justify-content-center align-items-center px-4 mt-3 mt-md-0"><span class="text-decoration-line-through me-3">65 €</span> 55,25 €</div>
                                     </div>
                                 </article>
                                 <!-- ========================================================================================================================== -->
@@ -204,7 +189,7 @@
                                         <div class="time time-badge d-flex justify-content-center align-items-center px-4">
                                             <i class="bi bi-clock me-2"></i>90 min
                                         </div>
-                                        <div class="price price-badge d-flex justify-content-center align-items-center px-4 mt-3 mt-md-0"><span class="text-dark text-decoration-line-through me-3">80 €</span>68 €</div>
+                                        <div class="price price-badge discount d-flex justify-content-center align-items-center px-4 mt-3 mt-md-0"><span class="text-decoration-line-through me-3">80 €</span>68 €</div>
                                     </div>
                                 </article>
                                 <!-- ========================================================================================================================== -->
@@ -231,7 +216,7 @@
                                         <div class="time d-flex justify-content-center align-items-center px-4">
                                             <i class="bi bi-clock me-2"></i>45 min
                                         </div>
-                                        <div class="price price-badge d-flex justify-content-center align-items-center px-4 mt-3 mt-xl-0"><span class="text-dark text-decoration-line-through me-3">55 €</span>46,75 €</div>
+                                        <div class="price price-badge discount d-flex justify-content-center align-items-center px-4 mt-3 mt-xl-0"><span class="text-decoration-line-through me-3">55 €</span>46,75 €</div>
                                     </div>
                                 </article>
                             </div>
@@ -251,7 +236,7 @@
                                         <div class="time d-flex justify-content-center align-items-center px-4">
                                             <i class="bi bi-clock me-2"></i>75 min
                                         </div>
-                                        <div class="price price-badge d-flex justify-content-center align-items-center px-4 mt-3 mt-xl-0"><span class="text-dark text-decoration-line-through me-3">70 €</span>59,50 €</div>
+                                        <div class="price price-badge discount d-flex justify-content-center align-items-center px-4 mt-3 mt-xl-0"><span class="text-decoration-line-through me-3">70 €</span>59,50 €</div>
                                     </div>
                                 </article>
                             </div>
@@ -270,7 +255,7 @@
                                         <div class="time d-flex justify-content-center align-items-center px-4">
                                             <i class="bi bi-clock me-2"></i>60 min
                                         </div>
-                                        <div class="price price-badge d-flex justify-content-center align-items-center px-4 mt-3 mt-xl-0"><span class="text-dark text-decoration-line-through me-3">75 €</span>63,75 €</div>
+                                        <div class="price price-badge discount d-flex justify-content-center align-items-center px-4 mt-3 mt-xl-0"><span class="text-decoration-line-through me-3">75 €</span>63,75 €</div>
                                     </div>
                                 </article>
                             </div>
@@ -338,6 +323,21 @@
                 </div>
                 <!-- ------------------------------------------------------------------------------------------------------------------------------ -->
 
+                <!-- PRODUITS -->
+                <!-- ------------------------------------------------------------------------------------------------------------------------------ -->
+                <article>
+                    <div class="row mx-0">
+                        <div class="col">
+                            <ul class="d-flex justify-content-evenly logos-product mt-4">
+                                <li><img src="../public/assets/img/logos/france.webp" alt="Made in France" class="img-fluid"></li>
+                                <li><img src="../public/assets/img/logos/bio.webp" alt="Bio" class="img-fluid"></li>
+                                <li><img src="../public/assets/img/logos/vegan.webp" alt="Vegan" class="img-fluid"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+                <!-- ------------------------------------------------------------------------------------------------------------------------------ -->
+
             </section>
 
         </div>
@@ -348,8 +348,8 @@
 
     <footer>
         <div class="container-fluid">
-            <div class="row justify-content-around my-4 mx-0">
-                <div class="col-12 col-md-6 col-xl-2 d-flex justify-content-md-center mb-4" id="informations">
+            <div class="row justify-content-around mt-4 mb-4 mb-lg-0 mb-xxl-4 mx-0">
+                <div class="col-12 col-md-6 col-lg-3 col-xxl-2 order-1 d-flex justify-content-md-center mb-4 mb-md-5 mb-lg-4" id="informations">
                     <ul class="ms-3 ms-md-0">
                         <li class="fs-4 footerTitle mb-4">Informations</li>
                         <li class="my-2"><a href="../informations/legal_notice.html" class="footer-link">Mentions légales</a></li>
@@ -357,7 +357,7 @@
                         <li class="my-2"><a href="../construction.html" class="footer-link">Conditions générales de vente</a></li>
                     </ul>
                 </div>
-                <div class="col-12 col-md-6 col-xl-2 d-flex justify-content-md-center mb-4" id="contact">
+                <div class="col-12 col-md-6 col-lg-3 col-xxl-2 order-3 order-lg-2 d-flex justify-content-md-center mb-4" id="contact">
                     <ul class="ms-3 ms-md-0">
                         <li class="fs-4 footerTitle mb-4">Contact</li>
                         <li class="my-3"><i class="bi bi-geo-alt me-2"></i> 10 chemin de la Tombelle <br> 02100 Saint
@@ -367,7 +367,7 @@
                         <li class="my-3"><i class="bi bi-telephone me-2"></i>07.67.47.68.37</li>
                     </ul>
                 </div>
-                <div class="col-12 col-md-6 col-xl-2 d-flex justify-content-md-center mb-4" id="websiteNavigation">
+                <div class="col-12 col-md-6 col-lg-3 col-xxl-2 order-2 order-lg-3 d-flex justify-content-md-center mb-4 mb-md-5 mb-lg-4" id="websiteNavigation">
                     <ul class="ms-3 ms-md-0">
                         <li class="fs-4 footerTitle mb-4">L' Aura Natur'elle</li>
                         <li class="my-2"><a href="../index.html" class="footer-link">Accueil</a></li>
@@ -377,7 +377,7 @@
                         <li class="my-2"><a href="../main/contact.html" class="footer-link">Contact</a></li>
                     </ul>
                 </div>
-                <div class="col-12 col-md-6 col-xl-2 d-flex justify-content-md-center mb-4" id="schedule">
+                <div class="col-12 col-md-6 col-lg-3 col-xxl-2 order-4 d-flex justify-content-md-center mb-4" id="schedule">
                     <ul class="ms-3 ms-md-0">
                         <li class="fs-4 footerTitle mb-4">Horaires</li>
                         <li class="my-2"><span>Lundi :</span> Fermé</li>
@@ -389,10 +389,10 @@
                         <li class="my-2"><span>Dimanche :</span> Fermé</li>
                     </ul>
                 </div>
-                <div class="col-12 col-md-6 col-xl-2 d-flex justify-content-center align-items-center"
+                <div class="col-12 col-md-6 col-lg-6 col-xxl-2 order-5 d-flex justify-content-center align-items-center"
                     id="socialNetwork">
-                    <ul class="d-flex flex-xl-column">
-                        <li class="me-5 me-xl-0 mb-xl-5"><a href="https://www.facebook.com/lauranaturellebioetvegan02"
+                    <ul class="d-flex flex-xxl-column">
+                        <li class="me-5 me-xxl-0 mb-xxl-5"><a href="https://www.facebook.com/lauranaturellebioetvegan02"
                                 target="_blank" rel="noopener noreferrer" title="Facebook" aria-label="Ouvrir la page facebook de L'Aura Natur'elle"><i class="bi bi-facebook" aria-hidden="true"></i></a></li>
                         <li><a href="" target="_blank" rel="noopener noreferrer" title="Instagram" aria-label="Ouvrir la page instagram de L'Aura Natur'elle"><i
                                     class="bi bi-instagram" aria-hidden="true"></i></a></li>

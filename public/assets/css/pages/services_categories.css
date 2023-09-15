@@ -4,7 +4,7 @@
 
 .background-services {
     position: relative;
-    background-image: url(../../img/backgrounds/min_leafs.webp);
+    background-color: var(--light-green);
     border: var(--border-brown-thin-solid);
     box-shadow: rgba(27, 70, 33, 0.39) 0px 7px 29px 0px;
 }
@@ -27,29 +27,23 @@
 }
 
 .services {
-    background-image: url(../../img/backgrounds/min_bois.webp);
+    background-image: url(../../img/backgrounds/bois3.jpg);
     background-position: center;
     color: var(--main-color);
     font-size: 1.1rem;
-    /* font-weight: bold; */
-    /* letter-spacing: 1px; */
     border: var(--border-brown-thin-solid);
     box-shadow: var(--box-light-shadow);
+    transition: 1s ease-in-out;
+}
+
+.services:hover {
+    transform: scale(0.9);
 }
 
 .services h3 {
-    background-color: var(--third-color);
+    background-color: var(--special-color);
     color: var(--main-color);
     padding: 10px 0px 10px;
-    box-shadow: var(--inset-shadow);
-    text-shadow: var(--text-shadow);
-}
-
-.services p {
-    text-shadow: var(--text-shadow);
-    backdrop-filter: blur(3px);
-    /* color: black; */
-    /* font-weight: bold; */
 }
 
 .services img {
@@ -71,22 +65,6 @@
 
 @media (min-width: 768px)  {
 
-    .content-services {
-        height: 410px;
-    }
-
-    .content-services div {
-        height: 50%;
-    }
-
-    .content-services p {
-        overflow-y: auto;
-    }
-
-    .content-services p::-webkit-scrollbar {
-        width: 7px;
-    }
-
 }
 
 
@@ -95,17 +73,7 @@
 
 @media (min-width: 1200px)  {
 
-    .content-services {
-        height: 270px;
-    }
-
     .services img {
-        width: 50%;
-        height: 100%;
-    }
-
-    .content-services div {
-        width: 50%;
         height: 100%;
     }
 

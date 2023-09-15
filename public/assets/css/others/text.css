@@ -34,6 +34,10 @@ h1 {
     animation: 0.9s titleAnimation cubic-bezier(0, 0.55, 0.45, 1) forwards;
 }
 
+h1 span:first-child {
+    font-size: 3rem;
+}
+
 .index-title {
     font-size: 2.5rem;
     word-wrap: break-word;
@@ -45,16 +49,16 @@ h1 {
 
 .title-container {
     width: 100%;
-    background-color: var(--main-filter-color);
-    color: var(--special-color);
-    border-top: var(--border-special-solid);
-    border-bottom: var(--border-special-solid);
-    box-shadow: var(--box-light-shadow);
-    text-shadow: var(--text-light-shadow);
+    /* background-color: var(--main-filter-color); */
+    color: var(--special-dark-color);
+    /* border-top: var(--border-special-solid);
+    border-bottom: var(--border-special-solid); */
+    /* box-shadow: var(--box-light-shadow); */
+    /* text-shadow: var(--text-light-shadow); */
 }
 
 .background-title {
-    background-image: url(../../img/backgrounds/leafs.webp);
+    background-image: url(../../img/backgrounds/5213747.jpg);
     background-size: cover;
     background-attachment: fixed;
     height: 35vh;
@@ -82,7 +86,7 @@ h1 {
     left: 50%;
     top: 100%;
     height: 5px;
-    background-color: var(--third-color);
+    background-color: var(--first-color);
     border-radius: 50%;
     transform: translate(-50%, -50%);
 }
@@ -193,7 +197,7 @@ h1 {
 @media (min-width: 1200px) {
 
     h1, .index-title {
-        font-size: 6rem;
+        font-size: 5.5rem;
     }
 
     .background-title, .background-main-title {
