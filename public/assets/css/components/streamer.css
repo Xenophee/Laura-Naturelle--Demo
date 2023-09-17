@@ -7,7 +7,6 @@
 .announcement {
     background-image: url(../../img/backgrounds/bois3.jpg);
     background-size: cover;
-    border-bottom: var(--border-brown-thin-solid);
     overflow-x: hidden;
     
 }

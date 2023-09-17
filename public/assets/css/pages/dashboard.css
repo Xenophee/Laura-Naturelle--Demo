@@ -33,8 +33,6 @@
 }
 
 .schedules legend {
-    background-color: var(--light-green);
-    color: var(--second-color);
     font-size: 2rem;
 }
 

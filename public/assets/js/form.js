@@ -53,7 +53,7 @@ const announcement = document.getElementById('announcement-form');
 if (announcement != undefined) {
 
     const textarea = document.querySelector('textarea');
-    const textareaBtns = document.querySelectorAll('.formatting');
+    const textareaBtn = document.querySelector('.formatting');
     const modalBtn = document.querySelector('.modal-footer .btn-outline');
 
     
@@ -85,25 +85,17 @@ if (announcement != undefined) {
     previewText();
 
     // ----------------------------------------------------------------------
-    textareaBtns.forEach((element, key) => {
-        element.addEventListener('click', () => {
-            const selectedText = textarea.value.substring(textarea.selectionStart, textarea.selectionEnd);
-            const textBefore = textarea.value.substring(0, textarea.selectionStart);
-            const textAfter = textarea.value.substring(textarea.selectionEnd);
+    
+    textareaBtn.addEventListener('click', () => {
+        const selectedText = textarea.value.substring(textarea.selectionStart, textarea.selectionEnd);
+        const textBefore = textarea.value.substring(0, textarea.selectionStart);
+        const textAfter = textarea.value.substring(textarea.selectionEnd);
 
-            let newText;
-            
-            if(key == 0) {
-                newText = `<span>${selectedText}</span>`;
-            } else {
-                newText = `<span class="category-annoucement">${selectedText}</span>`;
-            }
-            
-            
-            textarea.value = textBefore + newText + textAfter;
-            preview.innerHTML = textBefore + newText + textAfter;
-        })
-    });
+        let newText = `<span>${selectedText}</span>`;
+        
+        textarea.value = textBefore + newText + textAfter;
+        preview.innerHTML = textBefore + newText + textAfter;
+    })
     // ----------------------------------------------------------------------
 };
 

@@ -24,46 +24,47 @@ a {
 /* H1 */
 
 h1 {
+    color: var(--special-dark-color);
     font-size: 2.5rem;
     width: 100%;
     padding: 5px;
     margin: 0;
-    opacity: 0;
     letter-spacing: 5px;
-    transform: translateY(100%);
-    animation: 0.9s titleAnimation cubic-bezier(0, 0.55, 0.45, 1) forwards;
-}
-
-h1 span:first-child {
-    font-size: 3rem;
-}
-
-.index-title {
-    font-size: 2.5rem;
     word-wrap: break-word;
+    z-index: 2;
+    /* line-height: 15vh; */
 }
 
-.index-title span {
-    word-wrap: break-word;
-}
-
-.title-container {
-    width: 100%;
-    /* background-color: var(--main-filter-color); */
-    color: var(--special-dark-color);
-    /* border-top: var(--border-special-solid);
-    border-bottom: var(--border-special-solid); */
-    /* box-shadow: var(--box-light-shadow); */
-    /* text-shadow: var(--text-light-shadow); */
+.main-title {
+    background-color: var(--main-filter-color-op);
+    min-height: 45vh;
 }
 
 .background-title {
+    position: relative;
     background-image: url(../../img/backgrounds/5213747.jpg);
     background-size: cover;
     background-attachment: fixed;
-    height: 35vh;
-    border-bottom: var(--border-first-solid);
     box-shadow: var(--inset-shadow);
+}
+
+.background-title img {
+    position: absolute;
+    left: 80%;
+    top: 50%;
+    width: 30%;
+    transform: translate(-50%, -50%);
+}
+
+@media (orientation: portrait) {
+    .background-title img {
+        display: none;
+    }
+}
+
+
+h1 span:first-child {
+    font-size: 3rem;
 }
 
 /* ================================================================================================================================= */
@@ -72,7 +73,7 @@ h1 span:first-child {
 
 .category-title {
     position: relative;
-    color: var(--brown-color);
+    color: var(--first-color);
     font-weight: bold;
     font-size: 2.3rem;
     width: 100%;
@@ -86,7 +87,7 @@ h1 span:first-child {
     left: 50%;
     top: 100%;
     height: 5px;
-    background-color: var(--first-color);
+    background-color: #ede7db;
     border-radius: 50%;
     transform: translate(-50%, -50%);
 }
@@ -169,19 +170,22 @@ h1 span:first-child {
 
 @media (min-width: 768px) {
 
-    h1, .index-title {
-        font-size: 5rem;
-        letter-spacing: 20px;
+    h1 {
+        font-size: 4rem;
+        letter-spacing: 15px;
     }
 
-    .background-title, .background-main-title {
-        height: 30vh;
+    .main-title {
+        min-height: 25vh;
+    }
+
+    .background-title img {
+        width: 40%;
+        left: 25%;
+        top: 50%;
     }
 
     .category-title {
-        position: relative;
-        color: var(--brown-color);
-        font-weight: bold;
         font-size: 3rem;
     }
 
@@ -191,17 +195,38 @@ h1 span:first-child {
 }
 
 
+@media (min-width: 992px) {
+
+    .main-title {
+        min-height: 40vh;
+    }
+
+    .background-title img {
+        width: 15%;
+        left: 90%;
+        top: 50%;
+    }
+}
+
+
 /* -------------------------------------------- */
 /* GRAND ECRAN */
 
 @media (min-width: 1200px) {
 
-    h1, .index-title {
-        font-size: 5.5rem;
+    h1 {
+        font-size: 5.2rem;
     }
 
-    .background-title, .background-main-title {
-        height: 65vh;
+    .main-title {
+        background-color: var(--main-filter-color);
+        min-height: 65vh;
+    }
+
+    .background-title img {
+        left: 93%;
+        top: 50%;
+        width: 15%;
     }
 
     .subtitle::after {
@@ -216,11 +241,16 @@ h1 span:first-child {
 
 @media (min-width: 1400px) {
 
-    h1, .index-title {
-        font-size: 7rem;
+    .main-title {
+        min-height: 55vh;
     }
 
-    .background-title, .background-main-title {
-        height: 55vh;
+    .background-title img {
+        left: 90%;
+        top: 50%;
+    }
+
+    h1 span {
+        font-size: 7rem;
     }
 }

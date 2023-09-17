@@ -27,6 +27,7 @@
 .navbar-brand img {
     width: 20%;
     height: 20%;
+    border-radius: 50%;
 }
 
 /* ------------------------------------------------- */
@@ -84,7 +85,7 @@
 /* autres */
 
 .offcanvasColor {
-    background-color: var(--first-color);
+    background-color: var(--special-dark-color);
     color: var(--main-color);
 }
 

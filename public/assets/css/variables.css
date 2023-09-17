@@ -17,7 +17,8 @@
 
     --danger-color: #b2161a;
 
-    --main-filter-color: #fdf3fdbb;
+    --main-filter-color-op: #fdf3fdbb;
+    --main-filter-color: #fdf3fd98;
     /* --main-filter-color: #fdf3fd91; */
     /* --second-filter-color: #2f5b0e8c; */
     --second-filter-color: #2f5b0e28;
