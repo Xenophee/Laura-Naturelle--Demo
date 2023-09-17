@@ -134,7 +134,7 @@ h1 span:first-child {
     left: 50%;
     top: 105%;
     height: 5px;
-    background-color: var(--brown-color);
+    background-color: #ede7db;
     border-radius: 50%;
     transform: translate(-50%, -50%);
 }
