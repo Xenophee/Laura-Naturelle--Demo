@@ -10,6 +10,7 @@
 /* --------------------------------------------------------------------------------------------------------------------------------- */
 /* IMPORT POUR LES COMPOSANTS */
 
+@import url('./components/accordion.css');
 @import url('./components/buttons.css');
 @import url('./components/form.css');
 @import url('./components/logos.css');
@@ -63,9 +64,19 @@ body {
     color: var(--main-color);
 }
 
+.bg-filter-green {
+    background-color: var(--second-filter-color);
+    color: var(--first-color);
+}
+
 .bg-brown {
     background-color: var(--brown-color);
     color: var(--main-color);
+}
+
+.bg-filter-brown {
+    background-color: var(--brown-filter-color);
+    color: var(--brown-color);
 }
 
 .c-pink {

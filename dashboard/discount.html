@@ -126,8 +126,8 @@
                     <section class="d-flex flex-column justify-content-center align-items-center">
                         <h1 class="category-title text-center py-4 my-5 px-3 px-md-5">Promotions</h1>
 
-                        <div class="table-responsive pt-md-5 my-4 my-md-5">
-                            <table class="table align-middle table-striped">
+                        <div class="table-responsive pt-lg-5 my-4 my-md-5">
+                            <table class="table align-middle table-hover-green">
                                 <thead>
                                     <tr>
                                         <th scope="col"></th>
@@ -151,15 +151,15 @@
                                     <tr>
                                         <th scope="row">1</th>
                                         <td>
-                                            <div class="d-flex align-items-center">
+                                            <div class="d-flex align-items-center fw-bold">
                                                 Modelages <!-- <div class="d-inline badge-package px-3 ms-3">Forfait</div> -->
                                             </div>
                                         </td>
                                         <td>
-                                            <div class="table-advantage d-flex justify-content-center align-items-center">-15%</div>
+                                            <div class="table-badge-green d-flex justify-content-center align-items-center px-2 py-2">-15%</div>
                                         </td>
                                         <td>
-                                            <div class="table-date d-flex justify-content-center align-items-center w-100">Du 18/07 au 28/08</div>
+                                            <div class="table-badge-beige d-flex justify-content-center align-items-center text-center fw-bold text-nowrap w-100 px-3 py-2">Du 18/07 au 28/08</div>
                                         </td>
                                         <td>
                                             <div class="d-flex justify-content-end">
@@ -176,15 +176,15 @@
                                     <tr>
                                         <th scope="row">2</th>
                                         <td>
-                                            <div class="d-flex align-items-center">
+                                            <div class="d-flex align-items-center fw-bold">
                                                 Toutes les prestations <!-- <div class="d-inline badge-package px-3 ms-3">Forfait</div> -->
                                             </div>
                                         </td>
                                         <td>
-                                            <div class="table-advantage d-flex justify-content-center align-items-center">-10€</div>
+                                            <div class="table-badge-green d-flex justify-content-center align-items-center px-2 py-2">-10€</div>
                                         </td>
                                         <td>
-                                            <div class="table-date d-flex justify-content-center align-items-center w-100">Du 20/12 au 20/01</div>
+                                            <div class="table-badge-beige d-flex justify-content-center align-items-center text-center fw-bold text-nowrap w-100 px-3 py-2">Du 20/12 au 20/01</div>
                                         </td>
                                         <td>
                                             <div class="d-flex justify-content-end">
@@ -204,14 +204,14 @@
                     </section>
 
 
-                    <section class="d-flex flex-column justify-content-center align-items-center pt-5">
+                    <section class="d-flex flex-column justify-content-center align-items-center pt-lg-5">
                         
-                        <form method="post" enctype="multipart/form-data" class="dashboard-form mt-5">
+                        <form method="post" enctype="multipart/form-data" class="dashboard-form mt-5" id="discount-form">
                             <legend class="text-center py-2 mb-5">Ajouter une promotion</legend>
 
                                 <!-- -------------------------------------------------------------- -->
-                                <!-- DURÉE DE LA PROMOTION -->
-                                <label class="fw-bold mb-4 mt-4">Quand la promotion doit-elle être appliquée ?</label>
+                                <!-- DURÉE DE LA REDUCTION -->
+                                <label class="fw-bold mb-4 mt-md-4">Quand la promotion doit-elle être appliquée ?</label>
 
                                 <div class="d-flex flex-column flex-md-row justify-content-around align-items-center w-100 mb-4 mb-md-5">
                                     <div class="form-div me-md-5 mb-3 mb-md-0">
@@ -231,7 +231,7 @@
                                 <!-- -------------------------------------------------------------- -->
                                 <!-- TYPE DE REDUCTION -->
                                 <label class="d-block text-center fw-bold">Type de réduction :</label>
-                                <div class="btn-group d-flex mt-3 mb-5" role="group" aria-label="Choisir l'affichage en page d'accueil">
+                                <div class="btn-group d-flex mt-3 mb-5" role="group" aria-label="Choisir le type de réduction">
                                     <input type="radio" class="btn-check" name="discountType" value="0" id="percentage" autocomplete="off" aria-required="true" required>
                                     <label class="btn btn-radio" for="percentage">%</label>
                                 
@@ -246,10 +246,10 @@
                                     <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="advantage"></small>
                                 </div>
                                 <!-- -------------------------------------------------------------- -->
-                                <!-- CHOIX DU CONTRASTE PAR RAPPORT À L'IMAGE -->
+                                <!-- CHOIX DES PRESTATIONS CONCERNEES PAR LA REDUCTION -->
                                 <label class="d-block text-center fw-bold pt-4">Prestations concernées :</label>
-                                <div class="btn-group d-flex mt-3 mb-5" role="group" aria-label="Choisir l'affichage en page d'accueil">
-                                    <input type="radio" class="btn-check" name="whichServices" value="0" id="all" autocomplete="off" aria-required="true" required checked>
+                                <div class="btn-group d-flex mt-3 mb-5" role="group" aria-label="Choisir les prestations ciblées">
+                                    <input type="radio" class="btn-check" name="whichServices" value="0" id="all" autocomplete="off" aria-required="true" required>
                                     <label class="btn btn-radio" for="all">Toutes les prestations</label>
                                 
                                     <input type="radio" class="btn-check" name="whichServices" value="1" id="specific" autocomplete="off" aria-required="true" required>
@@ -257,65 +257,68 @@
                                 </div>
                                 <!-- -------------------------------------------------------------- -->
                                 
-                                <div class="accordion" id="accordionPanelsStayOpenExample">
+                                <!-- -------------------------------------------------------------- -->
+                                <!-- ACCORDEON DES PRESTATIONS -->
+                                <div class="accordion d-none" id="servicesAccordion">
                                     <div class="accordion-item">
                                         <h2 class="accordion-header">
-                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                                </div>
-                                                <label class="form-check-label ps-2" for="flexCheckDefault">Épilations</label>
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                                Épilations
                                             </button>
                                         </h2>
-                                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
-                                            <div class="accordion-body d-flex flex-column flex-md-row justify-content-evenly">
+                                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
+                                            <div class="accordion-body">
                                                 <fieldset class="mb-1">
-                                                    <label class="bg-green px-4 mb-2">Classiques</label>
-                                                        <div class="form-check mt-2">
-                                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                                            <label class="form-check-label ps-2" for="flexCheckDefault">
-                                                                Sourcils
-                                                            </label>
-                                                        </div>
-                                                        <div class="form-check mt-2">
-                                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                                            <label class="form-check-label ps-2" for="flexCheckDefault">
-                                                                Aisselles
-                                                            </label>
-                                                        </div>
-                                                        <div class="form-check mt-2">
-                                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                                            <label class="form-check-label ps-2" for="flexCheckDefault">
-                                                                Demi-jambe
-                                                            </label>
-                                                        </div>
-                                                        <div class="form-check mt-2">
-                                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                                            <label class="form-check-label ps-2" for="flexCheckDefault">
-                                                                Dos
-                                                            </label>
-                                                        </div>
-                                                        <div class="form-check mt-2">
-                                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                                            <label class="form-check-label ps-2" for="flexCheckDefault">
-                                                                Bras
-                                                            </label>
+                                                    <label class="bg-filter-green fw-bold w-100 px-4 mb-2">Classiques</label>
+                                                        <div class="d-flex flex-wrap">
+                                                            <div class="form-check accordion-block mt-2">
+                                                                <input class="form-check-input" type="checkbox" name="services[]" value="" id="epilations1">
+                                                                <label class="form-check-label ps-2" for="epilations1">
+                                                                    Sourcils
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check accordion-block mt-2">
+                                                                <input class="form-check-input" type="checkbox" name="services[]" value="" id="epilations2">
+                                                                <label class="form-check-label ps-2" for="epilations2">
+                                                                    Aisselles
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check accordion-block mt-2">
+                                                                <input class="form-check-input" type="checkbox" name="services[]" value="" id="epilations3">
+                                                                <label class="form-check-label ps-2" for="epilations3">
+                                                                    Demi-jambe
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check accordion-block mt-2">
+                                                                <input class="form-check-input" type="checkbox" name="services[]" value="" id="epilations4">
+                                                                <label class="form-check-label ps-2" for="epilations4">
+                                                                    Dos
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check accordion-block mt-2">
+                                                                <input class="form-check-input" type="checkbox" name="services[]" value="" id="epilations5">
+                                                                <label class="form-check-label ps-2" for="epilations5">
+                                                                    Bras
+                                                                </label>
+                                                            </div>
                                                         </div>
                                                 </fieldset>
 
                                                 <fieldset class="mb-1">
-                                                    <label class="bg-brown px-4 mt-3 mt-md-0 mb-2">Forfaits</label>
-                                                    <div class="form-check mt-2">
-                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                                        <label class="form-check-label ps-2" for="flexCheckDefault">
-                                                            Douceur printanière
-                                                        </label>
-                                                    </div>
-                                                    <div class="form-check mt-2">
-                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                                        <label class="form-check-label ps-2" for="flexCheckDefault">
-                                                            Liberté sans Soucis
-                                                        </label>
+                                                    <label class="bg-filter-brown fw-bold w-100 px-4 mt-3 mb-2">Forfaits</label>
+                                                    <div class="d-flex flex-wrap">
+                                                        <div class="form-check accordion-block mt-2">
+                                                            <input class="form-check-input" type="checkbox" name="services[]" value="" id="epilations6">
+                                                            <label class="form-check-label ps-2" for="epilations6" title="Description du forfait">
+                                                                Douceur printanière
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check accordion-block mt-2">
+                                                            <input class="form-check-input" type="checkbox" name="services[]" value="" id="epilations7">
+                                                            <label class="form-check-label ps-2" for="epilations7" title="Description du forfait">
+                                                                Liberté sans Soucis
+                                                            </label>
+                                                        </div>
                                                     </div>
                                                 </fieldset>
                                             </div>
@@ -329,7 +332,59 @@
                                         </h2>
                                         <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
                                             <div class="accordion-body">
-                                                <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                                <fieldset class="mb-1">
+                                                    <label class="bg-filter-green fw-bold w-100 px-4 mb-2">Classiques</label>
+                                                        <div class="d-flex flex-wrap">
+                                                            <div class="form-check accordion-block mt-2">
+                                                                <input class="form-check-input" type="checkbox" name="services[]" value="" id="modelages1">
+                                                                <label class="form-check-label ps-2" for="modelages1">
+                                                                    Californien
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check accordion-block mt-2">
+                                                                <input class="form-check-input" type="checkbox" name="services[]" value="" id="modelages2">
+                                                                <label class="form-check-label ps-2" for="modelages2">
+                                                                    Thaï Traditionnel
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check accordion-block mt-2">
+                                                                <input class="form-check-input" type="checkbox" name="services[]" value="" id="modelages3">
+                                                                <label class="form-check-label ps-2" for="modelages3">
+                                                                    Shiatsu
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check accordion-block mt-2">
+                                                                <input class="form-check-input" type="checkbox" name="services[]" value="" id="modelages4">
+                                                                <label class="form-check-label ps-2" for="modelages4">
+                                                                    Balinais
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check accordion-block mt-2">
+                                                                <input class="form-check-input" type="checkbox" name="services[]" value="" id="modelages6">
+                                                                <label class="form-check-label ps-2" for="modelages6">
+                                                                    Pierres Chaudes
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                </fieldset>
+
+                                                <fieldset class="mb-1">
+                                                    <label class="bg-filter-brown fw-bold w-100 px-4 mt-3 mb-2">Forfaits</label>
+                                                    <div class="d-flex flex-wrap">
+                                                        <div class="form-check accordion-block mt-2">
+                                                            <input class="form-check-input" type="checkbox" name="services[]" value="" id="modelages6">
+                                                            <label class="form-check-label ps-2" for="modelages6" title="Description du forfait">
+                                                                Évasion Zen
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check accordion-block mt-2">
+                                                            <input class="form-check-input" type="checkbox" name="services[]" value="" id="modelages7">
+                                                            <label class="form-check-label ps-2" for="modelages7" title="Description du forfait">
+                                                                Énergie Vitale
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
                                             </div>
                                         </div>
                                     </div>
@@ -416,6 +471,7 @@
     </footer>
 
     <script src="../public/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../public/assets/js/form.js"></script>
     <script src="../public/assets/js/script.js"></script>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-K01XHPHL6L"></script>

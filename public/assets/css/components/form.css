@@ -89,77 +89,8 @@ fieldset {
     color: var(--special-dark-color);
 }
 
-.accordion {
-    border: var(--border-special-solid);
-    border-radius: 5px;
-}
 
-.accordion-item {
-    border: none;
-}
 
-/* .accordion-item:first-of-type {
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-}
-
-.accordion-item:first-of-type .accordion-button {
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-} */
-
-/* .accordion-item:not(:first-of-type) {
-    border-top: 0;
-} */
-
-/* .accordion-item:last-of-type {
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-}
-
-.accordion-item:last-of-type .accordion-button.collapsed {
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-} */
-
-.accordion-item:last-of-type .accordion-collapse {
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-}
-
-.accordion-button:not(.collapsed) {
-    color: var(--main-dark-color);
-    background-color: var(--special-dark-filter);
-    box-shadow: none;
-}
-
-.accordion-button:not(.collapsed)::after {
-    background-image: var(--bs-accordion-btn-active-icon);
-    transform: var(--bs-accordion-btn-icon-transform);
-}
-
-.accordion-button {
-    /* background-color: var(--light-green); */
-    border-top: var(--border-special-solid) !important;
-}
-
-.accordion-button:focus {
-    /* border-color: var(--border-light-solid); */
-    box-shadow: none;
-}
-
-.accordion-header {
-    background-color: var(--special-dark-filter);
-    border-bottom: var(--border-dark-special-medium-solid);
-}
-
-.accordion-header .form-check {
-    position: relative;
-}
-
-.accordion-header .form-check-input {
-    position: absolute;
-}
 
 /* ================================================================================================================================= */
 /* --------------------------------------------------------------------------------------------------------------------------------- */

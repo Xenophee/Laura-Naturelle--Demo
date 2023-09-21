@@ -87,7 +87,7 @@ h1 span:first-child {
     left: 50%;
     top: 100%;
     height: 5px;
-    background-color: #ede7db;
+    background-color: var(--beige-color);
     border-radius: 50%;
     transform: translate(-50%, -50%);
 }
@@ -134,7 +134,7 @@ h1 span:first-child {
     left: 50%;
     top: 105%;
     height: 5px;
-    background-color: #ede7db;
+    background-color: var(--beige-color);
     border-radius: 50%;
     transform: translate(-50%, -50%);
 }

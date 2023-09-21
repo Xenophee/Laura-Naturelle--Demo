@@ -2,17 +2,6 @@
 
 
 
-
-.separator {
-    background-image: url(../../img/backgrounds/main.jpg);
-    background-attachment: fixed;
-    background-color: var(--special-color);
-    border-top: var(--border-first-solid);
-    border-bottom: var(--border-first-solid);
-    width: 100%;
-    height: 7vh;
-}
-
 hr {
     border: var(--border-light-green-medium-solid);
     width: 70%;
@@ -26,10 +15,6 @@ hr {
 
 @media (min-width: 768px)  {
 
-    .separator {
-        height: 6vh;
-    }
-
     .line {
         height: 3px;
         width: 20%;
@@ -40,8 +25,5 @@ hr {
 
 @media (min-width: 1200px) {
 
-    .separator {
-        height: 5vh;
-    }
     
 }

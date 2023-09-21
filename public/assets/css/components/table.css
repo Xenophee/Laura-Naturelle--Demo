@@ -40,12 +40,20 @@ tr:not(thead tr) {
     border-bottom: var(--border-brown-thin-solid);
 }
 
-.table-news tbody tr:nth-of-type(odd) {
-    background-color: var(--brown-filter-color);
-}
-
 .table-news th {
     color: var(--brown-color);
+}
+
+
+/* ---------------------------------------- */
+/* Tableau hover */
+
+.table-hover-green > tbody > tr:hover > * {
+    background-color: var(--second-filter-color);
+}
+
+.table-hover-brown > tbody > tr:hover > * {
+    background-color: var(--brown-filter-color);
 }
 
 
@@ -70,16 +78,16 @@ tr:not(thead tr) {
     background-color: var(--special-dark-color);
 }
 
-.table-time, .table-advantage {
+.table-badge-green {
     width: 70px;
     color: var(--main-color);
     background-color: var(--first-color);
 }
 
-.table-price, .table-date {
+.table-badge-beige {
     width: 70px;
-    color: var(--main-color);
-    background-color: var(--brown-color);
+    color: var(--first-color);
+    background-color: var(--beige-color);
 }
 
 

@@ -125,16 +125,18 @@
                     <section class="d-flex flex-column justify-content-center align-items-center">
                         <h1 class="category-title text-center py-4 my-5 px-3 px-md-5">Mes annonces</h1>
 
-                        <form method="POST" class="dashboard-form d-flex flex-column align-items-center" id="announcement-form">
+                        <form method="POST" class="d-flex flex-column align-items-center w-100" id="announcement-form">
 
-                            <label class="fw-bold mt-4 mt-md-5 mb-4 mb-md-0">Une annonce est actuellement en cours :</label>
+                            <div class="dashboard-form d-flex flex-column align-items-center">
+                                <label class="fw-bold mt-4 mt-md-5 mb-4 mb-md-0">Une annonce est actuellement en cours :</label>
 
-                            <div class="btn-group d-flex flex-column flex-md-row w-100 mb-4 mb-md-5 py-md-5" role="group" aria-label="Activer / Désactiver l'annonce">
-                                <input type="radio" class="btn-check status-choice" name="status" value="1" id="modify" autocomplete="off" required checked>
-                                <label class="btn btn-radio" for="modify">Modifier</label>
-                            
-                                <input type="radio" class="btn-check status-choice" name="status" value="2" data-id="" data-deleteparam="" id="deactivation" autocomplete="off" data-bs-toggle="modal" data-bs-target="#displayModal" required>
-                                <label class="btn btn-radio" for="deactivation">Désactiver</label>
+                                <div class="btn-group d-flex flex-column flex-md-row w-100 mb-4 mb-lg-5 py-md-5" role="group" aria-label="Activer / Désactiver l'annonce">
+                                    <input type="radio" class="btn-check status-choice" name="status" value="1" id="modify" autocomplete="off" required checked>
+                                    <label class="btn btn-radio" for="modify">Modifier</label>
+                                
+                                    <input type="radio" class="btn-check status-choice" name="status" value="2" data-id="" data-deleteparam="" id="deactivation" autocomplete="off" data-bs-toggle="modal" data-bs-target="#displayModal" required>
+                                    <label class="btn btn-radio" for="deactivation">Désactiver</label>
+                                </div>
                             </div>
 
                             <div class="announcement">
@@ -142,45 +144,47 @@
                                     <div class="col d-flex justify-content-center">
                                         <div class="d-flex flex-wrap justify-content-center align-items-center py-2 pe-3">
                                             <i class="bi bi-megaphone-fill announcement-icon"></i>
-                                            <p class="d-flex flex-wrap justify-content-center align-items-center text-center ps-5 my-0" id="preview">
+                                            <p class="d-flex flex-wrap justify-content-center align-items-center text-center pt-2 pt-md-0 ps-md-5 my-0" id="preview">
                                             </p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="mb-4 mb-md-5 pt-4 pt-md-5 w-100">
-                                <div class="d-flex flex-column flex-md-row justify-content-between">
-                                    <label for="content" class="form-label me-3">Contenu * :</label>
-                                    <small>Nb de caractères : <span id="counterChar"></span></small>
+                            <div class="dashboard-form d-flex flex-column align-items-center">
+                                <div class="mb-4 mb-md-5 pt-4 pt-md-5 w-100">
+                                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                                        <label for="content" class="form-label me-3">Contenu * :</label>
+                                        <small>Nb de caractères : <span id="counterChar"></span></small>
+                                    </div>
+                                    <textarea class="form-control textarea" name="content" id="content">
+                                        <span>-15%</span> sur les modelages du <span>18/07</span> au <span>28/08</span>
+                                    </textarea>
+                                    <button type="button" class="formatting mt-3 mx-2">Mettre en valeur</button>
+                                    <div class="text-danger fst-italic mt-2" id="textareaMessage"></div>
                                 </div>
-                                <textarea class="form-control textarea" name="content" id="content">
-                                    <span>-15%</span> sur des prestations de la catégorie <span class="category-annoucement">modelage</span> du <span>18/07</span> au <span>28/08</span>
-                                </textarea>
-                                <button type="button" class="formatting mt-3 mx-2">Mettre en valeur</button>
-                                <div class="text-danger fst-italic mt-2" id="textareaMessage"></div>
-                            </div>
-
-                            <label class="fw-bold mb-4">Quand l'annonce doit-elle apparaître sur le site ?</label>
-
-                            <div class="d-flex flex-column flex-md-row justify-content-around align-items-center w-100 mb-4 mb-md-5">
-                                <div class="form-div me-md-5 mb-3 mb-md-0">
-                                    <label for="first_date" class="form-label me-3">Date de début * :</label>
-                                    <input type="date" class="form-control" id="first_date" name="first_date" value="2023-07-18" required>
-                                    <div class="text-danger fst-italic mt-2"></div>
-                                </div>
-
-                                <span class="fw-bold">au</span>
     
-                                <div class="form-div ms-md-5 mt-3 mt-md-0">
-                                    <label for="last_date" class="form-label me-3">Date de fin * :</label>
-                                    <input type="date" class="form-control" id="last_date" name="last_date" value="2023-08-28" required>
-                                    <div class="text-danger fst-italic mt-2"></div>
+                                <label class="text-center fw-bold mb-4">Quand l'annonce doit-elle apparaître sur le site ?</label>
+    
+                                <div class="d-flex flex-column flex-md-row justify-content-around align-items-center w-100 mb-4 mb-md-5">
+                                    <div class="form-div me-md-5 mb-3 mb-md-0">
+                                        <label for="first_date" class="form-label me-3">Date de début * :</label>
+                                        <input type="date" class="form-control" id="first_date" name="first_date" value="2023-07-18" required>
+                                        <div class="text-danger fst-italic mt-2"></div>
+                                    </div>
+    
+                                    <span class="fw-bold">au</span>
+        
+                                    <div class="form-div ms-md-5 mt-3 mt-md-0">
+                                        <label for="last_date" class="form-label me-3">Date de fin * :</label>
+                                        <input type="date" class="form-control" id="last_date" name="last_date" value="2023-08-28" required>
+                                        <div class="text-danger fst-italic mt-2"></div>
+                                    </div>
                                 </div>
-                            </div>
-
-                            <div class="d-flex justify-content-center pb-md-5 mt-4 mt-md-5 mb-5 w-100">
-                                <button type="submit" class="btn btn-classic py-2"><i class="bi bi-pencil-fill me-3" aria-hidden="true"></i>Modifier l'annonce</button>
+    
+                                <div class="d-flex justify-content-center pb-md-5 mt-4 mt-md-5 mb-5 w-100">
+                                    <button type="submit" class="btn btn-classic py-2"><i class="bi bi-pencil-fill me-3" aria-hidden="true"></i>Modifier l'annonce</button>
+                                </div>
                             </div>
                         </form>
 

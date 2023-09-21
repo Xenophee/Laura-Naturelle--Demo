@@ -28,7 +28,7 @@
 }
 
 .schedules {
-    border-bottom: var(--border-light-green-solid);
+    border-bottom: var(--border-beige-thin-solid);
     list-style: none;
 }
 
@@ -72,6 +72,7 @@
     border: var(--border-light-solid);
 }
 
+
 /* ================================================================================================================================= */
 /* --------------------------------------------------------------------------------------------------------------------------------- */
 /* RESPONSIVE */
@@ -106,8 +107,16 @@
         font-size: 1.3rem;
     }
 
+    #announcement-form .announcement {
+        width: 90%;
+    }
+
     .announcement-btns {
         width: 80%;
+    }
+
+    .accordion-block {
+        width: 50%;
     }
 }
 

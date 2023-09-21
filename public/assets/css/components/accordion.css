@@ -1,0 +1,52 @@
+.accordion {
+    border-bottom: var(--border-special-solid);
+    border-left: var(--border-special-solid);
+    border-right: var(--border-special-solid);
+    border-radius: 5px;
+}
+
+.accordion-item {
+    border: none;
+}
+
+.accordion-button:not(.collapsed) {
+    color: var(--main-dark-color);
+    background-color: var(--special-dark-filter);
+    box-shadow: none;
+}
+
+.accordion-button::after {
+    background-image: url(../../img/chevron-double-vers-le-bas.webp);
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url(../../img/chevron-double-vers-le-bas.webp);
+}
+
+.accordion-button {
+    border-top: var(--border-special-solid) !important;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+
+.accordion-block {
+    width: 100%;
+}
+
+
+/* ================================================================================================================================= */
+/* --------------------------------------------------------------------------------------------------------------------------------- */
+/* RESPONSIVE */
+
+/* -------------------------------------------- */
+/* TABLETTE */
+
+@media (min-width: 768px) {
+
+    .accordion-block {
+        width: 50%;
+    }
+}

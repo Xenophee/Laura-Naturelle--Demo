@@ -9,6 +9,7 @@
     --third-color: #6fa348;
 
     --brown-color: #c08552;
+    --beige-color: #ede7db;
     --gold-color: #e3b04c;
     
     --special-color: #fb8bdb;
@@ -46,6 +47,8 @@
     --border-second-solid-medium: var(--second-color) 2px solid;
 
     --border-third-medium-solid: var(--third-color) 2px solid;
+
+    --border-beige-thin-solid: var(--beige-color) 1px solid;
 
     --border-brown-thin-solid: var(--brown-color) 1px solid;
     --border-brown-solid: var(--brown-color) 2px solid;
