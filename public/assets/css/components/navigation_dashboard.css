@@ -10,6 +10,18 @@
     color: var(--first-color);
 }
 
+.dashboard-nav .navbar-toggler {
+    border-color: var(--first-color);
+}
+
+.dashboard-nav .navbar-toggler-icon {
+    background-image: url("../../img/hamburger.webp");
+}
+
+.dashboard-nav .navbar-toggler:focus {
+    box-shadow: rgba(11, 87, 23, 0.16) 0px 1px 4px, rgb(7, 102, 7) 0px 0px 0px 3px;
+}
+
 .links-container, .dashboard-nav ul {
     width: 100%;
 }
