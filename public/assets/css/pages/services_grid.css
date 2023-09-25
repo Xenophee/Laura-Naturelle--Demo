@@ -21,7 +21,6 @@
 /* CARTE PRESTATION - TEXTE */
 
 .service {
-    border: var(--border-light-green-medium-solid);
     box-shadow: var(--box-light-shadow);
 }
 

@@ -12,7 +12,6 @@
     --beige-color: #ede7db;
     --gold-color: #e3b04c;
     
-    --special-color: #fb8bdb;
     --special-color: #f1a2da;
     --special-dark-color: #e76899;
 
@@ -20,8 +19,6 @@
 
     --main-filter-color-op: #fdf3fdbb;
     --main-filter-color: #fdf3fd98;
-    /* --main-filter-color: #fdf3fd91; */
-    /* --second-filter-color: #2f5b0e8c; */
     --second-filter-color: #2f5b0e28;
     --brown-filter-color: #c0855248;
     --special-dark-filter: #e768993d;
@@ -29,24 +26,14 @@
     --special-font: 'Petrona', serif;
     --main-font: 'Lato', sans-serif;
 
-    --font-normal-size: 1rem;
-    --font-ideal-size: 1.2rem;
-    --font-medium-size: 1.5rem;
-    --font-tall-size: 2rem;
+    --border-light-green-solid: var(--light-green) 2px solid;
 
-    --border-light-green-solid: var(--light-green) 1px solid;
-    --border-light-green-medium-solid: var(--light-green) 2px solid;
-    --border-light-green-strong-solid: var(--light-green) 4px solid;
-    --border-light-green-very-strong-solid: var(--light-green) 10px solid;
-
-    --border-light-solid: var(--main-color) 1px solid;
-    --border-light-medium-solid: var(--main-color) 2px solid;
-    --border-light-strong-solid: var(--main-color) 10px solid;
+    --border-light-thin-solid: var(--main-color) 1px solid;
+    --border-light-solid: var(--main-color) 2px solid;
     
-    --border-second-solid: var(--second-color) 3px solid;
-    --border-second-solid-medium: var(--second-color) 2px solid;
+    --border-second-medium-solid: var(--second-color) 3px solid;
 
-    --border-third-medium-solid: var(--third-color) 2px solid;
+    --border-third-solid: var(--third-color) 2px solid;
 
     --border-beige-thin-solid: var(--beige-color) 1px solid;
 
@@ -54,21 +41,21 @@
     --border-brown-solid: var(--brown-color) 2px solid;
     --border-brown-medium-solid: var(--brown-color) 3px solid;
 
-    --border-special-solid: var(--special-color) 1px solid;
+    --border-special-thin-solid: var(--special-color) 1px solid;
     --border-special-medium-solid: var(--special-color) 3px solid;
-    --border-special-strong-solid: var(--special-color) 10px solid;
+    --border-special-strong-solid: var(--special-color) 10px solid; /* A supprimer après la page de construction */
 
-    --border-dark-special-medium-solid: var(--special-dark-color) 2px solid;
+    --border-dark-special-solid: var(--special-dark-color) 2px solid;
     --border-special-dark-strong-solid: var(--special-dark-color) 10px solid;
 
-    --border-first-solid: var(--first-color) 1px solid;
-    --border-first-medium-solid: var(--first-color) 2px solid;
-    --border-first-strong-solid: var(--first-color) 10px solid;
+    --border-first-thin-solid: var(--first-color) 1px solid;
+    --border-first-solid: var(--first-color) 2px solid;
 
-    --box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    /* --box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
     --box-light-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
     --inset-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    --inset-light-shadow: rgba(195, 195, 218, 0.25) 0px 10px 30px -12px inset, rgba(195, 195, 218, 0.25) 0px 10px 20px -10px inset;
 
     --text-shadow: 1px 1px 4px #3B3939;
-    --text-light-shadow: 1px 1px 4px #fdf3fd;
+    /* --text-light-shadow: 1px 1px 4px #fdf3fd; */
 }

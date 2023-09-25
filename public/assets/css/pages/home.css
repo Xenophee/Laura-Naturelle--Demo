@@ -58,9 +58,9 @@
 .presentation-text {
     width: 100%;
     border: var(--border-special-strong-solid);
-    outline: var(--border-third-medium-solid);
+    outline: var(--border-third-solid);
     /* outline-offset: 15px; */
-    border: var(--border-first-medium-solid);
+    border: var(--border-first-solid);
     outline: var(--border-special-dark-strong-solid);
     outline-offset: -25px;
     box-shadow: var(--box-light-shadow);
@@ -80,8 +80,8 @@
     height: 650px;
     width: 100%;
     object-fit: cover;
-    border-top: var(--border-light-solid);
-    border-bottom: var(--border-light-solid);
+    border-top: var(--border-light-thin-solid);
+    border-bottom: var(--border-light-thin-solid);
     transition: opacity 1s ease-in-out;
 }
 
@@ -129,17 +129,17 @@
     width: 90%;
     background-color: transparent;
     color: var(--first-color);
-    border: var(--border-first-medium-solid);
+    border: var(--border-first-solid);
 }
 
 .btn-services-index.lightmode {
     color: var(--main-color);
-    border: var(--border-light-medium-solid);
+    border: var(--border-light-solid);
 }
 
 .btn-services-index:hover {
     color: var(--main-color);
-    border: var(--border-light-medium-solid);
+    border: var(--border-light-solid);
 }
 
 
@@ -271,7 +271,7 @@
     }
 
     .informations div:first-child {
-        border-right: var(--border-first-solid);
+        border-right: var(--border-first-thin-solid);
     }
 
     .scheduleBoard {
@@ -329,7 +329,7 @@
     }
 
     .informations div:last-child {
-        border-left: var(--border-first-solid);
+        border-left: var(--border-first-thin-solid);
     }
 
 }

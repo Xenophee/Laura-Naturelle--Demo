@@ -15,12 +15,12 @@
 .btn-classic {
     background-color: var(--special-dark-color);
     color: var(--main-color);
-    border: var(--border-light-solid);
+    border: var(--border-light-thin-solid);
 }
 
 .btn-classic:hover {
     color: var(--main-color);
-    border: var(--border-light-solid);
+    border: var(--border-light-thin-solid);
 }
 
 .btn-classic::before, .btn-outline:before {
@@ -49,7 +49,7 @@
 .btn-outline {
     background-color: transparent;
     color: var(--special-dark-color);
-    border: var(--border-dark-special-medium-solid);
+    border: var(--border-dark-special-solid);
 }
 
 .btn .bi {
@@ -63,31 +63,31 @@
 
 .view {
     color: var(--main-color);
-    border: var(--border-light-medium-solid);
+    border: var(--border-light-solid);
     background-color: var(--third-color);
 }
 
 .edit {
     color: var(--main-color);
-    border: var(--border-light-medium-solid);
+    border: var(--border-light-solid);
     background-color: var(--special-color);
 }
 
 .delete {
     color: var(--main-color);
-    border: var(--border-light-medium-solid);
+    border: var(--border-light-solid);
     background-color: var(--danger-color);
 }
 
 .validate {
     color: var(--main-color);
-    border: var(--border-light-medium-solid);
+    border: var(--border-light-solid);
     background-color: #e3b04c;
 }
 
 .desactivate {
     color: var(--main-color);
-    border: var(--border-light-medium-solid);
+    border: var(--border-light-solid);
     background-color: var(--brown-color);
 }
 
@@ -98,7 +98,7 @@
 .desactivate:hover {
     background-color: transparent;
     color: var(--special-dark-color);
-    border: var(--border-dark-special-medium-solid);
+    border: var(--border-dark-special-solid);
 }
 
 .view,

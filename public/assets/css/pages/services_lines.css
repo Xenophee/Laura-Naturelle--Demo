@@ -21,11 +21,11 @@
 }
 
 .classic-section .service {
-    border: var(--border-third-medium-solid);
+    border: var(--border-third-solid);
 }
 
 .special-section .service {
-    border: var(--border-dark-special-medium-solid);
+    border: var(--border-dark-special-solid);
 }
 
 .package-section .service {
@@ -47,11 +47,11 @@
 }
 
 .service-line {
-    border-bottom: var(--border-third-medium-solid);
+    border-bottom: var(--border-third-solid);
 }
 
 .service-line-odd {
-    border-bottom: var(--border-light-green-medium-solid);
+    border-bottom: var(--border-light-green-solid);
 }
 
 .service-line p, .service-line-odd p {

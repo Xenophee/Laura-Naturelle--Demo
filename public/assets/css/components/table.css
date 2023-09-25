@@ -21,7 +21,7 @@ tr:not(thead tr) {
 }
 
 .table-group-divider {
-    border-top: var(--border-second-solid);
+    border-top: var(--border-second-medium-solid);
 }
 
 .table-striped tbody tr:nth-of-type(odd) {

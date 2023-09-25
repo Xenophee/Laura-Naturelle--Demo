@@ -3,8 +3,11 @@
 
 
 hr {
-    border: var(--border-light-green-medium-solid);
+    background-color: var(--beige-color);
+    height: 15px;
+    opacity: 0.8;
     width: 70%;
+    border: none;
 }
 
 

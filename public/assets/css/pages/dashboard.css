@@ -63,13 +63,13 @@
 .formatting {
     background-color: var(--special-color);
     color: var(--main-color);
-    border: var(--border-light-solid);
+    border: var(--border-light-thin-solid);
 }
 
 .formatting:hover {
     background-color: var(--special-dark-color);
     color: var(--main-color);
-    border: var(--border-light-solid);
+    border: var(--border-light-thin-solid);
 }
 
 

@@ -1,7 +1,7 @@
 .accordion {
-    border-bottom: var(--border-special-solid);
-    border-left: var(--border-special-solid);
-    border-right: var(--border-special-solid);
+    border-bottom: var(--border-special-thin-solid);
+    border-left: var(--border-special-thin-solid);
+    border-right: var(--border-special-thin-solid);
     border-radius: 5px;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .accordion-button {
-    border-top: var(--border-special-solid) !important;
+    border-top: var(--border-special-thin-solid) !important;
 }
 
 .accordion-button:focus {

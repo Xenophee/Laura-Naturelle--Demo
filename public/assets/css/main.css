@@ -13,11 +13,13 @@
 @import url('./components/accordion.css');
 @import url('./components/buttons.css');
 @import url('./components/form.css');
+@import url('./components/footer.css');
 @import url('./components/logos.css');
 @import url('./components/modal.css');
 @import url('./components/navigation_dashboard.css');
 @import url('./components/navigation.css');
 @import url('./components/others.css');
+@import url('./components/pagination.css');
 @import url('./components/streamer.css');
 @import url('./components/table.css');
 
