@@ -16,6 +16,7 @@
     --special-dark-color: #e76899;
 
     --danger-color: #b2161a;
+    --danger-filter-color: #b2161b33;
 
     --main-filter-color-op: #fdf3fdbb;
     --main-filter-color: #fdf3fd98;
@@ -50,6 +51,8 @@
 
     --border-first-thin-solid: var(--first-color) 1px solid;
     --border-first-solid: var(--first-color) 2px solid;
+
+    --border-error-solid: var(--danger-color) 2px solid;
 
     /* --box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
     --box-light-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;

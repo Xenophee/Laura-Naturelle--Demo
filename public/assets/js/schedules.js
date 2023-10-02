@@ -4,7 +4,7 @@
 // ----------------------------------------------------------------------------------------------
 // VARIABLES
 
-const shedules = document.getElementById('schedules-form');
+const schedules = document.getElementById('schedules-form');
 
 const scheduleBtnGroup = document.querySelectorAll('.schedule-btn-group');
 const firstSchedules = document.querySelectorAll('.schedules-first-bloc');
@@ -12,6 +12,9 @@ const secondSchedules = document.querySelectorAll('.schedules-second-bloc');
 
 const closeMidHour = document.querySelectorAll('.close-mid-hour');
 const closeHour = document.querySelectorAll('.close-hour');
+
+const hourInputs = document.querySelectorAll('.hour');
+const minutesInputs = document.querySelectorAll('.minutes');
 
 
 
@@ -30,32 +33,29 @@ const displayForm = (value, index) => {
     } else if (value == 2) {
         firstSchedules[index].insertBefore(closeMidHour[index], null);
         secondSchedules[index].insertBefore(closeHour[index], null);
-    }
+    };
     // -----------------------------------------------------
 
     // -----------------------------------------------------
     // Sélection des inputs après la mise en ordre
     let firstSchedulesInputs = firstSchedules[index].querySelectorAll('.schedules-first-bloc input');
-    let firstHourInputs = [firstSchedulesInputs[0], firstSchedulesInputs[2]];
-
     let secondSchedulesInputs = secondSchedules[index].querySelectorAll('.schedules-second-bloc input');
-    let secondHourInputs = [secondSchedulesInputs[0], secondSchedulesInputs[2]];
     // -----------------------------------------------------
-
 
     // -----------------------------------------------------
     // Reset la mise en page
     firstSchedules[index].classList.add('d-none');
     secondSchedules[index].classList.add('d-none');
 
-    for(const firstHourInput of firstHourInputs) {
-        firstHourInput.required = false;
-        firstHourInput.setAttribute('aria-required', 'false');
-    }
-    for(const secondHourInput of secondHourInputs) {
-        secondHourInput.required = false;
-        secondHourInput.setAttribute('aria-required', 'false');
-    }
+    for(const firstSchedulesInput of firstSchedulesInputs) {
+        firstSchedulesInput.required = false;
+        firstSchedulesInput.setAttribute('aria-required', 'false');
+    };
+
+    for(const secondSchedulesInput of secondSchedulesInputs) {
+        secondSchedulesInput.required = false;
+        secondSchedulesInput.setAttribute('aria-required', 'false');
+    };
     // -----------------------------------------------------
 
     
@@ -65,23 +65,81 @@ const displayForm = (value, index) => {
 
         firstSchedules[index].classList.remove('d-none');
 
-        for(const firstHourInput of firstHourInputs) {
-            firstHourInput.required = true;
-            firstHourInput.setAttribute('aria-required', 'true');
-        }
+        for(const firstSchedulesInput of firstSchedulesInputs) {
+            firstSchedulesInput.required = true;
+            firstSchedulesInput.setAttribute('aria-required', 'true');
+        };
 
         if (value == 2) {
 
             secondSchedules[index].classList.remove('d-none');
 
-            for(const secondHourInput of secondHourInputs) {
-                secondHourInput.required = true;
-                secondHourInput.setAttribute('aria-required', 'true');
-            }
+            for(const secondSchedulesInput of secondSchedulesInputs) {
+                secondSchedulesInput.required = true;
+                secondSchedulesInput.setAttribute('aria-required', 'true');
+            };
 
         };
     };
     // -----------------------------------------------------
+};
+
+
+
+// ==============================================================================================
+// ----------------------------------------------------------------------------------------------
+// FONCTION DE VÉRIFICATION DES HORAIRES
+
+const verifSchedules = () => {
+
+    let isSchedulesOk = [];
+
+    // -----------------------------------------------------
+    // Vérification sur les heures
+    for(const hourInput of hourInputs) {
+        if (hourInput.required == true) {
+            if (hourInput.value < 0 || hourInput.value > 23) {
+                hourInput.classList.add('error-form');
+                isSchedulesOk.push(false);
+            } else {
+                hourInput.classList.remove('error-form');
+                isSchedulesOk.push(true);
+            };
+        };
+    };
+    // -----------------------------------------------------
+
+    // -----------------------------------------------------
+    // Vérification sur les minutes
+    for(const minutesInput of minutesInputs) {
+        if (minutesInput.required == true) {
+            if (minutesInput.value < 0 || minutesInput.value > 59) {
+                minutesInput.classList.add('error-form');
+                isSchedulesOk.push(false);
+            } else {
+                minutesInput.classList.remove('error-form');
+                isSchedulesOk.push(true);
+            };
+        };
+    };
+    // -----------------------------------------------------
+
+    return isSchedulesOk;
+};
+
+
+
+// ==============================================================================================
+// ----------------------------------------------------------------------------------------------
+// FONCTION DE FORMATAGE DES HORAIRES POUR GARDER UNE COHÉRENCE VISUELLE
+
+const formatNumber = (element) => {
+
+    if (element.value.length == 0) {
+        element.value = '00';
+    } else if (element.value.length == 1) {
+        element.value = '0' + element.value;
+    };
 };
 
 
@@ -98,7 +156,7 @@ scheduleBtnGroup.forEach((element, index) => {
 
         if (btn.checked) {
             displayForm(Number(btn.value), index);
-        }
+        };
 
         btn.addEventListener('change', () => {
             displayForm(Number(btn.value), index);
@@ -107,3 +165,42 @@ scheduleBtnGroup.forEach((element, index) => {
 
 });
 
+
+
+// ==============================================================================================
+// ----------------------------------------------------------------------------------------------
+// VÉRIFICATION DYNAMIQUE DES HORAIRES ET REMPLISSAGE AUTO POUR LES ÉLÉMENTS VIDE
+
+for(const hourInput of hourInputs) {
+    hourInput.addEventListener('keyup', verifSchedules);
+    hourInput.addEventListener('change', (event) => {
+        formatNumber(event.target);
+    });
+};
+
+for(const minutesInput of minutesInputs) {
+    minutesInput.addEventListener('keyup', verifSchedules);
+    minutesInput.addEventListener('change', (event) => {
+        formatNumber(event.target);
+    });
+};
+
+
+
+// ==============================================================================================
+// ----------------------------------------------------------------------------------------------
+// LANCEMENT DE LA FONCTION DE VÉRIFICATION À LA VALIDATION DU FORMULAIRE
+
+schedules.addEventListener('submit', (event) => {
+
+    event.preventDefault();
+
+    let isSchedulesOk = verifSchedules();
+
+    if (isSchedulesOk.includes(false)) {
+        errorMessage.textContent = 'Un ou plusieurs horaires que vous avez saisis ne sont pas valides !';
+    } else {
+        schedules.submit();
+    };
+    
+});
