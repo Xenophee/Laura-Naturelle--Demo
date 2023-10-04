@@ -196,9 +196,11 @@ schedules.addEventListener('submit', (event) => {
     event.preventDefault();
 
     let isSchedulesOk = verifSchedules();
+    console.log(isSchedulesOk);
 
     if (isSchedulesOk.includes(false)) {
         errorMessage.textContent = 'Un ou plusieurs horaires que vous avez saisis ne sont pas valides !';
+        schedules.scrollIntoView();
     } else {
         schedules.submit();
     };
