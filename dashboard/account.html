@@ -125,40 +125,35 @@
                     <section class="d-flex flex-column justify-content-center align-items-center">
                         <h1 class="category-title text-center py-4 my-5 px-3 px-md-5">Mon Compte</h1>
 
-                        <form method="post" enctype="multipart/form-data" class="dashboard-form mt-5">
+                        <form method="post" enctype="multipart/form-data" class="dashboard-form mt-5" id="account-form">
 
                             <fieldset class="mb-md-5">
                                 <legend class="text-center py-2 mb-5">Informations générales</legend>
                                 <div class="mb-4">
                                     <label for="email" class="form-label me-3">Adresse mail * :</label>
-                                    <input type="email" class="form-control" aria-describedby="email-description" id="email" name="email" value="" aria-required="true" required>
-                                    <p class="visually-hidden" id="email-description"></p>
-                                    <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="email"></small>
+                                    <input type="email" class="form-control" id="email" name="email" autocomplete="email" value="" pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" aria-required="true" required>
+                                    <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="email" id="emailError"></small>
                                 </div>
                                 <div class="mb-4">
                                     <label for="phone" class="form-label me-3">Numéro de téléphone * :</label>
-                                    <input type="text" class="form-control" aria-describedby="phone-description" id="phone" name="phone" value="" aria-required="true" required>
-                                    <p class="visually-hidden" id="phone-description"></p>
-                                    <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="phone"></small>
+                                    <input type="text" class="form-control" id="phone" name="phone" autocomplete="tel" value="" pattern="^(0[1-9])(\d{8})$" aria-required="true" required>
+                                    <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="phone" id="phoneError"></small>
                                 </div>
 
                                 <div class="mb-4">
                                     <label for="street" class="form-label me-3">Rue * :</label>
-                                    <input type="text" class="form-control" aria-describedby="street-description" id="street" name="street" value="" aria-required="true" required>
-                                    <p class="visually-hidden" id="street-description"></p>
-                                    <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="street"></small>
+                                    <input type="text" class="form-control" id="street" name="street" autocomplete="address-line1" value="" pattern="^\d+\s['A-Za-zÀ-ÿ\s-]+$" aria-required="true" required>
+                                    <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="street" id="streetError"></small>
                                 </div>
                                 <div class="mb-4">
                                     <label for="zipcode" class="form-label me-3">Code postal * :</label>
-                                    <input type="text" class="form-control" aria-describedby="zipcode-description" id="zipcode" name="zipcode" value="" aria-required="true" required>
-                                    <p class="visually-hidden" id="zipcode-description"></p>
-                                    <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="zipcode"></small>
+                                    <input type="text" class="form-control" id="zipcode" name="zipcode" autocomplete="postal-code" value="" pattern="^\d{5}$" aria-required="true" required>
+                                    <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="zipcode" id="zipcodeError"></small>
                                 </div>
                                 <div class="mb-4">
                                     <label for="city" class="form-label me-3">Ville * :</label>
-                                    <input type="text" class="form-control" aria-describedby="city-description" id="city" name="city" value="" aria-required="true" required>
-                                    <p class="visually-hidden" id="city-description"></p>
-                                    <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="city"></small>
+                                    <input type="text" class="form-control" id="city" name="city" autocomplete="address-level2" value="" pattern="^['A-Za-zÀ-ÿ\s-]+$" aria-required="true" required>
+                                    <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="city" id="cityError"></small>
                                 </div>
                             </fieldset>
     
@@ -166,20 +161,18 @@
                                 <legend class="text-center py-2 mb-5">Changer de mot de passe</legend>
                                 <div class="mb-4">
                                     <label for="password" class="form-label mb-2">Mot de passe actuel :</label>
-                                    <input type="password" class="form-control" aria-describedby="password-description" id="password" name="password">
-                                    <p class="visually-hidden" id="password-description"></p>
+                                    <input type="password" class="form-control" id="password" name="password">
                                     <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="password"></small>
                                 </div>
                                 <div class="mb-4">
-                                    <label for="newPassword" class="form-label mb-2">Nouveau mot de passe :</label>
-                                    <input type="password" class="form-control" aria-describedby="new-password-description" id="newPassword" name="newPassword">
-                                    <p class="visually-hidden" id="new-password-description"></p>
-                                    <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="newPassword"></small>
+                                    <label for="newPassword" class="form-label mb-2">Nouveau mot de passe <abbr title="au moins une majuscule, une minuscule, un chiffre et un caractère spécial (@#$%§^&+=!)">(?)</abbr> :</label>
+                                    <input type="password" class="form-control" id="newPassword" name="newPassword" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$%§^&+=!])(?=.*[a-zA-Z\d@#$%§^&+=!]).{8,}$">
+                                    <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="newPassword" id="newPasswordError"></small>
                                 </div>
                                 <div class="mb-4">
                                     <label for="confirmPassword" class="form-label mb-2">Confirmer le mot de passe :</label>
-                                    <input type="password" class="form-control" aria-describedby="new-password-description" id="confirmPassword" name="confirmPassword">
-                                    <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="confirmPassword"></small>
+                                    <input type="password" class="form-control" id="confirmPassword" name="confirmPassword">
+                                    <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="confirmPassword" id="confirmPasswordError"></small>
                                 </div>
                             </fieldset>
     
@@ -264,6 +257,7 @@
 
     <script src="../public/assets/js/bootstrap.bundle.min.js"></script>
     <script src="../public/assets/js/script.js"></script>
+    <script src="../public/assets/js/account.js"></script>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-K01XHPHL6L"></script>
     <script>

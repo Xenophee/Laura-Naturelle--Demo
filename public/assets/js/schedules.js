@@ -172,14 +172,14 @@ scheduleBtnGroup.forEach((element, index) => {
 // VÉRIFICATION DYNAMIQUE DES HORAIRES ET REMPLISSAGE AUTO POUR LES ÉLÉMENTS VIDE
 
 for(const hourInput of hourInputs) {
-    hourInput.addEventListener('keyup', verifSchedules);
+    hourInput.addEventListener('input', verifSchedules);
     hourInput.addEventListener('change', (event) => {
         formatNumber(event.target);
     });
 };
 
 for(const minutesInput of minutesInputs) {
-    minutesInput.addEventListener('keyup', verifSchedules);
+    minutesInput.addEventListener('input', verifSchedules);
     minutesInput.addEventListener('change', (event) => {
         formatNumber(event.target);
     });
@@ -192,11 +192,10 @@ for(const minutesInput of minutesInputs) {
 // LANCEMENT DE LA FONCTION DE VÉRIFICATION À LA VALIDATION DU FORMULAIRE
 
 schedules.addEventListener('submit', (event) => {
-
+    
     event.preventDefault();
 
     let isSchedulesOk = verifSchedules();
-    console.log(isSchedulesOk);
 
     if (isSchedulesOk.includes(false)) {
         errorMessage.textContent = 'Un ou plusieurs horaires que vous avez saisis ne sont pas valides !';
