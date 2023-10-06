@@ -1,13 +1,13 @@
 
 const REGEX_EMAIL = new RegExp(email.pattern);
 const REGEX_PHONE = new RegExp(phone.pattern);
-const REGEX_STREET = new RegExp(street.pattern);
+const REGEX_address = new RegExp(address.pattern);
 const REGEX_ZIPCODE = new RegExp(zipcode.pattern);
 const REGEX_CITY = new RegExp(city.pattern);
 const REGEX_PASSWORD = new RegExp(newPassword.pattern);
 
 const account = document.getElementById('account-form');
-const messages = { email: 'une adresse mail', phone: 'un numéro de téléphone', street: 'une rue', zipcode: 'un code postal', city: 'une ville', newPassword: 'un mot de passe'};
+const messages = { email: 'une adresse mail', phone: 'un numéro de téléphone', address: 'une rue', zipcode: 'un code postal', city: 'une ville', newPassword: 'un mot de passe'};
 
 
 // ==============================================================================================
@@ -106,8 +106,8 @@ phone.addEventListener('change', () => {
     checkInput(phone, REGEX_PHONE);
 });
 
-street.addEventListener('change', () => {
-    checkInput(street, REGEX_STREET);
+address.addEventListener('change', () => {
+    checkInput(address, REGEX_address);
 });
 
 zipcode.addEventListener('change', () => {
@@ -132,7 +132,7 @@ account.addEventListener('submit', (event) => {
 
     checkInput(email, REGEX_EMAIL);
     checkInput(phone, REGEX_PHONE);
-    checkInput(street, REGEX_STREET);
+    checkInput(address, REGEX_address);
     checkInput(zipcode, REGEX_ZIPCODE);
     checkInput(city, REGEX_CITY);
     checkInput(newPassword, REGEX_PASSWORD);
