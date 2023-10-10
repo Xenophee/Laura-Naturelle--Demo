@@ -125,6 +125,73 @@
                     <section class="d-flex flex-column justify-content-center align-items-center">
                         <h1 class="category-title text-center py-4 my-5 px-3 px-md-5">Mes annonces</h1>
 
+                        <div class="table-responsive pt-md-5 my-4 my-md-5">
+                            <table class="table align-middle table-hover-brown table-news">
+                                <thead>
+                                    <tr>
+                                        <th scope="col"></th>
+                                        <th scope="col">
+                                            <h2>Anciennes annonces</h2>
+                                        </th>
+                                        <th scope="col"></th>
+                                        <th scope="col"></th>
+                                        <th scope="col">
+                                            <div class="d-flex justify-content-end">
+                                                <!-- Bouton supprimer -->
+                                                <a href="" class="btn delete py-2" title="Supprimer toutes les annonces" data-id="" data-deleteparam="" data-bs-toggle="modal" data-bs-target="#displayModal">
+                                                    <i class="bi bi-trash3" data-id="" data-deleteparam="1"></i>
+                                                </a>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </thead>
+    
+                                <tbody class="table-group-divider">
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>
+                                            Toutes les prestations gratuites !
+                                        </td>
+                                        <td>
+                                            <div class="table-badge-beige d-flex justify-content-center align-items-center fw-bold w-100 px-2">10/02/2020</div>
+                                        </td>
+                                        <td>
+                                            <div class="table-badge-green d-flex justify-content-center align-items-center w-100 px-2">20/02/2020</div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex justify-content-end">
+                                                <!-- Bouton supprimer -->
+                                                <button type="button" class="btn delete py-2" title="Supprimer l'annonce" data-id="" data-deleteparam="" data-bs-toggle="modal" data-bs-target="#displayModal">
+                                                    <i class="bi bi-trash3" data-id="" data-deleteparam=""></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>
+                                            Le salon sera exceptionnellement fermé du <span>25/07</span> au <span>30/07</span>
+                                        </td>
+                                        <td>
+                                            <div class="table-badge-beige d-flex justify-content-center align-items-center fw-bold w-100 px-2">25/07/2022</div>
+                                        </td>
+                                        <td>
+                                            <div class="table-badge-green d-flex justify-content-center align-items-center w-100 px-2">30/07/2022</div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex justify-content-end">
+                                                <!-- Bouton supprimer -->
+                                                <button type="button" class="btn delete py-2" title="Supprimer l'annonce" data-id="" data-deleteparam="" data-bs-toggle="modal" data-bs-target="#displayModal">
+                                                    <i class="bi bi-trash3" data-id="" data-deleteparam=""></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
                         <form method="POST" class="d-flex flex-column align-items-center w-100" id="announcement-form">
 
                             <div class="dashboard-form d-flex flex-column align-items-center">
@@ -138,6 +205,7 @@
                                     <label class="btn btn-radio" for="deactivation">Désactiver</label>
                                 </div>
                             </div>
+
 
                             <div class="announcement">
                                 <div class="row mx-0 announcement-content">
@@ -157,9 +225,7 @@
                                         <label for="content" class="form-label me-3">Contenu * :</label>
                                         <small>Nb de caractères : <span id="counterChar"></span></small>
                                     </div>
-                                    <textarea class="form-control textarea" name="content" id="content">
-                                        <span>-15%</span> sur les modelages du <span>18/07</span> au <span>28/08</span>
-                                    </textarea>
+                                    <textarea class="form-control textarea" name="content" maxlength="500" id="content"><span>-15%</span> sur les modelages du <span>18/07</span> au <span>28/08</span></textarea>
                                     <button type="button" class="formatting mt-3 mx-2">Mettre en valeur</button>
                                     <div class="text-danger fst-italic mt-2" id="textareaMessage"></div>
                                 </div>
@@ -283,8 +349,10 @@
     </footer>
 
     <script src="../public/assets/js/bootstrap.bundle.min.js"></script>
-    <script src="../public/assets/js/form.js"></script>
     <script src="../public/assets/js/script.js"></script>
+
+    <script type="module" src="../public/assets/js/form.js"></script>
+    <script type="module" src="../public/assets/js/annoucement.js"></script>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-K01XHPHL6L"></script>
     <script>

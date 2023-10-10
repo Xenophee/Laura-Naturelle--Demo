@@ -90,16 +90,16 @@
                                 <!-- ADRESSE MAIL -->
                                 <div class="mb-4 mb-xl-5 pt-xl-5">
                                     <label for="email" class="form-label">Adresse mail * :</label>
-                                    <input type="email" class="form-control" id="email" name="email" aria-describedby="email-description" autocomplete="email" aria-required="true" required>
-                                    <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="email"></small>
+                                    <input type="email" class="form-control" id="email" name="email" autocomplete="email" aria-required="true" pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
+                                    <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="email" id="emailError"></small>
                                 </div>
 
                                 <!-- ---------------------------------------------------- -->
                                 <!-- MOT DE PASSE -->
                                 <div class="mb-4 mb-xl-5">
                                     <label for="password" class="form-label">Mot de passe * :</label>
-                                    <input type="password" class="form-control" id="password" name="password" aria-describedby="password-description" aria-required="true" required>
-                                    <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="password"></small>
+                                    <input type="password" class="form-control" id="password" name="password" aria-required="true" required>
+                                    <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="password" id="passwordError"></small>
                                 </div>
 
                                 <!-- ---------------------------------------------------- -->
@@ -187,6 +187,9 @@
 
     <script src="../public/assets/js/bootstrap.bundle.min.js"></script>
     <script src="../public/assets/js/script.js"></script>
+
+    <script type="module" src="../public/assets/js/form.js"></script>
+    <script type="module" src="../public/assets/js/connexion.js"></script>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-K01XHPHL6L"></script>
     <script>

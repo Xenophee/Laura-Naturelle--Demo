@@ -1,25 +1,76 @@
+
+
+
+const messages = { email: 'une adresse mail', phone: 'un numéro de téléphone', address: 'une rue', zipcode: 'un code postal', city: 'une ville', newPassword: 'un mot de passe'};
+
+
+// ==============================================================================================
 // ----------------------------------------------------------------------------------------------
-// VISUALISATION DE L'IMAGE DANS UN INPUT FILE
+// FONCTION D'AFFICHAGE D'ERREUR DANS LE FORMULAIRE (modification des classes)
 
-const coverInput = document.getElementById('cover');
-const coverPreview = document.querySelector('.cover');
-
-if (coverInput != undefined) {
-    
-    coverInput.addEventListener('change', (event) => {
-        const file = event.target.files[0];
-        if (file) {
-        const reader = new FileReader();
-        reader.addEventListener('load', () => {
-            coverPreview.setAttribute('src', reader.result);
-        });
-        reader.readAsDataURL(file);
-        };
-    });
-
+const errorDisplay = (input) => {
+    let message = document.getElementById(`${input.id}Error`);
+    input.classList.add('error-form');
+    message.classList.remove('d-none');
 };
 
 
+// ==============================================================================================
+// ----------------------------------------------------------------------------------------------
+// FONCTION DE RETRAIT D'ERREUR DANS LE FORMULAIRE (modification des classes)
+
+const errorRemove = (input) => {
+    let message = document.getElementById(`${input.id}Error`);
+    input.classList.remove('error-form');
+    message.classList.add('d-none');
+};
+
+
+// ==============================================================================================
+// ----------------------------------------------------------------------------------------------
+// FONCTION DE PERSONNALISATION DU MESSAGE D'ERREUR
+
+const errorMessage = (input, empty = false) => {
+
+    let message = document.getElementById(`${input.id}Error`);
+
+    if (empty) {
+        message.textContent = `Veuillez saisir ${messages[input.id]}.`;
+    } else {
+        message.textContent = `Veuillez saisir ${messages[input.id]} valide.`;
+    };
+};
+
+
+// ==============================================================================================
+// ----------------------------------------------------------------------------------------------
+// FONCTION DE VÉRIFICATION POUR UN INPUT DU FORMULAIRE
+
+const checkInput = (input, regex) => {
+
+    if (input.value == '') {
+
+        if (input.required) {
+            errorDisplay(input);
+            errorMessage(input, true);
+        } else {
+            errorRemove(input);
+        };
+        
+
+    } else if (!regex.test(input.value)) {
+
+        errorDisplay(input);
+        errorMessage(input);
+        
+    } else {
+
+        errorRemove(input);
+    };
+};
+
+
+// ==============================================================================================
 // ----------------------------------------------------------------------------------------------
 // FONCTION DE COMPTAGE SUR lES TEXTAREA
 
@@ -44,126 +95,9 @@ const counterLenght = (textarea, value) => {
 
 
 
-// ==============================================================================================
-// ----------------------------------------------------------------------------------------------
-// FORMULAIRE D'ANNONCE
-
-const announcement = document.getElementById('announcement-form');
-
-if (announcement != undefined) {
-
-    const textarea = document.querySelector('textarea');
-    const textareaBtn = document.querySelector('.formatting');
-    const modalBtn = document.querySelector('.modal-footer .btn-outline');
-
-    
-    const previewText = () => {
-        preview.innerHTML = textarea.value;
-    }
-
-    // ----------------------------------------------------------------------
-    // En cas d'annulation de la suppression de l'annonce, retour du check sur le bouton modifier
-    displayModal.addEventListener('hidden.bs.modal', () => {
-        modify.checked = true;
-    });
-    // ----------------------------------------------------------------------
-    
-    // ----------------------------------------------------------------------
-    // Fait le décompte du nombre de caractères sur le textarea et affiche le message d'erreur
-    textarea.addEventListener('keydown', () => {
-        counterLenght(textarea);
-    });
-
-    // Appel de la fonction de comptage au démarrage pour pallier les cas de modification
-    counterLenght(textarea);
-    // ----------------------------------------------------------------------
-    
-    textarea.addEventListener('input', () => {
-        previewText();
-    });
-
-    previewText();
-
-    // ----------------------------------------------------------------------
-    
-    textareaBtn.addEventListener('click', () => {
-        const selectedText = textarea.value.substring(textarea.selectionStart, textarea.selectionEnd);
-        const textBefore = textarea.value.substring(0, textarea.selectionStart);
-        const textAfter = textarea.value.substring(textarea.selectionEnd);
-
-        let newText = `<span>${selectedText}</span>`;
-        
-        textarea.value = textBefore + newText + textAfter;
-        preview.innerHTML = textBefore + newText + textAfter;
-    })
-    // ----------------------------------------------------------------------
-};
+export { messages, errorDisplay, errorRemove, errorMessage, checkInput, counterLenght };
 
 
-// ==============================================================================================
-// ----------------------------------------------------------------------------------------------
-// FORMULAIRE DE PROMOTION
-
-const discount = document.getElementById('discount-form');
-
-if (discount != undefined) {
-
-    const servicesBtn = document.querySelectorAll('input[name="whichServices"]');
-    
-    servicesBtn.forEach((element, key) => {
-        element.addEventListener('click', () => {
-            if (key == 1) {
-                servicesAccordion.classList.remove('d-none');
-            } else {
-                servicesAccordion.classList.add('d-none');
-            }
-        })
-    });
-}
 
 
-// ==============================================================================================
-// ----------------------------------------------------------------------------------------------
-// FORMULAIRE DE PRESTATION
 
-
-const service = document.getElementById('service-form');
-
-if (service != undefined) {
-
-    const textarea = document.querySelector('textarea');
-    const value = Number(counterChar.textContent);
-    const typeChoices = document.querySelectorAll('.type-choice');
-    const dates = document.querySelector('.special-dates');
-    const inputDates = document.querySelectorAll('.special-dates .form-control');
-    
-    // ----------------------------------------------------------------------
-    // Fait le décompte du nombre de caractères sur le textarea et affiche le message d'erreur
-    textarea.addEventListener('keydown', () => {
-        counterLenght(textarea, value);
-    });
-
-    // Appel de la fonction de comptage au démarrage pour pallier les cas de modification
-    counterLenght(textarea, value);
-    // ----------------------------------------------------------------------
-
-    // ----------------------------------------------------------------------
-    // Affiche les dates à enregistrer en cas de prestation spéciale et les rends obligatoire
-    typeChoices.forEach(element => {
-        element.addEventListener('click', () => {
-            if (element.checked && element.value == 1) {
-                dates.classList.remove('d-none');
-                inputDates.forEach(element => {
-                    element.required = true;
-                });
-                
-            } else {
-                dates.classList.add('d-none');
-                inputDates.forEach(element => {
-                    element.required = false;
-                });
-            };
-        });
-    });
-    // ----------------------------------------------------------------------
-};

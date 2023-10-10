@@ -1,78 +1,15 @@
 
+import { messages, checkInput, errorDisplay, errorRemove, errorMessage, counterLenght } from './form.js';
+
+
 const REGEX_EMAIL = new RegExp(email.pattern);
 const REGEX_PHONE = new RegExp(phone.pattern);
-const REGEX_address = new RegExp(address.pattern);
+const REGEX_ADDRESS = new RegExp(address.pattern);
 const REGEX_ZIPCODE = new RegExp(zipcode.pattern);
 const REGEX_CITY = new RegExp(city.pattern);
 const REGEX_PASSWORD = new RegExp(newPassword.pattern);
 
-const account = document.getElementById('account-form');
-const messages = { email: 'une adresse mail', phone: 'un numéro de téléphone', address: 'une rue', zipcode: 'un code postal', city: 'une ville', newPassword: 'un mot de passe'};
 
-
-// ==============================================================================================
-// ----------------------------------------------------------------------------------------------
-// FONCTION D'AFFICHAGE D'ERREUR DANS LE FORMULAIRE (modification des classes)
-
-const errorDisplay = (input) => {
-    let message = document.getElementById(`${input.id}Error`);
-    input.classList.add('error-form');
-    message.classList.remove('d-none');
-};
-
-
-// ==============================================================================================
-// ----------------------------------------------------------------------------------------------
-// FONCTION DE RETRAIT D'ERREUR DANS LE FORMULAIRE (modification des classes)
-
-const errorRemove = (input) => {
-    let message = document.getElementById(`${input.id}Error`);
-    input.classList.remove('error-form');
-    message.classList.add('d-none');
-};
-
-
-// ==============================================================================================
-// ----------------------------------------------------------------------------------------------
-// FONCTION DE PERSONNALISATION DU MESSAGE D'ERREUR
-
-const errorMessage = (input, empty = false) => {
-    let message = document.getElementById(`${input.id}Error`);
-    if (empty) {
-        message.textContent = `Veuillez saisir ${messages[input.id]}.`;
-    } else {
-        message.textContent = `Veuillez saisir ${messages[input.id]} valide.`;
-    };
-
-};
-
-
-// ==============================================================================================
-// ----------------------------------------------------------------------------------------------
-// FONCTION DE VÉRIFICATION POUR UN INPUT DU FORMULAIRE
-
-const checkInput = (input, regex) => {
-
-    if (input.value == '') {
-
-        if (input.required == true) {
-            errorDisplay(input);
-            errorMessage(input, true);
-        } else {
-            errorRemove(input);
-        };
-        
-
-    } else if (!regex.test(input.value)) {
-
-        errorDisplay(input);
-        errorMessage(input);
-        
-    } else {
-
-        errorRemove(input);
-    };
-};
 
 
 // ==============================================================================================
@@ -107,7 +44,7 @@ phone.addEventListener('change', () => {
 });
 
 address.addEventListener('change', () => {
-    checkInput(address, REGEX_address);
+    checkInput(address, REGEX_ADDRESS);
 });
 
 zipcode.addEventListener('change', () => {
@@ -124,20 +61,4 @@ newPassword.addEventListener('change', () => {
 
 confirmPassword.addEventListener('change', checkPassword);
 
-
-
-account.addEventListener('submit', (event) => {
-    console.log('oui');
-    event.preventDefault();
-
-    checkInput(email, REGEX_EMAIL);
-    checkInput(phone, REGEX_PHONE);
-    checkInput(address, REGEX_address);
-    checkInput(zipcode, REGEX_ZIPCODE);
-    checkInput(city, REGEX_CITY);
-    checkInput(newPassword, REGEX_PASSWORD);
-    checkPassword();
-
-
-});
 
