@@ -1,17 +1,14 @@
 
 
 
-const messages = { email: 'une adresse mail', phone: 'un numéro de téléphone', address: 'une rue', zipcode: 'un code postal', city: 'une ville', newPassword: 'un mot de passe'};
-
-
 // ==============================================================================================
 // ----------------------------------------------------------------------------------------------
 // FONCTION D'AFFICHAGE D'ERREUR DANS LE FORMULAIRE (modification des classes)
 
 const errorDisplay = (input) => {
-    let message = document.getElementById(`${input.id}Error`);
+    let messageLocation = document.getElementById(`${input.id}Error`);
     input.classList.add('error-form');
-    message.classList.remove('d-none');
+    messageLocation.classList.remove('d-none');
 };
 
 
@@ -20,9 +17,9 @@ const errorDisplay = (input) => {
 // FONCTION DE RETRAIT D'ERREUR DANS LE FORMULAIRE (modification des classes)
 
 const errorRemove = (input) => {
-    let message = document.getElementById(`${input.id}Error`);
+    let messageLocation = document.getElementById(`${input.id}Error`);
     input.classList.remove('error-form');
-    message.classList.add('d-none');
+    messageLocation.classList.add('d-none');
 };
 
 
@@ -30,14 +27,14 @@ const errorRemove = (input) => {
 // ----------------------------------------------------------------------------------------------
 // FONCTION DE PERSONNALISATION DU MESSAGE D'ERREUR
 
-const errorMessage = (input, empty = false) => {
+const errorMessage = (input, message, empty = false) => {
 
-    let message = document.getElementById(`${input.id}Error`);
+    let messageLocation = document.getElementById(`${input.id}Error`);
 
     if (empty) {
-        message.textContent = `Veuillez saisir ${messages[input.id]}.`;
+        messageLocation.textContent = `Veuillez saisir ${message}.`;
     } else {
-        message.textContent = `Veuillez saisir ${messages[input.id]} valide.`;
+        messageLocation.textContent = `Veuillez saisir ${message} valide.`;
     };
 };
 
@@ -46,22 +43,22 @@ const errorMessage = (input, empty = false) => {
 // ----------------------------------------------------------------------------------------------
 // FONCTION DE VÉRIFICATION POUR UN INPUT DU FORMULAIRE
 
-const checkInput = (input, regex) => {
+const checkInput = (input, message, regex) => {
 
     if (input.value == '') {
 
         if (input.required) {
             errorDisplay(input);
-            errorMessage(input, true);
+            errorMessage(input, message, true);
         } else {
             errorRemove(input);
         };
         
 
-    } else if (!regex.test(input.value)) {
+    } else if (regex && !regex.test(input.value)) {
 
         errorDisplay(input);
-        errorMessage(input);
+        errorMessage(input, message);
         
     } else {
 
@@ -72,20 +69,47 @@ const checkInput = (input, regex) => {
 
 // ==============================================================================================
 // ----------------------------------------------------------------------------------------------
+// FONCTION DE VÉRIFICATION POUR UN TEXTAREA DU FORMULAIRE
+
+const checkTextarea = (textarea, message) => {
+
+    let textareaMessage = document.getElementById(`${textarea.id}Error`);
+
+    if (textarea.value == '') {
+
+        if (textarea.required) {
+            errorDisplay(textarea);
+            textareaMessage.textContent = message;
+        } else {
+            errorRemove(textarea);
+            textarea.textContent = '';
+        };
+        
+    } else {
+        errorRemove(textarea);
+        textarea.textContent = '';
+    };;
+};
+
+
+
+// ==============================================================================================
+// ----------------------------------------------------------------------------------------------
 // FONCTION DE COMPTAGE SUR lES TEXTAREA
 
 const counterLenght = (textarea, value) => {
 
     let content = textarea.value.length;
-        
-    if (value != undefined) {
+    let message = document.getElementById(`${textarea.id}Error`);
+    
+    if (value) {
         counterChar.textContent = value - content;
         
         // Ajout d'un message d'erreur en cas de dépassement
         if (Number(counterChar.textContent) < 0) {
-            textareaMessage.textContent = 'Vous avez dépassé le nombre de caractères autorisés.';
+            message.textContent = 'Vous avez dépassé le nombre de caractères autorisés.';
         } else {
-            textareaMessage.textContent = '';
+            message.textContent = '';
         };
     } else {
         counterChar.textContent = content;
@@ -95,7 +119,7 @@ const counterLenght = (textarea, value) => {
 
 
 
-export { messages, errorDisplay, errorRemove, errorMessage, checkInput, counterLenght };
+export { errorDisplay, errorRemove, errorMessage, checkInput, checkTextarea, counterLenght };
 
 
 

@@ -1,5 +1,6 @@
 
-import { messages, checkInput, errorDisplay, errorRemove, errorMessage, counterLenght } from './form.js';
+import { checkInput, errorDisplay, errorRemove, errorMessage, counterLenght } from './form.js';
+
 
 
 const REGEX_EMAIL = new RegExp(email.pattern);
@@ -36,27 +37,27 @@ const checkPassword = () => {
 // ÉVÉNEMENTS SUR LE FORMULAIRE
 
 email.addEventListener('change', () => {
-    checkInput(email, REGEX_EMAIL);
+    checkInput(email, 'une adresse mail', REGEX_EMAIL);
 });
 
 phone.addEventListener('change', () => {
-    checkInput(phone, REGEX_PHONE);
+    checkInput(phone, 'un numéro de téléphone', REGEX_PHONE);
 });
 
 address.addEventListener('change', () => {
-    checkInput(address, REGEX_ADDRESS);
+    checkInput(address, 'une adresse', REGEX_ADDRESS);
 });
 
 zipcode.addEventListener('change', () => {
-    checkInput(zipcode, REGEX_ZIPCODE);
+    checkInput(zipcode, 'un code postal', REGEX_ZIPCODE);
 });
 
 city.addEventListener('change', () => {
-    checkInput(city, REGEX_CITY);
+    checkInput(city, 'une ville', REGEX_CITY);
 });
 
 newPassword.addEventListener('change', () => {
-    checkInput(newPassword, REGEX_PASSWORD);
+    checkInput(newPassword, 'un mot de passe', REGEX_PASSWORD);
 });
 
 confirmPassword.addEventListener('change', checkPassword);
