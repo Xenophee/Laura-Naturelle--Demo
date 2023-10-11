@@ -138,8 +138,8 @@
                                         <th scope="col">
                                             <div class="d-flex justify-content-end">
                                                 <!-- Bouton supprimer -->
-                                                <a href="" class="btn delete py-2" title="Supprimer toutes les annonces" data-id="" data-deleteparam="" data-bs-toggle="modal" data-bs-target="#displayModal">
-                                                    <i class="bi bi-trash3" data-id="" data-deleteparam="1"></i>
+                                                <a href="" class="btn delete py-2" title="Supprimer toutes les annonces" data-action="0" data-id="" data-param="4" data-method="1" data-bs-toggle="modal" data-bs-target="#displayModal" id="deleteAll">
+                                                    <i class="bi bi-trash3" data-action="0" data-id="" data-param="4" data-method="1"></i>
                                                 </a>
                                             </div>
                                         </th>
@@ -161,8 +161,8 @@
                                         <td>
                                             <div class="d-flex justify-content-end">
                                                 <!-- Bouton supprimer -->
-                                                <button type="button" class="btn delete py-2" title="Supprimer l'annonce" data-id="" data-deleteparam="" data-bs-toggle="modal" data-bs-target="#displayModal">
-                                                    <i class="bi bi-trash3" data-id="" data-deleteparam=""></i>
+                                                <button type="button" class="btn delete delete-one py-2" title="Supprimer l'annonce" data-action="0" data-id="1" data-param="4" data-method="2" data-bs-toggle="modal" data-bs-target="#displayModal">
+                                                    <i class="bi bi-trash3" data-action="0" data-id="1" data-param="4" data-method="2"></i>
                                                 </button>
                                             </div>
                                         </td>
@@ -182,8 +182,8 @@
                                         <td>
                                             <div class="d-flex justify-content-end">
                                                 <!-- Bouton supprimer -->
-                                                <button type="button" class="btn delete py-2" title="Supprimer l'annonce" data-id="" data-deleteparam="" data-bs-toggle="modal" data-bs-target="#displayModal">
-                                                    <i class="bi bi-trash3" data-id="" data-deleteparam=""></i>
+                                                <button type="button" class="btn delete delete-one py-2" title="Supprimer l'annonce" data-action="0" data-id="2" data-param="4" data-method="2" data-bs-toggle="modal" data-bs-target="#displayModal">
+                                                    <i class="bi bi-trash3" data-action="0" data-id="2" data-param="4" data-method="2"></i>
                                                 </button>
                                             </div>
                                         </td>
@@ -198,10 +198,10 @@
                                 <label class="fw-bold mt-4 mt-md-5 mb-4 mb-md-0">Une annonce est actuellement en cours :</label>
 
                                 <div class="btn-group d-flex flex-column flex-md-row w-100 mb-4 mb-lg-5 py-md-5" role="group" aria-label="Activer / Désactiver l'annonce">
-                                    <input type="radio" class="btn-check status-choice" name="status" value="1" id="modify" autocomplete="off" required checked>
+                                    <input type="radio" class="btn-check status-choice" name="active" value="1" id="modify" autocomplete="off" required checked>
                                     <label class="btn btn-radio" for="modify">Modifier</label>
                                 
-                                    <input type="radio" class="btn-check status-choice" name="status" value="2" data-id="" data-deleteparam="" id="deactivation" autocomplete="off" data-bs-toggle="modal" data-bs-target="#displayModal" required>
+                                    <input type="radio" class="btn-check status-choice" name="active" value="0" id="deactivation" autocomplete="off" data-bs-toggle="modal" data-bs-target="#displayModal" data-action="1" data-id="3" data-param="4">
                                     <label class="btn btn-radio" for="deactivation">Désactiver</label>
                                 </div>
                             </div>
@@ -221,30 +221,32 @@
 
                             <div class="dashboard-form d-flex flex-column align-items-center">
                                 <div class="mb-4 mb-md-5 pt-4 pt-md-5 w-100">
+                                    <p class="text-center text-green fst-italic mb-5">Afin de limiter les erreurs d'orthographe, vous pouvez faire vérifier votre texte sur le site de <a href="https://bonpatron.com/fr/" class="c-pink" target="_blank" rel="noopener noreferrer">Bonpatron</a>.</p>
                                     <div class="d-flex flex-column flex-md-row justify-content-between">
                                         <label for="content" class="form-label me-3">Contenu * :</label>
-                                        <small>Nb de caractères : <span id="counterChar"></span></small>
+                                        <small>Nb de caractères restants : <span id="counterChar">500</span></small>
                                     </div>
-                                    <textarea class="form-control textarea" name="content" maxlength="500" id="content"><span>-15%</span> sur les modelages du <span>18/07</span> au <span>28/08</span></textarea>
+                                    <textarea class="form-control textarea" name="content" maxlength="500" id="content" required><span>-15%</span> sur les modelages du <span>18/07</span> au <span>28/08</span></textarea>
+                                    
+                                    <div class="text-danger fst-italic mt-2" id="contentError"></div>
                                     <button type="button" class="formatting mt-3 mx-2">Mettre en valeur</button>
-                                    <div class="text-danger fst-italic mt-2" id="textareaMessage"></div>
                                 </div>
     
                                 <label class="text-center fw-bold mb-4">Quand l'annonce doit-elle apparaître sur le site ?</label>
     
-                                <div class="d-flex flex-column flex-md-row justify-content-around align-items-center w-100 mb-4 mb-md-5">
+                                <div class="d-flex flex-column flex-md-row justify-content-around w-100 mb-4 mb-md-5">
                                     <div class="form-div me-md-5 mb-3 mb-md-0">
-                                        <label for="first_date" class="form-label me-3">Date de début * :</label>
-                                        <input type="date" class="form-control" id="first_date" name="first_date" value="2023-07-18" required>
-                                        <div class="text-danger fst-italic mt-2"></div>
+                                        <label for="firstDate" class="form-label me-3">Date de début * :</label>
+                                        <input type="date" class="form-control" id="firstDate" name="firstDate" min="" value="" pattern="^\d{4}-\d{2}-\d{2}$" required>
+                                        <div class="text-danger fst-italic mt-2" id="firstDateError"></div>
                                     </div>
     
-                                    <span class="fw-bold">au</span>
+                                    <span class="align-self-center fw-bold">au</span>
         
                                     <div class="form-div ms-md-5 mt-3 mt-md-0">
-                                        <label for="last_date" class="form-label me-3">Date de fin * :</label>
-                                        <input type="date" class="form-control" id="last_date" name="last_date" value="2023-08-28" required>
-                                        <div class="text-danger fst-italic mt-2"></div>
+                                        <label for="lastDate" class="form-label me-3">Date de fin * :</label>
+                                        <input type="date" class="form-control" id="lastDate" name="lastDate" min="" value="2023-08-28" pattern="^\d{4}-\d{2}-\d{2}$" required>
+                                        <div class="text-danger fst-italic mt-2" id="lastDateError"></div>
                                     </div>
                                 </div>
     
@@ -268,15 +270,15 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5">Supprimer l'annonce</h1>
+                    <h1 class="modal-title fs-5"></h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body py-4">
-                    <p class="text-center">Êtes vous certain de vouloir <strong>supprimer</strong> l'annonce en cours ?</p>
+                    <p class="text-center"></p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline py-2 me-md-4 mb-3 mb-md-0" data-bs-dismiss="modal">Non</button>
-                    <a class="btn btn-classic py-2" id="delete-announcement">Oui</a>
+                    <button type="button" class="btn btn-outline me-md-4 mb-3 mb-md-0" data-bs-dismiss="modal">Non</button>
+                    <a class="btn btn-classic py-2" id="controllerLink">Oui</a>
                 </div>
             </div>
         </div>
@@ -352,7 +354,8 @@
     <script src="../public/assets/js/script.js"></script>
 
     <script type="module" src="../public/assets/js/form.js"></script>
-    <script type="module" src="../public/assets/js/annoucement.js"></script>
+    <script type="module" src="../public/assets/js/modal.link.js"></script>
+    <script type="module" src="../public/assets/js/announcement.js"></script>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-K01XHPHL6L"></script>
     <script>
