@@ -85,7 +85,7 @@
     background-color: #e3b04c;
 }
 
-.desactivate {
+.deactivate {
     color: var(--main-color);
     border: var(--border-light-solid);
     background-color: var(--brown-color);
@@ -95,7 +95,7 @@
 .edit:hover,
 .delete:hover,
 .validate:hover,
-.desactivate:hover {
+.deactivate:hover {
     background-color: transparent;
     color: var(--special-dark-color);
     border: var(--border-dark-special-solid);
@@ -105,7 +105,7 @@
 .edit,
 .delete,
 .validate,
-.desactivate {
+.deactivate {
     width: 55px;
 }
 
@@ -135,7 +135,7 @@
         font-size: 1.2rem;
     }
 
-    .view, .edit, .delete, .validate, .desactivate {
+    .view, .edit, .delete, .validate, .deactivate {
         width: 65px;
     }
 }
@@ -152,7 +152,7 @@
 
     
 
-    .view, .edit, .delete, .desactivate {
+    .view, .edit, .delete, .deactivate {
         width: 70px;
     }
 
