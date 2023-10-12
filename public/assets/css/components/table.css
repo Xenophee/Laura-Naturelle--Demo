@@ -12,11 +12,11 @@ tr {
     height: 60px;
 }
 
-th {
+.table-hover-green th {
     color: var(--first-color);
 }
 
-tr:not(thead tr) {
+.table-hover-green tr:not(thead tr) {
     border: var(--first-color);
 }
 
@@ -32,15 +32,15 @@ tr:not(thead tr) {
 /* ---------------------------------------- */
 /* Tableau en attente de publication */
 
-.table-news .table-group-divider {
+.table-hover-brown .table-group-divider {
     border-top: var(--border-brown-medium-solid);
 }
 
-.table-news tr:not(thead tr) {
+.table-hover-brown tr:not(thead tr) {
     border-bottom: var(--border-brown-thin-solid);
 }
 
-.table-news th {
+.table-hover-brown th {
     color: var(--brown-color);
 }
 

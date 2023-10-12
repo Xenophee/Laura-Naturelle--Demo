@@ -81,8 +81,9 @@ body {
     color: var(--brown-color);
 }
 
-.c-pink {
-    color: var(--special-dark-color);
+.bg-dark-pink {
+    background-color: var(--special-dark-color);
+    color: var(--main-color);
 }
 
 ::-webkit-scrollbar {
@@ -93,3 +94,4 @@ body {
 ::-webkit-scrollbar-thumb {
     background-color: var(--special-dark-color);
 }
+

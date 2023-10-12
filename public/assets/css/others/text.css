@@ -152,11 +152,19 @@ h1 span:first-child {
 }
 
 .text-green {
-    color: var(--third-color);
+    color: var(--second-color);
 }
 
 .text-brown {
     color: var(--brown-color);
+}
+
+.text-pink {
+    color: var(--special-dark-color);
+}
+
+.underline {
+    text-decoration: underline;
 }
 
 
