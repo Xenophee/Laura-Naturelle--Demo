@@ -118,8 +118,7 @@
                                         <input type="radio" name="civility" value="2" id="mrs" class="form-check-input me-2" aria-describedby="civility-description" aria-required="true" required>
                                         <label class="form-check-label" for="mrs">Mme</label>
                                     </div>
-                                    <p class="visually-hidden" id="civility-description"></p>
-                                    <small class="d-none text-danger fst-italic ms-5" role="alert" aria-errormessage="civility"></small>
+                                    <small class="d-none text-danger fst-italic ms-5" role="alert" aria-errormessage="civility" id="civilityError"></small>
                                 </div>
                                 
                                 <!-- ---------------------------------------------------- -->
@@ -127,9 +126,8 @@
                                 <div class="mb-4">
                                     <label for="lastname" class="form-label">Nom * :</label>
                                     <input type="text" class="form-control" aria-describedby="lastname-description" id="lastname" name="lastname"
-                                        autocomplete="family-name" pattern="" value="" aria-required="true" required>
-                                    <p class="visually-hidden" id="lastname-description"></p>
-                                    <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="lastname"></small>
+                                        autocomplete="family-name" pattern="^['A-Za-zÀ-ÿ\s-]+$" value="" aria-required="true" required>
+                                    <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="lastname" id="lastnameError"></small>
                                 </div>
 
                                 <!-- ---------------------------------------------------- -->
@@ -137,9 +135,8 @@
                                 <div class="mb-4">
                                     <label for="firstname" class="form-label">Prénom * :</label>
                                     <input type="text" class="form-control" aria-describedby="firstname-description" id="firstname" name="firstname"
-                                        autocomplete="given-name" pattern="" value="" aria-required="true" required>
-                                    <p class="visually-hidden" id="firstname-description"></p>
-                                    <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="firstname"></small>
+                                        autocomplete="given-name" pattern="^['A-Za-zÀ-ÿ\s-]+$" value="" aria-required="true" required>
+                                    <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="firstname" id="firstnameError"></small>
                                 </div>
 
                                 <!-- ---------------------------------------------------- -->
@@ -147,9 +144,8 @@
                                 <div class="mb-4">
                                     <label for="email" class="form-label">Adresse mail * :</label>
                                     <input type="email" class="form-control" id="email" name="email"
-                                        aria-describedby="email-description" autocomplete="email" aria-required="true" required>
-                                    <p class="visually-hidden" id="email-description"></p>
-                                    <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="email"></small>
+                                        aria-describedby="email-description" autocomplete="email" pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" aria-required="true" required>
+                                    <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="email" id="emailError"></small>
                                 </div>
 
                                 <!-- ---------------------------------------------------- -->
@@ -163,8 +159,7 @@
                                         <option value="3">Problème technique sur le site</option>
                                         <option value="4">Autre</option>
                                     </select>
-                                    <p class="visually-hidden" id="object-description"></p>
-                                    <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="object"></small>
+                                    <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="object" id="objectError"></small>
                                 </div>
 
                                 <!-- ---------------------------------------------------- -->
@@ -172,8 +167,7 @@
                                 <div class="mt-4 mb-5">
                                     <label for="request" class="form-label">Votre message * :</label>
                                     <textarea class="form-control textarea" aria-describedby="message-description" id="request" name="request" aria-required="true" required></textarea>
-                                    <p class="visually-hidden" id="message-description"></p>
-                                    <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="request"></small>
+                                    <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="request" id="requestError"></small>
                                 </div>
 
                                 <!-- ---------------------------------------------------- -->
@@ -268,6 +262,9 @@
 
     <script src="../public/assets/js/bootstrap.bundle.min.js"></script>
     <script src="../public/assets/js/script.js"></script>
+
+    <script type="module" src="../public/assets/js/form.js"></script>
+    <script type="module" src="../public/assets/js/contact.js"></script>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-K01XHPHL6L"></script>
     <script>

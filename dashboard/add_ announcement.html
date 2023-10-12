@@ -126,14 +126,13 @@
                         <h1 class="category-title text-center py-4 my-5 px-3 px-md-5">Mes annonces</h1>
 
                         <div class="table-responsive pt-md-5 my-4 my-md-5">
-                            <table class="table align-middle table-hover-brown table-news">
+                            <table class="table align-middle table-hover-brown">
                                 <thead>
                                     <tr>
                                         <th scope="col"></th>
                                         <th scope="col">
                                             <h2>Anciennes annonces</h2>
                                         </th>
-                                        <th scope="col"></th>
                                         <th scope="col"></th>
                                         <th scope="col">
                                             <div class="d-flex justify-content-end">
@@ -153,10 +152,7 @@
                                             Toutes les prestations gratuites !
                                         </td>
                                         <td>
-                                            <div class="table-badge-beige d-flex justify-content-center align-items-center fw-bold w-100 px-2">10/02/2020</div>
-                                        </td>
-                                        <td>
-                                            <div class="table-badge-green d-flex justify-content-center align-items-center w-100 px-2">20/02/2020</div>
+                                            <div class="table-badge-beige d-flex justify-content-center align-items-center text-center fw-bold text-nowrap w-100 px-3 py-2">Du 10/02/2020 au 20/02/2020</div>
                                         </td>
                                         <td>
                                             <div class="d-flex justify-content-end">
@@ -174,10 +170,7 @@
                                             Le salon sera exceptionnellement fermé du <span>25/07</span> au <span>30/07</span>
                                         </td>
                                         <td>
-                                            <div class="table-badge-beige d-flex justify-content-center align-items-center fw-bold w-100 px-2">25/07/2022</div>
-                                        </td>
-                                        <td>
-                                            <div class="table-badge-green d-flex justify-content-center align-items-center w-100 px-2">30/07/2022</div>
+                                            <div class="table-badge-beige d-flex justify-content-center align-items-center text-center fw-bold text-nowrap w-100 px-3 py-2">Du 25/07/2022 au 30/07/2022</div>
                                         </td>
                                         <td>
                                             <div class="d-flex justify-content-end">
@@ -221,14 +214,14 @@
 
                             <div class="dashboard-form d-flex flex-column align-items-center">
                                 <div class="mb-4 mb-md-5 pt-4 pt-md-5 w-100">
-                                    <p class="text-center text-green fst-italic mb-5">Afin de limiter les erreurs d'orthographe, vous pouvez faire vérifier votre texte sur le site de <a href="https://bonpatron.com/fr/" class="c-pink" target="_blank" rel="noopener noreferrer">Bonpatron</a>.</p>
+                                    <p class="text-center text-green fst-italic mb-5">Afin de limiter les erreurs d'orthographe, vous pouvez faire vérifier votre texte sur le site de <a href="https://bonpatron.com/fr/" class="text-pink underline" target="_blank" rel="noopener noreferrer">Bonpatron</a>.</p>
                                     <div class="d-flex flex-column flex-md-row justify-content-between">
                                         <label for="content" class="form-label me-3">Contenu * :</label>
                                         <small>Nb de caractères restants : <span id="counterChar">500</span></small>
                                     </div>
                                     <textarea class="form-control textarea" name="content" maxlength="500" id="content" required><span>-15%</span> sur les modelages du <span>18/07</span> au <span>28/08</span></textarea>
                                     
-                                    <div class="text-danger fst-italic mt-2" id="contentError"></div>
+                                    <div class="text-danger fst-italic mt-2" role="alert" aria-errormessage="content" id="contentError"></div>
                                     <button type="button" class="formatting mt-3 mx-2">Mettre en valeur</button>
                                 </div>
     
@@ -238,7 +231,7 @@
                                     <div class="form-div me-md-5 mb-3 mb-md-0">
                                         <label for="firstDate" class="form-label me-3">Date de début * :</label>
                                         <input type="date" class="form-control" id="firstDate" name="firstDate" min="" value="" pattern="^\d{4}-\d{2}-\d{2}$" required>
-                                        <div class="text-danger fst-italic mt-2" id="firstDateError"></div>
+                                        <div class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="firstDate" id="firstDateError"></div>
                                     </div>
     
                                     <span class="align-self-center fw-bold">au</span>
@@ -246,7 +239,7 @@
                                     <div class="form-div ms-md-5 mt-3 mt-md-0">
                                         <label for="lastDate" class="form-label me-3">Date de fin * :</label>
                                         <input type="date" class="form-control" id="lastDate" name="lastDate" min="" value="2023-08-28" pattern="^\d{4}-\d{2}-\d{2}$" required>
-                                        <div class="text-danger fst-italic mt-2" id="lastDateError"></div>
+                                        <div class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="lastDate" id="lastDateError"></div>
                                     </div>
                                 </div>
     
