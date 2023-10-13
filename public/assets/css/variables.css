@@ -24,6 +24,8 @@
     --brown-filter-color: #c0855248;
     --special-dark-filter: #e768993d;
 
+    --border-filter-special-thin-solid: var(--special-dark-filter) 1px solid;
+
     --special-font: 'Petrona', serif;
     --main-font: 'Lato', sans-serif;
 

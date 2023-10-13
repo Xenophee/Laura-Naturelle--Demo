@@ -54,9 +54,21 @@
     padding-right: 0;
 }
 
+.accordion-price-time .accordion-item {
+    position: relative;
+}
+
 .accordion-price-time .accordion-body {
+    position: absolute;
+    background-color: var(--main-color);
+    border-left: var(--border-filter-special-thin-solid);
+    border-right: var(--border-filter-special-thin-solid);
+    border-bottom: var(--border-filter-special-thin-solid);
+    width: 100%;
     padding-top: 0;
 }
+
+
 
 
 /* ================================================================================================================================= */
