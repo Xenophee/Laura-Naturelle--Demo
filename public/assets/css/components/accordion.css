@@ -3,6 +3,7 @@
     border-left: var(--border-special-thin-solid);
     border-right: var(--border-special-thin-solid);
     border-radius: 5px;
+    font-family: var(--normal-font);
 }
 
 .accordion-item {
@@ -34,6 +35,27 @@
 
 .accordion-block {
     width: 100%;
+}
+
+
+
+.accordion-price-time, .accordion-price-time .accordion-button {
+    border: none !important;
+}
+
+.accordion-price-time .accordion-button {
+    color: var(--main-dark-color);
+    background-color: var(--special-dark-filter);
+    box-shadow: none;
+}
+
+.accordion-price-time .accordion-button {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.accordion-price-time .accordion-body {
+    padding-top: 0;
 }
 
 
