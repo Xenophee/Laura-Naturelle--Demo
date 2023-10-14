@@ -17,11 +17,11 @@
 }
 
 .accordion-button::after {
-    background-image: url(../../img/chevron-double-vers-le-bas.webp);
+    background-image: url(../../img/chevron-pink.webp);
 }
 
 .accordion-button:not(.collapsed)::after {
-    background-image: url(../../img/chevron-double-vers-le-bas.webp);
+    background-image: url(../../img/chevron-pink.webp);
 }
 
 .accordion-button {
@@ -44,12 +44,6 @@
 }
 
 .accordion-price-time .accordion-button {
-    color: var(--main-dark-color);
-    background-color: var(--special-dark-filter);
-    box-shadow: none;
-}
-
-.accordion-price-time .accordion-button {
     padding-left: 0;
     padding-right: 0;
 }
@@ -58,18 +52,75 @@
     position: relative;
 }
 
+
 .accordion-price-time .accordion-body {
     position: absolute;
     background-color: var(--main-color);
-    border-left: var(--border-filter-special-thin-solid);
-    border-right: var(--border-filter-special-thin-solid);
-    border-bottom: var(--border-filter-special-thin-solid);
     width: 100%;
     padding-top: 0;
     z-index: 10;
 }
 
+/* --------------------------------------------------------------- */
+/* EN VERSION ROSE */
 
+.accordion-price-time .accordion-button {
+    color: var(--main-dark-color);
+    background-color: var(--special-dark-filter);
+    box-shadow: none;
+}
+
+.accordion-pink .accordion-body {
+    border-left: var(--border-filter-special-thin-solid);
+    border-right: var(--border-filter-special-thin-solid);
+    border-bottom: var(--border-filter-special-thin-solid);
+}
+
+/* --------------------------------------------------------------- */
+/* EN VERSION VERTE */
+
+.accordion-green .accordion-button {
+    color: var(--main-dark-color);
+    background-color: var(--second-filter-color);
+    box-shadow: none;
+}
+
+.accordion-green .accordion-body {
+    border-left: var(--border-filter-second-thin-solid);
+    border-right: var(--border-filter-second-thin-solid);
+    border-bottom: var(--border-filter-second-thin-solid);
+}
+
+.accordion-green .accordion-button::after {
+    background-image: url(../../img/chevron-green.webp);
+}
+
+.accordion-green .accordion-button:not(.collapsed)::after {
+    background-image: url(../../img/chevron-green.webp);
+}
+
+/* --------------------------------------------------------------- */
+/* EN VERSION MARRON */
+
+.accordion-brown .accordion-button {
+    color: var(--main-dark-color);
+    background-color: var(--brown-filter-color);
+    box-shadow: none;
+}
+
+.accordion-brown .accordion-body {
+    border-left: var(--border-filter-brown-thin-solid);
+    border-right: var(--border-filter-brown-thin-solid);
+    border-bottom: var(--border-filter-brown-thin-solid);
+}
+
+.accordion-brown .accordion-button::after {
+    background-image: url(../../img/chevron-brown.webp);
+}
+
+.accordion-brown .accordion-button:not(.collapsed)::after {
+    background-image: url(../../img/chevron-brown.webp);
+}
 
 
 /* ================================================================================================================================= */

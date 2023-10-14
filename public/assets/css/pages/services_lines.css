@@ -1,37 +1,4 @@
 
-/* ================================================================================================================================= */
-/* --------------------------------------------------------------------------------------------------------------------------------- */
-/* STYLE GLOBALE A SERVICE */
-
-
-.classic-section {
-    background-color: var(--second-filter-color);
-}
-
-.package-section {
-    background-color: var(--brown-filter-color);
-}
-
-.special-section {
-    background-color: var(--special-dark-filter);
-}
-
-.special-section .service, .classic-section .service, .package-section .service {
-    background-color: var(--main-color);
-}
-
-.classic-section .service {
-    border: var(--border-third-solid);
-}
-
-.special-section .service {
-    border: var(--border-dark-special-solid);
-}
-
-.package-section .service {
-    border: var(--border-brown-solid);
-}
-
 
 
 
@@ -74,6 +41,9 @@
     width: 90%;
 }
 
+.time-badge-line, .price-badge-line {
+    width: 100%;
+}
 
 
 /* ================================================================================================================================= */
@@ -115,6 +85,10 @@
         width: 35%;
     }
 
+    .time-badge-line, .price-badge-line {
+        width: auto;
+        min-width: 30%;
+    }
 }
 
 

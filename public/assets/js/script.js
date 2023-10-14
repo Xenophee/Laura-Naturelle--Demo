@@ -30,3 +30,35 @@ if (window.innerWidth >= 1200) {
     });
 
 };
+
+
+
+// 
+
+const genderCategory = document.querySelectorAll('.gender-category');
+const female = document.getElementById('female');
+const male = document.getElementById('male');
+
+const displayBlock = (event) => {
+    
+    for (const category of genderCategory) {
+        category.classList.remove('active');
+    };
+    
+    event.target.classList.add('active');
+
+    if (event.target == genderCategory[1]) {
+        male.classList.remove('d-none');
+        female.classList.add('d-none');
+    } else {
+        female.classList.remove('d-none');
+        male.classList.add('d-none');
+    };
+};
+
+if (genderCategory != null) {
+    for (const category of genderCategory) {
+        category.addEventListener('click', displayBlock);
+    };
+};
+
