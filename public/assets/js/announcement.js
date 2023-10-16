@@ -37,7 +37,7 @@ previewText();
 
 // ==============================================================================================
 // ----------------------------------------------------------------------------------------------
-// MODIFICATION DU CONTENU DU TEXTAREA EN METTANT LE MORCEAU SURLIGNE EN VALEUR
+// COMPTAGE DES CARACTÈRES DANS LE TEXTAREA
 
 // Fait le décompte du nombre de caractères sur le textarea et affiche le message d'erreur
 textarea.addEventListener('keydown', () => {
