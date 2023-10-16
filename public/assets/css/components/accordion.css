@@ -32,12 +32,13 @@
     box-shadow: none;
 }
 
-
 .accordion-block {
     width: 100%;
 }
 
 
+/* --------------------------------------------------------------- */
+/* ACCORDÉON DES PRIX ET DE LA DURÉE */
 
 .accordion-price-time, .accordion-price-time .accordion-button {
     border: none !important;
@@ -52,13 +53,17 @@
     position: relative;
 }
 
-
 .accordion-price-time .accordion-body {
     position: absolute;
     background-color: var(--main-color);
     width: 100%;
     padding-top: 0;
     z-index: 10;
+    box-shadow: var(--box-light-shadow);
+}
+
+.accordion-min {
+    width: 100%;
 }
 
 /* --------------------------------------------------------------- */
@@ -134,5 +139,9 @@
 
     .accordion-block {
         width: 50%;
+    }
+
+    .accordion-min {
+        width: 30%;
     }
 }
