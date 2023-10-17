@@ -49,12 +49,10 @@ const displayForm = (value, index) => {
 
     for(const firstSchedulesInput of firstSchedulesInputs) {
         firstSchedulesInput.required = false;
-        firstSchedulesInput.setAttribute('aria-required', 'false');
     };
 
     for(const secondSchedulesInput of secondSchedulesInputs) {
         secondSchedulesInput.required = false;
-        secondSchedulesInput.setAttribute('aria-required', 'false');
     };
     // -----------------------------------------------------
 
@@ -67,7 +65,6 @@ const displayForm = (value, index) => {
 
         for(const firstSchedulesInput of firstSchedulesInputs) {
             firstSchedulesInput.required = true;
-            firstSchedulesInput.setAttribute('aria-required', 'true');
         };
 
         if (value == 2) {
@@ -76,7 +73,6 @@ const displayForm = (value, index) => {
 
             for(const secondSchedulesInput of secondSchedulesInputs) {
                 secondSchedulesInput.required = true;
-                secondSchedulesInput.setAttribute('aria-required', 'true');
             };
 
         };

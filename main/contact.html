@@ -111,11 +111,11 @@
                                 <label>Civilité * :</label>
                                 <div class="mt-2 mb-4 d-flex justify-content-around justify-content-sm-start">
                                     <div class="d-inline d-flex align-items-center me-3">
-                                        <input type="radio" name="civility" value="1" id="mr" class="form-check-input me-2" aria-describedby="civility-description" aria-required="true" required>
+                                        <input type="radio" name="civility" value="1" id="mr" class="form-check-input me-2" aria-describedby="civility-description" required>
                                         <label class="form-check-label" for="mr">M</label>
                                     </div>
                                     <div class="ps-3 d-inline d-flex align-items-center">
-                                        <input type="radio" name="civility" value="2" id="mrs" class="form-check-input me-2" aria-describedby="civility-description" aria-required="true" required>
+                                        <input type="radio" name="civility" value="2" id="mrs" class="form-check-input me-2" aria-describedby="civility-description" required>
                                         <label class="form-check-label" for="mrs">Mme</label>
                                     </div>
                                     <small class="d-none text-danger fst-italic ms-5" role="alert" aria-errormessage="civility" id="civilityError"></small>
@@ -126,7 +126,7 @@
                                 <div class="mb-4">
                                     <label for="lastname" class="form-label">Nom * :</label>
                                     <input type="text" class="form-control" aria-describedby="lastname-description" id="lastname" name="lastname"
-                                        autocomplete="family-name" pattern="^['A-Za-zÀ-ÿ\s-]+$" value="" aria-required="true" required>
+                                        autocomplete="family-name" pattern="^['A-Za-zÀ-ÿ\s-]+$" value="" required>
                                     <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="lastname" id="lastnameError"></small>
                                 </div>
 
@@ -135,7 +135,7 @@
                                 <div class="mb-4">
                                     <label for="firstname" class="form-label">Prénom * :</label>
                                     <input type="text" class="form-control" aria-describedby="firstname-description" id="firstname" name="firstname"
-                                        autocomplete="given-name" pattern="^['A-Za-zÀ-ÿ\s-]+$" value="" aria-required="true" required>
+                                        autocomplete="given-name" pattern="^['A-Za-zÀ-ÿ\s-]+$" value="" required>
                                     <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="firstname" id="firstnameError"></small>
                                 </div>
 
@@ -144,7 +144,7 @@
                                 <div class="mb-4">
                                     <label for="email" class="form-label">Adresse mail * :</label>
                                     <input type="email" class="form-control" id="email" name="email"
-                                        aria-describedby="email-description" autocomplete="email" pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" aria-required="true" required>
+                                        aria-describedby="email-description" autocomplete="email" pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
                                     <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="email" id="emailError"></small>
                                 </div>
 
@@ -152,7 +152,7 @@
                                 <!-- OBJET -->
                                 <div class="mb-4">
                                     <label for="object" class="form-label mb-2">Objet * :</label>
-                                    <select class="form-select" aria-describedby="object-description" id="object" name="object" aria-required="true" required>
+                                    <select class="form-select" aria-describedby="object-description" id="object" name="object" required>
                                         <option value="0">-</option>
                                         <option value="1">Question / demande sur une prestation</option>
                                         <option value="2">Question / demande sur les cartes cadeaux</option>
@@ -166,7 +166,7 @@
                                 <!-- MESSAGE -->
                                 <div class="mt-4 mb-5">
                                     <label for="request" class="form-label">Votre message * :</label>
-                                    <textarea class="form-control textarea" aria-describedby="message-description" id="request" name="request" aria-required="true" required></textarea>
+                                    <textarea class="form-control textarea" aria-describedby="message-description" id="request" name="request" required></textarea>
                                     <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="request" id="requestError"></small>
                                 </div>
 
