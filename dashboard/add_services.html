@@ -129,6 +129,8 @@
     
                                 <fieldset class="mb-5">
 
+                                    <!-- -------------------------------------------------------------- -->
+                                    <!-- CATÉGORIE DE LA PRESTATION -->
                                     <div class="mb-4 pt-md-5">
                                         <label for="object" class="form-label mb-2">Catégorie de la prestation * :</label>
                                         <select class="form-select" id="object" name="object" required>
@@ -138,72 +140,97 @@
                                             <option value="3">Soins des mains</option>
                                             <option value="4">Modelages</option>
                                         </select>
-                                        <div class="text-danger fst-italic mt-2"></div>
+                                        <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="object" id="objectError"></small>
                                     </div>
+                                    <!-- -------------------------------------------------------------- -->
 
+                                    <!-- -------------------------------------------------------------- -->
+                                    <!-- NOM DE LA PRESTATION -->
                                     <div class="mb-4 pt-md-5">
-                                        <label for="title" class="form-label me-3">Titre * :</label>
-                                        <input type="text" class="form-control" id="title" name="title" value="" required>
-                                        <div class="text-danger fst-italic mt-2"></div>
+                                        <label for="name" class="form-label me-3">Nom * :</label>
+                                        <input type="text" class="form-control" id="name" name="name" value="" required>
+                                        <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="name" id="nameError"></small>
                                     </div>
+                                    <!-- -------------------------------------------------------------- -->
 
+                                    <!-- -------------------------------------------------------------- -->
+                                    <!-- DESCRIPTION DE LA PRESTATION -->
                                     <div class="mb-4 pt-md-5">
                                         <div class="d-flex flex-column flex-md-row justify-content-between">
                                             <label for="description" class="form-label me-3">Description :</label>
                                             <small>Nb de caractères restants : <span id="counterChar">200</span></small>
                                         </div>
                                         <textarea class="form-control textarea" name="description" id="description" maxlength="200"></textarea>
-                                        <div class="text-danger fst-italic mt-2" id="textareaMessage"></div>
+                                        <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="description" id="descriptionError"></small>
                                     </div>
+                                    <!-- -------------------------------------------------------------- -->
 
-                                    <div class="d-flex flex-column flex-md-row justify-content-between pt-md-5">
+                                    <!-- -------------------------------------------------------------- -->
+                                    <!-- DURÉE ET TARIF -->
+                                    <div class="d-flex flex-column flex-md-row justify-content-between pt-md-5 pb-4">
                                         <div class="mb-4">
                                             <label for="duration" class="form-label me-3">Durée (en minutes) * :</label>
                                             <input type="number" class="form-control" id="duration" name="duration" value="" required>
-                                            <div class="text-danger fst-italic mt-2"></div>
+                                            <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="duration" id="durationError"></small>
                                         </div>
     
                                         <div class="mb-md-4">
-                                            <label for="price" class="form-label me-3">Prix * :</label>
+                                            <label for="price" class="form-label me-3">Tarif * :</label>
                                             <input type="number" class="form-control" id="price" name="price" value="" required>
-                                            <div class="text-danger fst-italic mt-2"></div>
+                                            <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="price" id="priceError"></small>
                                         </div>
                                     </div>
-
-                                    <div class="btn-group d-flex mt-4 mt-md-0 py-md-5" role="group" aria-label="Choisir le type de prestation">
+                                    <!-- -------------------------------------------------------------- -->
+                                
+                                    <!-- -------------------------------------------------------------- -->
+                                    <!-- PRESTATION CLASSIQUE OU FORFAIT -->
+                                    <small class="d-none d-block text-danger text-center fst-italic mt-2" role="alert" id="packageError"></small>
+                                    <div class="btn-group d-flex mt-3 mb-5" role="group" aria-label="Choisir le type de prestation">
+                                        
                                         <input type="radio" class="btn-check" name="package" value="0" id="classic" autocomplete="off" required checked>
                                         <label class="btn btn-radio" for="classic">Prestation classique</label>
                                     
-                                        <input type="radio" class="btn-check" name="package" value="1" id="package" autocomplete="off" required>
+                                        <input type="radio" class="btn-check" name="package" value="1" id="package" autocomplete="off">
                                         <label class="btn btn-radio" for="package">Prestation en forfait</label>
                                     </div>
-
-                                    <div class="btn-group d-flex mt-4 mt-md-0 pb-md-5" role="group" aria-label="Choisir le type de prestation">
+                                    <!-- -------------------------------------------------------------- -->
+                                    
+                                    <!-- -------------------------------------------------------------- -->
+                                    <!-- PRESTATION EXCLUSIVE OU PERMANENTE -->
+                                    <small class="d-none d-block text-danger text-center fst-italic mt-2" role="alert" id="exclusiveError"></small>
+                                    <div class="btn-group d-flex mt-3 mb-5" role="group" aria-label="Choisir le type de prestation">
                                         <input type="radio" class="btn-check type-choice" name="exclusive" value="0" id="permanent" autocomplete="off" required checked>
                                         <label class="btn btn-radio" for="permanent">Prestation permanente</label>
                                     
-                                        <input type="radio" class="btn-check type-choice" name="exclusive" value="1" id="exclusive" autocomplete="off" required>
+                                        <input type="radio" class="btn-check type-choice" name="exclusive" value="1" id="exclusive" autocomplete="off">
                                         <label class="btn btn-radio" for="exclusive">Prestation exclusive</label>
                                     </div>
+                                    <!-- -------------------------------------------------------------- -->
 
+                                    <!-- -------------------------------------------------------------- -->
+                                    <!-- DATES EN CAS DE PRESTATIONS EXCLUSIVES -->
                                     <div class="special-dates d-none">
-                                        <div class="mb-md-4">
-                                            <label for="publication" class="form-label me-3">Date de début * :</label>
-                                            <input type="date" class="form-control" id="publication" name="publication" value="">
-                                            <div class="text-danger fst-italic mt-2"></div>
+                                        <div class="mb-4">
+                                            <label for="startExclusiveDate" class="form-label me-3">Date de début * :</label>
+                                            <input type="date" class="form-control" id="startExclusiveDate" name="startExclusiveDate" value="">
+                                            <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="startExclusiveDate" id="startExclusiveDateError"></small>
                                         </div>
 
                                         <div class="mb-md-4">
-                                            <label for="deactivation" class="form-label me-3">Date de fin * :</label>
-                                            <input type="date" class="form-control" id="deactivation" name="deactivation" value="">
-                                            <div class="text-danger fst-italic mt-2"></div>
+                                            <label for="endExclusiveDate" class="form-label me-3">Date de fin * :</label>
+                                            <input type="date" class="form-control" id="endExclusiveDate" name="endExclusiveDate" value="">
+                                            <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="endExclusiveDate" id="endExclusiveDateError"></small>
                                         </div>
                                     </div>
+                                    <!-- -------------------------------------------------------------- -->
                                 </fieldset>
         
+                                <!-- -------------------------------------------------------------- -->
+                                <!-- BOUTON DE VALIDATION -->
                                 <div class="d-flex justify-content-center pb-md-5 mb-5">
                                     <button type="submit" class="btn btn-classic py-2"><i class="bi bi-pencil-fill me-3" aria-hidden="true"></i>Ajouter la prestation</button>
                                 </div>
+                                <!-- -------------------------------------------------------------- -->
     
                             </form>
                         </section>

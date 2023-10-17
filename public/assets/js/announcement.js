@@ -3,7 +3,7 @@
 
 import { checkInput, checkTextarea, errorDisplay, errorRemove, errorMessage, counterLenght } from './form.js';
 
-const REGEX_DATE = new RegExp(firstDate.pattern);
+const REGEX_DATE = new RegExp(startDate.pattern);
 
 const deleteBtns = document.querySelectorAll('.delete-one');
 
@@ -121,12 +121,12 @@ content.addEventListener('input', () => {
     checkTextarea(content, 'Veuillez saisir l\'annonce à afficher.');
 });
 
-firstDate.addEventListener('input', () => {
-    checkInput(firstDate, 'une date', REGEX_DATE);
+startDate.addEventListener('input', () => {
+    checkInput(startDate, 'une date', REGEX_DATE);
 });
 
-lastDate.addEventListener('input', () => {
-    checkInput(lastDate, 'une date', REGEX_DATE);
+endDate.addEventListener('input', () => {
+    checkInput(endDate, 'une date', REGEX_DATE);
 });
 
 // ----------------------------------------------------------------------

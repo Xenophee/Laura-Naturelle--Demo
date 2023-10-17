@@ -1,6 +1,6 @@
 
 
-import { messages, checkInput, errorDisplay, errorRemove, errorMessage, counterLenght } from './form.js';
+import { checkInput, errorDisplay, errorRemove, errorMessage, counterLenght } from './form.js';
 
 
 
