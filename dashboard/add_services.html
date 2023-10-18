@@ -125,13 +125,22 @@
                         <section class="d-flex flex-column justify-content-center align-items-center">
                             <h1 class="category-title text-center py-4 my-5 px-3 px-md-5">Ajouter une prestation</h1>
 
-                            <form method="post" enctype="multipart/form-data" class="dashboard-form mt-5" id="service-form">
-    
-                                <fieldset class="mb-5">
+                            <!-- ========================================================================================================================================================================== -->
+                            <!-- FORMULAIRE -->
+                            <!-- ========================================================================================================================================================================== -->
 
+
+                            <form method="post" class="dashboard-form mt-5" id="service-form">
+
+                                <!-- =============================================================================================================== -->
+                                <!-- INFORMATION GÉNÉRALE -->
+                                <!-- =============================================================================================================== -->
+
+                                <fieldset>
+                                    <legend class="text-center py-2 mb-4 mb-md-5">Informations générales</legend>
                                     <!-- -------------------------------------------------------------- -->
                                     <!-- CATÉGORIE DE LA PRESTATION -->
-                                    <div class="mb-4 pt-md-5">
+                                    <div class="mb-4">
                                         <label for="object" class="form-label mb-2">Catégorie de la prestation * :</label>
                                         <select class="form-select" id="object" name="object" required>
                                             <option value="0">-</option>
@@ -146,7 +155,7 @@
 
                                     <!-- -------------------------------------------------------------- -->
                                     <!-- NOM DE LA PRESTATION -->
-                                    <div class="mb-4 pt-md-5">
+                                    <div class="mb-4">
                                         <label for="name" class="form-label me-3">Nom * :</label>
                                         <input type="text" class="form-control" id="name" name="name" value="" required>
                                         <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="name" id="nameError"></small>
@@ -156,6 +165,7 @@
                                     <!-- -------------------------------------------------------------- -->
                                     <!-- DESCRIPTION DE LA PRESTATION -->
                                     <div class="mb-4 pt-md-5">
+                                        <p class="text-center text-green fst-italic mb-5">Afin de limiter les erreurs d'orthographe, vous pouvez faire vérifier votre texte sur le site de <a href="https://bonpatron.com/fr/" class="text-pink underline" target="_blank" rel="noopener noreferrer">Bonpatron</a>.</p>
                                         <div class="d-flex flex-column flex-md-row justify-content-between">
                                             <label for="description" class="form-label me-3">Description :</label>
                                             <small>Nb de caractères restants : <span id="counterChar">200</span></small>
@@ -164,52 +174,82 @@
                                         <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="description" id="descriptionError"></small>
                                     </div>
                                     <!-- -------------------------------------------------------------- -->
+                                </fieldset>
 
+                                <!-- ================================================================================================================ -->
+                                <!-- TARIFICATION -->
+                                <!-- ================================================================================================================ -->
+
+                                <fieldset>
+                                    <legend class="text-center py-2 mt-4 mb-4 mb-lg-5">Tarification</legend>
                                     <!-- -------------------------------------------------------------- -->
                                     <!-- DURÉE ET TARIF -->
-                                    <div class="d-flex flex-column flex-md-row justify-content-between pt-md-5 pb-4">
-                                        <div class="mb-4">
-                                            <label for="duration" class="form-label me-3">Durée (en minutes) * :</label>
-                                            <input type="number" class="form-control" id="duration" name="duration" value="" required>
-                                            <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="duration" id="durationError"></small>
-                                        </div>
-    
-                                        <div class="mb-md-4">
-                                            <label for="price" class="form-label me-3">Tarif * :</label>
-                                            <input type="number" class="form-control" id="price" name="price" value="" required>
-                                            <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="price" id="priceError"></small>
+                                    <div id="pricings">
+                                        <div class="d-flex flex-column flex-md-row justify-content-between pricing py-3" id="pricing">
+                                            <div class="mb-4">
+                                                <label for="duration" class="form-label me-3">Durée (en minutes) * :</label>
+                                                <input type="number" class="form-control" id="duration" name="duration" value="" required>
+                                                <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="duration" id="durationError"></small>
+                                            </div>
+        
+                                            <div class="mb-md-4">
+                                                <label for="price" class="form-label me-3">Tarif * :</label>
+                                                <input type="number" class="form-control" id="price" name="price" value="" required>
+                                                <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="price" id="priceError"></small>
+                                            </div>
                                         </div>
                                     </div>
                                     <!-- -------------------------------------------------------------- -->
-                                
+
                                     <!-- -------------------------------------------------------------- -->
-                                    <!-- PRESTATION CLASSIQUE OU FORFAIT -->
-                                    <small class="d-none d-block text-danger text-center fst-italic mt-2" role="alert" id="packageError"></small>
-                                    <div class="btn-group d-flex mt-3 mb-5" role="group" aria-label="Choisir le type de prestation">
+                                    <!-- BOUTON D'AJOUT D'UNE TARIFICATION SUPPLÉMENTAIRE ET DE SUPPRESSION -->
+                                    <div class="d-flex flex-column align-items-center mb-5 mt-4">
+                                        <small class="d-none text-danger text-center fst-italic mb-2" role="alert" id="addError">Vous ne pouvez pas ajouter de tarification supplémentaire.</small>
+                                        <div>
+                                            <button type="button" class="btn btn-classic" id="addPricing" aria-errormessage="addError" title="Ajouter une tarification"><i class="bi bi-plus-circle me-3" aria-hidden="true"></i>Ajouter</button>
+                                            <button type="button" class="d-none btn btn-classic mt-4 mt-md-0 ms-lg-4" id="deletePricing" title="Supprimer une tarification"><i class="bi bi-trash3 me-3" aria-hidden="true"></i>Supprimer</button>
+                                        </div>
+                                    </div>
+                                    <!-- -------------------------------------------------------------- -->
+                                </fieldset>
+
+                                <!-- ================================================================================================================= -->
+                                <!-- TYPE DE PRESTATION -->
+                                <!-- ================================================================================================================= -->
+                            
+                                <fieldset>
+                                    <legend class="text-center py-2 mb-4 mb-md-5">Type de la prestation</legend>
+                                    
+                                    <div>
+                                        <!-- -------------------------------------------------------------- -->
+                                        <!-- PRESTATION CLASSIQUE OU FORFAIT -->
+                                        <small class="d-none d-block text-danger text-center fst-italic mt-2" role="alert" id="packageError"></small>
+                                        <div class="btn-group d-flex mt-3 mb-5" role="group" aria-label="Choisir le type de prestation">
+                                            
+                                            <input type="radio" class="btn-check" name="package" value="0" id="classic" aria-errormessage="packageError" autocomplete="off" required>
+                                            <label class="btn btn-radio" for="classic">Prestation classique</label>
                                         
-                                        <input type="radio" class="btn-check" name="package" value="0" id="classic" autocomplete="off" required checked>
-                                        <label class="btn btn-radio" for="classic">Prestation classique</label>
-                                    
-                                        <input type="radio" class="btn-check" name="package" value="1" id="package" autocomplete="off">
-                                        <label class="btn btn-radio" for="package">Prestation en forfait</label>
+                                            <input type="radio" class="btn-check" name="package" value="1" id="package" aria-errormessage="packageError" autocomplete="off">
+                                            <label class="btn btn-radio" for="package">Prestation en forfait</label>
+                                        </div>
+                                        <!-- -------------------------------------------------------------- -->
+                                        
+                                        <!-- -------------------------------------------------------------- -->
+                                        <!-- PRESTATION EXCLUSIVE OU PERMANENTE -->
+                                        <small class="d-none d-block text-danger text-center fst-italic mt-2" role="alert" id="exclusiveError"></small>
+                                        <div class="btn-group d-flex mt-3 mb-5" role="group" aria-label="Choisir le type de prestation">
+                                            <input type="radio" class="btn-check type-choice" name="exclusive" value="0" id="permanent" aria-errormessage="exclusiveError" autocomplete="off" required>
+                                            <label class="btn btn-radio" for="permanent">Prestation permanente</label>
+                                        
+                                            <input type="radio" class="btn-check type-choice" name="exclusive" value="1" id="exclusive" aria-errormessage="exclusiveError" autocomplete="off">
+                                            <label class="btn btn-radio" for="exclusive">Prestation exclusive</label>
+                                        </div>
+                                        <!-- -------------------------------------------------------------- -->
                                     </div>
-                                    <!-- -------------------------------------------------------------- -->
-                                    
-                                    <!-- -------------------------------------------------------------- -->
-                                    <!-- PRESTATION EXCLUSIVE OU PERMANENTE -->
-                                    <small class="d-none d-block text-danger text-center fst-italic mt-2" role="alert" id="exclusiveError"></small>
-                                    <div class="btn-group d-flex mt-3 mb-5" role="group" aria-label="Choisir le type de prestation">
-                                        <input type="radio" class="btn-check type-choice" name="exclusive" value="0" id="permanent" autocomplete="off" required checked>
-                                        <label class="btn btn-radio" for="permanent">Prestation permanente</label>
-                                    
-                                        <input type="radio" class="btn-check type-choice" name="exclusive" value="1" id="exclusive" autocomplete="off">
-                                        <label class="btn btn-radio" for="exclusive">Prestation exclusive</label>
-                                    </div>
-                                    <!-- -------------------------------------------------------------- -->
 
                                     <!-- -------------------------------------------------------------- -->
                                     <!-- DATES EN CAS DE PRESTATIONS EXCLUSIVES -->
-                                    <div class="special-dates d-none">
+                                    <div class="exclusive-dates d-none">
                                         <div class="mb-4">
                                             <label for="startExclusiveDate" class="form-label me-3">Date de début * :</label>
                                             <input type="date" class="form-control" id="startExclusiveDate" name="startExclusiveDate" value="">
@@ -227,7 +267,7 @@
         
                                 <!-- -------------------------------------------------------------- -->
                                 <!-- BOUTON DE VALIDATION -->
-                                <div class="d-flex justify-content-center pb-md-5 mb-5">
+                                <div class="d-flex justify-content-center pb-md-5 my-5">
                                     <button type="submit" class="btn btn-classic py-2"><i class="bi bi-pencil-fill me-3" aria-hidden="true"></i>Ajouter la prestation</button>
                                 </div>
                                 <!-- -------------------------------------------------------------- -->
