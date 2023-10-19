@@ -33,9 +33,10 @@ counterLenght(textarea, value);
 // ----------------------------------------------------------------------------------------------
 // Affiche les dates à enregistrer en cas de prestation spéciale et les rends obligatoire
 
-for (const type of typeChoices) {
+const displayDates = () => {
 
-    type.addEventListener('click', () => {
+    for (const type of typeChoices) {
+
         if (type.checked && type.value == 1) {
 
             dates.classList.remove('d-none');
@@ -44,13 +45,22 @@ for (const type of typeChoices) {
             };
 
         } else {
-            
+
             dates.classList.add('d-none');
             for (const inputDate of inputDates) {
                 inputDate.required = false;
             };
         };
-    });
+    };
+
+};
+
+
+displayDates();
+
+
+for (const type of typeChoices) {
+    type.addEventListener('click', displayDates);
 };
 // ----------------------------------------------------------------------
 
