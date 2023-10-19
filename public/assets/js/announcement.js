@@ -40,7 +40,7 @@ previewText();
 // COMPTAGE DES CARACTÈRES DANS LE TEXTAREA
 
 // Fait le décompte du nombre de caractères sur le textarea et affiche le message d'erreur
-textarea.addEventListener('keydown', () => {
+textarea.addEventListener('input', () => {
     counterLenght(textarea, maxChar);
 });
 

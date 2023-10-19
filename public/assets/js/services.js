@@ -19,7 +19,7 @@ const inputDates = document.querySelectorAll('.exclusive-dates .form-control');
 // ==============================================================================================
 // ----------------------------------------------------------------------------------------------
 // Fait le décompte du nombre de caractères sur le textarea et affiche le message d'erreur
-textarea.addEventListener('keydown', () => {
+textarea.addEventListener('input', () => {
     counterLenght(textarea, value);
 });
 
@@ -68,53 +68,6 @@ for (const type of typeChoices) {
 
 // ==============================================================================================
 // ----------------------------------------------------------------------------------------------
-// Ajoute une tarification
-
-let count = 1;
-
-const clone = () => {
-
-    
-    console.log(count);
-
-    if (count == 3) {
-        addError.classList.remove('d-none');
-        return false;
-    };
-
-    count++;
-
-    let cloned = pricing.cloneNode(true);
-    cloned.id = cloned.id + count;
-
-
-    let labels = cloned.querySelectorAll('label');
-    console.log(labels);
-    for (const label of labels) {
-        label.setAttribute('for', label.getAttribute('for') + count);
-    };
-
-    let inputs = cloned.querySelectorAll('input');
-    for (const input of inputs) {
-        input.setAttribute('id', input.getAttribute('id') + count);
-        input.setAttribute('name', input.getAttribute('name') + count);
-    };
-
-    let smalls = cloned.querySelectorAll('small');
-    for (const small of smalls) {
-        small.setAttribute('id', small.getAttribute('id') + count);
-        small.setAttribute('aria-errormessage', small.getAttribute('aria-errormessage') + count);
-    };
-
-    pricings.append(cloned);
-
-    deletePricing.classList.remove('d-none');
-    deletePricing.addEventListener('click', deleteClone);
-};
-
-
-// ==============================================================================================
-// ----------------------------------------------------------------------------------------------
 // Supprime une tarification
 
 const deleteClone = () => {
@@ -131,6 +84,66 @@ const deleteClone = () => {
 };
 
 
+// ==============================================================================================
+// ----------------------------------------------------------------------------------------------
+// Affiche le bouton de suppression d'une tarification
+
+const displayDeleteBtn = () => {
+    if (document.querySelectorAll('.pricing').length > 1) {
+        deletePricing.classList.remove('d-none');
+        deletePricing.addEventListener('click', deleteClone);
+    };
+};
+
+
+// ==============================================================================================
+// ----------------------------------------------------------------------------------------------
+// Ajoute une tarification
+
+const clone = () => {
+
+    let count = document.querySelectorAll('.pricing').length;
+
+    if (count == 3) {
+        addError.classList.remove('d-none');
+        return false;
+    };
+
+    count++;
+
+    let cloned = pricing1.cloneNode(true);
+    cloned.id = (cloned.id).slice(0, -1) + count;
+
+
+    let labels = cloned.querySelectorAll('label');
+    for (const label of labels) {
+        label.setAttribute('for', (label.getAttribute('for')).slice(0, -1) + count);
+    };
+
+    let inputs = cloned.querySelectorAll('input');
+    for (const input of inputs) {
+        input.setAttribute('id', (input.getAttribute('id')).slice(0, -1) + count);
+        input.setAttribute('name', (input.getAttribute('name')).slice(0, -1) + count);
+        input.value = '';
+        input.classList.remove('error-form');
+    };
+
+    let smalls = cloned.querySelectorAll('small');
+    for (const small of smalls) {
+        small.setAttribute('id', (small.getAttribute('id')).slice(0, -1) + count);
+        small.setAttribute('aria-errormessage', (small.getAttribute('aria-errormessage')).slice(0, -1) + count);
+        small.classList.add('d-none');
+    };
+
+    pricings.append(cloned);
+
+    displayDeleteBtn();
+};
+
+
+
+
+displayDeleteBtn();
 
 
 addPricing.addEventListener('click', clone);
