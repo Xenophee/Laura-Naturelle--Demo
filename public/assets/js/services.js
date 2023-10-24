@@ -71,6 +71,9 @@ for (const type of typeChoices) {
 // Supprime une tarification
 
 const deleteClone = () => {
+
+    let count = document.querySelectorAll('.pricing').length;
+    
     count--;
 
     if (count == 1) {
