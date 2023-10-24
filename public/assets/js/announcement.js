@@ -76,34 +76,7 @@ textareaBtn.addEventListener('click', () => {
 
 // ==============================================================================================
 // ----------------------------------------------------------------------------------------------
-// AJUSTEMENT DU CONTENU DE LA MODAL
-
-const dataModal = {
-    deleteAll: { title : 'Supprimer toutes les anciennes annonces', content: 'Êtes vous certain de vouloir <strong>supprimer</strong> toutes les anciennes annonces ?'},
-    delete: { title : 'Supprimer une ancienne annonce', content: 'Êtes vous certain de vouloir <strong>supprimer</strong> cette ancienne annonce ?'},
-    deactivation: { title: 'Désactiver l\'annonce en cours', content: 'Êtes vous certain de vouloir <strong>désactiver</strong> l\'annonce en cours ?'}
-};
-
-const modalTitle = document.querySelector('.modal-title');
-const modaltext = document.querySelector('.modal-body p');
-
-deactivation.addEventListener('click', () => {
-    modalTitle.textContent = dataModal.deactivation.title;
-    modaltext.innerHTML = dataModal.deactivation.content;
-});
-
-deleteAll.addEventListener('click', () => {
-    modalTitle.textContent = dataModal.deleteAll.title;
-    modaltext.innerHTML = dataModal.deleteAll.content;
-});
-
-for (const deleteBtn of deleteBtns) {
-    deleteBtn.addEventListener('click', () => {
-        modalTitle.textContent = dataModal.delete.title;
-        modaltext.innerHTML = dataModal.delete.content;
-    });
-};
-
+// AJUSTEMENT SUR LA MODAL
 
 // ----------------------------------------------------------------------
 // En cas d'annulation de la modal, retour du check sur le bouton modifier
