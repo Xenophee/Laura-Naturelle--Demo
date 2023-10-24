@@ -61,34 +61,34 @@
 /* --------------------------------------------------------------------------------------------------------------------------------- */
 /* BOUTONS DASHBOARD */
 
-.view {
+.view, .view:hover {
     color: var(--main-color);
     border: var(--border-light-solid);
     background-color: var(--third-color);
 }
 
-.edit {
+.edit, .edit:hover {
     color: var(--main-color);
     border: var(--border-light-solid);
-    background-color: var(--special-color);
+    background-color: var(--special-dark-color);
 }
 
-.delete {
+.delete, .delete:hover {
     color: var(--main-color);
     border: var(--border-light-solid);
     background-color: var(--danger-color);
 }
 
-.validate {
+.validate, .validate:hover {
     color: var(--main-color);
     border: var(--border-light-solid);
-    background-color: #e3b04c;
+    background-color: var(--gold-color);
 }
 
-.deactivate {
-    color: var(--main-color);
+.deactivate, .deactivate:hover {
+    color: var(--second-color);
     border: var(--border-light-solid);
-    background-color: var(--brown-color);
+    background-color: var(--beige-color);
 }
 
 .view:hover,
@@ -96,9 +96,7 @@
 .delete:hover,
 .validate:hover,
 .deactivate:hover {
-    background-color: transparent;
-    color: var(--special-dark-color);
-    border: var(--border-dark-special-solid);
+    opacity: 0.5;
 }
 
 .view,

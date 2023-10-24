@@ -155,6 +155,10 @@ h1 span:first-child {
     color: var(--second-color);
 }
 
+.text-gold {
+    color: var(--gold-color);
+}
+
 .text-brown {
     color: var(--brown-color);
 }

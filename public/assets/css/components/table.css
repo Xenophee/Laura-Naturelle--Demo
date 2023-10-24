@@ -9,8 +9,13 @@
 }
 
 tr {
-    height: 60px;
+    min-height: 60px;
 }
+
+.table-description {
+    min-width: 200px;
+}
+
 
 .table-hover-green th {
     color: var(--first-color);
@@ -58,38 +63,50 @@ tr {
 
 
 /* ---------------------------------------- */
-/* Ligne de tableau archivé */
+/* Ligne de tableau archivé et en attente */
 
-.desactivated {
-    background-color: var(--brown-filter-color) !important;
+.deactivated {
+    background-color: var(--beige-color) !important;
+}
+
+.shelved {
+    background-color: var(--gold-filter-color) !important;
 }
 
 
 /* ---------------------------------------- */
 /* Badges du tableau */
 
-.badge-package {
+td .bi {
+    font-size: 1.2rem;
+}
+
+/* .table-badge-new {
     color: var(--main-color);
     background-color: var(--gold-color);
 }
 
-.badge-special {
+.table-badge-package {
     color: var(--main-color);
-    background-color: var(--special-dark-color);
+    background-color: var(--brown-color);
 }
 
+.table-badge-exclusive {
+    color: var(--main-color);
+    background-color: var(--special-dark-color);
+} */
+
 .table-badge-green {
-    width: 70px;
+    width: 140px;
     color: var(--main-color);
     background-color: var(--first-color);
 }
 
 .table-badge-beige {
-    width: 70px;
+    min-width: 100px;
     color: var(--first-color);
     background-color: var(--beige-color);
 }
-
 
 
 /* ================================================================================================================================= */
@@ -125,6 +142,10 @@ tr {
 @media (min-width: 1400px) {
 
     .table-responsive {
-        width: 70%;
+        width: 80%;
+    }
+
+    .table-badge-beige {
+        min-width: 50px;
     }
 }

@@ -22,7 +22,9 @@
     --main-filter-color: #fdf3fd98;
     --second-filter-color: #2f5b0e28;
     --brown-filter-color: #c0855248;
+    /* --brown-filter-color: #c0855248; */
     --special-dark-filter: #e768993d;
+    --gold-filter-color: #e3b14c94;
 
     --border-filter-special-thin-solid: var(--special-dark-filter) 1px solid;
     --border-filter-second-thin-solid: var(--second-filter-color) 1px solid;
