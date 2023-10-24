@@ -81,21 +81,6 @@ td .bi {
     font-size: 1.2rem;
 }
 
-/* .table-badge-new {
-    color: var(--main-color);
-    background-color: var(--gold-color);
-}
-
-.table-badge-package {
-    color: var(--main-color);
-    background-color: var(--brown-color);
-}
-
-.table-badge-exclusive {
-    color: var(--main-color);
-    background-color: var(--special-dark-color);
-} */
-
 .table-badge-green {
     width: 140px;
     color: var(--main-color);
