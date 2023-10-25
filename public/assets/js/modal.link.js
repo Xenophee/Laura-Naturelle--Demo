@@ -11,7 +11,9 @@ const dataModal = {
         deleteAll: { title: 'Supprimer une catégorie', content: 'Êtes vous certain de vouloir <strong>supprimer</strong> cette catégories ainsi que toutes ses prestations ?' },
         delete: { title: 'Supprimer une prestation', content: 'Êtes vous certain de vouloir <strong>supprimer</strong> cette prestation ?' },
         deactivateAll: { title: 'Désactiver une catégorie', content: 'Êtes vous certain de vouloir <strong>désactiver</strong> cette catégorie ?' },
-        deactivate: { title: 'Désactiver une prestation', content: 'Êtes vous certain de vouloir <strong>désactiver</strong> cette prestation ?' }
+        deactivate: { title: 'Désactiver une prestation', content: 'Êtes vous certain de vouloir <strong>désactiver</strong> cette prestation ?' },
+        activateAll: { title: 'Activer une catégorie', content: 'Êtes vous certain de vouloir <strong>activer</strong> cette catégorie ?' },
+        activate: { title: 'Activer une prestation', content: 'Êtes vous certain de vouloir <strong>activer</strong> cette prestation ?' }
     },
     discount: {
         deleteAll: { title: 'Supprimer toutes les promotions', content: 'Êtes vous certain de vouloir <strong>supprimer</strong> toutes les promotions ?' },
@@ -25,6 +27,7 @@ const h1 = document.querySelector('h1');
 const publishBtns = document.querySelectorAll('.validate');
 const deleteBtns = document.querySelectorAll('.delete');
 const deactivateBtns = document.querySelectorAll('.deactivate');
+const activateBtns = document.querySelectorAll('.activate');
 const deactivation = document.getElementById('deactivation');
 
 const modalTitle = document.querySelector('.modal-title');
@@ -73,10 +76,13 @@ const createLink = (event, action) => {
             link = 'delete_controller.php';
             break;
         case 1:
-            link = 'deactivate_controller.php';
+            link = 'publish_controller.php';
             break;
         case 2:
-            link = 'publish_controller.php';
+            link = 'deactivate_controller.php';
+            break;
+        case 3:
+            link = 'activate_controller.php';
             break;
     }
 
@@ -97,7 +103,7 @@ if (publishBtns != null) {
     for (const publishBtn of publishBtns) {
         publishBtn.addEventListener('click', (event) => {
             (publishBtn.classList.contains('validateAll')) ? createText('publishAll') : createText('publish');
-            createLink(event, 2);
+            createLink(event, 1);
         });
     };
 };
@@ -115,7 +121,16 @@ if (deactivateBtns != null) {
     for (const deactivateBtn of deactivateBtns) {
         deactivateBtn.addEventListener('click', (event) => {
             (deactivateBtn.classList.contains('deactivateAll')) ? createText('deactivateAll') : createText('deactivate');
-            createLink(event, 1);
+            createLink(event, 2);
+        });
+    };
+};
+
+if (activateBtns != null) {
+    for (const activateBtn of activateBtns) {
+        activateBtn.addEventListener('click', (event) => {
+            (activateBtn.classList.contains('activateAll')) ? createText('activateAll') : createText('activate');
+            createLink(event, 3);
         });
     };
 };

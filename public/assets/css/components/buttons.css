@@ -85,7 +85,7 @@
     background-color: var(--gold-color);
 }
 
-.deactivate, .deactivate:hover {
+.deactivate, .deactivate:hover, .activate, .activate:hover {
     color: var(--second-color);
     border: var(--border-light-solid);
     background-color: var(--beige-color);
@@ -103,6 +103,7 @@
 .edit,
 .delete,
 .validate,
+.activate,
 .deactivate {
     width: 55px;
 }
@@ -133,7 +134,7 @@
         font-size: 1.2rem;
     }
 
-    .view, .edit, .delete, .validate, .deactivate {
+    .view, .edit, .delete, .validate, .activate, .deactivate {
         width: 65px;
     }
 }
@@ -150,7 +151,7 @@
 
     
 
-    .view, .edit, .delete, .deactivate {
+    .view, .edit, .delete, .validate, .activate, .deactivate {
         width: 70px;
     }
 

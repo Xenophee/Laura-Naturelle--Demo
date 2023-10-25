@@ -16,6 +16,9 @@ tr {
     min-width: 200px;
 }
 
+table h2 {
+    margin: 0;
+}
 
 .table-hover-green th {
     color: var(--first-color);
