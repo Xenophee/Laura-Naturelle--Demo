@@ -6,14 +6,15 @@
 
 const discount = document.getElementById('discount-form');
 
-const servicesBtn = document.querySelectorAll('input[name="whichServices"]');
+const servicesBtns = document.querySelectorAll('input[name="whichServices"]');
 
-servicesBtn.forEach((element, key) => {
-    element.addEventListener('click', () => {
-        if (key == 1) {
+
+for (const servicesBtn of servicesBtns) {
+    servicesBtn.addEventListener('input', () => {
+        if (servicesBtn.value == 2) {
             servicesAccordion.classList.remove('d-none');
         } else {
             servicesAccordion.classList.add('d-none');
-        }
-    })
-});
+        };
+    });
+};
