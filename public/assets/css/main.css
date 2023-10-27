@@ -82,6 +82,11 @@ body {
     color: var(--brown-color);
 }
 
+.bg-filter-pink {
+    background-color: var(--special-dark-filter);
+    color: var(--special-dark-color);
+}
+
 .bg-dark-pink {
     background-color: var(--special-dark-color);
     color: var(--main-color);
