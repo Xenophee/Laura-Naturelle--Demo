@@ -131,6 +131,7 @@
                                 <thead>
                                     <tr>
                                         <th scope="col"></th>
+                                        <th scope="col"></th>
                                         <th scope="col">
                                             <h2>Promotions enregistrées</h2>
                                         </th>
@@ -139,9 +140,9 @@
                                         <th scope="col">
                                             <div class="d-flex justify-content-end">
                                                 <!-- Bouton supprimer -->
-                                                <a href="" class="btn delete py-2" title="Supprimer la catégorie" data-id="" data-deleteparam="1" data-bs-toggle="modal" data-bs-target="#displayModal">
-                                                    <i class="bi bi-trash3" data-id="" data-deleteparam="1"></i>
-                                                </a>
+                                                <button type="button" class="btn delete deleteAll py-2" title="Supprimer toutes les promotions" data-id="" data-param="3" data-method="1" data-bs-toggle="modal" data-bs-target="#displayModal">
+                                                    <i class="bi bi-trash3" data-id="" data-param="3" data-method="1"></i>
+                                                </button>
                                             </div>
                                         </th>
                                     </tr>
@@ -150,13 +151,12 @@
                                 <tbody class="table-group-divider">
                                     <tr>
                                         <th scope="row">1</th>
+                                        <td><i class="bi bi-globe2 text-green" title="Actuellement en ligne"></i></td>
                                         <td>
-                                            <div class="d-flex align-items-center fw-bold">
-                                                Modelages <!-- <div class="d-inline badge-package px-3 ms-3">Forfait</div> -->
-                                            </div>
+                                            <div class="d-flex align-items-center fw-bold">Modelages</div>
                                         </td>
                                         <td>
-                                            <div class="table-badge-green d-flex justify-content-center align-items-center px-2 py-2">-15%</div>
+                                            <div class="table-badge-green d-flex justify-content-center align-items-center px-2 py-2">- 15 %</div>
                                         </td>
                                         <td>
                                             <div class="table-badge-beige d-flex justify-content-center align-items-center text-center fw-bold text-nowrap w-100 px-3 py-2">Du 18/07/2023 au 28/08/2023</div>
@@ -165,9 +165,13 @@
                                             <div class="d-flex justify-content-end">
                                                 <!-- Bouton éditer -->
                                                 <a href="" class="btn edit py-2 me-3" title="Modifier la promotion"><i class="bi bi-pen"></i></a>
+                                                <!-- Bouton de désactivation -->
+                                                <button type="button" class="btn deactivate py-2 me-3" title="Désactiver la promotion" data-id="" data-param="3" data-bs-toggle="modal" data-bs-target="#displayModal">
+                                                    <i class="bi bi-eye" data-id="" data-param="3"></i>
+                                                </button>
                                                 <!-- Bouton supprimer -->
-                                                <button type="button" class="btn delete py-2" title="Supprimer la promotion" data-id="" data-deleteparam="" data-bs-toggle="modal" data-bs-target="#displayModal">
-                                                    <i class="bi bi-trash3" data-id="" data-deleteparam="2"></i>
+                                                <button type="button" class="btn delete py-2" title="Supprimer la promotion" data-id="" data-param="3" data-method="2" data-bs-toggle="modal" data-bs-target="#displayModal">
+                                                    <i class="bi bi-trash3" data-id="" data-param="3" data-method="2"></i>
                                                 </button>
                                             </div>
                                         </td>
@@ -175,13 +179,12 @@
 
                                     <tr>
                                         <th scope="row">2</th>
+                                        <td><i class="bi bi-hourglass-split text-gold" title="En attente"></i></td>
                                         <td>
-                                            <div class="d-flex align-items-center fw-bold">
-                                                Toutes les prestations <!-- <div class="d-inline badge-package px-3 ms-3">Forfait</div> -->
-                                            </div>
+                                            <div class="d-flex align-items-center fw-bold">Toutes les prestations</div>
                                         </td>
                                         <td>
-                                            <div class="table-badge-green d-flex justify-content-center align-items-center px-2 py-2">-10€</div>
+                                            <div class="table-badge-green d-flex justify-content-center align-items-center px-2 py-2">- 10 €</div>
                                         </td>
                                         <td>
                                             <div class="table-badge-beige d-flex justify-content-center align-items-center text-center fw-bold text-nowrap w-100 px-3 py-2">Du 20/12/2023 au 20/01/2023</div>
@@ -189,10 +192,70 @@
                                         <td>
                                             <div class="d-flex justify-content-end">
                                                 <!-- Bouton éditer -->
-                                                <a href="" class="btn edit py-2 me-3" title="Modifier la prestation"><i class="bi bi-pen"></i></a>
+                                                <a href="" class="btn edit py-2 me-3" title="Modifier la promotion"><i class="bi bi-pen"></i></a>
+                                                <!-- Bouton de désactivation -->
+                                                <button type="button" class="btn deactivate py-2 me-3" title="Désactiver la promotion" data-id="" data-param="3" data-bs-toggle="modal" data-bs-target="#displayModal">
+                                                    <i class="bi bi-eye" data-id="" data-param="3"></i>
+                                                </button>
                                                 <!-- Bouton supprimer -->
-                                                <button type="button" class="btn delete py-2" title="Supprimer la prestation" data-id="" data-deleteparam="2" data-bs-toggle="modal" data-bs-target="#displayModal">
-                                                    <i class="bi bi-trash3" data-id="" data-deleteparam="2"></i>
+                                                <button type="button" class="btn delete py-2" title="Supprimer la promotion" data-id="" data-param="3" data-method="2" data-bs-toggle="modal" data-bs-target="#displayModal">
+                                                    <i class="bi bi-trash3" data-id="" data-param="3" data-method="2"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row" class="deactivated">3</th>
+                                        <td></td>
+                                        <td>
+                                            <div class="d-flex align-items-center fw-bold">Maquillages</div>
+                                        </td>
+                                        <td>
+                                            <div class="table-badge-green d-flex justify-content-center align-items-center px-2 py-2">- 5 €</div>
+                                        </td>
+                                        <td>
+                                            <div class="table-badge-beige d-flex justify-content-center align-items-center text-center fw-bold text-nowrap w-100 px-3 py-2">Du 20/05/2023 au 20/06/2023</div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex justify-content-end">
+                                                <!-- Bouton éditer -->
+                                                <a href="" class="btn edit py-2 me-3" title="Modifier la promotion"><i class="bi bi-pen"></i></a>
+                                                <!-- Bouton de d'activation -->
+                                                <button type="button" class="btn activate py-2 me-3" title="Activer la promotion" data-id="" data-param="3" data-bs-toggle="modal" data-bs-target="#displayModal">
+                                                    <i class="bi bi-eye-slash" data-id="" data-param="3"></i>
+                                                </button>
+                                                <!-- Bouton supprimer -->
+                                                <button type="button" class="btn delete py-2" title="Supprimer la promotion" data-id="" data-param="3" data-method="2" data-bs-toggle="modal" data-bs-target="#displayModal">
+                                                    <i class="bi bi-trash3" data-id="" data-param="3" data-method="2"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row">4</th>
+                                        <td></td>
+                                        <td>
+                                            <div class="d-flex align-items-center fw-bold">Toutes les prestations</div>
+                                        </td>
+                                        <td>
+                                            <div class="table-badge-green d-flex justify-content-center align-items-center px-2 py-2">- 10 %</div>
+                                        </td>
+                                        <td>
+                                            <div class="table-badge-beige d-flex justify-content-center align-items-center text-center fw-bold text-nowrap w-100 px-3 py-2">Du 15/01/2023 au 25/01/2023</div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex justify-content-end">
+                                                <!-- Bouton éditer -->
+                                                <a href="" class="btn edit py-2 me-3" title="Modifier la promotion"><i class="bi bi-pen"></i></a>
+                                                <!-- Bouton de désactivation -->
+                                                <!-- <button type="button" class="btn deactivate py-2 me-3" title="Désactiver la promotion" data-id="" data-param="3" data-bs-toggle="modal" data-bs-target="#displayModal">
+                                                    <i class="bi bi-eye" data-id="" data-param="3"></i>
+                                                </button> -->
+                                                <!-- Bouton supprimer -->
+                                                <button type="button" class="btn delete py-2" title="Supprimer la promotion" data-id="" data-param="3" data-method="2" data-bs-toggle="modal" data-bs-target="#displayModal">
+                                                    <i class="bi bi-trash3" data-id="" data-param="3" data-method="2"></i>
                                                 </button>
                                             </div>
                                         </td>
@@ -211,31 +274,32 @@
 
                                 <!-- -------------------------------------------------------------- -->
                                 <!-- DURÉE DE LA REDUCTION -->
-                                <label class="fw-bold mb-4 mt-md-4">Quand la promotion doit-elle être appliquée ?</label>
+                                <label class="d-block text-center fw-bold mb-4 mt-md-4">Quand la promotion doit-elle être appliquée ?</label>
 
                                 <div class="d-flex flex-column flex-md-row justify-content-around align-items-center w-100 mb-4 mb-md-5">
                                     <div class="form-div me-md-5 mb-3 mb-md-0">
                                         <label for="first_date" class="form-label me-3">Date de début * :</label>
-                                        <input type="date" class="form-control" id="first_date" name="first_date" value="2023-07-18" required>
-                                        <div class="text-danger fst-italic mt-2"></div>
+                                        <input type="date" class="form-control" id="firstDate" name="firstDate" value="" required>
+                                        <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="firstDate" id="firstDateError"></small>
                                     </div>
 
                                     <span class="fw-bold">au</span>
         
                                     <div class="form-div ms-md-5 mt-3 mt-md-0">
                                         <label for="last_date" class="form-label me-3">Date de fin * :</label>
-                                        <input type="date" class="form-control" id="last_date" name="last_date" value="2023-08-28" required>
-                                        <div class="text-danger fst-italic mt-2"></div>
+                                        <input type="date" class="form-control" id="lastDate" name="lastDate" value="" required>
+                                        <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="lastDate" id="lastDateError"></small>
                                     </div>
                                 </div>
                                 <!-- -------------------------------------------------------------- -->
                                 <!-- TYPE DE REDUCTION -->
                                 <label class="d-block text-center fw-bold">Type de réduction :</label>
+                                <small class="d-none d-block text-danger text-center fst-italic mt-2" role="alert" id="discountTypeError"></small>
                                 <div class="btn-group d-flex mt-3 mb-5" role="group" aria-label="Choisir le type de réduction">
-                                    <input type="radio" class="btn-check" name="discountType" value="0" id="percentage" autocomplete="off" required>
+                                    <input type="radio" class="btn-check" name="discountType" value="0" id="percentage" aria-errormessage="discountTypeError" autocomplete="off" required>
                                     <label class="btn btn-radio" for="percentage">%</label>
                                 
-                                    <input type="radio" class="btn-check" name="discountType" value="1" id="euro" autocomplete="off" required>
+                                    <input type="radio" class="btn-check" name="discountType" value="1" id="euro" aria-errormessage="discountTypeError" autocomplete="off" required>
                                     <label class="btn btn-radio" for="euro">€</label>
                                 </div>
                                 <!-- -------------------------------------------------------------- -->
@@ -243,17 +307,18 @@
                                 <div class="mb-4">
                                     <label for="advantage" class="form-label me-3">Montant de la réduction * :</label>
                                     <input type="number" class="form-control" id="advantage" name="advantage" value="" required>
-                                    <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="advantage"></small>
+                                    <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="advantage" id="advantageError"></small>
                                 </div>
                                 <!-- -------------------------------------------------------------- -->
                                 <!-- CHOIX DES PRESTATIONS CONCERNEES PAR LA REDUCTION -->
                                 <label class="d-block text-center fw-bold pt-4">Prestations concernées :</label>
+                                <small class="d-none d-block text-danger text-center fst-italic mt-2" role="alert" id="whichServicesError"></small>
                                 <div class="btn-group d-flex mt-3 mb-5" role="group" aria-label="Choisir les prestations ciblées">
-                                    <input type="radio" class="btn-check" name="whichServices" value="0" id="all" autocomplete="off" required>
-                                    <label class="btn btn-radio" for="all">Toutes les prestations</label>
+                                    <input type="radio" class="btn-check" name="whichServices" value="1" id="all" aria-errormessage="whichServicesError" autocomplete="off" required>
+                                    <label class="btn whichServices btn-radio" for="all">Toutes les prestations</label>
                                 
-                                    <input type="radio" class="btn-check" name="whichServices" value="1" id="specific" autocomplete="off" required>
-                                    <label class="btn btn-radio" for="specific">Prestations ciblées</label>
+                                    <input type="radio" class="btn-check" name="whichServices" value="2" id="specific" aria-errormessage="whichServicesError" autocomplete="off" required>
+                                    <label class="btn whichServices btn-radio" for="specific">Prestations ciblées</label>
                                 </div>
                                 <!-- -------------------------------------------------------------- -->
                                 
@@ -269,7 +334,7 @@
                                         <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
                                             <div class="accordion-body">
                                                 <fieldset class="mb-1">
-                                                    <label class="bg-filter-green fw-bold w-100 px-4 mb-2">Classiques</label>
+                                                    <label class="bg-filter-pink fw-bold w-100 px-4 mb-2">Femmes</label>
                                                         <div class="d-flex flex-wrap">
                                                             <div class="form-check accordion-block mt-2">
                                                                 <input class="form-check-input" type="checkbox" name="services[]" value="" id="epilations1">
@@ -305,18 +370,18 @@
                                                 </fieldset>
 
                                                 <fieldset class="mb-1">
-                                                    <label class="bg-filter-brown fw-bold w-100 px-4 mt-3 mb-2">Forfaits</label>
+                                                    <label class="bg-filter-green fw-bold w-100 px-4 mt-3 mb-2">Hommes</label>
                                                     <div class="d-flex flex-wrap">
                                                         <div class="form-check accordion-block mt-2">
                                                             <input class="form-check-input" type="checkbox" name="services[]" value="" id="epilations6">
-                                                            <label class="form-check-label ps-2" for="epilations6" title="Description du forfait">
-                                                                Douceur printanière
+                                                            <label class="form-check-label ps-2" for="epilations6">
+                                                                Bras
                                                             </label>
                                                         </div>
                                                         <div class="form-check accordion-block mt-2">
                                                             <input class="form-check-input" type="checkbox" name="services[]" value="" id="epilations7">
-                                                            <label class="form-check-label ps-2" for="epilations7" title="Description du forfait">
-                                                                Liberté sans Soucis
+                                                            <label class="form-check-label ps-2" for="epilations7">
+                                                                Torse
                                                             </label>
                                                         </div>
                                                     </div>
@@ -333,7 +398,7 @@
                                         <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
                                             <div class="accordion-body">
                                                 <fieldset class="mb-1">
-                                                    <label class="bg-filter-green fw-bold w-100 px-4 mb-2">Classiques</label>
+                                                    <label class="bg-filter-pink fw-bold w-100 px-4 mb-2">Femmes</label>
                                                         <div class="d-flex flex-wrap">
                                                             <div class="form-check accordion-block mt-2">
                                                                 <input class="form-check-input" type="checkbox" name="services[]" value="" id="modelages1">
@@ -367,24 +432,6 @@
                                                             </div>
                                                         </div>
                                                 </fieldset>
-
-                                                <fieldset class="mb-1">
-                                                    <label class="bg-filter-brown fw-bold w-100 px-4 mt-3 mb-2">Forfaits</label>
-                                                    <div class="d-flex flex-wrap">
-                                                        <div class="form-check accordion-block mt-2">
-                                                            <input class="form-check-input" type="checkbox" name="services[]" value="" id="modelages6">
-                                                            <label class="form-check-label ps-2" for="modelages6" title="Description du forfait">
-                                                                Évasion Zen
-                                                            </label>
-                                                        </div>
-                                                        <div class="form-check accordion-block mt-2">
-                                                            <input class="form-check-input" type="checkbox" name="services[]" value="" id="modelages7">
-                                                            <label class="form-check-label ps-2" for="modelages7" title="Description du forfait">
-                                                                Énergie Vitale
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </fieldset>
                                             </div>
                                         </div>
                                     </div>
@@ -403,6 +450,27 @@
 
         </div>
     </main>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="displayModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5"></h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body py-4">
+                    <p class="text-center"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline me-md-4 mb-3 mb-md-0"
+                        data-bs-dismiss="modal">Non</button>
+                    <a class="btn btn-classic py-2" id="controllerLink">Oui</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- ========================================================================================================================================================================== -->
     <!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
@@ -474,6 +542,7 @@
     <script src="../public/assets/js/script.js"></script>
 
     <script type="module" src="../public/assets/js/form.js"></script>
+    <script type="module" src="../public/assets/js/modal.link.js"></script>
     <script type="module" src="../public/assets/js/discount.js"></script>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-K01XHPHL6L"></script>
