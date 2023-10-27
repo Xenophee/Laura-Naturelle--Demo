@@ -17,7 +17,9 @@ const dataModal = {
     },
     discount: {
         deleteAll: { title: 'Supprimer toutes les promotions', content: 'Êtes vous certain de vouloir <strong>supprimer</strong> toutes les promotions ?' },
-        delete: { title: 'Supprimer une promotion', content: 'Êtes vous certain de vouloir <strong>supprimer</strong> cette promotion ?' }
+        delete: { title: 'Supprimer une promotion', content: 'Êtes vous certain de vouloir <strong>supprimer</strong> cette promotion ?' },
+        deactivate: { title: 'Désactiver une promotion', content: 'Êtes vous certain de vouloir <strong>désactiver</strong> cette promotion ?' },
+        activate: { title: 'Activer une promotion', content: 'Êtes vous certain de vouloir <strong>activer</strong> cette promotion ?' }
     }
 };
 
