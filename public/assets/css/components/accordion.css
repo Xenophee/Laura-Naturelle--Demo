@@ -12,16 +12,16 @@
 
 .accordion-button:not(.collapsed) {
     color: var(--main-dark-color);
-    background-color: var(--special-dark-filter);
+    background-color: var(--main-color);
     box-shadow: none;
 }
 
 .accordion-button::after {
-    background-image: url(../../img/chevron-pink.webp);
+    background-image: url(../../img/icons/chevron-pink.webp);
 }
 
 .accordion-button:not(.collapsed)::after {
-    background-image: url(../../img/chevron-pink.webp);
+    background-image: url(../../img/icons/chevron-pink.webp);
 }
 
 .accordion-button {
@@ -97,11 +97,11 @@
 }
 
 .accordion-green .accordion-button::after {
-    background-image: url(../../img/chevron-green.webp);
+    background-image: url(../../img/icons/chevron-green.webp);
 }
 
 .accordion-green .accordion-button:not(.collapsed)::after {
-    background-image: url(../../img/chevron-green.webp);
+    background-image: url(../../img/icons/chevron-green.webp);
 }
 
 /* --------------------------------------------------------------- */
@@ -120,11 +120,11 @@
 }
 
 .accordion-brown .accordion-button::after {
-    background-image: url(../../img/chevron-brown.webp);
+    background-image: url(../../img/icons/chevron-brown.webp);
 }
 
 .accordion-brown .accordion-button:not(.collapsed)::after {
-    background-image: url(../../img/chevron-brown.webp);
+    background-image: url(../../img/icons/chevron-brown.webp);
 }
 
 
