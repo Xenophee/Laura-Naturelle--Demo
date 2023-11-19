@@ -2,55 +2,17 @@
 /* --------------------------------------------------------------------------------------------------------------------------------- */
 /* PRESTATIONS */
 
-.background-services {
-    position: relative;
-    background-color: var(--light-green);
-    border: var(--border-brown-thin-solid);
-    box-shadow: rgba(27, 70, 33, 0.39) 0px 7px 29px 0px;
-}
 
-.badge-new::after {
-    position: absolute;
-    content: 'Nouveauté';
-    font-size: 1.1rem;
-    font-family: var(--special-font);
-    color: var(--main-color);
-    text-align: center;
-    top: 7%;
-    left: 70%;
-    transform: translate(-50%, -50%);
-    height: 25px;
-    width: 35%;
-    transform: rotate(48deg);
-    background-color: var(--gold-color);
+.card {
+    width: 15rem;
+    background-color: var(--second-filter-color);
+    border: var(--border-first-thin-solid);
     box-shadow: var(--box-light-shadow);
 }
 
-.services {
-    background-image: url(../../img/backgrounds/bois3.jpg);
-    background-position: center;
-    color: var(--main-color);
-    font-size: 1.1rem;
-    border: var(--border-brown-thin-solid);
-    box-shadow: var(--box-light-shadow);
-    transition: 1s ease-in-out;
-}
-
-.services:hover {
-    transform: scale(0.97);
-}
-
-.services h3 {
-    background-color: var(--special-color);
-    color: var(--main-color);
-    padding: 10px 0px 10px;
-}
-
-.services img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border: var(--border-brown-thin-solid);
+.card:hover {
+    background-color: var(--special-dark-filter);
+    border: var(--border-dark-special-thin-solid);
 }
 
 
@@ -65,6 +27,9 @@
 
 @media (min-width: 768px)  {
 
+    .card {
+        width: 18rem;
+    }
 }
 
 
@@ -73,15 +38,6 @@
 
 @media (min-width: 1200px)  {
 
-    .services img {
-        height: 100%;
-    }
 
-    .badge-new::after {
-        top: 10%;
-        left: 75%;
-        height: 25px;
-        width: 30%;
-    }
 }
 

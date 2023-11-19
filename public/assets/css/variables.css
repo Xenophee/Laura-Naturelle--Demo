@@ -52,6 +52,7 @@
     --border-special-medium-solid: var(--special-color) 3px solid;
     --border-special-strong-solid: var(--special-color) 10px solid; /* A supprimer après la page de construction */
 
+    --border-dark-special-thin-solid: var(--special-dark-color) 1px solid;
     --border-dark-special-solid: var(--special-dark-color) 2px solid;
     --border-special-dark-strong-solid: var(--special-dark-color) 10px solid;
 

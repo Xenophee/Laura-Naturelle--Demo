@@ -4,6 +4,16 @@
 /* --------------------------------------------------------------------------------------------------------------------------------- */
 /* STYLE GLOBALE A SERVICE */
 
+/* -------------------------------------------- */
+/* EN-TËTE */
+
+.service-text {
+    font-size: 1.2rem;
+    /* position: relative; */
+}
+
+/* -------------------------------------------- */
+
 .gender-nav {
     border-bottom: var(--special-dark-color) 5px solid;
 }
@@ -86,6 +96,10 @@
 /* GRAND ECRAN */
 
 @media (min-width: 750px) {
+
+    .service-text {
+        font-size: 1.4rem;
+    }
 
     .gender-category {
         width: 35%;
