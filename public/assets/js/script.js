@@ -25,10 +25,11 @@ if (window.innerWidth >= 1200) {
 } else {
 
     dropdown.addEventListener('click', (event) => {
-        event.preventDefault();
-        links.classList.toggle('d-none');
+        if (event.target.classList.contains('header-link')) {
+            event.preventDefault();
+            links.classList.toggle('d-none');
+        };
     });
-
 };
 
 
