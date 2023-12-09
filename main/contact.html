@@ -100,23 +100,23 @@
                     <!-- ------------------------------------------------------------------------------------------------------ -->
                     <!-- FORMULAIRE -->
                     <div class="col-12 col-sm-11 col-md-7 col-lg-7 col-xl-6 col-xxl-5">
-                        <form method="POST">
+                        <form method="POST" id="contact-form">
                             <fieldset>
                                 <legend class="text-center py-2 mb-5">Envoyer un message</legend>
 
                                 <!-- ---------------------------------------------------- -->
                                 <!-- CIVILITE -->
                                 <label>Civilité * :</label>
-                                <div class="mt-2 mb-4 d-flex justify-content-around justify-content-sm-start">
+                                <div class="mt-2 mb-4 d-flex flex-wrap justify-content-around justify-content-sm-start">
                                     <div class="d-inline d-flex align-items-center me-3">
                                         <input type="radio" name="civility" value="1" id="mr" class="form-check-input me-2" required>
                                         <label class="form-check-label" for="mr">M</label>
                                     </div>
                                     <div class="ps-3 d-inline d-flex align-items-center">
-                                        <input type="radio" name="civility" value="2" id="mrs" class="form-check-input me-2" required>
+                                        <input type="radio" name="civility" value="2" id="mrs" class="form-check-input me-2">
                                         <label class="form-check-label" for="mrs">Mme</label>
                                     </div>
-                                    <small class="d-none text-danger fst-italic ms-5" role="alert" aria-errormessage="civility" id="civilityError"></small>
+                                    <small class="d-none text-danger fst-italic mt-3 mt-md-0 ms-md-5" role="alert" aria-errormessage="civility" id="civilityError"></small>
                                 </div>
                                 
                                 <!-- ---------------------------------------------------- -->

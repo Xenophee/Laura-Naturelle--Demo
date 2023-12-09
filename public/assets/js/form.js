@@ -45,11 +45,14 @@ const errorMessage = (input, message, empty = false) => {
 
 const checkInput = (input, message, regex) => {
 
+    let error = false;
+
     if (input.value == '') {
 
         if (input.required) {
             errorDisplay(input);
             errorMessage(input, message, true);
+            error = true;
         } else {
             errorRemove(input);
         };
@@ -59,12 +62,73 @@ const checkInput = (input, message, regex) => {
 
         errorDisplay(input);
         errorMessage(input, message);
+        error = true;
         
     } else {
-
         errorRemove(input);
     };
+
+    return error;
 };
+
+
+// ==============================================================================================
+// ----------------------------------------------------------------------------------------------
+// FONCTION DE VÉRIFICATION POUR UNE VALEUR NUMÉRIQUE
+
+const checkNumbers = (input, message, limit) => {
+
+    let error = false;
+
+    if (input.value == '') {
+
+        if (input.required) {
+            errorDisplay(input);
+            errorMessage(input, message, true);
+            error = true;
+        } else {
+            errorRemove(input);
+        };
+        
+    } else if (limit && !limit.includes(Number(input.value))) {
+
+        errorDisplay(input);
+        errorMessage(input, message);
+        error = true;
+        
+    } else {
+        errorRemove(input);
+    };
+
+    return error;
+};
+
+
+// ==============================================================================================
+// ----------------------------------------------------------------------------------------------
+// FONCTION DE VÉRIFICATION POUR DES BOUTONS RADIOS
+
+const checkRadio = (inputs, message, messageLocation) => {
+
+    let error = true;
+
+    for (var i = 0; i < inputs.length; i++) {
+        // Vérifier si un bouton radio est coché
+        if (inputs[i].checked) {
+            error = false;
+        };
+    };
+
+    if (error) {
+        messageLocation.textContent = `Veuillez sélectionner ${message}.`;
+        messageLocation.classList.remove('d-none');
+    } else {
+        messageLocation.classList.add('d-none');
+    };
+
+    return error;
+};
+
 
 
 // ==============================================================================================
@@ -88,7 +152,7 @@ const checkTextarea = (textarea, message) => {
     } else {
         errorRemove(textarea);
         textarea.textContent = '';
-    };;
+    };
 };
 
 
@@ -119,7 +183,7 @@ const counterLenght = (textarea, value) => {
 
 
 
-export { errorDisplay, errorRemove, errorMessage, checkInput, checkTextarea, counterLenght };
+export { errorDisplay, errorRemove, errorMessage, checkInput, checkNumbers, checkRadio, checkTextarea, counterLenght };
 
 
 
