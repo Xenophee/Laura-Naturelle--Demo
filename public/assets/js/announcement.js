@@ -5,14 +5,11 @@ import { checkInput, checkTextarea, errorDisplay, errorRemove, errorMessage, cou
 
 const REGEX_DATE = new RegExp(startDate.pattern);
 
-const deleteBtns = document.querySelectorAll('.delete-one');
-
-const announcement = document.getElementById('announcement-form');
-
 const textarea = document.querySelector('textarea');
 const textareaBtn = document.querySelector('.formatting');
 const maxChar = counterChar.textContent;
 
+const validBtn = document.querySelector('button[type="submit"]');
 
 
 // ==============================================================================================
@@ -81,7 +78,10 @@ textareaBtn.addEventListener('click', () => {
 // ----------------------------------------------------------------------
 // En cas d'annulation de la modal, retour du check sur le bouton modifier
 displayModal.addEventListener('hidden.bs.modal', () => {
-    modify.checked = true;
+    const modify = document.getElementById('modify');
+    if (modify != null) {
+        modify.checked = true;
+    };
 });
 // ----------------------------------------------------------------------
 
@@ -89,6 +89,7 @@ displayModal.addEventListener('hidden.bs.modal', () => {
 // ==============================================================================================
 // ----------------------------------------------------------------------------------------------
 // VÉRIFICATION DU FORMULAIRE
+
 
 content.addEventListener('input', () => {
     checkTextarea(content, 'Veuillez saisir l\'annonce à afficher.');
@@ -103,3 +104,14 @@ endDate.addEventListener('input', () => {
 });
 
 // ----------------------------------------------------------------------
+
+
+// ==============================================================================================
+// ----------------------------------------------------------------------------------------------
+// VÉRIFICATION AU CLICK DE VALIDATION
+
+validBtn.addEventListener('click', () => {
+    checkTextarea(content, 'Veuillez saisir l\'annonce à afficher.');
+    checkInput(startDate, 'une date', REGEX_DATE);
+    checkInput(endDate, 'une date', REGEX_DATE);
+});

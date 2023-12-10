@@ -80,7 +80,7 @@ const checkNumbers = (input, message, limit) => {
 
     let error = false;
 
-    if (input.value == '') {
+    if (input.value == 0) {
 
         if (input.required) {
             errorDisplay(input);
@@ -164,7 +164,7 @@ const checkTextarea = (textarea, message) => {
 const counterLenght = (textarea, value) => {
 
     let content = textarea.value.length;
-    let message = document.getElementById(`${textarea.id}Error`);
+    let message = document.getElementById(`${textarea.id}Lenght`);
     
     if (value) {
         counterChar.textContent = value - content;

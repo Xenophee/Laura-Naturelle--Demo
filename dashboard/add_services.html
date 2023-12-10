@@ -141,24 +141,24 @@
                                     <!-- -------------------------------------------------------------- -->
                                     <!-- CATÉGORIE DE LA PRESTATION -->
                                     <div class="mb-4">
-                                        <label for="object" class="form-label mb-2">Catégorie de la prestation * :</label>
-                                        <select class="form-select" id="object" name="object" required>
+                                        <label for="category" class="form-label mb-2">Catégorie de la prestation * :</label>
+                                        <select class="form-select" id="category" name="category" required>
                                             <option value="0">-</option>
                                             <option value="1">Épilations</option>
                                             <option value="2">Soins du visage</option>
                                             <option value="3">Soins des mains</option>
                                             <option value="4">Modelages</option>
                                         </select>
-                                        <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="object" id="objectError"></small>
+                                        <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="category" id="categoryError"></small>
                                     </div>
                                     <!-- -------------------------------------------------------------- -->
 
                                     <!-- -------------------------------------------------------------- -->
                                     <!-- NOM DE LA PRESTATION -->
                                     <div class="mb-4">
-                                        <label for="name" class="form-label me-3">Nom * :</label>
-                                        <input type="text" class="form-control" id="name" name="name" value="" maxlength="50" required>
-                                        <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="name" id="nameError"></small>
+                                        <label for="title" class="form-label me-3">Nom * :</label>
+                                        <input type="text" class="form-control" id="title" name="title" value="" maxlength="50" required>
+                                        <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="title" id="titleError"></small>
                                     </div>
                                     <!-- -------------------------------------------------------------- -->
 
@@ -171,8 +171,7 @@
                                             <small>Nb de caractères restants : <span id="counterChar">250</span></small>
                                         </div>
                                         <textarea class="form-control textarea" name="description" id="description" maxlength="250"></textarea>
-                                        <small class="text-danger fst-italic mt-2" role="alert" aria-errormessage="description" id="descriptionError">Mauvais </small>
-                                        <!-- <small class="text-danger fst-italic mt-2" role="alert" aria-errormessage="name" id="nameError">fuck</small> -->
+                                        <small class="text-danger fst-italic mt-2" role="alert" aria-errormessage="description" id="descriptionLenght"></small>
                                     </div>
                                     <!-- -------------------------------------------------------------- -->
                                 </fieldset>
@@ -186,17 +185,17 @@
                                     <!-- -------------------------------------------------------------- -->
                                     <!-- DURÉE ET TARIF -->
                                     <div id="pricings">
-                                        <div class="d-flex flex-column flex-md-row justify-content-between pricing py-3" id="pricing">
+                                        <div class="d-flex flex-column flex-md-row justify-content-between pricing py-3" id="pricing1">
                                             <div class="mb-4">
-                                                <label for="duration" class="form-label me-3">Durée (en minutes) * :</label>
-                                                <input type="number" class="form-control" id="duration" name="duration" value="" required>
-                                                <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="duration" id="durationError"></small>
+                                                <label for="duration1" class="form-label me-3">Durée (en minutes) * :</label>
+                                                <input type="number" class="form-control" id="duration1" name="duration1" value="" required>
+                                                <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="duration1" id="durationError1"></small>
                                             </div>
         
                                             <div class="mb-md-4">
-                                                <label for="price" class="form-label me-3">Tarif * :</label>
-                                                <input type="number" class="form-control" id="price" name="price" value="" required>
-                                                <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="price" id="priceError"></small>
+                                                <label for="price1" class="form-label me-3">Tarif * :</label>
+                                                <input type="number" class="form-control" id="price1" name="price1" value="" required>
+                                                <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="price1" id="priceError1"></small>
                                             </div>
                                         </div>
                                     </div>
@@ -266,13 +265,13 @@
                                     <div class="exclusive-dates d-none">
                                         <div class="mb-4">
                                             <label for="startExclusiveDate" class="form-label me-3">Date de début * :</label>
-                                            <input type="date" class="form-control" id="startExclusiveDate" name="startExclusiveDate" value="">
+                                            <input type="date" class="form-control" id="startExclusiveDate" name="startExclusiveDate" value="" pattern="^\d{4}-\d{2}-\d{2}$">
                                             <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="startExclusiveDate" id="startExclusiveDateError"></small>
                                         </div>
 
                                         <div class="mb-md-4">
                                             <label for="endExclusiveDate" class="form-label me-3">Date de fin * :</label>
-                                            <input type="date" class="form-control" id="endExclusiveDate" name="endExclusiveDate" value="">
+                                            <input type="date" class="form-control" id="endExclusiveDate" name="endExclusiveDate" value="" pattern="^\d{4}-\d{2}-\d{2}$">
                                             <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="endExclusiveDate" id="endExclusiveDateError"></small>
                                         </div>
                                     </div>

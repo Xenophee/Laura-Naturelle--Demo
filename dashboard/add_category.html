@@ -138,17 +138,17 @@
                                         <div class="d-flex justify-content-center">
                                             <div>
                                                 <label class="btn btn-classic form-label d-flex align-items-center justify-content-center py-3 m-1" for="cover">Image de couverture</label>
-                                                <input type="file" class="form-control d-none" id="cover" name="cover" accept="image/jpeg"  required>
+                                                <input type="file" class="form-control d-none" id="cover" name="cover" accept="image/jpeg">
                                             </div>
                                         </div>
-                                        <small class="d-none text-danger text-center fst-italic mt-2" role="alert" aria-errormessage="cover" id="coverError"></small>
+                                        <small class="d-none d-block text-danger text-center fst-italic mt-2" role="alert" aria-errormessage="cover" id="coverError"></small>
                                     </div>
                                     <!-- -------------------------------------------------------------- -->
 
                                     <!-- -------------------------------------------------------------- -->
                                     <!-- CHOIX DU CONTRASTE PAR RAPPORT À L'IMAGE -->
                                     <label class="d-block text-center">Rendu textuel sur l'image en page d'accueil :</label>
-                                    <small class="d-none text-danger text-center fst-italic mt-2" role="alert" id="darkmodeError"></small>
+                                    <small class="d-none d-block text-danger text-center fst-italic mt-2" role="alert" id="darkmodeError"></small>
                                     <div class="btn-group d-flex mt-3 mb-5" role="group" aria-label="Choisir l'affichage en page d'accueil">
                                         <input type="radio" class="btn-check" name="darkmode" value="0" id="light" autocomplete="off" aria-errormessage="darkmodeError" required>
                                         <label class="btn btn-radio" for="light">Mode clair</label>
@@ -161,9 +161,9 @@
                                     <!-- -------------------------------------------------------------- -->
                                     <!-- NOM DE LA CATÉGORIE -->
                                     <div class="mb-4">
-                                        <label for="name" class="form-label me-3">Nom * :</label>
-                                        <input type="text" class="form-control" id="name" name="name" value="" pattern="^['A-Za-zÀ-ÿ\s-]+$" maxlength="50" required>
-                                        <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="name" id="nameError"></small>
+                                        <label for="title" class="form-label me-3">Nom * :</label>
+                                        <input type="text" class="form-control" id="title" name="title" value="" pattern="^['A-Za-zÀ-ÿ\s-]+$" maxlength="50" required>
+                                        <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="title" id="titleError"></small>
                                     </div>
                                     <!-- -------------------------------------------------------------- -->
 
@@ -176,14 +176,14 @@
                                             <small>Nb de caractères restants : <span id="counterChar">500</span></small>
                                         </div>
                                         <textarea class="form-control textarea" name="description" id="description" maxlength="500"></textarea>
-                                        <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="description" id="descriptionError"></small>
+                                        <small class="d-none text-danger fst-italic mt-2" role="alert" aria-errormessage="description" id="descriptionLenght"></small>
                                     </div>
                                     <!-- -------------------------------------------------------------- -->
 
                                     <!-- -------------------------------------------------------------- -->
                                     <!-- MODE D'AFFICHAGE DES PRESTATIONS -->
                                     <label class="d-block text-center pt-4">Comment souhaitez-vous afficher les prestations de cette catégorie ?</label>
-                                    <small class="d-none text-danger text-center fst-italic mt-2" role="alert" id="viewError"></small>
+                                    <small class="d-none d-block text-danger text-center fst-italic mt-2" role="alert" id="viewError"></small>
                                     <div class="btn-group d-flex pt-3 pb-md-5" role="group" aria-label="Choisir l'affichage des prestations au sein de la catégorie">
                                         <input type="radio" class="btn-check" name="view" value="1" id="lines" autocomplete="off" aria-errormessage="viewError" required>
                                         <label class="btn btn-radio" for="lines">Affichage en ligne</label>

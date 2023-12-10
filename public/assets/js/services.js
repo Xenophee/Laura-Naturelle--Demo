@@ -1,19 +1,22 @@
 
 
-import { checkInput, errorDisplay, errorRemove, errorMessage, counterLenght } from './form.js';
+import { checkInput, checkNumbers, checkRadio, errorDisplay, errorRemove, errorMessage, counterLenght, checkTextarea } from './form.js';
 
 
-
-
-const service = document.getElementById('service-form');
+const REGEX_TEXT = new RegExp(title.pattern);
+const REGEX_DATE = new RegExp(startExclusiveDate.pattern);
 
 const textarea = document.querySelector('textarea');
 const value = Number(counterChar.textContent);
-const typeChoices = document.querySelectorAll('.type-choice');
+
 const dates = document.querySelector('.exclusive-dates');
 const inputDates = document.querySelectorAll('.exclusive-dates .form-control');
 
+const genderBtns = document.querySelectorAll('input[name="gender"]');
+const packageBtns = document.querySelectorAll('input[name="package"]');
+const exclusiveBtns = document.querySelectorAll('input[name="exclusive"]');
 
+const validBtn = document.querySelector('button[type="submit"]');
 
 
 // ==============================================================================================
@@ -35,7 +38,7 @@ counterLenght(textarea, value);
 
 const displayDates = () => {
 
-    for (const type of typeChoices) {
+    for (const type of exclusiveBtns) {
 
         if (type.checked && type.value == 1) {
 
@@ -59,7 +62,7 @@ const displayDates = () => {
 displayDates();
 
 
-for (const type of typeChoices) {
+for (const type of exclusiveBtns) {
     type.addEventListener('click', displayDates);
 };
 // ----------------------------------------------------------------------
@@ -73,7 +76,7 @@ for (const type of typeChoices) {
 const deleteClone = () => {
 
     let count = document.querySelectorAll('.pricing').length;
-    
+
     count--;
 
     if (count == 1) {
@@ -150,3 +153,66 @@ displayDeleteBtn();
 
 
 addPricing.addEventListener('click', clone);
+
+
+// ==============================================================================================
+// ----------------------------------------------------------------------------------------------
+// VÉRIFICATION DU FORMULAIRE
+
+
+category.addEventListener('change', () => {
+    checkNumbers(category, 'une catégorie pour la prestation');
+});
+
+title.addEventListener('change', () => {
+    checkInput(title, 'un nom de catégorie', REGEX_TEXT);
+});
+
+
+
+
+
+// ==============================================================================================
+// ----------------------------------------------------------------------------------------------
+// VÉRIFICATION AU CLICK DE VALIDATION
+
+const verifPricings = (inputId, message, messageLocationId) => {
+
+    let input = document.getElementById(inputId);
+    let messageLocation = document.getElementById(messageLocationId);
+
+    if (input.required && input.value == '') {
+
+        input.classList.add('error-form');
+        messageLocation.classList.remove('d-none');
+        messageLocation.textContent = `Veuillez saisir ${message}.`;
+    } else {
+
+        input.classList.remove('error-form');
+        messageLocation.classList.add('d-none');
+    };
+};
+
+
+validBtn.addEventListener('click', () => {
+
+    checkNumbers(category, 'une catégorie pour la prestation');
+    checkInput(title, 'un nom de prestation', REGEX_TEXT);
+
+    const pricingBlocks = document.querySelectorAll('.pricing');
+    console.log(pricingBlocks);
+
+    pricingBlocks.forEach((pricingBlock, key) => {
+        verifPricings(`duration${key + 1}`, 'une durée', `durationError${key + 1}`);
+        verifPricings(`price${key + 1}`, 'un prix', `priceError${key + 1}`);
+    });
+
+    checkRadio(genderBtns, 'un choix de clientèle', genderError);
+    checkRadio(packageBtns, 'le type de la prestation', packageError);
+
+    if (!checkRadio(exclusiveBtns, 'le type de la prestation', exclusiveError)) {
+        checkInput(startExclusiveDate, 'une date de début', REGEX_DATE);
+        checkInput(endExclusiveDate, 'une date de fin', REGEX_DATE);
+    };
+
+});
