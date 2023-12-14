@@ -75,16 +75,16 @@ const createLink = (event, action) => {
 
     switch (action) {
         case 0:
-            link = 'delete_controller.php';
+            link = 'suppression';
             break;
         case 1:
-            link = 'publish_controller.php';
+            link = 'publication';
             break;
         case 2:
-            link = 'deactivate_controller.php';
+            link = 'desactivation';
             break;
         case 3:
-            link = 'activate_controller.php';
+            link = 'activation';
             break;
     }
 
