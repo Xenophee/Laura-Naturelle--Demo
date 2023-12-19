@@ -32,16 +32,53 @@
     box-shadow: 0 -5px 5px -5px #e768993d;
 }
 
+/* ===================================================================================================== */
+/* ----------------------------------------------------------------------------------------------------- */
+
+/* GENDER BADGE */
 
 .exclusively {
+    position: relative;
     width: 150px;
-    border: var(--border-dark-special-solid);
+    height: 150px;
     border-radius: 50%;
 }
 
+.bagde-line-background-before {
+    width: 30%;
+    height: 50px;
+}
+
+.bagde-line-background-after {
+    width: 30%;
+    height: 50px;
+}
 
 
+/* --female-badge-- */
 
+.female-badge-service .exclusively {
+    border: var(--border-dark-special-solid);
+}
+
+.female-badge-service .bagde-line-background-before, .female-badge-service .bagde-line-background-after {
+    background-color: var(--special-dark-filter);
+}
+
+/* --male-badge-- */
+
+.male-badge-service .exclusively {
+    border: var(--border-third-solid);
+}
+
+.male-badge-service .bagde-line-background-before, .male-badge-service .bagde-line-background-after {
+    background-color: var(--second-filter-color);
+}
+
+
+/* ===================================================================================================== */
+/* ----------------------------------------------------------------------------------------------------- */
+/* SECTIONS COLOR */
 
 .classic-section {
     background-color: var(--second-filter-color);
