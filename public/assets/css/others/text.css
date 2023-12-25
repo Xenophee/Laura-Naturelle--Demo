@@ -42,7 +42,7 @@ h1 {
 
 .background-title {
     position: relative;
-    background-image: url(../../img/backgrounds/5213747.jpg);
+    background-image: url(../../img/backgrounds/home.webp);
     background-size: cover;
     background-attachment: fixed;
     box-shadow: var(--inset-shadow);
@@ -191,6 +191,10 @@ h1 span:first-child {
         min-height: 25vh;
     }
 
+    .background-title {
+        background-image: url(../../img/backgrounds/home-xl.webp);
+    }
+
     .background-title img {
         width: 40%;
         left: 25%;
@@ -252,10 +256,6 @@ h1 span:first-child {
 /* TRES GRAND ECRAN */
 
 @media (min-width: 1400px) {
-
-    .main-title {
-        min-height: 55vh;
-    }
 
     .background-title img {
         left: 90%;

@@ -71,7 +71,7 @@
 .presentation-text img {
     position: absolute;
     transform: translate(-50%, -50%);
-    width: 200px;
+    width: 250px;
     top: 50%;
     left: 50%;
     z-index: -1;
