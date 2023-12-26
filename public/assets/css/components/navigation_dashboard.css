@@ -4,8 +4,7 @@
 
 
 .dashboard-nav {
-    background-image: url(../../img/backgrounds/bois3.jpg);
-    /* background-color: var(--second-color); */
+    background-image: url(../../img/backgrounds/bois.webp);
     font-family: var(--special-font);
     color: var(--first-color);
 }

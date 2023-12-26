@@ -99,7 +99,7 @@
 .prestations-index {
     height: 750px;
     position: relative;
-    background-image: url(../../img/backgrounds/bois3.jpg);
+    background-image: url(../../img/backgrounds/bois.webp);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -183,7 +183,7 @@
 }
 
 .scheduleBoard {
-    background-image: url(../../img/backgrounds/bois3.jpg);
+    background-image: url(../../img/backgrounds/bois.webp);
     background-size: cover;
     color: var(--special-dark-color);
     font-size: 1.2rem;
@@ -204,7 +204,7 @@
 
 .informations h3 {
     width: 100%;
-    background-image: url(../../img/backgrounds/bois3.jpg);
+    background-image: url(../../img/backgrounds/bois.webp);
     background-size: cover;
     border: var(--border-brown-thin-solid);
     font-size: 2rem;
