@@ -1,6 +1,7 @@
 # Laura-Naturelle--Demo
 
-La démo est en ligne : [ici](https://xenophee.github.io/Laura-Naturelle--Demo/)
+La démo est en ligne (avec le dashboard) : [ici](https://xenophee.github.io/Laura-Naturelle--Demo/)
+Le site est en ligne : [ici](https://laura-naturelle.000webhostapp.com)
 
 
 ## Description du projet
